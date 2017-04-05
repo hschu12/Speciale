@@ -18,7 +18,8 @@ struct HyperGraph
 		std::string name;
 		double price;
 		double cost;
-		int minEdge;
+		int minEdge; // might not be neccesary
+		int maxYieldEdge;
 
 		std::vector<int> productOfReaction; //Contains a reference to the ID of a reaction in which the compund is a product of. 
 	};
@@ -119,8 +120,39 @@ public:
 		return minimumCost;
 	}
 
-	double shortestPath(CompoundNode &v, std::vector<int> &startingCompounds) {
-		CompoundNode *s = new CompoundNode();
+	double maxYield(CompoundNode &v, std::vector<int> &list) {
+		std::cout << "maxYield(" << v.id << ")" << std::endl;
+		auto startingCompoundIterator = list.begin();
+		while (startingCompoundIterator != list.end()) {
+			if (v.id == *startingCompoundIterator) {
+				return 1.0; //starting compounds always have a yield of 100%
+			}
+			++startingCompoundIterator;
+		}
+		double maximumYield = 0; // infinity
+		auto productOfReactionIterator = v.productOfReaction.begin();
+		for(auto productOfReactionIterator = v.productOfReaction.begin(); productOfReactionIterator != v.productOfReaction.end(); ++productOfReactionIterator ) {
+			ReactionNode *r1 = getReaction(*productOfReactionIterator);
+			double yield = r1->yield;
+			for (auto reactionTailIterator = r1->tail.begin(); reactionTailIterator != r1->tail.end(); ++reactionTailIterator) {
+				std::cout << "yield before " << yield << std::endl;
+				yield = yield * maxYield(*getCompound(*reactionTailIterator), list);
+				std::cout << "yield after " << yield << std::endl;
+
+
+			}
+			std::cout << "maximumYield: " << maximumYield << " yield: " << yield << std::endl;
+			if (maximumYield < yield) {
+				maximumYield = yield;
+				v.maxYieldEdge = *productOfReactionIterator;
+				std::cout << "maxYieldEdge from " << v.id << " is: " << v.maxYieldEdge << std::endl;
+			}
+		}
+		return maximumYield;
+	}
+
+	double shortestPathMinimumCost(CompoundNode &v, std::vector<int> &startingCompounds) {
+		CompoundNode *s = new CompoundNode(); //MIGHT NOT BE NEEDED
 		s->id = 0;
 		auto startingCompoundIterator = startingCompounds.begin();
 		while (startingCompoundIterator != startingCompounds.end()) {
@@ -132,6 +164,21 @@ public:
 			++startingCompoundIterator;
 		}
 		return minCost(v, startingCompounds);
+	}
+
+	double shortestPathMaxiumYield(CompoundNode &v, std::vector<int> &startingCompounds) {
+		CompoundNode *s = new CompoundNode(); //MIGHT NOT BE NEEDED
+		s->id = 0;
+		auto startingCompoundIterator = startingCompounds.begin();
+		while (startingCompoundIterator != startingCompounds.end()) {
+			std::vector<int> head;
+			head.push_back(*startingCompoundIterator);
+			std::vector<int> tail;
+			tail.push_back(s->id);
+			addReaction(0, head, tail, 0.0);
+			++startingCompoundIterator;
+		}
+		return maxYield(v, startingCompounds);
 	}
 
 	ReactionNode* getReaction(int id){

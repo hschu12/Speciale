@@ -54,16 +54,16 @@ int main(int argc, char const *argv[])
 	int tail10[] = {7};
   	std::vector<int> reacttail10 (tail10, tail10 + sizeof(tail10) / sizeof(int) );
 
-  	h.addReaction(1, reacthead1, reacttail1, 2.0);
-  	h.addReaction(2, reacthead2, reacttail2, 1.0);
-  	h.addReaction(3, reacthead3, reacttail3, 1.0);
-  	h.addReaction(4, reacthead4, reacttail4, 2.0);
-  	h.addReaction(5, reacthead5, reacttail5, 2.0);
-  	h.addReaction(6, reacthead6, reacttail6, 2.0);
-  	h.addReaction(7, reacthead7, reacttail7, 2.0);
-  	h.addReaction(8, reacthead8, reacttail8, 2.0);
-  	h.addReaction(9, reacthead9, reacttail9, 2.0);
-  	h.addReaction(10, reacthead10, reacttail10, 2.0);
+  	h.addReaction(1, reacthead1, reacttail1, 0.5);
+  	h.addReaction(2, reacthead2, reacttail2, 0.8);
+  	h.addReaction(3, reacthead3, reacttail3, 0.8);
+  	h.addReaction(4, reacthead4, reacttail4, 0.4);
+  	h.addReaction(5, reacthead5, reacttail5, 0.4);
+  	h.addReaction(6, reacthead6, reacttail6, 0.4);
+  	h.addReaction(7, reacthead7, reacttail7, 0.5);
+  	h.addReaction(8, reacthead8, reacttail8, 0.4);
+  	h.addReaction(9, reacthead9, reacttail9, 0.8);
+  	h.addReaction(10, reacthead10, reacttail10, 0.8);
 
   	/*h.printCompoundList();
   	h.printReactionList();
@@ -87,10 +87,10 @@ int main(int argc, char const *argv[])
 	startingCompound.push_back(2);
 	std::cout << h.shortestPath(*goal, startingCompound) << " is cheapest " << std::endl;
 	auto test1 = h.getCompound(8);
-	std::cout << test1->minEdge << std::endl;
+	std::cout << test1->maxYieldEdge << std::endl;
 	auto test2 = h.getCompound(4);
-	std::cout << test2->minEdge << std::endl;
+	std::cout << test2->maxYieldEdge << std::endl;
 	auto test3 = h.getCompound(5);
-	std::cout << test3->minEdge << std::endl;
+	std::cout << test3->maxYieldEdge << std::endl;
 	return 0;
 }
