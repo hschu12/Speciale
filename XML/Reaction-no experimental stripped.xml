@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xf>
+  <reactions>
+    <reaction index="1">
+      <RX>
+        <RX.ID>1046321</RX.ID>
+        <RX01>
+          <RX.RXRN>1900195</RX.RXRN>
+          <RX.RCT>Cyclopentane</RX.RCT> <!-- reactant -->
+        </RX01>
+        <RX02>
+          <RX.PXRN>3193768</RX.PXRN>
+          <RX.PRO>trans-1,2-dibromocyclopentane</RX.PRO> <!-- Product -->
+        </RX02>
+        <RX.BLB>1900195</RX.BLB> <!-- reaxys IDs -->
+        <RX.BLB>3193768</RX.BLB>
+        <RX.BLC>1900195</RX.BLC>
+        <RX.BLC>3193768</RX.BLC>
+        <RX.NVAR>2</RX.NVAR>
+        <RX03>
+          <RX.BCODE>231589181434589</RX.BCODE>
+          <RX.MCODE>276144097808164</RX.MCODE>
+          <RX.NCODE>276144097808164</RX.NCODE>
+        </RX03>
+        <RX04>
+          <RX.TRANS>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(07)|01E41(07)|01D41()|</RX.TRANS>
+          <RX.BIN>233066</RX.BIN>
+          <RX.BFREQ>241</RX.BFREQ>
+          <RX.QRY0>0/80FE1(03)|80FE1(04)|80F41(04*)|80F41(*)|*</RX.QRY0>
+          <RX.QRY1>0/80FE1(03)|80FE1(04)|80F41(04*)|80F41(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+          <RX.QRY2>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(*)|01E41(*)|*</RX.QRY2>
+          <RX.QRY3>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(*)|01E41(*)|01D41(*)|*</RX.QRY3>
+          <RX.QRY4>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(07*)|01E41(07*)|01D41(*)|*</RX.QRY4>
+          <RX.QRY5>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(07)|01E41(07)|01D41()|*</RX.QRY5>
+        </RX04>
+        <RX.RXNFILE>eJylVbFOwzAQ3fsVHlgb+XyxHS9IKQkdSIoUIgRThRAjC0J8P3c+hyalVGmwrMY53708Pz+7V93TbkVNKaC+umrvG37prtuvPNOjZirOUCBBxU2Px1xlY9cnewhBPRpKX6kIY8EjDdaYaaPdAU7dqL8gYgcZJBSjg2EUk2kX8vkoZoRimItdwgUnKBo8M1hDlheA81HyCUphnFuyIvuDAnF5MJ6WKP6Omvj54yhGuONofiLaklXqrYKgNQTLr/Wu+qeLfOxzXMRqFU6ckFt9gebT/SfueRphcYHmMEGxUCTvWFJj2f5j5n0oZEXe6TGXzcdZFD1CoXMBosaluhw7WnRB1sUv5UK64BJdljkaBke7I5+fcLSJWTCeEPf737n2RJTs/tA/xwqaqcqeVUtP5GfMKJs4zeXR/EZJBUvL1w6bxsfMzezMqo8pbdVstvvbrty29a7fP/R1V9+rod1KapXQeC9csDxc015YOkrUqpJ/y6YZkuhTsa6Wuo+X17f3l8+3w1JkK+jP4oeISUTk+/u7+llN2oiIUWItb4bDEoIY9DwRo7oDA0zyHBjgfAaYpAjJ3GRQL4f+PAMUBnzdIQT0rhiuu2/hoTHB</RX.RXNFILE>
+        <RX.REG>f48e87185a02401cfc6d15abe7894d4e</RX.REG>
+        <RX.RANK highlight="true">95</RX.RANK>
+        <RX.MYD>90.18</RX.MYD>  <!-- yield -->
+        <RX.SKW>mapped reaction</RX.SKW>
+        <RX.RTYP>full reaction</RX.RTYP>
+        <RX.RTYP>has preparation</RX.RTYP>
+        <RX.RAVAIL>6</RX.RAVAIL>
+        <RX.PAVAIL>6</RX.PAVAIL>
+        <RX.MAXPUB>2015</RX.MAXPUB>
+        <RX.NUMREF>2</RX.NUMREF>
+        <RX.MAXPMW>227.927</RX.MAXPMW>
+        <RX.ED>2007/11/12</RX.ED>
+        <RX.UPD>2015/12/23</RX.UPD>
+      </RX>
+      <RXD>
+        <RXD.L>67475222</RXD.L>
+        <RXD.CL>Preparation</RXD.CL>
+        <RXD.SCO>40</RXD.SCO>
+        <RXD.LB>14.4</RXD.LB>
+        <RXD.TI>step 4: 1,2-trans-cyclopentyl diamine</RXD.TI> <!-- Title of preperation -->
+        
+        <RXD.STP>1</RXD.STP>
+        <RXD01>
+          <RXD.YXRN>3193768</RXD.YXRN>
+          <RXD.YPRO>trans-1,2-dibromocyclopentane</RXD.YPRO>
+          <RXD.YD>90.18 percent</RXD.YD>
+          <RXD.NYD>90.18</RXD.NYD>
+        </RXD01>
+        <RXDS01>  <!-- USES -->
+          <RXD03>
+            <RXD.RGTXRN>3587193</RXD.RGTXRN>
+            <RXD.RGT>bromine</RXD.RGT> 
+          </RXD03>
+          <RXD05>
+            <RXD.SOLXRN>1730800</RXD.SOLXRN>
+            <RXD.SOL>dichloromethane</RXD.SOL>
+          </RXD05>
+          <RXD.T>-5 - 10</RXD.T>
+          <RXD.DED>2015/12/23</RXD.DED>
+          <RXD.LCN>Paragraph 0171</RXD.LCN>
+        </RXDS01>
+       

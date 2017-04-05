@@ -1,0 +1,88 @@
+<IDE>
+        <IDE.XRN highlight="true">1900195</IDE.XRN> <!-- Reaxts ID -->
+        <IDE.XPR>287-92-3</IDE.XPR> <!-- CAS Registry Number-->
+        <IDE.RN>287-92-3</IDE.RN> <!-- CAS Registry Number -->
+        <IDE.CN>Cyclopentane</IDE.CN> <!-- Name -->
+        <IDE.CN>Cyclopentan</IDE.CN>  <!-- Name -->
+        <IDE.AUN>Cyclopentane</IDE.AUN> <!-- Name -->
+        <IDE.REG>53cd351bfb0c4b915f812300e07da8a2</IDE.REG>
+        <IDE.LSF>(CH<sub>2</sub>)5</IDE.LSF>  <!-- Formel -->
+        <IDE01>
+          <IDE.FMF>C<sub>5</sub>H<sub>10</sub></IDE.FMF> <!-- Formel -->
+        </IDE01>
+        <IDE.MF>C<sub>5</sub>H<sub>10</sub></IDE.MF> <!-- Formel -->
+        <IDE.HSF>C<sub>5</sub>H<sub>10</sub></IDE.HSF><!-- Formel -->
+        <IDE.IMF>C<sub>5</sub>H<sub>10</sub></IDE.IMF><!--  Formel -->
+        <IDE.IHSF>C<sub>5</sub>H<sub>10</sub></IDE.IHSF><!-- Formel C5H10-->
+        <IDE.CHA>0</IDE.CHA>
+        <IDE.ELC>C<sub>5</sub></IDE.ELC> <!-- Antal C -->
+        <IDE.ELC>H<sub>10</sub></IDE.ELC> <!-- Antal H -->
+        <IDE.IELC>C<sub>5</sub></IDE.IELC> <!-- Antal C -->
+        <IDE.IELC>H<sub>10</sub></IDE.IELC> <!-- Antal H -->
+        <IDE.NA>15</IDE.NA>
+        <IDE.NE>2</IDE.NE>
+        <IDE.NF>1</IDE.NF>
+        <IDE.NI>0</IDE.NI>
+        <IDE.INE>2</IDE.INE>
+        <IDE.MW>70.1344</IDE.MW> <!-- Molecular Weight-->
+        <IDE.STYPE>isocyclic</IDE.STYPE> <!-- Substance type -->
+        <IDE.INCHI>RGSFGYAAUTVSQA-UHFFFAOYSA-N</IDE.INCHI> <!-- InChIKey-->
+        <IDE.INCHA>RGSFGYAAUTVSQA-UHFFFAOYAL</IDE.INCHA>
+        <IDE.AVAIL>2</IDE.AVAIL>
+        <IDE.MAXPUB>2016</IDE.MAXPUB>
+        <IDE.NUMREF highlight="true">1650</IDE.NUMREF> <!-- Number of References -->
+        <IDE.MARKREF>2</IDE.MARKREF>
+        <IDE.FULLRXNS>127</IDE.FULLRXNS>
+        <IDE.HASBIO>1</IDE.HASBIO>
+        <IDE.ED>1989/06/29</IDE.ED>
+        <IDE.UPD>2017/02/02</IDE.UPD>
+      </IDE>
+      <FA>
+        <FA.FA>RX(733),YY(1),LB(42),PSD(5),MB(1),CALC(1),EXTID(2),RSTR(1),AUTEX(16),CDER(3),MP(9),BP(18),RI(52),DEN(50),ADSM(32),ASSM(30),AZE(32),BSPM(1),CHROMAT(1),CPEM(1),COMP(3),CNF(2),CRD(1),CRP(4),CRT(5),CRV(2),XS(4),CRYPH(3),CSYS(1),DIC(2),EDIS(8),DV(21),ELE(4),EM(1),ELP(4),ELCB(2),POT(1),CIP(1),EBC(1),ENEM(69),HPTP(2),HCOM(2),HFOR(3),HFUS(4),HVAP(9),FINFO(81),CP(8),CP0(6),CV(1),HEN(1),IDA(9),IP(7),LIQPH(2),LLSM(27),LSSM(4),LVSM(69),MSUS(1),MECM(71),MEC(9),DFM(4),OPT(6),OTHE(9),POW(1),SDIF(5),SLB(13),SOLM(2),SOUND(5),SDIC(1),ST(10),CPTP(8),LPTP(2),TD(3),TRAM(16),TP(1),VP(7),NMR(22),IR(34),MS(8),UV(6),ESR(3),RAMAN(5),LUM(5),FLU(1),OSM(2),PHARM(110),ECT(5),ECA(4),ECC(16),ECTD(1),BIOD(2),ECDH(1),USE(9),INP(10),RCT(593),PRO(140),BEH(235),PRE(500),DET(601),CNR(1650)</FA.FA>
+      </FA>
+      <YY>
+        <YY.STR rn="1900195"> <!-- Reaxys ID -->
+
+HDR <!-- Mol representation in V3000 standard-->
+  0  0  0  0  0  0  0  0  0  0999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 5 5 0 0 0 REGNO=1900195
+M  V30 BEGIN ATOM
+M  V30 1 C     0.3089     0.0000     0.0000 0
+M  V30 2 C     1.3082     0.0009     0.0000 0
+M  V30 3 C     0.0000     0.9512     0.0000 0
+M  V30 4 C     1.6185     0.9512     0.0000 0
+M  V30 5 C     0.8093     1.5394     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 2 4
+M  V30 4 1 3 5
+M  V30 5 1 4 5
+M  V30 END BOND
+M  V30 BEGIN COLLECTION
+M  V30 MDLV30/HILITE ATOMS=(5 1 2 3 4 5) BONDS=(5 1 2 3 4 5)
+M  V30 END COLLECTION
+M  V30 END CTAB
+M  END
+</YY.STR>
+        <YY.SIMSORT>1</YY.SIMSORT>
+      </YY>
+      <YY>
+        <YY.STR rn="1900195">
+
+HDR <!-- Mol representation in v2000 standard -->
+  5  5  0  0  0  0  0  0  0  0999 V2000
+    0.3089    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.3082    0.0009    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.0000    0.9512    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    1.6185    0.9512    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+    0.8093    1.5394    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0
+  1  2  1  0  0  0  0
+  1  3  1  0  0  0  0
+  2  4  1  0  0  0  0
+  3  5  1  0  0  0  0
+  4  5  1  0  0  0  0
+M  REG 1900195
+M  END

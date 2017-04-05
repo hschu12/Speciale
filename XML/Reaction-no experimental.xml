@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<xf>
+  <reactions>
+    <reaction index="1">
+      <RX>
+        <RX.ID>1046321</RX.ID>
+        <RX01>
+          <RX.RXRN>1900195</RX.RXRN>
+          <RX.RCT>Cyclopentane</RX.RCT> <!-- reactant -->
+        </RX01>
+        <RX02>
+          <RX.PXRN>3193768</RX.PXRN>
+          <RX.PRO>trans-1,2-dibromocyclopentane</RX.PRO> <!-- Product -->
+        </RX02>
+        <RX.BLB>1900195</RX.BLB> <!-- reaxys IDs -->
+        <RX.BLB>3193768</RX.BLB>
+        <RX.BLC>1900195</RX.BLC>
+        <RX.BLC>3193768</RX.BLC>
+        <RX.NVAR>2</RX.NVAR>
+        <RX03>
+          <RX.BCODE>231589181434589</RX.BCODE>
+          <RX.MCODE>276144097808164</RX.MCODE>
+          <RX.NCODE>276144097808164</RX.NCODE>
+        </RX03>
+        <RX04>
+          <RX.TRANS>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(07)|01E41(07)|01D41()|</RX.TRANS>
+          <RX.BIN>233066</RX.BIN>
+          <RX.BFREQ>241</RX.BFREQ>
+          <RX.QRY0>0/80FE1(03)|80FE1(04)|80F41(04*)|80F41(*)|*</RX.QRY0>
+          <RX.QRY1>0/80FE1(03)|80FE1(04)|80F41(04*)|80F41(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+          <RX.QRY2>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(*)|01E41(*)|*</RX.QRY2>
+          <RX.QRY3>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(*)|01E41(*)|01D41(*)|*</RX.QRY3>
+          <RX.QRY4>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(07*)|01E41(07*)|01D41(*)|*</RX.QRY4>
+          <RX.QRY5>0/80FE1(03)|80FE1(04)|80F41(0405)|80F41(06)|01E41(07)|01E41(07)|01D41()|*</RX.QRY5>
+        </RX04>
+        <RX.RXNFILE>eJylVbFOwzAQ3fsVHlgb+XyxHS9IKQkdSIoUIgRThRAjC0J8P3c+hyalVGmwrMY53708Pz+7V93TbkVNKaC+umrvG37prtuvPNOjZirOUCBBxU2Px1xlY9cnewhBPRpKX6kIY8EjDdaYaaPdAU7dqL8gYgcZJBSjg2EUk2kX8vkoZoRimItdwgUnKBo8M1hDlheA81HyCUphnFuyIvuDAnF5MJ6WKP6Omvj54yhGuONofiLaklXqrYKgNQTLr/Wu+qeLfOxzXMRqFU6ckFt9gebT/SfueRphcYHmMEGxUCTvWFJj2f5j5n0oZEXe6TGXzcdZFD1CoXMBosaluhw7WnRB1sUv5UK64BJdljkaBke7I5+fcLSJWTCeEPf737n2RJTs/tA/xwqaqcqeVUtP5GfMKJs4zeXR/EZJBUvL1w6bxsfMzezMqo8pbdVstvvbrty29a7fP/R1V9+rod1KapXQeC9csDxc015YOkrUqpJ/y6YZkuhTsa6Wuo+X17f3l8+3w1JkK+jP4oeISUTk+/u7+llN2oiIUWItb4bDEoIY9DwRo7oDA0zyHBjgfAaYpAjJ3GRQL4f+PAMUBnzdIQT0rhiuu2/hoTHB</RX.RXNFILE>
+        <RX.REG>f48e87185a02401cfc6d15abe7894d4e</RX.REG>
+        <RX.RANK highlight="true">95</RX.RANK>
+        <RX.MYD>90.18</RX.MYD>  <!-- yield -->
+        <RX.SKW>mapped reaction</RX.SKW>
+        <RX.RTYP>full reaction</RX.RTYP>
+        <RX.RTYP>has preparation</RX.RTYP>
+        <RX.RAVAIL>6</RX.RAVAIL>
+        <RX.PAVAIL>6</RX.PAVAIL>
+        <RX.MAXPUB>2015</RX.MAXPUB>
+        <RX.NUMREF>2</RX.NUMREF>
+        <RX.MAXPMW>227.927</RX.MAXPMW>
+        <RX.ED>2007/11/12</RX.ED>
+        <RX.UPD>2015/12/23</RX.UPD>
+      </RX>
+      <RXD>
+        <RXD.L>67475222</RXD.L>
+        <RXD.CL>Preparation</RXD.CL>
+        <RXD.SCO>40</RXD.SCO>
+        <RXD.LB>14.4</RXD.LB>
+        <RXD.TI>step 4: 1,2-trans-cyclopentyl diamine</RXD.TI> <!-- Title of preperation -->
+        
+        <RXD.STP>1</RXD.STP>
+        <RXD01>
+          <RXD.YXRN>3193768</RXD.YXRN>
+          <RXD.YPRO>trans-1,2-dibromocyclopentane</RXD.YPRO>
+          <RXD.YD>90.18 percent</RXD.YD>
+          <RXD.NYD>90.18</RXD.NYD>
+        </RXD01>
+        <RXDS01>  <!-- USES -->
+          <RXD03>
+            <RXD.RGTXRN>3587193</RXD.RGTXRN>
+            <RXD.RGT>bromine</RXD.RGT> 
+          </RXD03>
+          <RXD05>
+            <RXD.SOLXRN>1730800</RXD.SOLXRN>
+            <RXD.SOL>dichloromethane</RXD.SOL>
+          </RXD05>
+          <RXD.T>-5 - 10</RXD.T>
+          <RXD.DED>2015/12/23</RXD.DED>
+          <RXD.LCN>Paragraph 0171</RXD.LCN>
+        </RXDS01>
+        <citations>
+          <citation index="2">
+            <CNR>
+              <CNR.CNR>67475222</CNR.CNR>
+              <CNR.CED>2015/11/16</CNR.CED>
+              <CNR.CUPD>2016/03/09</CNR.CUPD>
+            </CNR>
+            <CIT>
+              <CIT.DT>Patent</CIT.DT>
+              <CIT.PA>BEIJING FSWELCOME TECHNOLOGY DEVELOPMENT, CO., LTD; CHEN, Xiaoping; YAN, Yashi; MENG, Xiaoping; ZHAO, Feng; GAO, Zejun; WEN, Shouming</CIT.PA>
+              <CIT.ABPR>Y</CIT.ABPR>
+              <CIT.PREPY>2015</CIT.PREPY>
+              <CIT.PUI>606346789</CIT.PUI>
+              <CIT02>
+                <CIT.PCC>EP</CIT.PCC>
+                <CIT.PN>EP2924044</CIT.PN>
+                <CIT.PPY>2015</CIT.PPY>
+                <CIT.PK>A1</CIT.PK>
+                <CIT.PLA>English</CIT.PLA>
+              </CIT02>
+              <CIT.DOCQ>0.7</CIT.DOCQ>
+              <CIT.HASBIO>1</CIT.HASBIO>
+            </CIT>
+          </citation>
+        </citations>
+      </RXD>
+      <RXD>
+        <RXD.L>68063</RXD.L>
+        <RXD.CL>Preparation</RXD.CL>
+        <RXD.SCO>20</RXD.SCO>
+        <RXD.STP>1</RXD.STP>
+        <RXDS01>
+          <RXD03>
+            <RXD.RGTXRN>3587193</RXD.RGTXRN>
+            <RXD.RGT>bromine</RXD.RGT>
+          </RXD03>
+          <RXD.T>60</RXD.T>
+          <RXD.COND>Irradiation</RXD.COND>
+          <RXD.DED>2007/11/12</RXD.DED>
+        </RXDS01>
+        <citations>
+          <citation index="1">
+            <CNR>
+              <CNR.CNR>68063</CNR.CNR>
+              <CNR.CED>2007/10/12</CNR.CED>
+              <CNR.CUPD>2008/05/25</CNR.CUPD>
+            </CNR>
+            <CIT>
+              <CIT.DT>Article</CIT.DT>
+              <CIT.AU>Traynham,J.G.; Lee,Y.-S.</CIT.AU>
+              
+              <CIT.PREPY>1974</CIT.PREPY>
+              <CIT.PUI>4555653</CIT.PUI>
+              <CIT01>
+                <CIT.CO>JACSAT</CIT.CO>
+                <CIT.JT>Journal of the American Chemical Society</CIT.JT>
+                <CIT.JTS>J. Am. Chem. Soc.</CIT.JTS>
+                <CIT.LA>English</CIT.LA>
+                <CIT.VL>96</CIT.VL>
+                <CIT.PY>1974</CIT.PY>
+                <CIT.PAG>3590 - 3594</CIT.PAG>
+                <CIT.DOI>10.1021/ja00818a036</CIT.DOI>
+                <CIT.ISSN>0002-7863</CIT.ISSN>
+                <CIT.SCOPUS>347156465</CIT.SCOPUS>
+                <CIT.CITBY>31</CIT.CITBY>
+              </CIT01>
+              <CIT.DOCQ>0</CIT.DOCQ>
+            </CIT>
+          </citation>
+        </citations>
+      </RXD>
+      <RY>
+        <RY.RCT rn="1900195">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 5 5 0 0 0 REGNO=1900195
+M  V30 BEGIN ATOM
+M  V30 1 C     0.8080     1.4762     0.0000 0
+M  V30 2 C     0.4999     2.4274     0.0000 0
+M  V30 3 C     1.8082     1.4762     0.0000 0
+M  V30 4 C     1.3081     3.0155     0.0000 0
+M  V30 5 C     2.1173     2.4274     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 2 4
+M  V30 4 1 3 5
+M  V30 5 1 4 5
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+        <RY.PRO rn="3193768">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 7 7 1 0 0 REGNO=3193768
+M  V30 BEGIN ATOM
+M  V30 1 C     5.7355     1.9267     0.0000 0
+M  V30 2 C     4.9264     2.5149     0.0000 0
+M  V30 3 C     5.4255     0.9765     0.0000 0
+M  V30 4 Br     6.6868     2.2368     0.0000 0
+M  V30 5 C     4.1173     1.9267     0.0000 0
+M  V30 6 Br     4.9264     3.5151     0.0000 0
+M  V30 7 C     4.4253     0.9765     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4 CFG=3
+M  V30 4 1 2 5
+M  V30 5 1 2 6 CFG=1
+M  V30 6 1 3 7
+M  V30 7 1 5 7
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(7 1 2 3 4 5 6 7) -
+M  V30 CBONDS=(7 1 2 3 4 5 6 7) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    4.6020   -0.0835    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+      </RY>
+    </reaction>
+  </reactions>
+</xf>
