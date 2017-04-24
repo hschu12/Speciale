@@ -6,7 +6,19 @@
 
 struct HyperGraph
 {
-	
+	struct ReactionNode
+	{
+
+		ReactionNode(){};
+
+		ReactionNode(int id, std::vector<int> head, std::vector<int> tail, double yield) : id(id), head(head), tail(tail), yield(yield) {};
+		//Change constuctor (No need to add head and tail if method does so)
+		int id;
+		double yield;	
+		std::vector<int> head;
+		std::vector<int> tail;
+	};
+
 	struct CompoundNode
 	{
 
@@ -22,19 +34,7 @@ struct HyperGraph
 		int maxYieldEdge;
 
 		std::vector<int> productOfReaction; //Contains a reference to the ID of a reaction in which the compund is a product of. 
-	};
-
-	struct ReactionNode
-	{
-
-		ReactionNode(){};
-
-		ReactionNode(int id, std::vector<int> head, std::vector<int> tail, double yield) : id(id), head(head), tail(tail), yield(yield) {};
-		//Change constuctor (No need to add head and tail if method does so)
-		int id;
-		double yield;	
-		std::vector<int> head;
-		std::vector<int> tail;
+		ReactionNode *toS;
 	};
 
 private: 
@@ -50,16 +50,16 @@ public:
 
 	//add compound to set.
 	void addCompound(int compoundID) {
-		std::cout << "Adding: " << compoundID << std::endl;
+		//std::cout << "Adding: " << compoundID << std::endl;
 		CompoundNode *cn = new CompoundNode(compoundID);
 		compoundList.at(compoundID) = *cn;
 	} 
 
 	void addPointerFromCompound (int compoundID, int reactionID) {
-		std::cout << "Adding pointer from compound " << compoundID << " to reaction " << reactionID << std::endl; 
+		//std::cout << "Adding pointer from compound " << compoundID << " to reaction " << reactionID << std::endl; 
 		auto compound = getCompound(compoundID);
 		compound->productOfReaction.push_back(reactionID);
-		std::cout << "size of PoR is " << compound->productOfReaction.size() << " after insertion" << std::endl;
+		//std::cout << "size of PoR is " << compound->productOfReaction.size() << " after insertion" << std::endl;
 	}	
 
 	void addReaction(int id, std::vector<int> head, std::vector<int> tail, double yield) {
@@ -68,7 +68,7 @@ public:
 
 		//add active compounds if not existing
 		while(headIterator != head.end()) {
-			std::cout << "head it is pointing at: " << *headIterator << std::endl;
+			//std::cout << "head it is pointing at: " << *headIterator << std::endl;
 			if ( *headIterator >= compoundList.size()) {
 				compoundList.resize(*headIterator+1);
 			}
@@ -79,7 +79,7 @@ public:
 			++headIterator;
 		}
 		while(tailIterator != tail.end()) {
-			std::cout << "tail it is pointing at: " << *tailIterator << std::endl;
+			//std::cout << "tail it is pointing at: " << *tailIterator << std::endl;
 			if ( *tailIterator >= compoundList.size()) {
 				compoundList.resize(*tailIterator+1);
 			}
@@ -120,37 +120,31 @@ public:
 		return minimumCost;
 	}
 
-	double maxYield(CompoundNode &v, std::vector<int> &list) {
-		std::cout << "maxYield(" << v.id << ")" << std::endl;
-		auto startingCompoundIterator = list.begin();
-		while (startingCompoundIterator != list.end()) {
-			if (v.id == *startingCompoundIterator) {
-				return 1.0; //starting compounds always have a yield of 100%
-			}
-			++startingCompoundIterator;
+	double maxYield(CompoundNode &v, CompoundNode &s) {
+		if (v.id == s.id) {
+			return 1.0; //starting compounds always have a yield of 100%
 		}
 		double maximumYield = 0; // infinity
-		auto productOfReactionIterator = v.productOfReaction.begin();
 		for(auto productOfReactionIterator = v.productOfReaction.begin(); productOfReactionIterator != v.productOfReaction.end(); ++productOfReactionIterator ) {
-			ReactionNode *r1 = getReaction(*productOfReactionIterator);
+			ReactionNode *r1;
+			if (*productOfReactionIterator == 0) {
+				r1 = v.toS;
+			}
+			else{
+				r1 = getReaction(*productOfReactionIterator);
+			}		
 			double yield = r1->yield;
 			for (auto reactionTailIterator = r1->tail.begin(); reactionTailIterator != r1->tail.end(); ++reactionTailIterator) {
-				std::cout << "yield before " << yield << std::endl;
-				yield = yield * maxYield(*getCompound(*reactionTailIterator), list);
-				std::cout << "yield after " << yield << std::endl;
-
-
+				yield = yield * maxYield(*getCompound(*reactionTailIterator), s);
 			}
-			std::cout << "maximumYield: " << maximumYield << " yield: " << yield << std::endl;
 			if (maximumYield < yield) {
 				maximumYield = yield;
 				v.maxYieldEdge = *productOfReactionIterator;
-				std::cout << "maxYieldEdge from " << v.id << " is: " << v.maxYieldEdge << std::endl;
 			}
 		}
 		return maximumYield;
 	}
-
+	//Not updated to s use.
 	double shortestPathMinimumCost(CompoundNode &v, std::vector<int> &startingCompounds) {
 		CompoundNode *s = new CompoundNode(); //MIGHT NOT BE NEEDED
 		s->id = 0;
@@ -160,7 +154,7 @@ public:
 			head.push_back(*startingCompoundIterator);
 			std::vector<int> tail;
 			tail.push_back(s->id);
-			addReaction(0, head, tail, 0.0);
+			addReaction(0, head, tail, 1.0);
 			++startingCompoundIterator;
 		}
 		return minCost(v, startingCompounds);
@@ -175,10 +169,14 @@ public:
 			head.push_back(*startingCompoundIterator);
 			std::vector<int> tail;
 			tail.push_back(s->id);
-			addReaction(0, head, tail, 0.0);
+			ReactionNode *r = new ReactionNode(0, head, tail, 1.0); 	
+			CompoundNode *c = getCompound(*startingCompoundIterator);
+			c->toS = r;
+			c->productOfReaction.push_back(r->id);
 			++startingCompoundIterator;
 		}
-		return maxYield(v, startingCompounds);
+		compoundList.at(s->id) = *s;
+		return maxYield(v, *s);
 	}
 
 	ReactionNode* getReaction(int id){
@@ -190,12 +188,89 @@ public:
 	}	
 
 	CompoundNode* getCompound(int id){
-		if (compoundList.at(id).id == 0 ) {
+		/*if (compoundList.at(id).id == 0 ) {
 			std::cout << "No compound with ID: " << id << std::endl;
 			assert(false);
-		}
+		}*/
 		return &compoundList.at(id);
 	}	
+
+	int compoundInDegree(int compoundID) {
+		return getCompound(compoundID)->productOfReaction.size();
+	}
+
+	int reactionInDegree(int reactionID) {
+		return getReaction(reactionID)->tail.size();
+	}
+
+	int reactionOutDegree(int reactionID) {
+		return getReaction(reactionID)->head.size();
+	}
+
+	int highestCompoundInDegree() {
+		int highest = -1;
+		for (auto it = compoundList.begin(); it != compoundList.end(); ++it ) {
+			if (it->id != 0) {
+				int degree = compoundInDegree(it->id);
+				if (highest == -1) {
+					highest = it->id;
+				}
+				if (degree > compoundInDegree(highest)) {
+					highest = it->id;
+				}
+			}
+		}
+		return highest;
+	}
+
+	int highestCompoundOutDegree() {
+		std::vector<int> OutDegreeList;
+		OutDegreeList.resize(compoundList.size());
+		for (auto reactionIterator = reactionList.begin(); reactionIterator != reactionList.end(); ++reactionIterator) {
+			for (auto tailIterator = reactionIterator->tail.begin(); tailIterator != reactionIterator->tail.end(); ++tailIterator) {
+				OutDegreeList.at(*tailIterator)++;
+			}
+		}
+		int highest = -1;
+		for (auto it = OutDegreeList.begin(); it != OutDegreeList.end(); ++it ) {
+			if (*it > highest) {
+				highest = *it;
+			}
+		}
+		return highest;
+	}
+
+	int highestReactionInDegree() {
+		int highest = -1;
+		for (auto it = reactionList.begin(); it != reactionList.end(); ++it ) {
+			if (it->id != 0) {
+				int degree = reactionInDegree(it->id);
+				if (highest == -1) {
+					highest = it->id;
+				}
+				if (degree > reactionInDegree(highest)) {
+					highest = it->id;
+				}
+			}
+		}
+		return highest;
+	}
+
+	int highestReactionOutDegree() {
+		int highest = -1;
+		for (auto it = reactionList.begin(); it != reactionList.end(); ++it ) {
+			if (it->id != 0) {
+				int degree = reactionOutDegree(it->id);
+				if (highest == -1) {
+					highest = it->id;
+				}
+				if (degree > reactionOutDegree(highest)) {
+					highest = it->id;
+				}
+			}
+		}
+		return highest;
+	}
 
 
 	void printCompoundList() {

@@ -1,4 +1,4 @@
-#include "HyperGraph.hpp"
+#include "include/HyperGraph.hpp"
 #include <iostream>
 int main(int argc, char const *argv[])
 {
@@ -54,16 +54,16 @@ int main(int argc, char const *argv[])
 	int tail10[] = {7};
   	std::vector<int> reacttail10 (tail10, tail10 + sizeof(tail10) / sizeof(int) );
 
-  	h.addReaction(1, reacthead1, reacttail1, 0.5);
-  	h.addReaction(2, reacthead2, reacttail2, 0.8);
-  	h.addReaction(3, reacthead3, reacttail3, 0.8);
-  	h.addReaction(4, reacthead4, reacttail4, 0.4);
-  	h.addReaction(5, reacthead5, reacttail5, 0.4);
-  	h.addReaction(6, reacthead6, reacttail6, 0.4);
-  	h.addReaction(7, reacthead7, reacttail7, 0.5);
-  	h.addReaction(8, reacthead8, reacttail8, 0.4);
-  	h.addReaction(9, reacthead9, reacttail9, 0.8);
-  	h.addReaction(10, reacthead10, reacttail10, 0.8);
+  	h.addReaction(1, reacthead1, reacttail1, 2);
+  	h.addReaction(2, reacthead2, reacttail2, 1);
+  	h.addReaction(3, reacthead3, reacttail3, 1);
+  	h.addReaction(4, reacthead4, reacttail4, 2);
+  	h.addReaction(5, reacthead5, reacttail5, 2);
+  	h.addReaction(6, reacthead6, reacttail6, 2);
+  	h.addReaction(7, reacthead7, reacttail7, 2);
+  	h.addReaction(8, reacthead8, reacttail8, 2);
+  	h.addReaction(9, reacthead9, reacttail9, 2);
+  	h.addReaction(10, reacthead10, reacttail10,2);
 
   	/*h.printCompoundList();
   	h.printReactionList();
@@ -85,12 +85,28 @@ int main(int argc, char const *argv[])
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
-	std::cout << h.shortestPath(*goal, startingCompound) << " is cheapest " << std::endl;
+	std::cout << h.shortestPathMaxiumYield(*goal, startingCompound) << " is maxyield " << std::endl;
 	auto test1 = h.getCompound(8);
 	std::cout << test1->maxYieldEdge << std::endl;
-	auto test2 = h.getCompound(4);
+	auto test2 = h.getCompound(6);
 	std::cout << test2->maxYieldEdge << std::endl;
-	auto test3 = h.getCompound(5);
+	auto test3 = h.getCompound(3);
 	std::cout << test3->maxYieldEdge << std::endl;
+  auto test4 = h.getCompound(2);
+  std::cout << test4->maxYieldEdge << std::endl;
+  auto test5 = h.getCompound(1);
+  std::cout << test5->maxYieldEdge << std::endl;
+  
+  std::cout << "compound 8 has degree in " << h.compoundInDegree(8) << std::endl;
+  std::cout << "reaction 6 has degree in " << h.reactionInDegree(6) << std::endl;
+  std::cout << "reaction 6 has degree out " << h.reactionOutDegree(6) << std::endl;
+
+  std::cout << "Node with highest indegree is: " << h.highestCompoundInDegree() << std::endl;
+  std::cout << "Node with highest outdegree is: " << h.highestCompoundOutDegree() << std::endl;
+  std::cout << "Reaction with highest indegree is: " << h.highestReactionInDegree() << std::endl;
+  std::cout << "Reaction with highest outdegree is: " << h.highestReactionOutDegree() << std::endl;
+
+
+
 	return 0;
 }
