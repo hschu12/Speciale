@@ -1,0 +1,696 @@
+\documentclass[a4paper,10pt,titlepage]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bchart}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[style=authoryear,backend=bibtex]{biblatex}
+
+\bibliography{bibreferencer}
+
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{%
+    pdfborder = {0 0 0}
+}
+
+\parindent0em
+
+\lstset{%
+frame=single,
+numbers=left,
+numberstyle=\footnotesize,
+tabsize=2,
+keepspaces=true,
+columns=fullflexible,
+basicstyle=\ttfamily\scriptsize,
+inputencoding=utf8,
+extendedchars=true,
+}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+
+\fancyhf{} % resetting the header and footer
+\pagestyle{fancy} % using fancyhdr to make custom header and footer 
+\lhead{Henrik Schulz} % left header
+\lfoot{} % left footer
+\chead{Fra krav til produkt\\ En musikfestivalsapplikation til iOS}
+\rhead{1. august 2015} % right header
+\rfoot{Page \thepage\ of \pageref{LastPage}} % right footer
+\renewcommand{\headrulewidth}{0.0pt} % removing the header separtions line
+
+\title{Fra krav til produkt \\ En musikfestivalsapplikation til iOS}
+\author{From requirements to product - A music festival application for iOS\\ \\Bachelor 2015\\Henrik Schulz}
+\date{01/8/2015}
+
+\begin{document}
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+\textsc{\LARGE Syddansk Universitet\\\vspace{0.2cm}Institut for Matematik og Datalogi}\\[1.5cm] % Name of your university/college
+\textsc{\large Bachelor Projekt -- 01/08-2015}\\[0.5cm] % Major heading such as course name
+
+\HRule \\[0.4cm]
+{\huge \bfseries Fra krav til produkt \\En musikfestivalsapplikation til iOS}\\[0.4cm] 
+{From requirements to product - A music festival application for iOS}
+\HRule \\[1.5cm]
+
+\begin{minipage}{0.3\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Henrik Schulz\\
+
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\vspace{0.5cm}
+\emph{Supervisors:} \\
+Rolf Fagerberg\\
+Vitus Vestergaard
+\end{flushright}
+\end{minipage}\\[4cm]
+\includegraphics[scale=0.3]{Billeder/logo.png}
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\tableofcontents
+\vfill
+\section*{Abstract}
+The project "From requirements to product - A music festival application for iOS" uses the iterative methods of interaction design in the development of an application to Tønder Festival. It also uses Mike Gualtieri's criterias and definitions of a good user experience in the final evaluation of the product.\\
+The requirements for the application was collected using interviews, and focus group were used for evaluating each of the prototypes. The project consists of three low fidelity prototypes, one high fidelity prototype and the final implemented product. POPApp has been used to show the prototypes to the focus group.\\ 
+The final product meets Mike Gualtieri's definitions of a good user experience and must be evaluated as a success. Tønder Festival was also very pleased with the final product and the course of the project. The release of the final product has not been decided before deadline of this project.
+\newpage
+\section{Resumé}
+Projektet "Fra krav til produkt - En musikfestivalsappliation til iOS" består af syv dele, der alle er en del af den iterative arbejdsmetode, som interaktionsdesign benytter sig af:
+\begin{enumerate}
+\item
+Klarlægning af festivalens krav
+\item
+Udformning af 3 forskellige designs i form af low fidelity prototyper
+\item
+Evaluering af low fidelity prototyper ved fokusgruppe
+\item
+Brug af evaluering til udformning af high fidelity prototype
+\item
+Evaluering af high fidelity prototype ved fokusgruppe
+\item
+Implementering af endeligt produkt
+\item
+Evaluering af endelige produkt ved festivalledelse
+\end{enumerate}
+For at kunne lave en personlig vurdering af det endelige produkts brugervenlighed bliver Mike Gualtieris\footnote{https://www.forrester.com/Mike-Gualtieri} krav og definitioner for brugervenlighed benyttet.\\
+Selve arbejdsmetoden, som ligger bag interaktionsdesign, har vist at være til stor glæde for kunden, da de føler sig som en del af udviklingsforløbet. For at kunne vise prototyperne til de forskellige medlemmer af fokusgruppen blev POPApp benyttet.\\
+Ud fra de krav som Mike Gualtieri opstiller, må den endelige applikation anses for at være brugervenlig og brugbar. Tønder Festival har udvist stor tilfredshed ved projektet og forløbet, men endelig benyttelse af produktet vil først blive besluttet efter projektets afslutning.
+\section{Forord}
+Den følgende rapport er den skriftlige del af mit bachelor projekt "Fra krav til produkt - En musikfestivalsappliation til iOS", som blev udformet i perioden 1. februar 2015 til 1. august 2015. Selve programmeringsprojektet befinder sig på github\footnote{https://github.com/hschu12/Bachelor2015} og er frit tilgængeligt for alle. \\
+Jeg vil gerne takke mine vejledere Rolf Fagerberg og Vitus Vestergaard for hjælp og vejledning gennem hele forløbet. \\
+Derudover vil jeg takke Tønder Festivals ledelse for at have givet mig lov til at arbejde med dem som kunde. De har været imødekommende og behjælpelige, når jeg har manglet info og materialer til applikationen. \\
+Sidst, men ikke mindst, vil jeg takke min fokusgruppe Kirstine Uhrbrand, Maria Theessink, Morten Dahl Pedersen, Sille Linnet, Katrine Iwersen Flyman, Bert Schultz og Heidi Iwersen for deres samarbejde med evaluering af mine prototyper og det endelige produkt. 
+\section{Indledning}
+I løbet af dagen kommer man i kontakt med mange produkter. Disse produkter har ofte til mål at gøre vores hverdag lettere og hjælpe med dagligdagens gøremål. Dette kan dog kun lade sig gøre, hvis de ikke gør opgaven mere besværlig, end hvis den skulle klares uden produktet. Hvis brugerne har en god oplevelse med produktet, er de mere tilbøjelige til at benytte sig af det, og for at hæve brugeroplevelsen kan man benytte sig af interaktionsdesign.\\
+Interaktionsdesign benytter sig af forskellige redskaber for at tage hånd om brugerne og deres oplevelse med produktet og på den måde fremme de positive aspekter ved produktet, mens den reducerer de negative. Formået med denne opgave er at skabe et produkt ved hjælp af interaktionsdesigns værktøjer og på den måde imødekomme kundens og brugernes krav.
+
+\subsubsection*{Problemformulering}
+Gennem et tæt samarbejde med ledelsen af Tønder Festival vil der blive indsamlet kvalitative data fra ledelse, betalende gæster og frivillige medarbejdere fra festivalen. Disse data vil danne udgangspunktet for kravspecifikationen for en festivalapplikation til iPhone. Kravene vil blive fornyet gennem en iterativ arbejdsproces, hvor evalueringer fra brugerne vil danne grundlag for designvalg.  Efter at low fidelity og high fidelity prototyper er blevet godkendt, vil implementationen af en funktionel applikation blive udført. Applikationen vil have fokus på et interface til de betalende gæster. Af ideer som vil blive fremlagt på første møde vil følgende være en del:
+\begin{itemize}
+\item
+En oversigt over tidspunkter og scene for koncerter
+\item
+En gennemgang af kunstnerne
+\item
+Kort over festivalpladsen
+\end{itemize}
+Ideerne kommer fra det nuværende papirprogram, som bliver produceret hvert år.  Til implementation af den endelige applikation vil der blive benyttet Xcode. For at kunne implementere applikationen vil der være behov for at lære programmeringssproget Objective-C.
+
+\section{Ordliste}
+\begin{itemize}
+\item
+\textbf{Design pattern:} Et design pattern er en generel genanvendelig løsning på et almindeligt forekommende problem inden for en given kontekst i software design.
+\item
+\textbf{Semi-struktureret interview:} Et interview som har nogle fastlagte spørgsmål fra interviewerens side, men som ikke kræver en slavisk gennemgang fra spørgsmål 1 til $n$, men derimod indbyder til åben og fri samtale.
+\item
+\textbf{Swipe:} Bevægelse man laver på skærmen med én eller flere fingre. 
+\end{itemize}
+\section{Teori}
+\subsection{Interaktionsdesign}
+Målet med interaktionsdesign er at forme og opbygge et produkt, så det passer bedst muligt til de brugere, som i sidste ende skal benytte sig af produktet. Det handler om at udvikle interaktive produkter, der er nemme at bruge, effektive og behagelige - set fra brugernes synspunkt.\\
+Processen bag interaktionsdesign involverer fire basale aktiviteter:
+\begin{enumerate}
+\item
+Fastlæggelse af krav
+\item
+Alternative designs
+\item
+Prototyper
+\item
+Evaluering
+\end{enumerate}
+Disse aktiviteter har til formål at informere hinanden og indgår i en iterativ proces. Med en iterativ proces menes der, at man efter evaluering er i stand til at gentage processen for at indarbejde de nye ønsker og krav, der er blevet klarlagt sammen med designeren, efter at kunden eller potentielle brugere har evalueret det midlertidige produkt. Dermed er alle krav og målsætninger altså ikke nødvendigvis fastlagt 100 procent fra starten, og det endelige produkt kan variere fra det som kunden i første omgang havde tænkt sig. \parencite[pp. 2-15]{Interaction}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{Billeder/Iterativ.png}
+\caption{Den iterative process i interaktionsdesign\parencite{Interaction}}
+\end{figure}
+\subsubsection{Fastlæggelse af krav}
+Krav er en vigtig del af interaktionsdesign når det kommer til at udvikle til andre, og det er essentielt at fastsætte klare og konkrete krav for at sikre at alle brugerbehov opfyldes. Udvikler man sit eget produkt indfanger man ikke krav på samme måde, da man selv har en ide om, hvordan det endelige produkt skal være. Udvikler man derimod for andre, er det vigtigt at få deres tanker om det endelige produkt formuleret og fastlagt tilstrækkeligt til, at man selv kan skabe sig deres mentale billede af produktet. Der er mange forskellige måder at tilegne sig denne information på.\\
+
+Interviews bruges ofte til at indfange de basale krav i starten af projektet. Her kan man stille spørgsmål til kunden om, hvilke tanker de gør sig om produktet, og hvordan de tænker, at deres fremtidige produkt vil kunne bruges af deres brugere. \\
+En undergren af interviews er fokusgrupper. Her bryder man ideen om, at et interview kun er mellem to personer og samler 3-10 personer, der er sammensat af mennesker, som typisk vil være en del af målgruppen for produktet. De bliver præsenteret for projektet. Her får intervieweren mulighed for at få input fra mennesker, som ser forskelligt på produktet, da de kan have forskellige scenarier, hvori de kan bruge det. På den måde kommer ikke før sete problemer frem i lyset, og da medlemmerne har forskellige syn på produktet, vil de også kunne få de andre i gruppen til at skulle tage stilling til dele, som de ellers ikke har tænkt på.\parencite{Interaction} \\
+
+Spørgeskemaer bliver brugt til at kunne få svar på specifikke spørgsmål. Det er her et krav, at spørgsmålene er meget præcise, da der ikke længere er en interviewer til at uddybe, hvis der er tvivl, og af samme grund er meget lukkede og dårligt formulerede spørgsmål farlige, da besvareren kan risikere at svare på andet end, hvad de egentligt blev spurgt om. Et positivt aspekt af spørgeskemaer er, at de gør det muligt at få svar fra en stor gruppe af mennesker, og er især gode i tilfælde af, at gruppen af mennesker er spredt over et stort område, og det derfor er svært at samle dem til et mere personligt interview/fokus gruppe. \parencite{Interaction}
+\subsubsection{Alternative designs}
+Efter kravene er blevet fastlagt, er det vigtigt at få omformet dem til konceptuelle modeller. En konceptuel model er en måde at beskrive produktet som koncept. Den giver en ide om, hvad brugerne kan med dette produkt, og hvilke designmetaforer produktet bygger på. I dette projekt skal der f.eks. tages højde for, at man har med en mobil platform at gøre. Når de konceptuelle rammer er blevet lagt, kan man arbejde sig videre mod de mere håndgribelige og konkrete prototyper, hvor man ofte vil fremstille forskellige designvalg. Ved at lave flere forskellige designs tvinger man ens kunder eller testpersoner til at tage en holdning til, hvad de synes fungerer i designet. Da personen sjældent har viden om, hvad der faktisk er muligt, vil han/hun heller ikke vide, om der er en bedre måde end den, som bliver præsenteret. Ved flere designs fremvises disse muligheder, og personen vil kunne tage stilling til, hvad der egentlig fungerer i deres øjne.\\
+Efter alle personer har tilkendegivet deres personlige meninger, er det designerens opgave at samle denne spredte information og evaluere, hvad der er det bedste og mest smarte at sende videre til et potentielt færdigt design.\parencite{Interaction}
+\subsubsection{Prototyper}
+Prototyper er manifestationer af forskellige designforslag Det giver potentielle brugere mulighed for at interagere med produktet før det er færdigt, og dermed også muligheden for feedback før produktet færdiggøres. Jeg arbejder i dette projekt med to dybder af prototyper: Low fidelity og High fidelity.
+\subsubsection*{Low Fidelity}
+En low fidelity prototype er en prototype, som ikke nødvendigvis ligner det endelige produkt. Den kan f. eks. være lavet af papir placeret på en tavle i stedet for en skærm med bagvedliggende funktionel elektronik.
+Low fidelity prototyper er brugbare, fordi de ofte er simple, billige og hurtige at producere. Det betyder samtidigt også, at de er simple, billige og hurtige at ændre på, så de kan afspejle de forskellige designs og ideer. Low fidelity prototyper er en vigtig del i de tidlige stadier af udviklingen af produktet, bl.a. når der skal laves beslutninger om design. Det endelige produkt kan derfor også variere meget fra de første prototyper, da der vil være designs, der bliver erstattet af bedre og mere funktionelle designs.
+\subsubsection*{High Fidelity}
+High fidelity prototyper er en prototype som ligger meget tæt op af det endelige produkt og skal ofte afspejle, hvordan det endelige produkt fungerer og føles, dog uden at have den fuldstændige funktionalitet eller være konstrueret af det korrekte materiale. I dette projekt vil high fidelity prototypen ikke leve 100\% op til definitionen af en high fidelity og vil derfor kunne betegnes mere som at være en middle fidelity. Den vil stadig benytte sig af stillbilleder og POPApp til at fremvise funktionaliteten. Stillbillederne vil dog ikke længere blot være tegninger, men derimod computergenerede billeder, som vil kunne afspejle det endelige produkt med farver, tekst, billeder og bevægelser mellem sider. Dette er et valg, der er taget grundet tidsrammen for projektet. Der vil stadig være store forbedringer i forhold til low fidelity prototypen, men funktionaliteten er overladt til POPApp. Dette giver mig muligheden for hurtige ændringer, hvis jeg gennem mit arbejde med fokusgruppen skulle finde et relevant behov for ændringer inden implementering.
+\subsubsection{Evaluering}
+Evaluering er den del af processen, som giver information til forbedringer og ændringer. I dette projekt har jeg samlet en gruppe af forskellige og køn og aldersgrupper, som kan give mig feedback på de designvalg og den funktionalitet, der bliver tilbudt. Denne feedback fungerer som en målestok for, hvorvidt kravene for produktet er opfyldt. Skulle man ikke være nået helt i mål, vil feedbacken blive brugt som grundlag til forbedringer i den næste iteration.\\
+I sidste ende vil produktet opfylde kravene tilstrækkeligt, plus det stadigt er behageligt at bruge, og producenten vil kunne frigive det endelige produkt. Det er ikke nødvendigt at opfylde alle krav før frigivelse, da nogen ændringer kræver kompromiser og derfor muligvis gør mere skade end gavn. Spørgsmålet er, om ændringen får nogen betydelig virkning på produktet, eller om det blot er at opfylde enkelte personers ønsker.
+\subsection{Brugeroplevelsen}
+Brugeroplevelsen (The User Experience) er central for interaktionsdesign. Det handler om, hvordan mennesker føler omkring et produkt og deres oplevelse, når de bruger det, ser på det og holder det. Det inkluderer deres overordnede indtryk af produktet samt de helt små detaljer så som modstanden i en knap, når den bliver trykket ned. \\
+Mike Gualtieri\parencite{AppBestPractice} berører nogle vigtige aspekter, når det kommer til at designe en brugeroplevelse på mobile enheder. Først og fremmest skal brugeren kunne holde af applikationen, og til det opstiller han tre krav, hvor især de to første henvender sig til selve applikationen:
+\begin{itemize}
+\item
+Useful: Kan brugeren opnå deres mål?\\
+En applikation skal først og fremmest give funktionaliteten, som tillader en bruger at opnå sine mål. Mobile enheder er en fantastisk måde at bringe funktionalitet ud til brugerne. Dette skyldes deres "anywhere, anytime nature". De kan befinde sig næsten alle tænkelige steder og kan derfor hjælpe ejeren i både forventede og uventede situationer. De er blevet en del af mennesket og er med os over alt.
+\item
+Usable: Hvor let kan brugeren opnå sit mål?\\
+Dette er meget vigtigt, for hvor meget er din applikation værd, hvis du laver fantastisk funktionalitet, hvis det er svært at bruge. Selv hvis din applikation har noget som er så fantastisk, at det gør op for den manglende brugervenlighed, vil du miste alle dine kunder i det øjeblik, at en konkurrent har noget som gør det samme - bare på en mere brugervenlig måde.
+\end{itemize}
+Et andet vigtigt aspekt inden for brugeroplevelsesdesign er kontekst, fordi det beskriver det miljø som brugeren muligvis vil skulle bruge applikationen i, og de features som vil være mest brugbare og nyttefulde i øjeblikket. Når det kommer til de mobile enheder og applikationer, er det især inden for fem dimensioner, som han forkorter LLIID:
+\begin{itemize}
+\item
+Location: Folk bruger applikationer vidt forskellige steder og er en nøgledimension inden for kontekst, da den frembringer forskellige krav og ønsker, alt efter hvor de befinder sig. Dette er noget som en standard stationær computer ikke bliver berørt af i samme grad, og selv om bærbare computere har lignende bevægelighed, så er det langtfra noget, man benytter overalt, som man gør med en smartphone.
+\item
+Locomotion: Mobile enheder bliver ofte brugt på farten. Dette gør, at der af og til er andre krav til produktet end hvis de var stationære. Brugeren kan for eksempel kun have en hånd til rådighed, fordi den anden bærer på tasker, eller ingen hænder til rådighed fordi de kører bil. 
+\item
+Immediacy: Brugeren forventer at have den rigtige applikation til det rigtige tidspunkt. Netop fordi de er på farten, vil de skulle kunne bruge den her og nu og få den information, som de kræver. En ideel applikation vil kunne benytte location og locomotion til at opfylde brugerens krav og derved skabe denne form for forbindelse mellem brugere og produkt.
+\item
+Intimacy: Brugeren identificerer sig med deres mobile enheder, og udvikleren kan udnytte dette personlige bånd mellem enhed og person i sin applikation. Da mennesker er forskellige, vil de også have forskellige grader af forhold med enheden. En person, som elsker at shoppe efter tilbud, vil ikke kun reagere, men ligefrem blive glad, hvis en applikation pusher en besked, om at der er et godt tilbud i nærheden, hvorimod andre vil finde det irriterende at blive forstyrret. Når der skal designes med intimiteten mellem enhed og ejer for øje, er det vigtigt at forstå hver enkelt persons forhold med den mobile enhed, så udvikleren kan finde passende kapacitet til netop den kontekst, de befinder sig i. 
+\item
+Device: Her findes en af de største udfordringer inden for design af brugeroplevelser. De forskellige størrelser og funktionsmuligheder de forskellige udbydere af mobile enheder tilbyder, gør at programørerne skal være i stand til at vide, hvilke features der er til rådighed på den bestemte mobile enhed. Features, så som motion caption, stemmegenkendelse, touch og swipes, varierer fra enhed til enhed. Device kontekst er vigtig, fordi udviklere skal lave applikationer ved kun at bruge de funktionsmuligheder, der er til rådighed.
+\end{itemize}
+Ved at tage disse aspekter med i sin designproces kan de være med til at skabe en bedre brugeroplevelse for brugerne, og dermed skabe en succesfuld applikation, som mennesker vil benytte og have glæde af.\parencite{AppBestPractice}
+\subsection{Cocoa Touch}
+Cocoa Touch er en samling af software frameworks, som bliver brugt til iOS applikationer samtidig med, at det er runtime-miljøet, som applikationerne bliver kørt i. Cocoa Touch inkluderer hundredvis af klasser, der håndterer alt fra knapper og URLs til at manipulere billeder og udføre ansigtsgenkendelse.\\
+Fordelen ved at programmere med Cocoa Tourch i forhold til andre platforme såsom Android er, at selv om iOS er en forholdsvis ny platform, bygger den på Cocoa frameworks, der har været under udvikling, siden det kom til verden som en efterfølger til NeXTSTEP platformen. NeXTSTEP blev brugt i midten af 1980'erne af NeXT computere. NeXT blev købt i 1996 af Apple, og det blev herefter standarden inden for udvikling til Macintosh.\\
+Forskellen på Cocoa og Cocoa Touch er, at Cocoa hovedsageligt er udviklet med henblik på OS X. Selvom iOS bygger på mange af de samme fundamentale teknologier af OS X, er det ikke det samme. Cocoa Touch har undergået en stor ombygning fra Cocoa, da det skal tage højde for touch interfacet samtidig med, at det blandt andet skal kunne holde sig inden for de begrænsninger, der er at finde, hvis man arbejder med en håndholdt enhed så som iPhone, iPad og iPod. \parencite[side 103]{Teach}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/iOSLayers.png}
+\caption{De forskellige lag af iOS\parencite{Layers}}
+\end{figure}
+
+\subsubsection{Cocoa Touch layer}
+Som det fremstår af figur 2 er Cocoa Touch det øverste "lag" af services til iOS applikation. Her findes kernefunktionaliteten for ens applikationer. Her finder man det første essentielle framework UIKit.\\
+UIKit dækker en stor del af funktionaliteten. Det er bl.a. ansvarligt for at applikationen starter op og lukker korrekt, kontrollerer interfacet og multitouch events og gør det muligt at vise forskellige typer af data (hjemmesider, dokumenter osv.). Det håndterer også alle intra-iOS features. Dette kunne være at tilgå medie biblioteket, billede biblioteket eller accelerometeret.\parencite[side 103-104]{Teach}
+\subsubsection{Media Layer}
+Under Cocoa Touch-laget ligger medielaget. Dette lags frameworks gør, at iPhone kan håndtere kompleks lyd og video afspilning samt genere real-time 3D grafikker\parencite[side 105]{Teach}. Et framework, som bliver benyttet i projektet, er Core Graphics. Core Graphics gør det muligt at manipulere med de grafiske interfaces samt håndtering og generering af billede og PDF. \parencite{CoreService}.
+\subsubsection{Core Services Layer}
+Det næstnederste lag bliver brugt til at tilgå lavere niveau operativ system services så som fil adgang, iCloud, netværk og mange andre almene data objekt typer.\parencite[side 106]{Teach}\\
+Et at de meget brugte frameworks i dette lag er Foundation. Foundation frameworket giver mulighed for at benytte sig af sine Objective-C klasser. Hertil hører et sæt af brugbare primitive objekt klasser såsom string og arrays. \parencite{CoreFound}
+\subsubsection{Core OS Layer}
+Det nederst lag i iOS er Core OS. Det består af de inderste services tilgængeligt for iOS. Her vil man finde support for threads, compleks matematik, hardware accessories og kryptologi. Man tilgår sjældent selv de frameworks, der bliver tilbudt i dette lag, og de virker som en mere autonom del af iOS.
+\subsection{Objective-C}
+Programmeringssproget, som vil blive benyttet i dette projekt, er Objective-C. Objective-C er et objekt orienteret programmeringssprog (OOP). Denne type af programmeringssprog giver mulighed for at indfange fællestræk for forskellige dele af programmet i klasser. Når klassen er oprettet er det muligt at generere flere instanser af den samme klasse. Dette sker ved at oprette et nyt objekt af den givne type og udfylde de nødvendige attributter. Dette reducerer mængden af gentagende kode. \parencite[side 68-69]{Teach}\\ I dette projekt ser man brugen af klasser i form af de vinduesklasser, som bliver genereret. I stedet for at have klasser for hvert vindue, som i bund og grund består af de samme elementer (f. eks. et billede og et tekstfelt), kan jeg oprette en klasse, der indeholder disse elementer som standard, og derfor behøver jeg kun at definere, hvad elementerne indeholder.\\
+
+Objective-C bygger ovenpå programmeringssproget C og er derfor stadig fuldt kompatibelt med kode, som er skrevet i C. Et af de elementer, som er ført videre fra C, er fil strukturen. I C har hver klasse en Header/Interface fil, som er af filtypen ".h" og en implementeringsfil af filtypen ".c". Den eneste ændring i Objective-C til denne struktur er, at ".c"filen er blevet erstattet af en ".m"fil. Som navnene hentyder består header filen af interfacet til implementeringsfilen. Her finder man navnet samt de attributter, som skal gives med på alle de metoder, som befinder sig i .m filen. Ideen i at have et interface er, at brugeren af metoderne ikke har direkte adgang til metoderne og deres implementering, men derimod kun kan tilgå dem gennem interfacet/header filen. \parencite[side 71-85]{Teach}
+
+\subsection{Model-View-Controller}
+Da koden, som ligger bag et user interface ofte både er kompleks og fyldt med små detaljer, vælger man som udvikler ofte at dele koden op i mindre, konceptuelle komponenter, der gør det nemmere at rette og udvikle på komplekse systemer. Et meget udbredt design pattern, der bliver brugt til at dele user interface designet op i konceptuelle komponenter, er Model-View-Controller (MVC). Figur 3 viser hvordan MVC deler user interfacet op i tre konceptuelle komponenter - applikationens logik (Model'en), user interfacets præsentation (View'et) og brugeres input/output og navigationsfunktionalitet (Controller). Denne deling af systemet giver mulighed for individuel udvikling, test og vedligeholdelse af hvert komponent.\parencite[side 207]{MVC}
+\begin{figure}[H]
+\centering\includegraphics[scale=0.4]{Billeder/MVC.png}
+\caption{Model-View-Controller design pattern \parencite{MVCPic}}
+\end{figure}
+\subsubsection*{Model}
+Modellen indeholder sessions-specifik repræsentation af dataen, også kaldet tilstanden af systemet, i det øjeblik en interaktion bliver udført af brugeren. Modellen indeholder altså de aktive variabler givet af brugeren såvel som database tabellerne i sig selv. Når informationen i databasen ændres, kan modellen give denne information videre til view og controller.\parencite[side 207]{MVC}
+\subsubsection*{View}
+View komponenten fremviser modellen på en måde, som understøtter brugers interaktion. Denne fremvisning består typisk af en samling af user interface artefakter såsom grafik, tekst og forskellige små implementeringer, der gør det muligt at kommunikere information mellem brugeren og modellen ved hjælp af controlleren. \parencite[side 207]{MVC}
+\subsubsection*{Controller}
+Controller komponenten modtager input fra brugeren gennem applikationens view og igangsætter et svar ved at lave ændringer i dataen i den underliggende model. Controlleren vedligeholder og fortolker altså den nuværende tilstand af en interaktion mellem brugeren og systemet.\parencite[side 208]{MVC}
+
+\section{Materialer og Metode}
+For at løse min problemformulering har jeg benyttet mig af følgende fremgangsmåde:
+\begin{enumerate}
+\item
+Indsamle krav fra ledelsen af Tønder Festival gennem et møde
+\item
+Lave tre low fidelity protoyper ved hjælp af et tegneprogram på computer, hvor hovedvægten er på design
+\item
+Fremvise low fidelity prototyper for fokusgruppen ved hjælp af Prototype On Paper App, og indsamle meninger om de forskellige designmuligheder
+\item
+Samle det gode fra de forskellige low fidelity prototyper til en samlet high fidelity app ved at benytte Xcode, og flytte fokus til indhold og funktionalitet
+\item
+Fremvise high fidelity prototype for fokusgruppe ved hjælp af Prototype On Paper App samt have møde med ledelsen for Tønder Festival, hvor de kunne benytte Xcode Simulator for mere livagtig fremvisning. Her vil de sidste ændringer til indhold, funktionalitet og design bliver fastlagt
+\item
+Implementere indhold, som bliver fremsendt fra Tønder Festival og offentliggøre applikationen på App Store\footnote{Dette lader sig kun gøre med Tønder Festivals godkendelse}.
+\end{enumerate}
+\subsection{Dataindsamling}
+For at kunne indsamle data omkring ønsker og krav til applikationen har jeg benyttet mig af forskellige arbejdsmetoder. Der er tale om interviews, fokusgrupper samt spørgeskemaer.
+\subsubsection{Interview}
+For at skabe et grundlæggende billede af, hvad festivalledelsen havde af tanker omkring en applikation til festivalens gæster, foretog jeg den 25/2-2015 et semi-struktureret interview med den administrative leder af festivalen, Kirstine Uhrbrand. Jeg valgte at benytte mig af en lyd-optager til at optage hele interviewet samt håndskrevne noter/sketchs til at indfange de ideer og tanker, som ellers ikke kunne formuleres nemt ved ord. \\
+Grunden til at jeg valgte at benytte mig af et semi-struktureret interview, skyldes både at jeg selv havde enkelte spørgsmål jeg skulle have svar på, samt at jeg ønskede mig en mere emneopdelt samtale, så det ikke blot blev til en brainstorm bestående af enkelte stikord. Emnerne kan ses i appendiks under sektion 9.1. Da jeg på daværende tidspunkt ikke havde den store ide om, hvad der var muligt både tids- og evnemæssigt, valgte vi at tage alle ideer og tanker med og derved ikke udelukke noget. De krav som blev fastlagt kan se i appendiks under sektion 9.2.
+\subsubsection{Fokusgruppe}
+Efter de første low fidelity prototyper blev lavet havde jeg et behov for at kunne få dem bedømt. Hertil syntes jeg ikke at festivalledelsen var tilstrækkelig, da de muligvis ville have mere at sige om funktionaliteten end om den endelige brugerflade. Derfor samlede jeg en fokusgruppe på 7 personer(3 personer som var frivillige på festivalen, 2 personer som var betalende gæster på festivalen samt 2 personer fra ledelsen (den administrative leder og musikalske leder)) af begge køn og med et aldersspænd fra 23 til 63 år. Ved at inkludere både festivalgæster, festivalfrivillige og ledelsen kunne jeg skabe mig en alsidig mening omkring designet og indholdet af applikationen. 
+\subsubsection*{Spørgeskema}
+Da min fokusgruppe var spredt vidt ud over Danmark (Århus, Tønder og Odense), valgte jeg at benytte mig af spørgeskemaer til at bedømme mine low fidelity prototyper. Det blev tilsendt i en mail til de forskellige deltagere af fokusgruppen og indeholdt links til de tre forskellige prototyper samt 5 åbne spørgsmål som de skulle besvare. Derudover havde de lov til at komme med bemærkninger og forslag til forbedringer. Selve spørgeskemaet kan ses i appendiks under sektion 9.3.
+
+\subsection{Prototyping on paper}
+\subsubsection{POPApp - En Prototyping on Paper Applikation}
+For at kunne gøre mine papir prototyper mere levende har jeg benyttet mig af POP. POP er en hjemmeside\footnote{https://popapp.in/} samt en gratis applikation til iPhone, Android og Windows Phone, som gør det muligt at uploade sine papir prototyper til en tilknyttet bruger. Her vil man kunne markere områder på sine billeder til at linke til andre billeder, og derved gøre ens applikation mere levende, da brugeren nu vil kunne interagere med prototypen,som var det en implementeret applikation. Hvis brugeren klikker på et ikke linket område vil applikation lyse de klik-bare områder op.\\ 
+\begin{figure}[H]
+\begin{center}
+\begin{minipage}{.4\textwidth}
+  \includegraphics[scale=0.4]{Billeder/POP.png}
+  \caption{Screenshot af POP fremvisning}
+ \end{minipage}
+ \begin{minipage}{.2\textwidth}
+\end{minipage}
+ \begin{minipage}{.4\textwidth}
+   \vspace{0.15cm}
+  \includegraphics[scale=0.4]{Billeder/POP1.png}
+  \caption{Grøn markering til at vise klik-bare objekter}
+\end{minipage}
+\end{center}
+
+\end{figure}
+Når prototypen er blevet færdiggjort, er der mulighed for at kunne dele den med alle personer i ens fokusgruppe. Bliver den fremvist på hjemmesiden vil den fremstå med en telefon ramme. \\
+Der er dog enkelte ulemper ved at benytte POP. Det er ikke muligt at swipe på prototypen, og man vil derfor skulle implementere dette gennem markering af områder og benytte sig af et slide frame-skift. Enkelte testpersoner vil blive snydt af funktionaliteten og vil derfor muligvis tro at det de tester, er tættere på det endelige produkt end, hvad det er designeres hensigt.
+
+\subsection{Xcode}
+Xcode er et Integrated Development Environment  (IDE) udviklet af Apple som hjælp til at udvikle software til OS X og iOS. Det understøtter de to programmeringssprog Objective-C og Swift, som begge er kompatible med Cocoa og Cocoa Touch. Det er gratis at benytte sig af Xcode, men ønsker man at kunne få support til udvikling  samt muligheden for at distribuere sin applikation bl.a. på App Store er det nødvendigt at betale et årligt beløb for at kunne blive oprettet i et Developer Program hos Apple. 
+\subsubsection{Storyboard}
+Storyboard er en feature i Xcode, som gør det nemt og overskueligt at holde styr på sammenhængen mellem sine forskellige vinduer i applikationen samt tilføje nye elementer til dem, og er hovedelementet i deres Interface Builder. Dette gør det meget overkommeligt at påbegynde nye projekter. Det er ikke nødvendigt at have den store indsigt i, hvordan man opretter nye elementer i projektets vinduer, da alle standard elementer er mulige at indsætte ved hjælp af drag-and-drop fra de pre-defineret templates.
+\subsubsection{Simulation}
+Xcode kommer med en simulator til at kunne køre ens applikation i de forskellige udgaver af iPhones og iPads som findes. Dette giver udvikleren mulighed for at finde skalleringsfejl samt teste de forskellige funktioner, før man frigiver applikationen på App Store. Denne mulighed gør, at man som udvikler ikke behøver at have de forskellige mobile enheder for at kunne teste sit produkt, og mindsker sandsynligheden for, at der bliver frigivet fejlfyldte produkter på App Store. Apple anbefaler dog, at man tester sin applikation på de rigtige enheder for at sikre, at alt fungerer efter hensigten.
+\subsubsection{MVC}
+I Xcode kommer Model-view-controller pattern af sig selv. Views er nemt genereret i Xcode ved hjælp af Interface Builder og storyboard. Når det bliver loaded i run-time skaber det selv de elementer som kræves for at have interaktivitet, så som at et tastatur åbner, når et tekstfelt bliver berørt. Til trods for dette forbliver Views helt uafhængige af applikationens logiske motor. Dette er et at fundamenterne i MVC. \\
+Før at objekterne i et View kan interagere med logikken kræver det et "connection point". Der findes to forskellige typer:
+\begin{itemize}
+\item
+Outlets: Definerer en sti mellem den skrevne kode og det tilhørende view, som kan blive brugt til at skrive eller læse specifikke typer af information.
+\item
+Actions: Definerer en metode i ens applikation, som bliver igangsat via et event i et View så som et tryk eller swipe.
+\end{itemize}  
+Al kode, som skal bruges af et view, findes i den tilhørende ViewController. Som navnet antyder så er dette vores controller i MVC. View Controlleren håndterer alle interaktioner med et View og opretter disse "connection points" for Viewets outlets og actions, som i View Controller bliver betegnet ved henholdsvis IBOutlet og IBAction og bliver tilføjet i interfacefilen til Controlleren. \\
+Den sidste del af MVC, Model, bliver ikke benyttet i de fleste applikationer. Det er først nødvendigt når der arbejdes med data, som skal gemmes og hentes. Her kan man benytte sig af Core Data library, der fungerer som et interface mellem applikationen og den underliggende datastore.\parencite{Teach}
+\subsubsection{Assistant}
+Assistant er i Xcode en måde at holde styr på sammenhængen mellem View og Controllers. Ved hjælp af Assistant kan man have sit Storyboard i halvdelen af skærmen, og når et View er markeret, vil Assistant automatisk begrænse sine valgmuligheder til de elementer som hører til netop dette view. Hvis Assistant er sat til at skulle vise den tilhørende controller kode, enten .h eller .m filen, vil man kunne trække en forbindelse fra et element i Storyboard over på koden, og Xcode vil dermed autogenere en IBOutlet eller IBAction, som senere kan benyttes til at implementere funktionalitet.\\
+Assistant har også en Preview Mode. Her fremviser den Viewet som var det på en iPhone. Dette er et værktøj, som bliver brugt, når der skal sættes layout begrænsninger på de forskellige elementer i Viewet. I stedet for at skulle kører simulatoren hver gang man har lavet en ændring, kan Assistant Preview Mode give svar på om ens begrænsninger er nogenlunde korrekte.
+\section{Resultater og diskussion}
+\subsection{Kravspecifikation}
+Efter et interview med ledelsen af Tønder Festival fik jeg etableret de krav, som skulle udgøre mine målsætninger for projektet. Som nævnt tidligere kan listen af krav ses i appendiks under sektion 9.2. Som det fremgår af listen, var der mange ideer på mødet, og intet blev skrottet i første omgang. Dette skyldes, at ingen af de deltagende, inklusiv mig selv, vidste, hvor meget der ville være muligt, samt hvor tidskrævende projektet ville være i sin helhed.\\
+Vi var dog enig om tre grundlæggende ting, som skulle være en del af det færdige produkt:
+\begin{itemize}
+\item
+Et koncert program
+\item
+En beskrivelse af alle kunstnere, som skulle spille på festivalen
+\item
+Et kort over pladsen
+\end{itemize}
+Disse elementer er en del af det nuværende program, som bliver trykt før festivalen, og ledelsen ønskede som minimum at disse elementer skulle overføres til den elektroniske platform.
+\subsection{Low Fidelity Prototyper}
+Følgende afsnit vil beskrive de tre forskellige low fidelity prototypers design, for derefter at berøre fokusgruppens feedback til førnævnte prototyper. For at undgå gentagelser omhandler første afsnit de fællestræk, der er for alle designmuligheder. I low fidelity prototyper er der ikke lagt vægt på funktionaliteten, men derimod udseendet af applikationen. Jeg havde sat mig en ambition om, at applikationen skulle indeholde de grundlæggende elementer samt en oversigt over spisesteder, et event program, basal information til festivalgæsterne, have flere sprog, en form for newsfeed og en inkludering af festivalens Spotify-playlist.\\
+De tre forskellige designs kan ses på de følgende POP links:
+\begin{enumerate}
+\item
+TF1: https://popapp.in/w/projects/54fdaff8f1e2e32231b9ee68/preview
+\item
+TF2: https://popapp.in/w/projects/54fdf33a0f577535310956cd/preview
+\item
+TF3: https://popapp.in/w/projects/54fe08fd08386a7331a8c45b/preview
+\end{enumerate}
+Disse links er også at finde i readme filen på github.\footnote{https://github.com/hschu12/Bachelor2015}.
+\subsubsection{Fællestræk}
+Fælles for de tre designs:
+\begin{itemize}
+\item
+\textbf{Beskrivelse af kunstnere og madstederne:}\\ Designet for beskrivelse af en kunstner/det enkelte spisested  består af et billede af kunstneren eller spisestedet i øverste halvdel af skærmen og en tekstboks i den nederste halvdel til information.
+\item
+\textbf{Newsfeed:}\\ Tænkt som et nyhedscenter, hvor alle nyheder fra Twitter, Facebook og Instragram ville samles. Alle tre nyhedskilder er samlet på samme side, hvilket giver 1/3 af skærmen til hver. Facebook og Twitter ville kun skulle vise den nyeste opdatering fra festivalen, og Instagram ville skulle fungere som et slideshow.
+\item
+\textbf{Kort over festivalpladsen:}\\ Denne side vil kun indeholde et interaktivt kort over pladsen. Hermed menes, at brugeren vil kunne bruge zoom funktion på kortet.
+\item
+\textbf{Valg af sprog:}\\ Muligheden for at vælge sprog var et ønske fra festivalens side. Grunden til flere sprog er, at der er mange udenlandske gæster på festivalen. Det umiddelbare valg vil være kun at have en engelsksproget applikation, men da det danske publikum er vant til at have et dansk papirprogram i hænderne, skulle de ikke glemmes. Da festivalen også gerne vil have flere tyskere til at besøge festivalen, skulle tysk også være en del af applikationen. Designet skulle være nemt at forstå, og valget faldt derfor på en knap til hver af de tre flag (Dannebrog, Union Jack og Bundesflagge). På denne måde bliver brugeren mødt af en nem og overskuelig start af applikationen og betydningen burde være klar.
+\item
+\textbf{Oversigt over madboder:}\\ Selvom design 1 også indeholder en alternativ oversigt over madstederne i forhold til de andre, har alle tre designs tilfælles, at de indeholder en liste over madstederne i alfabetisk rækkefølge. Listen er inddelt i sektioner (A,B...Æ,Å) med matchende madsteder i  hver sektion.
+\item
+\textbf{Info oversigt:}\\ En simple liste over de forskellige informationer som gæsten kunne finde relevant.
+\item
+\textbf{Musik/Event program:}\\ Til trods for at design 1 og 2 har event- og musikprogrammet under samme vindue, hvorimod design 3 har dem opdelt i egne vinduer, er designet af programmet den samme. Jeg valgte at opdele musikken dag for dag i hver deres "tab", og på den måde gøre programmet mere overskueligt og samtidige reducere tiden som brugeren skulle bruge på at finde en bestemt koncert.
+\end{itemize}
+\subsubsection{Design 1}
+Hovedmenuen i design 1 reserverer ca. 1/3 af skærmen til en video om festivalen. Resten af skærmen indeholder seks knapper ( program, kunstnere, kort, mad, news og info) inddelt i kvadratiske felter. Der er til dette design taget inspiration fra Windows Phones menuer, som jeg personligt finder meget overskuelige med deres flade og kvadratiske felter, hvor det ofte er ikonet som beskriver handlingen bag knappen, mere end det er titlen.\\
+For at kunne læse om kunstnerene i design 1 skal man benytte sig af en søgefunktion i øverste højre hjørne. Derudover ville man kunne gennemgå kunstnerne én efter én ved at lave et swipe fra højre mod venstre for at gå frem til næste, eller fra venstre mod højre for at se foregående. Kunstnerne ville være sorteret alfabetisk.\\
+Som nævnt tidligere indeholder design 1 standard inddelingen af madsteder. Den indeholder dog også en inddeling efter type af mad. Dette ville skulle gøre det nemmere for gæsten at finde en madvare inden for en bestemt genre. Designet af typeopdelingen benytter sig af samme kvadratiske opbygning som hovedmenuen, og ville skulle vise ikoner som passede med typen af mad.
+\subsubsection{Design 2}
+Hovedmenuen i design 2 benytter den øverste 1/3 af skærmen til et Instragram slideshow. Ideen var, at det ville gøre applikationen mere levende. De resterende 2/3 af skærmen er menupunkterne opstillet i en liste form. Skulle det ske, at der var flere punkter på listen end hvad der kunne være på skærmen, var ideen, at man kunne scrolle gennem punkterne, mens slideshowet blev stående som en form for banner.\\
+Kunstnerne er i design 2 stillet op i listeform med to forskellige sorteringskriterier, Headliners (Største bands først) og Alfabetisk.  Søgefunktionen fra design 1 er nu ikke en nødvendighed, da bands hurtigt ville kunne findes ud fra den alfabetiske liste.\\
+Når det kommer til madstederne adskiller design 2 sig fra design 1 ved, at typerne af mad også står i liste form, og ikonerne er erstattet af standard tekst.
+\subsubsection{Design 3}
+Design 3 tager udgangspunkt i en menu, som kan tilgås alle steder i applikationen. Ved at klikke på menu ikonet i venstre hjørne, foldes en listemenu ud fra venstre side og dækker store dele af skærmen. Fordelen ved dette er at brugeren ikke skal klikke sig hele vejen tilbage til hovedmenuen for at skifte emne, men derimod kan hoppe fra emne til emne uden problemer. Som nævnt tidligere så indeholder design 3 også et separat event program, hvilket giver en mere logisk placering.\\
+Design 3 benytter sig af samme design som design 2, når det kommer til madstederne. Begge benytter sig af listeformen, når det kommer til inddeling efter typer af mad.\\
+Som noget nyt indeholder design 3 adgang til festivalens Spotify playliste. Selve designet til dette vindue er en knap, der vil fungere som et link til festivalens forudbestemte playliste.
+\subsubsection{Feedback}
+Fokusgruppens aldersspænd taget i betragtning, så var gruppen meget enig i, hvad der fungerede, og hvad der ikke fungerede. Alle var enige om, at den kvadratiske opdeling af emnerne på hovedmenuen, som det ses i design 1, var god. De syntes, at det gjorde applikationen meget overskuelig og gav et hurtigt overblik over indholdet.\\ 
+Ligeledes var alle enige om, at ideen med at inddele kunsterne efter headliners ikke ville fungere. De mente, at det kunne gå hen og blive for subjektivt. Katrine Iwersen Flyman skrev: "Folk kan måske have nogle anderledes opfattelser af, hvem der er headliners.". Morten Dahl Pedersen kom også med en fin bemærkning om, at man skulle foretrække den alfabetiske listeform i stedet for at bruge en søgefunktion. Den ville give mere overblik og "måske i højere grad lægge op til ”opdagelse”". Opdagelse af ny musik er en af de ting, jeg personligt synes er en af grundende til at tage på festival, og jeg kunne derfor også nikke genkendende til måden man opdager nye kunstnere på.\\
+Udover dette var der også tanker om, at man kunne droppe typeinddelingen af madsteder. Flere fra fokusgruppen kunne ikke se ideen i det, og de kunne ikke se sig selv bruge det. Der vil være mere brug for at gæsten hurtigt kan se, hvad de forskellige madsteder har at tilbyde når de står i nærheden af dem. Dette kunne gøres nemt ved at lave en alfabetisk oversigt.\\
+Ideen med et news feed fik blandede anmeldelser. Nogen kunne godt se det smarte i at have en forbindelse til festivalens udmeldelser, men samtidig havde de betænkeligheder. De mente, at det ville være farligt at lade det blive en stor del af applikationen. De frygtede, at hvis der ikke var nok aktivitet på de forskellige medier vil ideen forsvinde, og det vil blive for kedeligt at have med.\\
+Især det unge segment, syntes at det var en god ide at inddrage festivalens Spotify playliste.
+
+\subsection{High Fidelity Prototyper}
+\subsubsection{Design}
+High fidelity prototypen forsøger at samle de positive ting fra de tre low fidelity prototyper, og jeg tog her udgangspunkt i førnævnte feedback til low fidelity prototyperne. Som nævnt i teori-afsnittet 5.1.3 benyttede jeg mig af computer genreret stillbilleder til high fidelity prototypen. Disse blev lavet som en rigtig applikation i Xcode, og blev på den måde grundpillen til det endelige produkt. \\
+På hovedmenuen er der nu kun knapper, som leder videre til de forskellige emner festivalen har at byde på. Det tager udgangspunkt i design 1 med de kvadratiske knapper, hvor ikonerne taler til brugeren. Programmet er gået fra scene/tidspunkt skemaet til en liste af koncerter inddelt i fire tabs (en for hver koncertdag). Listen er opdelt i sektioner, som definerer hver time på dagen.	\\
+Vinduet til kortet er som i alle low fidelity prototyperne: Et simpelt vindue med plads til, at kortet kan få lov til at fylde hele skærmen.\\
+Kunstnerene er blevet inddelt i alfabetisk rækkefølge, og ved et klik på kunstneren, vil brugeren blive ledt videre til beskrivelsen af denne kunstner. Alle swipe muligheder er fjernet, og man vil skulle gå tilbage til listen for at kunne se andre kunstnere. Med præcis samme fremgangsmåde kan brugeren se de forskellige madsteder. En liste der er alfabetisk inddelt, som leder videre til beskrivelsen af stedet.\\
+Event programmet er også i listeform. Her er hver sektion en dag under festivalen, og tidspunkterne/de forskellige events kommer i logisk rækkefølge under hver sektion.\\
+Nyhedssiden benytter sig stadig af 1/3 plads af skærmen til hver kilde. Til high fidelity prototypen blev dog brugt skærmbilleder af de forskellige medier, og denne del blev derfor heller ikke en implementeret del af det formede skelet i Xcode.\\
+Festivalens Spotify playliste er blevet inkorporeret i applikationen ved at have et billede af Spotify's ikon, der fungerer som et link til playlisten på Spotify's hjemmeside.\\
+Sidste del af applikationen er informationssiden. Her bliver brugeren igen præsenteret for listeformen der opstiller information i forskellige sektioner alt efter om de hører til emnet "Billetter", "Praktisk", "Festivalen" eller "Om Appen". Når brugeren vælger en af emnerne, vil de få vist en simple side med tekst.
+\subsubsection{Feedback}
+Fokusgruppen var overordnet tilfreds med high fidelity prototypen. Især hovedmenuen fik positive kommentarer i forhold til de selvsigende ikoner. Kun smileyen fik kommentarer med på vejen for ikke at være 100\% logisk i forhold til, at der skulle være events gemt bag knappen. Fokusgruppen gav også udtryk for, at der manglede farver på applikationen. Dette var jeg dog også selv bevidst om, da jeg indtil nu kun havde benyttet mig af de standard farver som sættes af Xcode. Jeg afventede på dette tidspunkt årets festivalplakat for at kunne skabe mig et farvetema.
+\subsection{Implementering}
+Følgende afsnit omhandler vigtige dele af udarbejdelsen af det endelige produkt. Applikationen består hovedsagelig af Xcodes View Controllers og Tableview Controllers.
+\subsubsection{Tableview Controllers}
+Tableview Controllers blev benyttet hver gang, jeg skulle lave en oversigt over flere emner. Altså det, som tidligere er blevet refereret til som listeform. En Tableview Controller indeholder fra start et table - en liste - som enten kan være dynamisk eller statisk. De statiske er blev benyttet under prototypen, men da jeg skulle indarbejde et farvetema skiftede jeg til de dynamiske. Dette kræver dog at man opretter objektklasser, da alt indhold skal kodes. Til indholdet i listen benyttede jeg mig af dictionaries. Tableview Controlleren kommer med pre-defineret metoder i klassen. Disse metoder bliver brugt til at beskrive, hvad der skal ske efter at vinduet er blevet loadet og bl.a., hvordan tabellen skal opstille informationen samt, hvor mange rækker der skal vises.\\
+Dictionaries er en måde at sammenkæde et element med et andet. Følgende kodeeksempel fra projektet viser, hvordan tidspunkter er knyttet sammen med koncerterne.
+
+\begin{verbatim}
+spilletider = @{@"12:00" : @[@"12:30 - Festivalåbning", 
+                       @"12:45 - Ten Strings And A Goat Skin"],
+                    @"13:00" : @[@"13:00 - DR P4 Madsen Live", 
+                       @"13:15 - Canadisk mashup"],
+                    @"14:00" : @[@"14:45 - Ten Strings And A Goat Skin"],
+                    @"16:00" : @[@"16:00 - Hayseed Dixie", 
+                       @"16:00 - Kathryn Tickell & The Side", 
+                       @"16:30 - The Stray Birds"],
+                    @"18:00" : @[@"18:00 - Chris Smither", 
+                       @"18:00 - The Great Malarkey", 
+                       @"18:15 - Fara", @"18:15 - Ron Kavana"],
+                    @"19:00" : @[@"19:30 - Richard Thompson"],
+                    @"20:00" : @[@"20:00 - Hot Rize", 
+                       @"20:00 - Richard J. Dobson", 
+                       @"20:15 - Hans Theessink"],
+                    @"21:00" : @[@"21:15 - The Bros Landreth", 
+                       @"21:45 - Jacob Dinesen", 
+                       @"21:45 - King James & The Special Men"],
+                    @"22:00" : @[@"22:00 - The Hot Seats", 
+                       @"22:30 - Sturgill Simpson"],
+                    @"23:00" : @[@"23:30 - Mánran", 
+                       @"23:45 - Meschiya Lake & The Little Big Horns"]};
+\end{verbatim}
+Her kan f.eks. ses hvordan strengen "12:00" bliver kædet sammen med den liste der indeholder "Festivalsåbningen" og "Ten Strings And A Goat Skin". Disse tidspunkter bliver senere i koden sorteret ved brug af en sammenligner, som er indbygget i Objective-C.
+\subsubsection{View Controllers}
+View Controllers er standard controller'en i Xcode. Det er en blank skabelon for alle vinduer. Jeg har brugt View Controllers til at lave størstedelen af mine informationsvinduer. Til kunstner- og madstedsbeskrivelser er der indsat et Image View, der fungerer som en placeholder for billeder i den øvre del af skærmen, mens den nedre del består af et Text View. Text Views inderholder tekst og vil automatisk tilføje en scrollbar hvis mængden af tekst skulle overskride skærmstørrelsen. \\
+Hovedmenuen er også generet ved brug af en View Controller. Her er indsat otte knapper, hvor baggrundsbilledet er det viste ikon. \\
+\subsubsection{Constraints}
+Størstedelen af arbejdet med den grafiske brugerflade ligger i at sætte begrænsninger for diverse elementer på skærmen. Xcode tilbyder en Auto-Layout funktion, men den virker kun som "en hjælpende hånd", da dens løsninger ikke passer til alle skærmstørrelser. Det var derfor nødvendigt at sætte begrænsningerne selv. Xcodes assistant er her en god hjælp for at se sine ændringer uden at skulle køre applikation ved hver rettelse. Assistant er dog ikke altid nok, og en simulation er derfor nødvendig for at sikre sig, at alt er som det skal være i den "færdige" brugerflade.
+\subsubsection{Ændring af news feed}
+Under udviklingen blev der forsøgt at lave RSS-feeds til både Facebook og Twitter. Det viser sig dog at begge medier er holdt op med at understøtte RSS-feeds fra brugere, og kræver derimod, at man benytter deres API's. For at nyhedssiden ikke skulle tage for meget tid af projektet, valgte jeg at benytte et Web View til at vise festivalens egen nyhedsside\footnote{www.tf.dk/nyheder} i applikationen.
+\subsection{Personlig evaluering af det endelige produkt}
+\subsubsection{Brugeroplevelse og LLIID}
+Min personlige oplevelse af at bruge applikationen er generel positiv. Jeg finder den nem og overskuelig, og man kommer som bruger aldrig ud i nogle grene af applikationer uden at kunne finde tilbage til sit udgangspunkt. Min egen mening er dog ikke nok for at kunne vurdere brugervenligheden, og jeg tager derfor udgangspunkt i Mike Gualtieris tidligere nævnte krav til at kunne holde af en applikation.
+\begin{itemize}
+\item
+\textbf{Useful: Kan brugerene opnå deres mål}\\
+Med denne applikation får brugerne den samme funktionalitet som det oprindelige papirprogram kan tilbyde (Gennemgang af kunstnerne, koncertprogram og kort over pladsen). Derudover får de nu også adgang til mere information om pladsen og festivalen, en samling af alle madsteder, et program over kommende events, en nyhedskanal i tilfælde af aflysninger eller forsinkelse af koncerter, samt muligheden for at kunne høre musikken, der kommer på festivalen, ved hjælp af Spotify. Ud fra denne samling af funktioner vil jeg mene at med denne applikation, kan de nu opnå deres mål i højere grad end med papirprogrammet.\\
+\item
+\textbf{Usable: Hvor let kan brugerne opnå sine mål}\\
+Når brugeren først har valgt sprog og befinder sig på hovedmenuen skal han/hun ikke udfører mere end to klik for at komme ud i de yderste grene af applikationen. Det er her at applikationen gør det nemmere end det oprindelige papirprogram, hvor man ofte kunne bruge længere tid på f.eks. at finde frem til den rigtige kunstner, og hvor/hvilken scene optræder de på. Hvor finder man kortet i bogen o.s.v.. Med applikationen opnår brugeren hurtigt den ønskede information, og kan nemt finde tilbage til udgangspunktet ved hjælp af "back-knapperne" i venstre hjørne.
+\end{itemize}
+Det andet aspekt som Mike Gualtieri også fandt vigtigt for et godt brugeroplevelsesdesign var kontekst. Han delte konteksten ud på fem dimensioner som han forkortede LLIID:
+\begin{itemize}
+\item
+\textbf{Location}\\
+Brugerens mål og ønsker til funktionalitet ændrer sig i løbet i dagen. Personligt vil jeg sige, at applikationen kan leve op til denne dimension, da den kan bruges selv om gæsten er i teltet og skal planlægge næste dags koncerter, er på pladsen og ønsker noget at spise, lige har hørt et nyt og spændende band og gerne vil vide mere, eller måske har fundet en pung og ikke ved, hvor den skal indleveres. 
+\item
+\textbf{Locomotion}\\
+Mobile enheder er lavet til at fungere på farten, og derfor skal en applikation også kunne håndtere det. Da gæsten befinder sig på en festival er det meget tænkeligt, at de har noget i den ene hånd (taske, mad, drikkevare, etc.) og har derfor kun en hånd til rådighed. Hele applikationen kan udforskes ved brug af en hånd. Kortets zoomfunktionen kræver dog muligheden for at kunne lave en knibebevægelse med fingerene. Dette kan være meget svært, hvis kun én hånd er til rådighed. Til trods for dette vil jeg dog mene, at applikationen kan fungere i denne dimension.
+\item
+\textbf{Immediacy}\\
+Som Mike Gualtieri selv skriver, så forbinder immediacy locomotion og location i et. Hvis begge fungerer så kan immediacy også opfyldes. Brugeren kan nemt og uden problemer tilgå den nødvendige viden på farten.
+\item
+\textbf{Intimacy}\\
+Denne dimension er ikke blevet udforsket i denne applikation. Der var dog ønsker i fokusgruppen om at oprette muligheden for at lave sit eget koncertprogram, som kunne påminde gæsten om ønskede koncerters start. Her ville intimacy have været en vigtig del af funktionen. Brugeren skulle selv være i stand til at bestemme i hvilken grad, de skulle påmindes om deres ønsker. 
+\item
+\textbf{Device}\\
+Selve applikation bruger ikke mange af iPhones funktioner og egenskaber. Der er dog hele touch interfacet, som bliver en integreret del af applikationen. Her er tale om zoomfunktionen, når kortet vises, som kræver at brugeren laver en knibebevægelse med fingerene. Derudover er der brugen af swiping, når brugeren skal bevæge sig op og ned i listen af kunstnere, madsteder, koncertprogram, events og information.
+\end{itemize}
+\subsubsection{Fejl og mangler}
+Følgende fejl er fundet under test på en iPhone4:
+\begin{itemize}
+\item
+I vinduet til koncertprogrammet, er "Back-knappen" blå. Dette sker til trods for at farven er blevet kodet til at skulle være hvid. 
+\item
+I vinduet til valg af sprog kommer der en blå "Back-knap", når man tilgår vinduet fra hovedmenuen. Selve view controlleren indeholder i storyboard'et ikke knappen.
+\end{itemize}
+Disse fejl er dog ikke at finde på en iPhone6, og jeg antager derfor, at det skyldes versionen af styresystemet. Den nyeste iOS version der findes til iPhone4 er 7.1.2, hvorimod iPhone6 benytter 8.4. Jeg antager dog ikke dette som at være et større problem, da  en undersøgelse viser at 93\% af alle iPhones i omløb er i stand til at køre med iOS 8.4.\footnote{http://david-smith.org/iosversionstats/}\\
+Hvis der havde været mere tid til projektet, vil jeg have gerne have lavet og forbedret følgende ting.
+\begin{itemize}
+\item
+\textbf{Fyld til eventsprogram}\\
+Jeg havde kontakt med festivalens atmosfæregruppe, som står for events under festivalen. De skulle dog først have et møde og jeg ville så høre nærmere. Dette skete ikke, men jeg kan modtage det til festivalens stormøde den 9. august 2015, hvis jeg ønsker.
+\item
+\textbf{Bedre information og billeder til diverse madsteder}\\
+Grunden til, at der enkelte steder ikke er et en fyldestgørende tekst, samt at der af og til ikke er et passende billede af madstedet skyldes, at jeg til denne opgave skulle i kontakt med de enkelte ledere for hvert madsted. Jeg var ikke i stand til at finde alle madsteder og ledere i festivalens eget medarbejderkartotek. Derudover er det heller ikke alle ledere, som har svaret på henvendelsen. 
+\item
+\textbf{Mere og bedre praktisk information til de gæsterne}\\
+På nuværende tidspunkt er noget af den praktiske information ikke fyldestgørende. F.eks. ville ekstra bus- og togafgange i festivaldagene være gode at have med.
+\item
+\textbf{Program for spillestedet Hagges}\\
+Festivalen har et eksternt spillested, som hedder Hagges. Både før og under festivalen er der musik i denne bar og den anses for at være en del af festivalen. Der var dog ikke offentliggjort noget musikprogram for spillestedet inden projektets afslutning.
+\item
+\textbf{Renere nyhedsside}\\
+I øjeblikket bruges hjemmesiden www.tf.dk/nyheder. Denne side er ikke fuldt optimeret til at skulle vises på iPhone, da der er mange unødvendige elementer på siden, som bliver vist. Dette gør, at tiden, som siden bruger på at loade, bliver længere end nødvendigt. En forbedring vil være et feed fra festivalens egen Facebook profil gennem Facebooks Graph API, et RSS feed fra festivalens egen hjemmeside eller at forsætte med den nuværende løsning, men med en mere trimmet nyhedsside.
+\item
+\textbf{Favoritprogram}\\
+Flere i fokusgruppen gav udtryk for, at de ønskede muligheden for at sammensætte deres eget koncertprogram. Dette vil jeg tro er nemt at løse, men meget tidskrævende, da jeg regner med at skulle oprette koncerterne som objekter i stedet for strings i et dictionary. Dette ville gøre at alt information befinder sig i objektet, og favoritfunktionen vil derved nemt kunne sortere efter spilledag og spilletid. Denne funktion ville kunne være i forlængelse af det nuværende koncertprogram og ligge som en femte tab. 
+\end{itemize}
+\subsection{Evaluering ved festivalledelsen}
+Følgende afsnit tager udgangspunkt i et evalueringsmøde onsdag d. 29/7-2015 med Kirstine Uhrbrand. Hun blev bedt om at forholde sig til, hvordan hele forløbet havde været for festivalen, en evaluering af det færdige produkt, samt at komme med en vurdering på applikationens brugbarhed i forhold til en evt. udgivelse på App Store og brug på årets festival.
+\subsubsection{Applikationen}
+I forhold til det endelige produkt er festivalens ledelse overordnet tilfreds. De kunne dog godt ønske mere "folk'et" logoer samt lidt flere farver på hovedmenuen. Derudover har de givet udtryk for at en favoritfunktion vil være rar at have. Med favoritfunktion menes muligheden for at sammensætte sit eget musikprogram ved at klikke på de koncerter man gerne vil overvære.\\
+I forhold til udgivelse af applikationen på App Store (enten som officiel eller uofficiel app) kunne Kirstine ikke udtale sig derom på nuværende tidspunkt. Dette var en afgørelse som Maria Theessink skulle være med til at tage. Der blev aftalt et nyt møde onsdag d. 5/8-2015, hvor Maria også vil være tilstede. 
+\subsubsection{Forløbet}
+Gennem hele forløbet har festivalens ledelse været tilfredse med kommunikationen. Der har gennem hele projektet været månedlige statusopdateringer på produktet samt møder, når vigtige beslutninger skulle tages. De syntes også, at det var rart, at man som interviewer og udvikler talte "deres sprog". Med dette menes, at de ikke blev udsat for fagtermer, når der har været samtaler. Derimod blev budskabet omformuleret til almindelige danske ord og sketchs på papir. Dermed var alle parter enige om, hvad der var i tale, og ledelsen havde nemmere ved at komme med input til løsninger og ideer.
+Derudover fandt de POP meget innovativt i forhold til afprøvning af prototyperne, da de synes det gav en meget god følelse af, hvordan produktet kunne ageres med.
+\section{Konklusion}
+På baggrund af evalueringen fra festivalen, samt de kriterier for brugervenlighed som Mike Gualtieri opstiller vil jeg konkludere, at applikationen har en velfungerende brugerflade, og forløbet for projektet har været tilfredsstillende for begge parter - udvikler såvel som kunde.\\
+Fremgangsmåden, som interaktionsdesign benytter sig af, har vist sig at være til stor glæde for kunden, da de ikke føler sig tabt i termer og kode, men derimod bliver mødt på samme niveau. Ideen i at benytte low fidelity prototyper til at fastslå et skelet for den fremtidige applikation fungerer, da udvikleren ofte har en større viden om hvad der kan kan fungere og lade sig gøre programmeringsmæssigt. Ved at lave flere forskellige design muligheder bliver kunden og brugerne også inddraget i projektet og bliver tvunget til at tage et valg, om hvilken udformning applikationen skal tage.\\
+Efter at have arbejdet med en fokusgruppe, der er spredt ud over et stort geografisk område, er det blevet klart, at det kan lade sig gøre ved hjælp af veldefinerede spørgsmål, men jeg tror dog, at ved at samle dem om samme bord, vil give mere information til udvikleren, da der bliver mulighed for at enkelte personer i gruppen kan gøre andre opmærksomme på nye aspekter.\\
+POPapp er blevet modtaget positivt ved fokusgruppen såvel som kunden, da det har givet en følelse af at bruge en fungerende applikation, selv om det bare har været tegninger.
+\newpage
+
+\printbibliography[type=book, title={Bøger}]
+\printbibliography[type=article, title={Artikler}]
+\printbibliography[nottype=book, nottype=article, title={Hjemmesider}]
+
+\newpage
+\section{Appendiks}
+\subsection{Mødeemner}
+\begin{itemize}
+\item
+GENERELT INFO
+\begin{itemize}
+\item
+Sprog -> hvilke
+\end{itemize}
+\item
+OVERFØRELSE AF PROGRAMMET
+\begin{itemize}
+\item
+Koncert program
+\item
+Musiker gennemgang
+\begin{itemize}
+\item
+30 sek musik
+\item
+Opdeling (alfabetisk/lande) Hvad gør vi nu?
+\end{itemize}
+\item
+Lav dit eget skema
+\item
+Kort over pladsen
+\item
+Historie/Info om områderne -> EVENTS
+\end{itemize}
+\item
+OP TIL / UNDER FESTIVALEN
+\begin{itemize}
+\item
+Parkerings områder
+\item
+Camping indgang og vej dertil
+\item
+Armbånd modtagelse
+\end{itemize}
+\item
+ANDET
+\begin{itemize}
+\item
+Program for resten af byen?
+\item
+Farvetema
+\item
+Offentlig transport (bus/tog)
+\item
+Indkodet nummer til taxa services
+\item
+Ofte stillede spørgsmål
+\item
+Første hjælp  (nød knap -> camping/pladskontor/samarit/112)
+\item
+Carstens Mail
+\end{itemize}
+\end{itemize}
+\newpage
+\subsection{Fastlagte krav efter møde}
+\begin{itemize}
+\item
+Det grundlæggende
+\begin{itemize}
+\item
+Overførelse af nuværende program
+\begin{itemize}
+\item
+Koncert program
+\item
+Musiker gennemgang
+\item
+Kort over pladsen
+\end{itemize}
+\end{itemize}
+\item
+Extra funktionalitet
+\begin{itemize}
+\item
+Scene beskrivelser (intim - openair) - ved koncert programmet
+\item
+ekstra til Musiker gennemgang
+\begin{itemize}
+\item
+30 sek musik
+\item
+Spotify playlist
+\item
+Alfabetisk / Søgefunktion
+\item
+Eget skema
+\end{itemize}
+\item
+Lave sit eget program (favoritter)
+\item
+Event Program -> Områderne (Morgensang, popop middag, workshop, noget til børn)
+\item
+Et program over andre handlinger i byen
+\item
+Program for Hagges
+\item
+Hvor finder man diverse ting / praktisk info
+\item
+Reservations funktion
+\item
+Menuer / Madoplevelser
+\item
+Ikon oversigt -> mad boderne
+\item
+Område kort - Tættere på giver muligheder for at sætte hele menuer på stederne
+\item
+Camping info + kort over pladsen
+\item
+Rute vejledninger til indkøb og andet i byen
+\item
+Ekstra info om unge camp
+\item
+Parkering i Tønder by
+\item
+Newsfeed fra festivalen
+\item
+Hashtag TF2015 -> Twitter, instagram
+\item
+Rejseplaner fra de største byer inklusiv Flensborg, Niebull og lign.
+\item
+Ekstra afgange fra Tønder / Afgangstider 
+\item
+Taxaservices
+\item
+Grundlæggende førstehjælp - trin for trin -> hvor er samariterne. Hvor er apoteket. Kontakt en medarbejder. Hjertestartere.
+\item
+God info at have med
+\begin{itemize}
+\item
+Billetter - Hvor, hvornår, og hvordan
+\item
+Camping
+\end{itemize}
+\item
+Video - rundvisning på pladsen / scenerne
+\end{itemize}
+\item
+Andet
+\begin{itemize}
+\item
+Farve tema -> festivalens grafiske udtryk (plakater - og lignende)
+\item
+Evt. Få det til at ligne den kommende nye hjemmeside (Vigtig)
+\item
+Sprog - Dansk, Tysk, Engelsk
+\end{itemize}
+\end{itemize}
+\newpage
+\subsection{Low-Fidelity Spørgeskema}
+\subsection*{Vurderingsark}
+Følgende tre links indeholder en prototype for en applikation til Tønder Festival. Der er blevet lagt fokus på, at applikationen skal bruges under selve festivalen. Disse prototyper er af typen low fidelity. Dette vil sige, at prototypen kun består af tegninger og tekst. Hjemmesiden som linkene henviser til giver mulighed for at kunne give disse tegninger mere liv, samt følelsen af, at man sidder med en applikation på jeres telefon.\\
+
+\textbf{POPAPP instruktion:} For hver "slide" i prototypen vil du kunne klikke på skærmen. Hvis du klikker et sted, som ikke er forbundet med et nyt slide, vil applikationen oplyse de steder, som er klik-bare. "Home-knappen" i bunden af telefon-simulationen vil føre tilbage til det allerførste slide.
+\begin{enumerate}
+\item
+TF1: https://popapp.in/w/projects/54fdaff8f1e2e32231b9ee68/preview
+\item
+TF2: https://popapp.in/w/projects/54fdf33a0f577535310956cd/preview
+\item
+TF3: https://popapp.in/w/projects/54fe08fd08386a7331a8c45b/preview
+\end{enumerate}
+
+\subsection*{Spørgsmål}
+De følgende spørgsmål bedes besvaret så fyldestgørende som muligt for hver af de tre prototyper. Det giver mig bedre mulighed for at samle de ting som bliver fundet gode og frasortere de dårlige, når jeg skal lave den endelige prototype. Svarene kan I tilbagesende i form af filer (.pdf, .doc, .docx, .txt, .pages) eller som teksten i en email. 
+\begin{enumerate}
+\item
+Hvilke elementer i de forskellige design finder I tiltalende?
+\item
+Hvilke elementer i de forskellige design fungerer ikke?
+\item
+Er der noget som ikke giver mening? (udformning af program, gruppering af mad katagorier, titler etc.)
+\item
+Hvis du skulle sammensætte en applikation, hvilke vinduer ville du bruge fra hvilke prototyper?
+\item
+Er der "features" som du synes mangler, eller som du synes kunne fungere/opsættes på en anden måde?
+\end{enumerate}
+Du er selvfølgelig velkommen til at tænke ud over disse spørgsmål samt komme med information om, hvordan din ønske-applikation ser ud.\\
+Hvis du har problemer med at beskrive, hvordan noget burde se ud på tekst eller lignende, så er jeg til rådighed på telefon: \textbf{28 15 47 00}. Så kan du forklare det med ord, eller vi kan mødes og tegne os ud af det.\\
+
+Seneste svar på dette er \textbf{mandag d. 16. marts 2015}. \\
+Har jeg ikke modtaget dit svar, vil jeg rykke for det om tirsdagen.
+
+\end{document}

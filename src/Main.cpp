@@ -81,14 +81,20 @@ int main(int argc, char const *argv[])
   	for( auto it = com->productOfReaction.begin(); it != com->productOfReaction.end(); ++it) {
 	  	std::cout << *it << std::endl;
   	}*/
+  std::vector<int> toRemove;
+  toRemove.push_back(9);
+   toRemove.push_back(8);
+
+  auto overlayFullGraph = h.createOverlay(toRemove);
+
 	auto goal = h.getCompound(8);
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
-	std::cout << h.shortestPathMaxiumYield(*goal, startingCompound) << " is maxyield " << std::endl;
+	std::cout << h.shortestPathMaximumYield(*goal, startingCompound, overlayFullGraph) << " is maxyield " << std::endl;
 	auto test1 = h.getCompound(8);
 	std::cout << test1->maxYieldEdge << std::endl;
-	auto test2 = h.getCompound(6);
+	auto test2 = h.getCompound(7);
 	std::cout << test2->maxYieldEdge << std::endl;
 	auto test3 = h.getCompound(3);
 	std::cout << test3->maxYieldEdge << std::endl;
@@ -106,7 +112,11 @@ int main(int argc, char const *argv[])
   std::cout << "Reaction with highest indegree is: " << h.highestReactionInDegree() << std::endl;
   std::cout << "Reaction with highest outdegree is: " << h.highestReactionOutDegree() << std::endl;
 
-
+  std::vector<int> v;
+  v.push_back(2);
+  auto overlay = h.createOverlay(v);
+  std::cout << "overlay value at index 1 = " << overlayFullGraph.at(7) << std::endl;
+  std::cout << "overlay value at index 2 = " << overlayFullGraph.at(0) << std::endl;
 
 	return 0;
 }

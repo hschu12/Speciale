@@ -1,0 +1,4 @@
+Vector of booleans to as overlay to reactions. If there is 48 million reactions then it would take up 384 megabytes. 8 byte per boolean.
+If it exists in the new graph, then "true" otherwise "false".
+
+Use Std::vector<Bool>. Uses only 1 bit per entry = 6 megabyte pr overlay.

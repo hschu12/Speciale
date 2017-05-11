@@ -1,0 +1,18 @@
+Backward Braching method for a B-Hypergraph using bitmap/array of booleans
+
+Require valid ordering of the nodes {s, u_1, u_2,..., u_q = t}
+function BACKWARDBRANCHING(H) 						// H is a hypergraph
+	List B = Ø
+	for i = q to 1 do								// Move from t to s O(V)
+		Set all compound vertices to 1 				// All compound are usable O(V)
+		Set all Reaction Vertices to 1 				// All compound are usable O(E)
+		Set reaction u_i to 0						// remove the i'th edge	O(1)
+		for j = q to i	do							// Fix the edges from t to u_i O(V)
+			Set all reactions to compound u_j 
+				not in pi to 0 except pi.u_j		// Makes all reaction into u_j unusable except the one from Shortest path. (FIXES)
+				which is set to 1.
+		end for
+		B = B UNION {H^i}
+	end for
+	return B
+end function

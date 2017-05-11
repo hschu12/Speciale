@@ -95,47 +95,61 @@ public:
 		reactionList.at(id) = *rn;
 	}
 
-	double minCost(CompoundNode &v, std::vector<int> &list) {
-		auto startingCompoundIterator = list.begin();
-		while (startingCompoundIterator != list.end()) {
-			if (v.id == *startingCompoundIterator) {
-				return v.cost;
-			}
-			++startingCompoundIterator;
+	double minCost(CompoundNode &v, CompoundNode &s, std::vector<bool> &overlay) {
+		if (v.id == s.id) {
+			return 0;
 		}
 		double minimumCost = HUGE_VAL; // infinity
-		auto productOfReactionIterator = v.productOfReaction.begin();
-		for(auto productOfReactionIterator = v.productOfReaction.begin(); productOfReactionIterator != v.productOfReaction.end(); ++productOfReactionIterator ) {
-			ReactionNode *r1 = getReaction(*productOfReactionIterator);
+		for (auto productOfReactionIterator : v.productOfReaction ) {//.begin(); productOfReactionIterator != v.productOfReaction.end(); ++productOfReactionIterator ) {
+			ReactionNode *r1;
+			//std::cout << "before if " << productOfReactionIterator << std::endl;
+			if (overlay.at(productOfReactionIterator)) {
+				//std::cout << "test " << productOfReactionIterator << std::endl;
+				if (productOfReactionIterator == 0) {
+					//std::cout << "ifif" << std::endl;
+					r1 = v.toS;
+					//std::cout << "v.toS " << v.toS -> id << std::endl;
+
+				}
+				else{
+					r1 = getReaction(productOfReactionIterator);
+					//std::cout << "r1: " << r1->id << std::endl;
+
+				}		
+			}	
+			std::cout << "after if " << std::endl;
+
 			double cost = r1->yield;
 			for (auto reactionTailIterator = r1->tail.begin(); reactionTailIterator != r1->tail.end(); ++reactionTailIterator) {
-				cost = cost + minCost(*getCompound(*reactionTailIterator), list);
+				cost = cost + minCost(*getCompound(*reactionTailIterator), s, overlay);
 
 			}
 			if (minimumCost > cost) {
 				minimumCost = cost;
-				v.minEdge = *productOfReactionIterator;
+				v.minEdge = productOfReactionIterator;
 			}
 		}
 		return minimumCost;
 	}
 
-	double maxYield(CompoundNode &v, CompoundNode &s) {
+	double maxYield(CompoundNode &v, CompoundNode &s, std::vector<bool> &overlay) {
 		if (v.id == s.id) {
 			return 1.0; //starting compounds always have a yield of 100%
 		}
-		double maximumYield = 0; // infinity
+		double maximumYield = 0; // -infinity
 		for(auto productOfReactionIterator = v.productOfReaction.begin(); productOfReactionIterator != v.productOfReaction.end(); ++productOfReactionIterator ) {
 			ReactionNode *r1;
-			if (*productOfReactionIterator == 0) {
-				r1 = v.toS;
+			if (overlay.at(*productOfReactionIterator)) {
+				if (*productOfReactionIterator == 0) {
+					r1 = v.toS;
+				}
+				else{
+					r1 = getReaction(*productOfReactionIterator);
+				}		
 			}
-			else{
-				r1 = getReaction(*productOfReactionIterator);
-			}		
 			double yield = r1->yield;
 			for (auto reactionTailIterator = r1->tail.begin(); reactionTailIterator != r1->tail.end(); ++reactionTailIterator) {
-				yield = yield * maxYield(*getCompound(*reactionTailIterator), s);
+				yield = yield * maxYield(*getCompound(*reactionTailIterator), s, overlay);
 			}
 			if (maximumYield < yield) {
 				maximumYield = yield;
@@ -145,7 +159,7 @@ public:
 		return maximumYield;
 	}
 	//Not updated to s use.
-	double shortestPathMinimumCost(CompoundNode &v, std::vector<int> &startingCompounds) {
+	double shortestPathMinimumCost(CompoundNode &v, std::vector<int> &startingCompounds, std::vector<bool> &overlay) {
 		CompoundNode *s = new CompoundNode(); //MIGHT NOT BE NEEDED
 		s->id = 0;
 		auto startingCompoundIterator = startingCompounds.begin();
@@ -154,13 +168,17 @@ public:
 			head.push_back(*startingCompoundIterator);
 			std::vector<int> tail;
 			tail.push_back(s->id);
-			addReaction(0, head, tail, 1.0);
+			ReactionNode *r = new ReactionNode(0, head, tail, 0.0); 	
+			CompoundNode *c = getCompound(*startingCompoundIterator);
+			c->toS = r;
+			c->productOfReaction.push_back(r->id);			
 			++startingCompoundIterator;
 		}
-		return minCost(v, startingCompounds);
+		compoundList.at(s->id) = *s;
+		return minCost(v, *s, overlay);
 	}
 
-	double shortestPathMaxiumYield(CompoundNode &v, std::vector<int> &startingCompounds) {
+	double shortestPathMaximumYield(CompoundNode &v, std::vector<int> &startingCompounds, std::vector<bool> &overlay) {
 		CompoundNode *s = new CompoundNode(); //MIGHT NOT BE NEEDED
 		s->id = 0;
 		auto startingCompoundIterator = startingCompounds.begin();
@@ -176,7 +194,16 @@ public:
 			++startingCompoundIterator;
 		}
 		compoundList.at(s->id) = *s;
-		return maxYield(v, *s);
+		return maxYield(v, *s, overlay);
+	}
+
+	std::vector<bool> createOverlay(std::vector<int> toRemove) {
+		std::vector<bool> overlay;
+		overlay.resize(reactionList.size(), true);
+		for(auto it = toRemove.begin(); it != toRemove.end(); ++it) {
+			overlay.at(*it) = false;
+		}
+		return overlay;
 	}
 
 	ReactionNode* getReaction(int id){
