@@ -82,8 +82,11 @@ int main(int argc, char const *argv[])
 	  	std::cout << *it << std::endl;
   	}*/
   std::vector<int> toRemove;
-  toRemove.push_back(9);
-   toRemove.push_back(8);
+  /*toRemove.push_back(9);
+  toRemove.push_back(1);
+  toRemove.push_back(8);
+  toRemove.push_back(2);*/
+
 
   auto overlayFullGraph = h.createOverlay(toRemove);
 
@@ -91,32 +94,37 @@ int main(int argc, char const *argv[])
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
-	std::cout << h.shortestPathMaximumYield(*goal, startingCompound, overlayFullGraph) << " is maxyield " << std::endl;
-	auto test1 = h.getCompound(8);
-	std::cout << test1->maxYieldEdge << std::endl;
-	auto test2 = h.getCompound(7);
-	std::cout << test2->maxYieldEdge << std::endl;
-	auto test3 = h.getCompound(3);
-	std::cout << test3->maxYieldEdge << std::endl;
-  auto test4 = h.getCompound(2);
-  std::cout << test4->maxYieldEdge << std::endl;
-  auto test5 = h.getCompound(1);
-  std::cout << test5->maxYieldEdge << std::endl;
+	//std::cout << h.shortestPathMaximumYield(*goal, startingCompound, overlayFullGraph) << " is maxyield " << std::endl;
+
   
-  std::cout << "compound 8 has degree in " << h.compoundInDegree(8) << std::endl;
+  /*std::cout << "compound 8 has degree in " << h.compoundInDegree(8) << std::endl;
   std::cout << "reaction 6 has degree in " << h.reactionInDegree(6) << std::endl;
   std::cout << "reaction 6 has degree out " << h.reactionOutDegree(6) << std::endl;
 
   std::cout << "Node with highest indegree is: " << h.highestCompoundInDegree() << std::endl;
   std::cout << "Node with highest outdegree is: " << h.highestCompoundOutDegree() << std::endl;
   std::cout << "Reaction with highest indegree is: " << h.highestReactionInDegree() << std::endl;
-  std::cout << "Reaction with highest outdegree is: " << h.highestReactionOutDegree() << std::endl;
+  std::cout << "Reaction with highest outdegree is: " << h.highestReactionOutDegree() << std::endl;*/
 
-  std::vector<int> v;
-  v.push_back(2);
-  auto overlay = h.createOverlay(v);
-  std::cout << "overlay value at index 1 = " << overlayFullGraph.at(7) << std::endl;
-  std::cout << "overlay value at index 2 = " << overlayFullGraph.at(0) << std::endl;
+  /*std::cout << "h: " <<  h.getCompound(4)->maxYieldEdge << std::endl;
+
+  auto p = h.shortestPathMaximumYield(*goal, startingCompound, overlayFullGraph);
+  auto list = p.second;
+  std::cout << "shortest: " << std::endl;
+  for (auto g : list) {
+    std::cout << g << std::endl;
+  }
+  std::cout << "h: " << h.getCompound(4)->maxYieldEdge << std::endl;*/
+
+
+  auto dBest = h.yenHyp(*goal, startingCompound, overlayFullGraph, 9);
+  std::cout << dBest.size() << std::endl;
+  for( auto path : dBest) {
+    std::cout << "plan: " << std::endl;
+    for( auto d : path) {
+      std::cout << d << std::endl;
+    }
+  }
 
 	return 0;
 }

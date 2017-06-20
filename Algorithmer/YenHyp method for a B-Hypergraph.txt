@@ -1,0 +1,21 @@
+YenHyp method for a B-Hypergraph using bitmap/array of booleans
+
+function YenHyp(s, t, K) 
+	L = new heap with elements (overlay, maxYield)
+	A = List of shortestpaths
+	Pi = ShortestPath(Graph, s,t) 				(Graph is default overlay (all true))
+	Insert (Graph, Pi)
+	for k = 1 to K
+		if L = Ø 
+			Break
+		endif
+		(Overlay', pi') = L.pop
+		for all Overlays' in BackwardBranching((Overlay',Pi'))
+			pi^i = shortestPath(Overlay', s, t)
+			if pi ^i is complete
+				Insert( H^i, pi^i) into L
+			endif
+		endfor
+	endfor
+	Return A
+end function
