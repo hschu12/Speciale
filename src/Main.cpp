@@ -118,13 +118,52 @@ int main(int argc, char const *argv[])
 
 
   auto dBest = h.yenHyp(*goal, startingCompound, overlayFullGraph, 9);
-  std::cout << dBest.size() << std::endl;
-  for( auto path : dBest) {
+  h.printResults(dBest);
+
+ /* std::cout << "" << std::endl;
+
+  std::cout << "Part 2" << std::endl;
+
+  HyperGraph h2;
+
+
+
+  int head12[] = {3};
+    std::vector<int> reacthead12 (head12, head12 + sizeof(head12) / sizeof(int) );
+  int tail12[] = {1,2};
+    std::vector<int> reacttail12 (tail12, tail12 + sizeof(tail12) / sizeof(int) );
+
+  int head22[] = {2};
+    std::vector<int> reacthead22 (head22, head22 + sizeof(head22) / sizeof(int) );
+  int tail22[] = {3,4};
+    std::vector<int> reacttail22 (tail22, tail22 + sizeof(tail22) / sizeof(int) );
+
+    int head32[] = {5};
+    std::vector<int> reacthead32 (head32, head32 + sizeof(head32) / sizeof(int) );
+  int tail32[] = {2,4};
+    std::vector<int> reacttail32 (tail32, tail32 + sizeof(tail32) / sizeof(int) );
+
+    h2.addReaction(1, reacthead12, reacttail12, 2);
+    h2.addReaction(2, reacthead22, reacttail22, 2);
+    h2.addReaction(3, reacthead32, reacttail32, 1);
+
+  auto overlayFG = h2.createOverlay(toRemove);
+  
+  goal = h2.getCompound(5);
+  std::vector<int> startingCompound2;
+  startingCompound2.push_back(1);
+  startingCompound2.push_back(2);
+  startingCompound2.push_back(4);
+
+  auto dBest2 = h2.yenHyp(*goal, startingCompound2, overlayFG, 9);
+
+  std::cout << dBest2.size() << std::endl;
+  for( auto path : dBest2) {
     std::cout << "plan: " << std::endl;
     for( auto d : path) {
       std::cout << d << std::endl;
     }
-  }
+  }*/
 
 	return 0;
 }
