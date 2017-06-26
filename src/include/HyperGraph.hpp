@@ -5,6 +5,7 @@
 #include <cmath>
 #include <queue>
 #include <algorithm>
+#include <fstream>
 
 struct HyperGraph
 {
@@ -492,5 +493,48 @@ public:
     		std::cout << "With yield: " << plan.first << "\n" << std::endl;
     		i++;
   		} 
+	}
+
+	void printGraphConsole() {
+		for( auto reaction : reactionList) {
+			if (reaction.id == 0) {
+				continue;
+			}
+			std::cout << "ID: " << reaction.id << ". Yield: " << reaction.yield <<  std::endl;
+    		std::cout << "head: " << *reaction.head.begin() << std::endl;
+    		for( auto tailelement : reaction.tail) {
+      			std::cout << "tail: " << tailelement << std::endl;
+    		}
+    		
+  		} 
+	}
+
+	void graphToGraphviz() {
+		std::ofstream graphFile;
+		graphFile.open("Graph.gv");
+		graphFile << "digraph G { \n";
+		graphFile << "{\n";
+
+		for( auto reaction : reactionList) {
+			if(reaction.id == 0) {
+				continue;
+			}
+			graphFile << "	R" << reaction.id << " [label = \"R" << reaction.id << ". Yield: " << reaction.yield << "\"]\n";
+
+		}
+
+		graphFile << "}\n";
+
+		for( auto reaction : reactionList) {
+			if(reaction.id == 0) {
+				continue;
+			}
+			graphFile << "	R" << reaction.id << " -> " << *reaction.head.begin() << ";\n";
+    		for( auto tailelement : reaction.tail) {
+      			graphFile << "	" << tailelement << " -> R" << reaction.id << ";\n";
+    		}
+  		} 
+		graphFile << "}";
+		graphFile.close();
 	}
 };

@@ -65,27 +65,8 @@ int main(int argc, char const *argv[])
   	h.addReaction(9, reacthead9, reacttail9, 2);
   	h.addReaction(10, reacthead10, reacttail10,2);
 
-  	/*h.printCompoundList();
-  	h.printReactionList();
-
-  	auto react = h.getReaction(2);
-  	for ( auto it = react->tail.begin(); it != react->tail.end(); ++it ) {
-	  	std::cout << *it << std::endl;
-  	}
-  	std::cout << "yield " << react->yield << std::endl;
-
-
-  	auto com = h.getCompound(3);
-  	std::cout << com->id << std::endl;
-  	std::cout << "head of " << com->id << std::endl;
-  	for( auto it = com->productOfReaction.begin(); it != com->productOfReaction.end(); ++it) {
-	  	std::cout << *it << std::endl;
-  	}*/
   std::vector<int> toRemove;
-  /*toRemove.push_back(9);
-  toRemove.push_back(1);
-  toRemove.push_back(8);
-  toRemove.push_back(2);*/
+
 
 
   auto overlayFullGraph = h.createOverlay(toRemove);
@@ -94,76 +75,10 @@ int main(int argc, char const *argv[])
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
-	//std::cout << h.shortestPathMaximumYield(*goal, startingCompound, overlayFullGraph) << " is maxyield " << std::endl;
-
-  
-  /*std::cout << "compound 8 has degree in " << h.compoundInDegree(8) << std::endl;
-  std::cout << "reaction 6 has degree in " << h.reactionInDegree(6) << std::endl;
-  std::cout << "reaction 6 has degree out " << h.reactionOutDegree(6) << std::endl;
-
-  std::cout << "Node with highest indegree is: " << h.highestCompoundInDegree() << std::endl;
-  std::cout << "Node with highest outdegree is: " << h.highestCompoundOutDegree() << std::endl;
-  std::cout << "Reaction with highest indegree is: " << h.highestReactionInDegree() << std::endl;
-  std::cout << "Reaction with highest outdegree is: " << h.highestReactionOutDegree() << std::endl;*/
-
-  /*std::cout << "h: " <<  h.getCompound(4)->maxYieldEdge << std::endl;
-
-  auto p = h.shortestPathMaximumYield(*goal, startingCompound, overlayFullGraph);
-  auto list = p.second;
-  std::cout << "shortest: " << std::endl;
-  for (auto g : list) {
-    std::cout << g << std::endl;
-  }
-  std::cout << "h: " << h.getCompound(4)->maxYieldEdge << std::endl;*/
-
 
   auto dBest = h.yenHyp(*goal, startingCompound, overlayFullGraph, 9);
   h.printResults(dBest);
-
- /* std::cout << "" << std::endl;
-
-  std::cout << "Part 2" << std::endl;
-
-  HyperGraph h2;
-
-
-
-  int head12[] = {3};
-    std::vector<int> reacthead12 (head12, head12 + sizeof(head12) / sizeof(int) );
-  int tail12[] = {1,2};
-    std::vector<int> reacttail12 (tail12, tail12 + sizeof(tail12) / sizeof(int) );
-
-  int head22[] = {2};
-    std::vector<int> reacthead22 (head22, head22 + sizeof(head22) / sizeof(int) );
-  int tail22[] = {3,4};
-    std::vector<int> reacttail22 (tail22, tail22 + sizeof(tail22) / sizeof(int) );
-
-    int head32[] = {5};
-    std::vector<int> reacthead32 (head32, head32 + sizeof(head32) / sizeof(int) );
-  int tail32[] = {2,4};
-    std::vector<int> reacttail32 (tail32, tail32 + sizeof(tail32) / sizeof(int) );
-
-    h2.addReaction(1, reacthead12, reacttail12, 2);
-    h2.addReaction(2, reacthead22, reacttail22, 2);
-    h2.addReaction(3, reacthead32, reacttail32, 1);
-
-  auto overlayFG = h2.createOverlay(toRemove);
-  
-  goal = h2.getCompound(5);
-  std::vector<int> startingCompound2;
-  startingCompound2.push_back(1);
-  startingCompound2.push_back(2);
-  startingCompound2.push_back(4);
-
-  auto dBest2 = h2.yenHyp(*goal, startingCompound2, overlayFG, 9);
-
-  std::cout << dBest2.size() << std::endl;
-  for( auto path : dBest2) {
-    std::cout << "plan: " << std::endl;
-    for( auto d : path) {
-      std::cout << d << std::endl;
-    }
-  }*/
-
+  h.graphToGraphviz();
+ 
 	return 0;
 }
