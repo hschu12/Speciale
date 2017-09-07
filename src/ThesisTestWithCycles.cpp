@@ -54,6 +54,12 @@ int main(int argc, char const *argv[])
 	int tail10[] = {7};
   	std::vector<int> reacttail10 (tail10, tail10 + sizeof(tail10) / sizeof(int) );
 
+    //add cycle
+  int head11[] = {3};
+    std::vector<int> reacthead11 (head10, head10 + sizeof(head10) / sizeof(int) );
+  int tail11[] = {7};
+    std::vector<int> reacttail11 (tail10, tail10 + sizeof(tail10) / sizeof(int) );
+
   	h.addReaction(1, reacthead1, reacttail1, 0.7);
   	h.addReaction(2, reacthead2, reacttail2, 0.5);
   	h.addReaction(3, reacthead3, reacttail3, 0.5);
@@ -64,6 +70,7 @@ int main(int argc, char const *argv[])
   	h.addReaction(8, reacthead8, reacttail8, 0.7);
   	h.addReaction(9, reacthead9, reacttail9, 0.7);
   	h.addReaction(10, reacthead10, reacttail10,0.7);
+    h.addReaction(11, reacthead11, reacttail11,0.7);
 
   std::vector<int> toRemove;
 
@@ -82,7 +89,6 @@ int main(int argc, char const *argv[])
   for (auto element : path) {
     std::cout << element << std::endl;
   }
-  goal = h.getCompound(8);
   std::cout << goal -> weight << std::endl;
   h.graphToGraphviz();
  

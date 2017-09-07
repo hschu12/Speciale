@@ -361,7 +361,7 @@ public:
 			ReactionNode *r = getReaction(reaction.id);
 			r->kj = 0;
 		}
-		s->weight = 1;
+		s->weight = 1; // Need to be 1 to start out the weight calculations.
 		compoundList.at(s->id) = *s;
 		Q.push_back(*s); 
 		std::push_heap (Q.begin(),Q.end(), cmp());
