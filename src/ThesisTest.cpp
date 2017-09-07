@@ -1,4 +1,4 @@
-#include "include/HyperGraph.hpp"
+#include "include/HyperGraphNoCycles.hpp"
 #include <iostream>
 int main(int argc, char const *argv[])
 {
@@ -54,16 +54,16 @@ int main(int argc, char const *argv[])
 	int tail10[] = {7};
   	std::vector<int> reacttail10 (tail10, tail10 + sizeof(tail10) / sizeof(int) );
 
-  	h.addReaction(1, reacthead1, reacttail1, 2);
-  	h.addReaction(2, reacthead2, reacttail2, 1);
-  	h.addReaction(3, reacthead3, reacttail3, 1);
-  	h.addReaction(4, reacthead4, reacttail4, 2);
-  	h.addReaction(5, reacthead5, reacttail5, 2);
-  	h.addReaction(6, reacthead6, reacttail6, 2);
-  	h.addReaction(7, reacthead7, reacttail7, 2);
-  	h.addReaction(8, reacthead8, reacttail8, 2);
-  	h.addReaction(9, reacthead9, reacttail9, 2);
-  	h.addReaction(10, reacthead10, reacttail10,2);
+    h.addReaction(1, reacthead1, reacttail1, 0.7);
+    h.addReaction(2, reacthead2, reacttail2, 0.5);
+    h.addReaction(3, reacthead3, reacttail3, 0.5);
+    h.addReaction(4, reacthead4, reacttail4, 0.7);
+    h.addReaction(5, reacthead5, reacttail5, 0.7);
+    h.addReaction(6, reacthead6, reacttail6, 0.7);
+    h.addReaction(7, reacthead7, reacttail7, 0.7);
+    h.addReaction(8, reacthead8, reacttail8, 0.7);
+    h.addReaction(9, reacthead9, reacttail9, 0.7);
+    h.addReaction(10, reacthead10, reacttail10,0.7);
 
   std::vector<int> toRemove;
 

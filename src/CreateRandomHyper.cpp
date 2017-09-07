@@ -1,4 +1,4 @@
-#include "include/HyperGraph.hpp"
+#include "include/HyperGraphNoCycles.hpp"
 #include <iostream>
 #include <cstdlib>
 
