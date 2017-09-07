@@ -355,7 +355,7 @@ public:
 		}
 		for(auto compound : compoundList) {
 			CompoundNode *c = getCompound(compound.id);
-			c->weight = 1;
+			c->weight = 0;
 		}
 		for(auto reaction : reactionList) {
 			ReactionNode *r = getReaction(reaction.id);
@@ -388,7 +388,7 @@ public:
   						F = temp->weight * F;
   					}
   					std::cout << "F: " << F << std::endl;
-  					if (c->weight >= r->yield *  F) {
+  					if (c->weight < r->yield *  F) {
   						if(!vectorContainsCompoundNode(Q, *c)) {
   							Q.push_back(*c); 
 							std::push_heap (Q.begin(),Q.end(), cmp());

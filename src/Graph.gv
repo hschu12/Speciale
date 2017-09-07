@@ -10,6 +10,8 @@ digraph G {
 	R8 [label = "R8. Yield: 0.7"]
 	R9 [label = "R9. Yield: 0.7"]
 	R10 [label = "R10. Yield: 0.7"]
+	R11 [label = "R11. Yield: 1"]
+	R12 [label = "R12. Yield: 1"]
 }
 	R1 -> 3;
 	1 -> R1;
@@ -35,4 +37,8 @@ digraph G {
 	6 -> R9;
 	R10 -> 8;
 	7 -> R10;
+	R11 -> 1;
+	0 -> R11;
+	R12 -> 2;
+	0 -> R12;
 }

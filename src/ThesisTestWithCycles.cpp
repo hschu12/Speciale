@@ -82,6 +82,8 @@ int main(int argc, char const *argv[])
   for (auto element : path) {
     std::cout << element << std::endl;
   }
+  goal = h.getCompound(8);
+  std::cout << goal -> weight << std::endl;
   h.graphToGraphviz();
  
 	return 0;
