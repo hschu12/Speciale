@@ -70,26 +70,17 @@ int main(int argc, char const *argv[])
   	h.addReaction(8, reacthead8, reacttail8, 0.7);
   	h.addReaction(9, reacthead9, reacttail9, 0.7);
   	h.addReaction(10, reacthead10, reacttail10,0.7);
-    h.addReaction(11, reacthead11, reacttail11,0.7);
+  //  h.addReaction(11, reacthead11, reacttail11,0.7);
 
-  std::vector<int> toRemove;
-
-
-
-  auto overlayFullGraph = h.createOverlay(toRemove);
 
 	auto goal = h.getCompound(8);
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
 
-  auto dBest = h.ShortestHyperNielsen(startingCompound);
-  auto path = h.getShortestPathYield(8);
-  std::cout << "path" << std::endl;
-  for (auto element : path) {
-    std::cout << element << std::endl;
-  }
-  std::cout << goal -> weight << std::endl;
+  auto dBest = h.yenHyp(*goal, startingCompound, 8);
+  h.printResults(dBest);
+
   h.graphToGraphviz();
  
 	return 0;

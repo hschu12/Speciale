@@ -35,37 +35,14 @@ int main(int argc, char const *argv[])
     h.addReaction(4, reacthead4, reacttail4, 0.7);
     h.addReaction(5, reacthead5, reacttail5, 0.7);
 
-  	
-  std::vector<int> toRemove;
-
-
-
-  
-  /*auto overlayFullGraph = h.createOverlay(toRemove);
-
   auto goal = h.getCompound(5);
   std::vector<int> startingCompound;
   startingCompound.push_back(1);
   startingCompound.push_back(6);
 
-  auto dBest = h.yenHyp(*goal, startingCompound, overlayFullGraph, 9);
-  h.printResults(dBest);*/
+  auto dBest = h.yenHyp(*goal, startingCompound, 9);
+  h.printResults(dBest);
 
-
-  auto overlayFullGraph = h.createOverlay(toRemove);
-
-  auto goal = h.getCompound(5);
-  std::vector<int> startingCompound;
-  startingCompound.push_back(1);
-  startingCompound.push_back(6);
-
-  auto dBest = h.ShortestHyperNielsen(startingCompound);
-  auto path = h.getShortestPathYield(5);
-  std::cout << "path" << std::endl;
-  for (auto element : path) {
-    std::cout << element << std::endl;
-  }
-  std::cout << goal -> weight << std::endl;
   h.graphToGraphviz();
  
 	return 0;
