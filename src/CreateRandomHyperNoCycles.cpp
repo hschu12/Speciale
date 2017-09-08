@@ -1,4 +1,4 @@
-#include "include/HyperGraphNoCycles.hpp"
+#include "include/HyperGraph.hpp"
 #include <iostream>
 #include <cstdlib>
 
@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
       tail1 = rand() % numberOfCompounds + 1;
       tail2 = rand() % numberOfCompounds + 1;
     } while (head1 == tail1 || head1 == tail2 || head1 < tail1 || head1 < tail2);
-    int yield = rand() % 2 + 1;
+    double yield =  ((double) rand() / (RAND_MAX));
     std::vector<int> head;
     std::vector<int> tail;
     head.push_back(head1);
@@ -29,23 +29,19 @@ int main(int argc, char const *argv[])
     h.addReaction(r, head, tail, yield);
   }
 
-  h.printGraphConsole();
-  h.graphToGraphviz();
-
-  std::vector<int> toRemove;
-  auto overlayFullGraph = h.createOverlay(toRemove);
-
 	auto goal = h.getCompound(numberOfCompounds);
 	std::vector<int> startingCompound;
-	for (int i = 1; i <= numberOfReactions; i++)
+	for (int i = 1; i <= numberOfReactions/2; i++)
   {
     startingCompound.push_back(i);
   }
-
-
-
-  auto dBest = h.yenHyp(*goal, startingCompound, overlayFullGraph, 9);
+  auto dBest = h.yenHypDynamic(*goal, startingCompound, 4);
   h.printResults(dBest);
+  
+  dBest = h.yenHypNielsen(*goal, startingCompound, 4);
+  h.printResults(dBest);
+
+  h.graphToGraphviz();
 
 	return 0;
 }

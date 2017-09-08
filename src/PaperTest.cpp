@@ -1,4 +1,4 @@
-#include "include/HyperGraphNoCycles.hpp"
+#include "include/HyperGraph.hpp"
 #include <iostream>
 int main(int argc, char const *argv[])
 {
@@ -44,21 +44,18 @@ int main(int argc, char const *argv[])
   h.addReaction(5, reacthead5, reacttail5, 1);
   h.addReaction(6, reacthead6, reacttail6, 2);
 
-  h.graphToGraphviz();
-
-  std::vector<int> toRemove;
-
-
-  auto overlayFullGraph = h.createOverlay(toRemove);
-
 	auto goal = h.getCompound(6);
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
 
-  auto dBest = h.yenHyp(*goal, startingCompound, overlayFullGraph, 9);
+  auto dBest = h.yenHypNielsen(*goal, startingCompound, 9);
   h.printResults(dBest);
 
+  dBest = h.yenHypDynamic(*goal, startingCompound, 9);
+  h.printResults(dBest);
+  
+  h.graphToGraphviz();
 
 	return 0;
 }

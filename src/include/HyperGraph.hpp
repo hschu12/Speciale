@@ -10,7 +10,7 @@
 struct HyperGraph
 {
 
-	struct ReactionNode
+struct ReactionNode
 	{
 
 		ReactionNode(){};
@@ -60,9 +60,11 @@ struct HyperGraph
 		}
 
 	};
+
 private: 
 	std::vector<CompoundNode> compoundList;
 	std::vector<ReactionNode> reactionList;
+	int numberOfReactions = 0;
 
 public:
 	HyperGraph() {
@@ -77,13 +79,13 @@ public:
 		CompoundNode *cn = new CompoundNode(compoundID);
 		compoundList.at(compoundID) = *cn;
 	} 
-
+	
 	void addPointerFromReactionToCompound (int compoundID, int reactionID) {
 		//std::cout << "Adding pointer from compound " << compoundID << " to reaction " << reactionID << std::endl; 
 		auto compound = getCompound(compoundID);
 		compound->productOfReaction.push_back(reactionID);
 		//std::cout << "size of PoR is " << compound->productOfReaction.size() << " after insertion" << std::endl;
-	}	
+	}		
 
 	void addPointerFromCompoundToReaction (int compoundID, int reactionID) {
 		//std::cout << "Adding pointer from compound " << compoundID << " to reaction " << reactionID << std::endl; 
@@ -228,6 +230,41 @@ public:
 		return graphOverlay;
 	}
 
+	double maxYield(CompoundNode &v, CompoundNode &s, std::vector<bool> &overlay) {
+		if (v.id == s.id) {
+			return 1.0; //starting compounds always have a yield of 100%
+		}
+		double maximumYield = 0; // -infinity
+		for(auto reaction : v.productOfReaction ) {
+			if (overlay.at(reaction)) {
+
+				ReactionNode *r1 = getReaction(reaction);
+				double yield = r1->yield;
+				for (auto reactionTailIterator : r1->tail) {
+
+					yield = yield * maxYield(*getCompound(reactionTailIterator), s, overlay);
+				}
+				if (maximumYield < yield) {
+					maximumYield = yield;
+					v.maxYieldEdge = reaction;
+				}
+			}
+		}
+		return maximumYield;
+	}
+
+	std::pair < std::vector<bool> , std::pair< double, std::vector<int>> >shortestPathMaximumYield(CompoundNode &v, std::vector<int> &startingCompounds, std::vector<bool> &overlay, CompoundNode &s) {
+
+		double result = maxYield(v, s, overlay);
+
+		std::vector<int> shortest = getShortestPathYield(v.id);
+
+		std::pair<double, std::vector<int>> pair (result, shortest);
+		std::pair<std::vector<bool> , std::pair<double, std::vector<int>> > pair2 (overlay, pair);
+
+		return pair2;
+	}
+
 	std::vector< std::vector<bool> > backwardBranching(std::pair < double, std::vector<int> > pair, std::vector<bool> overlay) {
 		std::vector< std::vector<bool> > B;
 
@@ -255,11 +292,66 @@ public:
 				B.push_back(overlay);
 			}
 		}
-
 		return B;
 	}
 
-	std::vector< std::pair < double, std::vector<int>> > yenHyp (CompoundNode &v, std::vector<int> &startingCompounds, int K) {
+	std::vector< std::pair < double, std::vector<int>> > yenHypDynamic (CompoundNode &v, std::vector<int> &startingCompounds, int K) {
+		std::vector< std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > > L;
+		
+		std::make_heap (L.begin(),L.end(), cmpPair());
+
+		std::vector< std::pair < double, std::vector<int> > >A; //list of k shortest hyperpaths.
+		
+		CompoundNode *s = new CompoundNode(); //MIGHT NOT BE NEEDED
+		s->id = 0;
+		auto startingCompoundIterator = startingCompounds.begin();
+		while (startingCompoundIterator != startingCompounds.end()) {
+			std::vector<int> head;
+			head.push_back(*startingCompoundIterator);
+			std::vector<int> tail;
+			tail.push_back(s->id);
+			addReactionToS(reactionList.size(), head, tail, 1.0); 	
+			ReactionNode *r = getReaction(reactionList.size()-1);
+			CompoundNode *c = getCompound(*startingCompoundIterator);
+			c->toS = r;
+			c->productOfReaction.push_back(r->id);
+			s->eductOfReaction.push_back(r->id);
+			++startingCompoundIterator;
+		}
+		compoundList.at(s->id) = *s;
+
+		std::vector<int> toRemove;
+		std::vector<bool> overlay = createOverlay(toRemove, true);
+
+		std::pair< std::vector<bool> , std::pair<double, std::vector<int>> > pair = shortestPathMaximumYield(v, startingCompounds, overlay, *s);
+		L.push_back(pair);
+		for ( int k = 0; k < K; k++) {
+			if (L.empty()) {
+				break;
+			}
+			pair = L.front(); 	//Get shortest path with max yield and remove from heap
+  			std::pop_heap (L.begin(),L.end(), cmpPair() ); 
+  			L.pop_back();	
+
+  			std::pair < double, std::vector<int> > toA (pair.second.first, pair.second.second);
+  			A.push_back(toA);	//Add current best plan to k-best
+
+  			for (auto newOverlay : backwardBranching(pair.second, pair.first)) { //Potential danger (function call in for loop)
+  				std::pair < std::vector<bool> , std::pair<double, std::vector<int>> >potentialNewPlan = shortestPathMaximumYield(v, startingCompounds, newOverlay, *s);
+  				
+  				if (pathIsComplete(potentialNewPlan.second.first)) {
+  					if(pathNotAlreadyFound(potentialNewPlan.second.second, A)){
+  						L.push_back(potentialNewPlan); 
+						std::push_heap (L.begin(),L.end(), cmpPair());
+  					}
+  				}
+  			}
+  		}
+  		removeDummy(startingCompounds);
+  		return A;
+	}
+
+std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode &v, std::vector<int> &startingCompounds, int K) {
 		std::vector< std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > > L;
 		
 		std::make_heap (L.begin(),L.end(), cmpPair());
@@ -314,6 +406,7 @@ public:
   				}
   			}
   		}
+  		removeDummy(startingCompounds);
   		return A;
 	}
 
@@ -451,13 +544,13 @@ public:
 		}
 
 		resetMaxYieldEdges();
-		resetNodeWeight();
 		return shortestPath;
 	}
 
 	void resetMaxYieldEdges(){
 		for (CompoundNode &compound : compoundList) {
 			compound.maxYieldEdge = -1;
+
 		}
 	}
 
@@ -470,6 +563,13 @@ public:
 				compound.weight = 0;
 			}
 		}
+	}
+
+	void removeDummy(std::vector<int> &startingCompounds) {
+		for(auto compound : startingCompounds) {
+			reactionList.pop_back();
+		}
+		compoundList.at(0) = NULL;
 	}
 
 	/********************************
@@ -570,6 +670,11 @@ public:
 	}
 
 
+	/************************
+	*						*
+	*		PRINTING		*
+	*						*
+	*************************/
 	void printCompoundList() {
 		int i = 0;
 		for (auto it : compoundList) {

@@ -1,4 +1,4 @@
-#include "include/HyperGraphWithCycles.hpp"
+#include "include/HyperGraph.hpp"
 #include <iostream>
 int main(int argc, char const *argv[])
 {
@@ -77,8 +77,10 @@ int main(int argc, char const *argv[])
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
+  auto dBest = h.yenHypDynamic(*goal, startingCompound, 8);
+  h.printResults(dBest);
 
-  auto dBest = h.yenHyp(*goal, startingCompound, 8);
+  dBest = h.yenHypNielsen(*goal, startingCompound, 8);
   h.printResults(dBest);
 
   h.graphToGraphviz();
