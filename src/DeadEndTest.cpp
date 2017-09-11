@@ -71,11 +71,11 @@ int main(int argc, char const *argv[])
 
     auto dBest = h.yenHypNielsen(*goal, startingCompound, 10);
     h.printResults(dBest);
+    h.graphToGraphviz();
 
     dBest = h.yenHypDynamic(*goal, startingCompound, 10);
     h.printResults(dBest);
 
-    h.graphToGraphviz();
  
 	return 0;
 }

@@ -1,44 +1,35 @@
 digraph G { 
 {
-	R1 [label = "R1. Yield: 0.935913"]
-	R2 [label = "R2. Yield: 0.73811"]
-	R3 [label = "R3. Yield: 0.139006"]
-	R4 [label = "R4. Yield: 0.534809"]
-	R5 [label = "R5. Yield: 0.0597719"]
-	R6 [label = "R6. Yield: 0.863395"]
-	R7 [label = "R7. Yield: 0.277873"]
-	R8 [label = "R8. Yield: 0.790831"]
-	R9 [label = "R9. Yield: 0.0126407"]
-	R10 [label = "R10. Yield: 0.222167"]
+	R1 [label = "R1. Yield: 0.7"]
+	R2 [label = "R2. Yield: 0.5"]
+	R3 [label = "R3. Yield: 0.9"]
+	R4 [label = "R4. Yield: 0.8"]
+	R5 [label = "R5. Yield: 0.9"]
+	R6 [label = "R6. Yield: 0.8"]
+	R7 [label = "R7. Yield: 0.7"]
+	R8 [label = "R8. Yield: 0.6"]
 }
-	R1 -> 8;
-	3 -> R1;
+	R1 -> 6;
 	1 -> R1;
-	R2 -> 10;
-	8 -> R2;
+	2 -> R1;
+	R2 -> 7;
 	2 -> R2;
-	R3 -> 9;
+	3 -> R2;
+	R3 -> 8;
+	3 -> R3;
 	4 -> R3;
-	8 -> R3;
-	R4 -> 8;
-	6 -> R4;
-	4 -> R4;
-	R5 -> 7;
+	R4 -> 5;
+	1 -> R4;
+	R5 -> 2;
 	6 -> R5;
-	2 -> R5;
-	R6 -> 7;
+	7 -> R5;
+	R6 -> 9;
 	5 -> R6;
-	6 -> R6;
-	R7 -> 6;
-	1 -> R7;
-	1 -> R7;
+	7 -> R6;
+	R7 -> 10;
+	6 -> R7;
+	8 -> R7;
 	R8 -> 10;
-	7 -> R8;
-	3 -> R8;
-	R9 -> 10;
-	8 -> R9;
-	1 -> R9;
-	R10 -> 7;
-	4 -> R10;
-	1 -> R10;
+	8 -> R8;
+	4 -> R8;
 }
