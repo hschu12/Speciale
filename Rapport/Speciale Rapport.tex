@@ -9,7 +9,7 @@
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage{listings}
-\usepackage[style=authoryear,backend=bibtex]{biblatex}
+\usepackage[style=ieee, defernumbers=true, backend=bibtex]{biblatex}
 
 \bibliography{referencer}
 
@@ -103,17 +103,23 @@ Daniel Merkle
 
 \section{Preliminaries}
 
-kkk \cite{Carsten}
-kkkk \cite{SynthesisPlans}
+kkk \cite{Carsten}\\
+kkkk \cite{SynthesisPlans}\\
+kkk \cite{Grzybowski}\\
+kkkk \cite{Fagerberg}\\
+
+\section{Dynamic Approach}
+
+\section{Nielsens Algorithm}
+k \cite{Nielsen}
 
 \section{Konklusion}
 
 \newpage
 
-%\printbibliography
-%\printbibliography[type=book]
-%\printbibliography[type=article]
-%\printbibliography[nottype=book, nottype=article, title={Hjemmesider}]
+\printbibliography[type=book, title={Books}]
+\printbibliography[type=article, title={Articles}]
+\printbibliography[nottype=book, nottype=article, title={Other}]
 
 \newpage
 \section{Appendiks}

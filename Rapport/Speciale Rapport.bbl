@@ -1,0 +1,174 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Carsten}{thesis}{}
+  \name{author}{2}{}{%
+    {{}%
+     {L{\"u}tzen}{L.}%
+     {Carsten~Gr{\o}nbjerg}{C.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Johansen}{J.}%
+     {Daniel~Fentz}{D.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LCGJDF1}
+  \strng{fullhash}{LCGJDF1}
+  \field{title}{A Computational and Mathematical Approach to Synthesis
+  Planning}
+  \list{institution}{1}{%
+    {University of Southern Denmark}%
+  }
+  \field{type}{mathesis}
+  \field{year}{2015}
+\endentry
+
+\entry{SynthesisPlans}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hoffmann}{H.}%
+     {R.~W.}{R.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Berlin Heidelberg}%
+  }
+  \strng{namehash}{HRW1}
+  \strng{fullhash}{HRW1}
+  \field{title}{Elements of Synthesis Planning}
+  \field{year}{2009}
+\endentry
+
+\entry{Grzybowski}{article}{}
+  \name{author}{8}{}{%
+    {{}%
+     {Szymkuc}{S.}%
+     {Sara}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Gajewska}{G.}%
+     {Ewa~P.}{E.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Klucznik}{K.}%
+     {Tomasz}{T.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Molga}{M.}%
+     {Karol}{K.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Dittwald}{D.}%
+     {Piotr}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Startek}{S.}%
+     {Michal}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Bajczyk}{B.}%
+     {Michal}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Grzybowski}{G.}%
+     {Bartosz~A.}{B.~A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SSGEPKT+1}
+  \strng{fullhash}{SSGEPKTMKDPSMBMGBA1}
+  \field{number}{55}
+  \field{pages}{5904\bibrangedash 5937}
+  \field{title}{Computer-Assisted Synthetic Planning: The End of the Beginning}
+  \field{journaltitle}{Angewandte Chemie International Edition}
+  \field{year}{2016}
+\endentry
+
+\entry{Fagerberg}{article}{}
+  \name{author}{5}{}{%
+    {{}%
+     {Fagerberg}{F.}%
+     {Rolf}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Flamm}{F.}%
+     {Christoph}{C.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Kianian}{K.}%
+     {Rojin}{R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Merkle}{M.}%
+     {Daniel}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Stadler}{S.}%
+     {Peter~F.}{P.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{FRFCKR+1}
+  \strng{fullhash}{FRFCKRMDSPF1}
+  \field{note}{Unpublished Article}
+  \field{title}{Finding the K Best Synthesis Plans}
+  \field{year}{2017}
+\endentry
+
+\entry{Nielsen}{article}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Nielsen}{N.}%
+     {Lars~Relund}{L.~R.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Andersen}{A.}%
+     {Kim~Allan}{K.~A.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Pretolani}{P.}%
+     {Daniele}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{NLRAKAPD1}
+  \strng{fullhash}{NLRAKAPD1}
+  \field{title}{Finding the K shortest hyperpaths: algorithms and applications}
+  \field{year}{2002}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
