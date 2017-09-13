@@ -81,13 +81,14 @@ int main(int argc, char const *argv[])
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
    
+    h.graphToGraphviz("ThesisTestWithCycles");
+
     auto dBest = h.yenHypNielsen(*goal, startingCompound, 8);
     h.printResults(dBest);
 
     dBest = h.yenHypDynamic(*goal, startingCompound, 8);
     h.printResults(dBest);
 
-    h.graphToGraphviz();
  
 	return 0;
 }

@@ -631,9 +631,9 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 		 std::cout << std::endl;
 	}
 
-	void graphToGraphviz() {
+	void graphToGraphviz(std::string s) {
 		std::ofstream graphFile;
-		graphFile.open("Graph.gv");
+		graphFile.open(s + ".gv");
 		graphFile << "digraph G { \n";
 		graphFile << "{\n";
 

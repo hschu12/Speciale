@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
     dBest = h.yenHypNielsen(*goal, startingCompound, 4);
     h.printResults(dBest);
 
-    h.graphToGraphviz();
+    h.graphToGraphviz("Random");
 
 	return 0;
 }
