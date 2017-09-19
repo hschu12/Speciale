@@ -22,16 +22,18 @@
 \parindent0em
 
 \lstset{%
+mathescape,
 frame=single,
 numbers=left,
 numberstyle=\footnotesize,
-tabsize=2,
+tabsize=4,
 keepspaces=true,
 columns=fullflexible,
-basicstyle=\ttfamily\scriptsize,
+basicstyle=\normalsize,
 inputencoding=utf8,
 extendedchars=true,
 }
+\renewcommand{\lstlistingname}{Algorithm}% Listing -> Algorithm
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 
@@ -41,13 +43,13 @@ extendedchars=true,
 \lhead{Henrik Schulz} % left header
 \lfoot{} % left footer
 \chead{}
-\rhead{1. januar 2018} % right header
+\rhead{31. December 2017} % right header
 \rfoot{Page \thepage\ of \pageref{LastPage}} % right footer
 \renewcommand{\headrulewidth}{0.0pt} % removing the header separtions line
 
 \title{Computational Synthesis Planning Using Big Data}
 \author{Computational Syntese planlægning ved hjælp af big data\\ \\Master Thesis 2018\\Henrik Schulz}
-\date{01/1/2018}
+\date{31/12/2017}
 
 \begin{document}
 \begin{titlepage}
@@ -57,7 +59,7 @@ extendedchars=true,
 \center % Center everything on the page
 
 \textsc{\LARGE University of Southern Denmark\\\vspace{0.2cm}Department of Mathematics \\ \vspace{0.2 cm} and Computer Science}\\[1.5cm] % Name of your university/college
-\textsc{\large Master Thesis -- 01/01-2018}\\[0.5cm] % Major heading such as course name
+\textsc{\large Master Thesis -- 31/12-2017}\\[0.5cm] % Major heading such as course name
 
 \HRule \\[0.4cm]
 {\huge \bfseries Computational Synthesis Planning Using Big Data}\\[0.4cm] 
@@ -74,7 +76,6 @@ Henrik Schulz\\
 ~
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
-\vspace{0.5cm}
 \emph{Supervisors:} \\
 Daniel Merkle
 \end{flushright}
@@ -84,34 +85,122 @@ Daniel Merkle
 
 \end{titlepage}
 
-\tableofcontents
-\newpage
-
 \vfill
 \section*{Abstract}
 
 \section*{Resumé}
 \newpage
 
-\section{Preface}
+\tableofcontents
+\newpage
+
+
+\section{Acknowledgements}
 
 \section{Introduction}
-
-
-\subsubsection*{Problem formulation}
-
+kkk \cite{Grzybowski}\\
+\subsection{Overview}
+Hvad indeholder hver sektion??
 
 \section{Preliminaries}
 
+This section contains definitions that will be used throughout this paper. It is assumed that the reader have a basic understanding of graph theory. \\
+
+\textbf{Hypergraphs}\\
+A directed hypergraph $h$ is a set of $V$ of vertices and a set $E$ of hyperedges, where each hyperedge $e=(T(e),H(e))$ is an ordered pair of non-empty multi-sets of vertices. The set $T(e)$ is denoted as the tail of the hyperedge and $H(e)$ is the head. If $|H(e)|=1$ then the hyperedge is denoted as a B-hyperedge. If all edges in the hypergraph is B-hyperedges, then the graph is denoted a B-hypergraph. This paper will only consider hypergraphs that are B-hypergraphs. A hypergraph $H' = (V',E')$ is a subhypergraph of $H=(V,E)$ if $V' \subset V$ and $E'\subset E$.\cite{Fagerberg}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/HyperEdge.png}
+\caption{Example of hyperedge $A$. $T(A) = \{1,2,3\}$, $H(A) = \{4\}$}
+\end{figure}
+
+\textbf{Hyperpaths}\\
+A path $P_{st}$ from $s$ to $t$ in a B-hypergraph is a sequence $P_{st}=\langle e_1, e_2, e_3, ... , e_q \rangle$ of B-hyperedges such that $s\in T(e_1)$ and $t=H(e_q)$ and $H(e_i) \in T(e_{i+1})$ for $i=1..q-1$. Its length $|P_{st}|$ is the number $q$ of hyperedges. If $t \in T(e_1)$, then $P_{st}$ is a cycle. A hypergraph is acyclic if it does not contain any cycles. \cite{Fagerberg}
+
+\section{Finding The K-Best Synthetic Plans}
 kkk \cite{Carsten}\\
-kkkk \cite{SynthesisPlans}\\
-kkk \cite{Grzybowski}\\
+kkkk \cite{Fagerberg}\\
+\subsection{Yen's Algorithm}
+Yen's algorithm is an algorithm that computes the K-shortest paths for a graph with non-negative edges. It was publish in 1971 and uses any shortest path algorithm to find the best path and then proceeds to find the $K-1$ deviation of the best path.
+
+It starts out by finding the best path using a shortest path algorithm. Once the best path have been found it uses the path to find all the potential next best paths by fixing and removing edges in the graph. \\
+By using the same first vertex as the original path but removing the first edge, it forces the shortest path algorithm to take another route through the graph and thereby creating a potential second best path. This is added to the list of potential paths and the algorithm can continue to derive other paths from the best path. By fixing the first edge in the previous best plan, Yen's algorithm forces the shortest path algorithm to take the first edge which it now shares with the best path. However, now the algorithm have removed the second edge from the original path and once again forces the shortest path algorithm to find alternative routes. This process is then repeated until we reach the next to last vertex in the best path.\\
+By sorting the list of potential paths, it has the second best path at the start of the list and it can add it to the final list of best path. The algorithm then repeats on the second best path to find the third best path. This is done until all K-best path have been found. \\
+
+We use the principles from Yen's algorithm to make our own algorithm that will work on hypergraphs. To handle the problem of generating all derived paths from our best path in our hypergraph, we use a method called BackwardsBranching.\cite{Nielsen} 
+
+However, this algorithm have a problem when working on a larger hypergraph. It demands that each time we make alterations on the hypergraph we have to copy all vertices and all arcs except
+
+\begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Backwards Branching for B-Hypergraph using overlay]
+function BackwardsBranching(Path, Overlay) 						
+	List B = $\emptyset$
+	// q = Path length
+	for i = 1 to q do			
+		//remove i'th hyperedge from Path in overlay					
+		Set Overlay[Path[i]] to false		
+		//fix the backtree				
+		for j = i downto 1	do							
+			Get compound C <- Path[j].head
+			for each reaction into C
+				Set Overlay[reaction.id] to false
+			Set Overlay[Path[j]] to true
+		endfor
+		B = B $\cup $ {$Overlay$}
+	endfor
+	return B
+endfunction
+\end{lstlisting}
+
+\begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = K-Shortest Paths Algorithm in B-Hypergraph]
+function YenHyp(s, t, K) 
+	L = new heap with elements (overlay, maxYield)
+	A = List of shortest paths
+	//(Graph is default overlay (all true))
+	$\pi$ = shortestPath(Graph, s,t) 				
+	Insert (Graph, $\pi$) into L
+	for k = 1 to K do
+		if L = $\emptyset$
+			Break
+		endif
+		(Overlay$'$, $\pi'$) = L.pop
+		for all Overlay$^i$ in BackwardBranching((Overlay$'$,$\pi'$)) do
+			$\pi^i$ = shortestPath(Overlay$^i$, s, t)
+			if $\pi^i$ is complete
+				Insert( $H^i$, $\pi^i$) into L
+			endif
+		endfor
+	endfor
+	return A
+endfunction
+\end{lstlisting}
+
+\subsection{Back-Branch}
+\subsubsection{Overlay}
+d\cite{VectorBool}
+
+\section{Shortest Path}
+\subsection{Dynamic Approach}
+kkk \cite{Carsten}\\
 kkkk \cite{Fagerberg}\\
 
-\section{Dynamic Approach}
+\subsubsection{Approach}
+\subsubsection{Testing}
+\subsubsection{Problems}
 
-\section{Nielsens Algorithm}
+\subsection{Nielsens Algorithm}
 k \cite{Nielsen}
+\subsubsection{Approach}
+\subsubsection{Testing}
+\subsubsection{Optimizing}
+
+\section{Work With Beilstein Data}
+\subsection{The Graph}
+\subsection{Testing}
+\subsubsection{Strychnine}
+\subsubsection{Compound 2} 
+\subsubsection{Compound 3}
+kkkk \cite{SynthesisPlans}\\
 
 \section{Konklusion}
 

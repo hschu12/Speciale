@@ -16,47 +16,6 @@
   {}
 \endgroup
 
-\entry{Carsten}{thesis}{}
-  \name{author}{2}{}{%
-    {{}%
-     {L{\"u}tzen}{L.}%
-     {Carsten~Gr{\o}nbjerg}{C.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Johansen}{J.}%
-     {Daniel~Fentz}{D.~F.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{LCGJDF1}
-  \strng{fullhash}{LCGJDF1}
-  \field{title}{A Computational and Mathematical Approach to Synthesis
-  Planning}
-  \list{institution}{1}{%
-    {University of Southern Denmark}%
-  }
-  \field{type}{mathesis}
-  \field{year}{2015}
-\endentry
-
-\entry{SynthesisPlans}{book}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Hoffmann}{H.}%
-     {R.~W.}{R.~W.}%
-     {}{}%
-     {}{}}%
-  }
-  \list{publisher}{1}{%
-    {Springer Berlin Heidelberg}%
-  }
-  \strng{namehash}{HRW1}
-  \strng{fullhash}{HRW1}
-  \field{title}{Elements of Synthesis Planning}
-  \field{year}{2009}
-\endentry
-
 \entry{Grzybowski}{article}{}
   \name{author}{8}{}{%
     {{}%
@@ -144,6 +103,38 @@
   \field{year}{2017}
 \endentry
 
+\entry{Carsten}{thesis}{}
+  \name{author}{2}{}{%
+    {{}%
+     {L{\"u}tzen}{L.}%
+     {Carsten~Gr{\o}nbjerg}{C.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Johansen}{J.}%
+     {Daniel~Fentz}{D.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LCGJDF1}
+  \strng{fullhash}{LCGJDF1}
+  \field{title}{A Computational and Mathematical Approach to Synthesis
+  Planning}
+  \list{institution}{1}{%
+    {University of Southern Denmark}%
+  }
+  \field{type}{mathesis}
+  \field{year}{2015}
+\endentry
+
+\entry{VectorBool}{misc}{}
+  \verb{url}
+  \verb http://en.cppreference.com/w/cpp/container/vector_bool
+  \endverb
+  \field{month}{09}
+  \field{year}{2017}
+\endentry
+
 \entry{Nielsen}{article}{}
   \name{author}{3}{}{%
     {{}%
@@ -166,6 +157,23 @@
   \strng{fullhash}{NLRAKAPD1}
   \field{title}{Finding the K shortest hyperpaths: algorithms and applications}
   \field{year}{2002}
+\endentry
+
+\entry{SynthesisPlans}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hoffmann}{H.}%
+     {R.~W.}{R.~W.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Springer Berlin Heidelberg}%
+  }
+  \strng{namehash}{HRW1}
+  \strng{fullhash}{HRW1}
+  \field{title}{Elements of Synthesis Planning}
+  \field{year}{2009}
 \endentry
 
 \lossort
