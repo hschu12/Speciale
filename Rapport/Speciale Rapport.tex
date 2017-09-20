@@ -122,29 +122,73 @@ A path $P_{st}$ from $s$ to $t$ in a B-hypergraph is a sequence $P_{st}=\langle 
 kkk \cite{Carsten}\\
 kkkk \cite{Fagerberg}\\
 \subsection{Yen's Algorithm}
-Yen's algorithm is an algorithm that computes the K-shortest paths for a graph with non-negative edges. It was publish in 1971 and uses any shortest path algorithm to find the best path and then proceeds to find the $K-1$ deviation of the best path.
+Yen's algorithm is an algorithm that computes the K-shortest paths for a graph with non-negative edges. It was publish in 1971 and uses any shortest path algorithm to find the best path and then proceeds to find the $K-1$ deviation of the best path. \cite{Yen}
 
 It starts out by finding the best path using a shortest path algorithm. Once the best path have been found it uses the path to find all the potential next best paths by fixing and removing edges in the graph. \\
 By using the same first vertex as the original path but removing the first edge, it forces the shortest path algorithm to take another route through the graph and thereby creating a potential second best path. This is added to the list of potential paths and the algorithm can continue to derive other paths from the best path. By fixing the first edge in the previous best plan, Yen's algorithm forces the shortest path algorithm to take the first edge which it now shares with the best path. However, now the algorithm have removed the second edge from the original path and once again forces the shortest path algorithm to find alternative routes. This process is then repeated until we reach the next to last vertex in the best path.\\
-By sorting the list of potential paths, it has the second best path at the start of the list and it can add it to the final list of best path. The algorithm then repeats on the second best path to find the third best path. This is done until all K-best path have been found. \\
+By sorting the list of potential paths, it has the second best path at the start of the list and it can add it to the final list of best path. The algorithm then repeats on the second best path to find the third best path. This is done until all K-best path have been found.
 
-We use the principles from Yen's algorithm to make our own algorithm that will work on hypergraphs. To handle the problem of generating all derived paths from our best path in our hypergraph, we use a method called BackwardsBranching.\cite{Nielsen} 
+\subsection{Yen's Algorithm On Hypergraphs}
+We use the principles from Yen's algorithm to make our own algorithm that will work on hypergraphs. To handle the problem of generating all derived paths from our best path in our hypergraph, we use a method called BackwardsBranching. \cite{Fagerberg} \cite{Nielsen} \cite{Carsten}
+\begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Backwards Branching for B-Hypergraph]
+function Back-Branch(H,$\pi$)
+	B=$\emptyset$
+	for i = 1 to q do 
+		Let H$^i$ be a new hypergraph
+		H$^i$.V = H.V
+		// Remove hyperarc from H
+		H$^i$.E = H.E $\setminus \{\pi.p(v_i)\}$
+		// Fix Back tree
+		for j = i+1 to q do
+			H$^i$.BS(vj) = \{$\pi.p(v_j)$\}
+		B = B $\cup$ \{H$^i$\}
+	return B
+\end{lstlisting}
+However, this algorithm have a problem when working on a larger hypergraph. It demands that each time we make alterations on the hypergraph we have to make a copy, $H^i$, of the graph, $H$, with the exception of the hyperedges that is removed when fixing the back tree and removing $\pi.p(v_i)$.\\
+This could easily work for smaller graphs, but if we use this on the hypergraph that we generate from the beilstein database, we would have to copy a graph of multiple GigaBytes. \\
+To handle this problem I came up with the idea of creating an overlay for the graph instead of copying it. The overlay would work as an transparent on top of the original graph, stating which edges still were accessible. This is done by creating a \textit{vector<bool>} which has a length of $R$, where $R$ is the number of reactions. Normally a reaction would contain at least 24 bytes of data:
+\begin{itemize}
+\item
+2x ints of 4 bytes each
+\item
+1x double of 8 bytes
+\item
+1x \textit{vector<int>} head of length one of at least 4 bytes
+\item
+1x \textit{vector<int>} tail of length $N$ (number of educts) of at least 4 bytes
+\end{itemize}
+This can be reduced dramaticly by using the \textit{vector<bool>}, since c++ only uses 1 bit per boolean in the vector instead of the regular 1 byte per boolean.\cite{VectorBool} This means if working on a hypergraph with 40 million reactions, we would be able to create an overlay using 5 MB of space per alternated graph, instead of copying a hypergraph were the reactions alone uses at least 960 MB per copy. \\
+As the figure below shows, we never change or remove anything on the hypergraph. We simply create the following overlay:
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c|c|c}
+Reaction & A & B & C & D \\\hline
+Usable & true & true & true & false \\\hline
+Bit Representation & 1 & 1 & 1 & 0
+\end{tabular}
+\end{table} 
+And then when trying to use an edge, we simply ask: "Does overlay at reaction A exist?". If yes, you can use it. If no, the edge have been "removed", and therefore cannot be used.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/OverlayIllustration}
+\caption{a) The original hypergraph. b) The original hypergraph, but using the overlay. If the reaction is green it is still usable. If red then it have been "removed" from the hypergraph.}
+\end{figure}
 
-However, this algorithm have a problem when working on a larger hypergraph. It demands that each time we make alterations on the hypergraph we have to copy all vertices and all arcs except
+This of course means that the algorithm for back-branch have to be changed accordingly. Instead of the hypergraph as input we now give it an overlay. This overlay is changed so it fits with the new layout of the graph. Instead of deleting hyperedges in the copy, we now simply changes the boolean at the index of the hyperedge.id. True if we should add the hyperedge and false when we want to "remove" a hyperedge.
 
 \begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Backwards Branching for B-Hypergraph using overlay]
-function BackwardsBranching(Path, Overlay) 						
+function BackwardsBranching($\pi$, Overlay) 						
 	List B = $\emptyset$
 	// q = Path length
 	for i = 1 to q do			
 		//remove i'th hyperedge from Path in overlay					
-		Set Overlay[Path[i]] to false		
+		Set Overlay[$\pi$[i]] to false		
 		//fix the backtree				
 		for j = i downto 1	do							
-			Get compound C <- Path[j].head
-			for each reaction into C
+			vertex C <- $\pi$[j].head
+			for each hyperedge into C
 				Set Overlay[reaction.id] to false
-			Set Overlay[Path[j]] to true
+			Set Overlay[$\pi$[j]] to true
 		endfor
 		B = B $\cup $ {$Overlay$}
 	endfor
@@ -174,10 +218,6 @@ function YenHyp(s, t, K)
 	return A
 endfunction
 \end{lstlisting}
-
-\subsection{Back-Branch}
-\subsubsection{Overlay}
-d\cite{VectorBool}
 
 \section{Shortest Path}
 \subsection{Dynamic Approach}

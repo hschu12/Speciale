@@ -16,49 +16,49 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Speciale_Rapport-blx.bib
 Database file #2: referencer.bib
 Warning--entry type for "VectorBool" isn't style-file defined
---line 12 of file referencer.bib
+--line 24 of file referencer.bib
 Biblatex version: 3.0
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-You've used 7 entries,
+You've used 8 entries,
             6047 wiz_defined-function locations,
-            1163 strings with 9056 characters,
-and the built_in function-call counts, 20196 in all, are:
-= -- 810
-> -- 730
-< -- 183
-+ -- 296
-- -- 286
-* -- 1428
-:= -- 1367
+            1171 strings with 9153 characters,
+and the built_in function-call counts, 22726 in all, are:
+= -- 898
+> -- 808
+< -- 204
++ -- 312
+- -- 308
+* -- 1590
+:= -- 1509
 add.period$ -- 0
-call.type$ -- 7
-change.case$ -- 94
-chr.to.int$ -- 37
-cite$ -- 12
-duplicate$ -- 2176
-empty$ -- 2039
-format.name$ -- 451
-if$ -- 4584
+call.type$ -- 8
+change.case$ -- 101
+chr.to.int$ -- 40
+cite$ -- 14
+duplicate$ -- 2478
+empty$ -- 2341
+format.name$ -- 496
+if$ -- 5157
 int.to.chr$ -- 0
-int.to.str$ -- 13
+int.to.str$ -- 15
 missing$ -- 0
-newline$ -- 181
-num.names$ -- 252
-pop$ -- 2022
+newline$ -- 200
+num.names$ -- 290
+pop$ -- 2333
 preamble$ -- 1
-purify$ -- 125
+purify$ -- 134
 quote$ -- 0
-skip$ -- 1207
+skip$ -- 1356
 stack$ -- 0
-substring$ -- 511
-swap$ -- 668
-text.length$ -- 160
+substring$ -- 547
+swap$ -- 773
+text.length$ -- 181
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 252
+type$ -- 290
 warning$ -- 0
-while$ -- 130
+while$ -- 150
 width$ -- 0
-write$ -- 173
+write$ -- 191
 (There was 1 warning)

@@ -127,12 +127,23 @@
   \field{year}{2015}
 \endentry
 
-\entry{VectorBool}{misc}{}
-  \verb{url}
-  \verb http://en.cppreference.com/w/cpp/container/vector_bool
-  \endverb
-  \field{month}{09}
-  \field{year}{2017}
+\entry{Yen}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Yen}{Y.}%
+     {Jin~Y.}{J.~Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YJY1}
+  \strng{fullhash}{YJY1}
+  \field{number}{11}
+  \field{pages}{712\bibrangedash 716}
+  \field{title}{Finding the K Shortest Loopless Paths in a Network}
+  \field{volume}{17}
+  \field{journaltitle}{Management Science}
+  \field{month}{07}
+  \field{year}{1971}
 \endentry
 
 \entry{Nielsen}{article}{}
@@ -157,6 +168,14 @@
   \strng{fullhash}{NLRAKAPD1}
   \field{title}{Finding the K shortest hyperpaths: algorithms and applications}
   \field{year}{2002}
+\endentry
+
+\entry{VectorBool}{misc}{}
+  \verb{url}
+  \verb http://en.cppreference.com/w/cpp/container/vector_bool
+  \endverb
+  \field{month}{09}
+  \field{year}{2017}
 \endentry
 
 \entry{SynthesisPlans}{book}{}
