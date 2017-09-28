@@ -196,12 +196,12 @@ public:
 	std::vector< std::vector<bool> > backwardBranching(std::pair < double, std::vector<int> > pair, std::vector<bool> overlay) {
 		std::vector< std::vector<bool> > B;
 
-		for(int i = 0; i < pair.second.size(); i++) {
+		for(int i = 0; i < pair.second.size(); i++) { //for each edge in path
 
-			std::vector<int> toRemove (1,pair.second.at(i)); //remove the i'th edge from t and down.
+			std::vector<int> toRemove (1,pair.second.at(i)); //pick edge i to remove
 
 			for(auto it = toRemove.begin(); it != toRemove.end(); ++it) {
-				overlay.at(*it) = false;
+				overlay.at(*it) = false; //remove edge i
 			}
 
 			if(i == 0) {
@@ -651,7 +651,9 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 			if(reaction.id == 0) {
 				continue;
 			}
-			graphFile << "	R" << reaction.id << " -> " << *reaction.head.begin() << ";\n";
+			for( auto headelement : reaction.head) {
+				graphFile << "	R" << reaction.id << " -> " << headelement << ";\n";
+			}
     		for( auto tailelement : reaction.tail) {
       			graphFile << "	" << tailelement << " -> R" << reaction.id << ";\n";
     		}

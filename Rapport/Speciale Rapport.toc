@@ -16,36 +16,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Yen's Algorithm On Hypergraphs}{4}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Shortest Path}{7}{section.5}
+\contentsline {section}{\numberline {5}Shortest Path}{8}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Dynamic Approach}{7}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.1}Dynamic Approach}{8}{subsection.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Approach}{7}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Approach}{8}{subsubsection.5.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.2}Testing}{7}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2}Testing}{8}{subsubsection.5.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.3}Problems}{7}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.3}Problems}{8}{subsubsection.5.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Nielsens Algorithm}{7}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.2}Nielsens Algorithm}{8}{subsection.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.1}Approach}{7}{subsubsection.5.2.1}
+\contentsline {subsubsection}{\numberline {5.2.1}Approach}{8}{subsubsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2}Testing}{7}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2}Testing}{9}{subsubsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.3}Optimizing}{7}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3}Problems}{9}{subsubsection.5.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Work With Beilstein Data}{7}{section.6}
+\contentsline {subsubsection}{\numberline {5.2.4}Optimizing}{9}{subsubsection.5.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}The Graph}{7}{subsection.6.1}
+\contentsline {section}{\numberline {6}Work With Beilstein Data}{9}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Testing}{7}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.1}The Graph}{9}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1}Strychnine}{7}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2}Testing}{9}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.2}Compound 2}{7}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Strychnine}{9}{subsubsection.6.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.3}Compound 3}{7}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.2}Compound 2}{9}{subsubsection.6.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Konklusion}{7}{section.7}
+\contentsline {subsubsection}{\numberline {6.2.3}Compound 3}{9}{subsubsection.6.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Appendiks}{9}{section.8}
+\contentsline {section}{\numberline {7}Konklusion}{9}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Appendiks}{11}{section.8}

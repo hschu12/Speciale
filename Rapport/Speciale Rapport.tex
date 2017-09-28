@@ -119,14 +119,13 @@ A directed hypergraph $h$ is a set of $V$ of vertices and a set $E$ of hyperedge
 A path $P_{st}$ from $s$ to $t$ in a B-hypergraph is a sequence $P_{st}=\langle e_1, e_2, e_3, ... , e_q \rangle$ of B-hyperedges such that $s\in T(e_1)$ and $t=H(e_q)$ and $H(e_i) \in T(e_{i+1})$ for $i=1..q-1$. Its length $|P_{st}|$ is the number $q$ of hyperedges. If $t \in T(e_1)$, then $P_{st}$ is a cycle. A hypergraph is acyclic if it does not contain any cycles. \cite{Fagerberg}
 
 \section{Finding The K-Best Synthetic Plans}
-kkk \cite{Carsten}\\
-kkkk \cite{Fagerberg}\\
+This section describes how to find the K-Best paths of a hypergraph modifying an algorithm made by Jin Y. Yen. The section starts out by describing the work flow of the algorithm, and then proceeds to deal with the alterations that are needed to run the algorithm on a hypergraph.
 \subsection{Yen's Algorithm}
 Yen's algorithm is an algorithm that computes the K-shortest paths for a graph with non-negative edges. It was publish in 1971 and uses any shortest path algorithm to find the best path and then proceeds to find the $K-1$ deviation of the best path. \cite{Yen}
 
-It starts out by finding the best path using a shortest path algorithm. Once the best path have been found it uses the path to find all the potential next best paths by fixing and removing edges in the graph. \\
+It starts out by finding the best path using a shortest path algorithm. Once the best path have been found it uses the path to find all the potential second best paths by fixing and removing edges in the graph. \\
 By using the same first vertex as the original path but removing the first edge, it forces the shortest path algorithm to take another route through the graph and thereby creating a potential second best path. This is added to the list of potential paths and the algorithm can continue to derive other paths from the best path. By fixing the first edge in the previous best plan, Yen's algorithm forces the shortest path algorithm to take the first edge which it now shares with the best path. However, now the algorithm have removed the second edge from the original path and once again forces the shortest path algorithm to find alternative routes. This process is then repeated until we reach the next to last vertex in the best path.\\
-By sorting the list of potential paths, it has the second best path at the start of the list and it can add it to the final list of best path. The algorithm then repeats on the second best path to find the third best path. This is done until all K-best path have been found.
+By sorting the list of potential paths, it has the second best path at the start of the list and it can add it to the final list of best path. The algorithm then repeats on the second best path to find the third best path. This is done until all K-best path have been found or there are no more paths to find.
 
 \subsection{Yen's Algorithm On Hypergraphs}
 We use the principles from Yen's algorithm to make our own algorithm that will work on hypergraphs. To handle the problem of generating all derived paths from our best path in our hypergraph, we use a method called BackwardsBranching. \cite{Fagerberg} \cite{Nielsen} \cite{Carsten}
@@ -144,6 +143,11 @@ function Back-Branch(H,$\pi$)
 		B = B $\cup$ \{H$^i$\}
 	return B
 \end{lstlisting}
+\begin{figure}[H]
+\hspace{-2cm}
+\includegraphics[scale=0.5]{Billeder/BachBranch}
+\caption{An example of branching for hypergraphs. $H$ is the original hypergraph. The vertices and hyperedges marked with blue are part of the best path. The rest of the figure illustrates the backwards branching. Each of the smaller figures shows a hypergraph $H^i$ and how it is created from $H$. Dotted hyperedges and red heyperedges are not part of the hypergraph, but have been deleted due to branching. Hyperedges in bold are fixed hyperedges. When hyperedges are fixed it leads to other hyperedges being deleted (dotted). The caption beneath each hypergraph represents the possible paths that are available in the given hypergraph.}
+\end{figure}
 However, this algorithm have a problem when working on a larger hypergraph. It demands that each time we make alterations on the hypergraph we have to make a copy, $H^i$, of the graph, $H$, with the exception of the hyperedges that is removed when fixing the back tree and removing $\pi.p(v_i)$.\\
 This could easily work for smaller graphs, but if we use this on the hypergraph that we generate from the beilstein database, we would have to copy a graph of multiple GigaBytes. \\
 To handle this problem I came up with the idea of creating an overlay for the graph instead of copying it. The overlay would work as an transparent on top of the original graph, stating which edges still were accessible. This is done by creating a \textit{vector<bool>} which has a length of $R$, where $R$ is the number of reactions. Normally a reaction would contain at least 24 bytes of data:
@@ -167,7 +171,7 @@ Usable & true & true & true & false \\\hline
 Bit Representation & 1 & 1 & 1 & 0
 \end{tabular}
 \end{table} 
-And then when trying to use an edge, we simply ask: "Does overlay at reaction A exist?". If yes, you can use it. If no, the edge have been "removed", and therefore cannot be used.
+And then when trying to use an edge, we ask: "Does overlay at reaction A exist?". If yes, you can use it. If no, the edge have been "removed", and therefore cannot be used.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{Billeder/OverlayIllustration}
@@ -195,10 +199,11 @@ function BackwardsBranching($\pi$, Overlay)
 	return B
 endfunction
 \end{lstlisting}
-
+Now that we have the branching in place are we able to construct an algorithm that are similar to Yen's algorithm but can run on hypergraphs. As input it takes a start vertex, a goal vertex, and an integer $K$, where $K$ is the number of best paths we want to find.\\
+It creates a heap, $L$, and a list, $A$, which will contain the $K$-best paths once the algorithm is finished. It then finds the best path using a shortest path algorithm and inserts it into the heap. Inside the loop it extracts the best path found from the heap and performs a backward branching, and finds all possible paths in the branches. If there is a path from $s$ to $t$, then this path is added to the heap. The algorithm either terminates if the heaps is empty ( No more paths available) or once it have found the $K$-best paths.
 \begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = K-Shortest Paths Algorithm in B-Hypergraph]
 function YenHyp(s, t, K) 
-	L = new heap with elements (overlay, maxYield)
+	L = new heap with elements (overlay, $\pi$)
 	A = List of shortest paths
 	//(Graph is default overlay (all true))
 	$\pi$ = shortestPath(Graph, s,t) 				
@@ -208,6 +213,7 @@ function YenHyp(s, t, K)
 			Break
 		endif
 		(Overlay$'$, $\pi'$) = L.pop
+		add $\pi'$ to A
 		for all Overlay$^i$ in BackwardBranching((Overlay$'$,$\pi'$)) do
 			$\pi^i$ = shortestPath(Overlay$^i$, s, t)
 			if $\pi^i$ is complete
@@ -218,20 +224,61 @@ function YenHyp(s, t, K)
 	return A
 endfunction
 \end{lstlisting}
-
 \section{Shortest Path}
+This section describes two different approaches to the shortest path problem in a hypergraph. A dynamic approach proposed by Carsten Grønbjerg Lützen and Daniel Fentz Johansen \cite{Carsten} and a Dijkstra inspired approach proposed by Lars Relund Nielsen, Kim Allan Andersen and Daniele Pretolani \cite{Nielsen}. 
 \subsection{Dynamic Approach}
 kkk \cite{Carsten}\\
 kkkk \cite{Fagerberg}\\
 
 \subsubsection{Approach}
+\begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Dynamic programming for finding the best path]
+function Min(V)
+	if(V) is starting material 
+		return Cost of V
+	endif
+	mincost <- $\inf$
+	for all $e\in BS(V)$ do
+		cost <- cost of e
+		for all $u \in Tail(e)$ do
+			cost <- cost + Min(u)
+		endfor
+		if mincost $\leq$ cost 
+			mincost <- cost
+			V.minedge <- e
+		endif
+	endfor
+	return mincost
+endfunction
+\end{lstlisting}
 \subsubsection{Testing}
 \subsubsection{Problems}
 
 \subsection{Nielsens Algorithm}
 k \cite{Nielsen}
 \subsubsection{Approach}
+\begin{lstlisting} [emph={if,for, endif, while, endwhile, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Dynamic programming for finding the best path]
+Initialization: Set W(u) = $\inf \forall u \in V$, $k_j = 0 \forall e_j \in E$,$Q = \{s\}$ and $W(s)=0$
+function SBT-Dijkstra
+	while ($Q=\emptyset$) do
+		select and remove $u\in Q$ such that $W(u) = min\{W(x)|x\in Q\}$
+		for ($e_j \in FS(u)$) do
+			$k_j <- kj+1$
+			if ($k_j = |T(e_j)|$) 
+				v <- h($e_j$)
+				if (W(v) > w($e_j$) + F($e_j$))
+					if ($v \notin Q$  
+						Q <- Q $\cup$ \{v\}
+					endif
+				W(v) <- w($e_j$)+ F($e_j$)
+				p(v) <- $e_j$
+				endif
+			endif
+		endfor
+	endwhile
+endfunction
+\end{lstlisting}
 \subsubsection{Testing}
+\subsubsection{Problems}
 \subsubsection{Optimizing}
 
 \section{Work With Beilstein Data}

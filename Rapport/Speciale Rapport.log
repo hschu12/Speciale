@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  20 SEP 2017 10:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  20 SEP 2017 13:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1176,7 +1176,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 75.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Billeder/logo.png, id=103, 547.8066pt x 542.5068pt>
+<Billeder/logo.png, id=107, 547.8066pt x 542.5068pt>
 File: Billeder/logo.png Graphic file (type png)
  <use Billeder/logo.png>
 Package pdftex.def Info: Billeder/logo.png used on input line 83.
@@ -1208,77 +1208,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-<Billeder/HyperEdge.png, id=155, 262.9825pt x 194.7275pt>
+<Billeder/HyperEdge.png, id=160, 262.9825pt x 194.7275pt>
 File: Billeder/HyperEdge.png Graphic file (type png)
 
 <use Billeder/HyperEdge.png>
 Package pdftex.def Info: Billeder/HyperEdge.png used on input line 114.
 (pdftex.def)             Requested size: 131.49092pt x 97.3635pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
-
- []
-
-[3 <./Billeder/HyperEdge.png>]
+ [3 <./Billeder/HyperEdge.png>]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [4]
-<Billeder/OverlayIllustration.png, id=205, 762.85pt x 341.275pt>
+)
+<Billeder/BachBranch.png, id=185, 968.61874pt x 590.205pt>
+File: Billeder/BachBranch.png Graphic file (type png)
+
+<use Billeder/BachBranch.png>
+Package pdftex.def Info: Billeder/BachBranch.png used on input line 148.
+(pdftex.def)             Requested size: 484.30818pt x 295.10178pt.
+
+Overfull \hbox (84.62436pt too wide) in paragraph at lines 147--149
+[]  [] 
+ []
+
+[4] [5 <./Billeder/BachBranch.png>]
+<Billeder/OverlayIllustration.png, id=217, 762.85pt x 341.275pt>
 File: Billeder/OverlayIllustration.png Graphic file (type png)
 
 <use Billeder/OverlayIllustration.png>
 Package pdftex.def Info: Billeder/OverlayIllustration.png used on input line 17
-3.
+7.
 (pdftex.def)             Requested size: 381.42407pt x 170.63707pt.
 
-Overfull \hbox (36.42407pt too wide) in paragraph at lines 173--174
+Overfull \hbox (36.42407pt too wide) in paragraph at lines 177--178
  [][] 
  []
 
-[5 <./Billeder/OverlayIllustration.png>]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+) [6 <./Billeder/OverlayIllustration.png>]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+) [7]
+Underfull \hbox (badness 10000) in paragraph at lines 230--232
+
+ []
+
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-)
-Underfull \hbox (badness 10000) in paragraph at lines 224--226
+) [8]
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
-
- []
-
-[7]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 251.
+[9]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 298.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [8]
+) [10]
 
 AED: lastpage setting LastPage
-[9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
  (./Speciale Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 303.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
 Package rerunfilecheck Info: File `"Speciale Rapport".out' has not changed.
-(rerunfilecheck)             Checksum: DC13B39749AEA371C68C7F7AD3B4B1C9;1481.
+(rerunfilecheck)             Checksum: FDFCE308D05D28FBD6035598E9F4F108;1549.
 Package logreq Info: Writing requests to '"Speciale Rapport".run.xml'.
 \openout1 = `"Speciale Rapport.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24152 strings out of 493089
- 427882 string characters out of 6134842
+ 24230 strings out of 493089
+ 429050 string characters out of 6134842
  618702 words of memory out of 5000000
- 27119 multiletter control sequences out of 15000+600000
+ 27149 multiletter control sequences out of 15000+600000
  16722 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,56p,808b,1476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,56p,814b,2236s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
@@ -1299,10 +1310,10 @@ f-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/texmf-
 dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "Speciale Rapport.pdf" (10 pages, 437104 bytes).
+Output written on "Speciale Rapport.pdf" (12 pages, 502318 bytes).
 PDF statistics:
- 372 PDF objects out of 1000 (max. 8388607)
- 332 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 437 PDF objects out of 1000 (max. 8388607)
+ 393 compressed objects within 4 object streams
+ 144 named destinations out of 1000 (max. 500000)
+ 233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
