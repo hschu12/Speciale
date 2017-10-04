@@ -59,23 +59,25 @@ private:
 	std::vector<ReactionNode> reactionList;
 
 public:
-	HyperGraph() {
+	HyperGraph(int compoundListSize, int reactionListSize) {
+		compoundList.resize(compoundListSize);
+		reactionList.resize(reactionListSize);
 	}
 
 
 public:
 
-	void addCompound(int compoundID) {
+	inline void addCompound(int compoundID) {
 		CompoundNode *cn = new CompoundNode(compoundID);
 		compoundList.at(compoundID) = *cn;
 	} 
 	
-	void addPointerFromReactionToCompound (int compoundID, int reactionID) {
+	inline void addPointerFromReactionToCompound (int compoundID, int reactionID) {
 		auto compound = getCompound(compoundID);
 		compound->productOfReaction.push_back(reactionID);
 	}		
 
-	void addPointerFromCompoundToReaction (int compoundID, int reactionID) {
+	inline void addPointerFromCompoundToReaction (int compoundID, int reactionID) {
 		auto compound = getCompound(compoundID);
 		compound->eductOfReaction.push_back(reactionID);
 	}	
@@ -461,7 +463,7 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 		for(auto compound : startingCompounds) {
 			reactionList.pop_back();
 		}
-		compoundList.at(0) = NULL;
+	//	compoundList.at(0) = NULL;
 	}
 
 	/********************************
@@ -633,6 +635,7 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 
 	void graphToGraphviz(std::string s) {
 		std::ofstream graphFile;
+		std::cout << "Creating Graphviz Graph" << std::endl;
 		graphFile.open(s + ".gv");
 		graphFile << "digraph G { \n";
 		graphFile << "{\n";

@@ -3,7 +3,7 @@
 
 int main(int argc, char const *argv[])
 {
-	HyperGraph h = createGraph();
+	HyperGraph h = createGraph(6000000, 1000000);
 
 	h.graphToGraphviz("dump");
 
