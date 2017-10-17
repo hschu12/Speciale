@@ -1,0 +1,7 @@
+Synth Plan 6 J. Bosch
+
+Compound 52979
+^ Reaction 2508784
+Compound 43170
+^ Reaction 16309504
+Compound 4750507
