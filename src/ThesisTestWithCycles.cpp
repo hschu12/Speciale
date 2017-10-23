@@ -80,6 +80,11 @@ int main(int argc, char const *argv[])
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
+
+    auto start = h.getCompound(1);
+    auto start2 = h.getCompound(2);
+    start->molecularWeight = 2;
+    start2->molecularWeight = 2;
    
     h.graphToGraphviz("ThesisTestWithCycles");
 

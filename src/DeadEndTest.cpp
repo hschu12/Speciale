@@ -67,6 +67,14 @@ int main(int argc, char const *argv[])
 	startingCompound.push_back(2);
     startingCompound.push_back(3);
     startingCompound.push_back(4);
+    auto start = h.getCompound(1);
+    auto start2 = h.getCompound(2);
+    auto start3 = h.getCompound(3);
+    auto start4 = h.getCompound(4);
+    start->molecularWeight = 2;
+    start2->molecularWeight = 2;    
+    start3->molecularWeight = 2;
+    start4->molecularWeight = 2;
 
     h.graphToGraphviz("Deadend");
 

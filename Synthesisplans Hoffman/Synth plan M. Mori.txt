@@ -1,7 +1,0 @@
-Synth plan M. Mori
-
-Compound 
-^ 11 Reaction 9442925
-Compound 97332
-^ 10-1 Reaction 14048128
-Compound 8933321 

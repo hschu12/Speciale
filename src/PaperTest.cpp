@@ -37,17 +37,22 @@ int main(int argc, char const *argv[])
     std::vector<int> reacttail6;
         reacttail6.push_back(5);
 
-    h.addReaction(1, reacthead1, reacttail1, 2);
-    h.addReaction(2, reacthead2, reacttail2, 1);
-    h.addReaction(3, reacthead3, reacttail3, 1);
-    h.addReaction(4, reacthead4, reacttail4, 2);
-    h.addReaction(5, reacthead5, reacttail5, 1);
-    h.addReaction(6, reacthead6, reacttail6, 2);
+    h.addReaction(1, reacthead1, reacttail1, 0.3);
+    h.addReaction(2, reacthead2, reacttail2, 0.5);
+    h.addReaction(3, reacthead3, reacttail3, 0.6);
+    h.addReaction(4, reacthead4, reacttail4, 0.3);
+    h.addReaction(5, reacthead5, reacttail5, 0.6);
+    h.addReaction(6, reacthead6, reacttail6, 0.7);
 
 	auto goal = h.getCompound(6);
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
+
+    auto start = h.getCompound(1);
+    auto start2 = h.getCompound(2);
+    start->molecularWeight = 2;
+    start2->molecularWeight = 2;
 
     h.graphToGraphviz("PaperTest");
 

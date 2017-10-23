@@ -42,6 +42,11 @@ int main(int argc, char const *argv[])
     startingCompound.push_back(1);
     startingCompound.push_back(6);
 
+    auto start = h.getCompound(1);
+    auto start2 = h.getCompound(6);
+    start->molecularWeight = 2;
+    start2->molecularWeight = 2;
+    
     h.graphToGraphviz("CycleTest");
 
     auto dBest = h.yenHypNielsen(*goal, startingCompound, 9);

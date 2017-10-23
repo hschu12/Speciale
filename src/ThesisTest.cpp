@@ -70,6 +70,10 @@ int main(int argc, char const *argv[])
     h.addReaction(10, reacthead10, reacttail10,0.7);
 
 	auto goal = h.getCompound(8);
+    auto start = h.getCompound(1);
+    auto start2 = h.getCompound(2);
+    start->molecularWeight = 2;
+    start2->molecularWeight = 2;
 	std::vector<int> startingCompound;
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);

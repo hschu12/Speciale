@@ -30,7 +30,8 @@ struct ReactionNode
 
 		int id;
 		std::string name;
-		double weight;
+		double molecularWeight;
+		double cost;
 		int maxYieldEdge = -1;
 		bool visited = false;
 
@@ -41,15 +42,15 @@ struct ReactionNode
 	struct cmpPair //Compare function used to sort pair(vector, pair(double, vector)) on the double value.
 	{	
 		bool operator()(std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > a, std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > b) {
-			return a.second.first < b.second.first;
+			return a.second.first > b.second.first;
 		}
 	};
 
 
-	struct cmp //Compare function used to sort compounds on weight.
+	struct cmp //Compare function used to sort compounds on molecularWeight.
 	{
 		bool operator()(CompoundNode a, CompoundNode b){
-			return a.weight > b.weight;
+			return a.cost < b.cost;
 		}
 
 	};
@@ -161,21 +162,22 @@ public:
 	}
 
 	double maxYield(CompoundNode &v, CompoundNode &s, std::vector<bool> &overlay) {
-		if (v.id == s.id) {
-			return 1.0; //starting compounds always have a yield of 100%
-		}
-		double maximumYield = 0; // -infinity
+		double maximumYield = std::numeric_limits<double>::max(); // infinity
 		for(auto reaction : v.productOfReaction ) {
 			if (overlay.at(reaction)) {
 
 				ReactionNode *r1 = getReaction(reaction);
-				double yield = r1->yield;
+				double cost = 0;
 				for (auto reactionTailIterator : r1->tail) {
-
-					yield = yield * maxYield(*getCompound(reactionTailIterator), s, overlay);
+					if ((*getCompound(reactionTailIterator)).id != 0) {
+						cost  += (1/r1->yield) * maxYield(*getCompound(reactionTailIterator), s, overlay);
+					}
+					else {
+						cost = v.cost;
+					}
 				}
-				if (maximumYield < yield) {
-					maximumYield = yield;
+				if (maximumYield > cost) {
+					maximumYield = cost;
 					v.maxYieldEdge = reaction;
 				}
 			}
@@ -184,6 +186,12 @@ public:
 	}
 
 	std::pair < std::vector<bool> , std::pair< double, std::vector<int>> >shortestPathMaximumYield(CompoundNode &v, std::vector<int> &startingCompounds, std::vector<bool> &overlay, CompoundNode &s) {
+		resetNodeCost();
+
+		for(auto compoundID : startingCompounds){
+			auto compound = getCompound(compoundID);
+			compound->cost = compound->molecularWeight;
+		}
 
 		double result = maxYield(v, s, overlay);
 
@@ -312,7 +320,7 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 		std::vector< CompoundNode > Q;		
 		std::make_heap (Q.begin(),Q.end(), cmp());
 
-		resetNodeWeight();
+		resetNodeCost();
 
 		for(auto reaction : reactionList) {
 			ReactionNode *r = getReaction(reaction.id);
@@ -324,7 +332,7 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 		std::push_heap (Q.begin(),Q.end(), cmp());
 		//Initiliaze done
 		while(!Q.empty()) {
-			CompoundNode compound = Q.front(); 	//Get node with highest weight
+			CompoundNode compound = Q.front(); 	//Get node with highest molecularWeight
 
   			std::pop_heap (Q.begin(),Q.end(), cmp() ); 
   			Q.pop_back();	
@@ -335,25 +343,35 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 	
 	  				if (r->kj == r->tail.size()) {
 						CompoundNode *c = getCompound(*(r->head.begin()));
-  						double F = 1;
-  						for(auto educt : r->tail) {
-  							CompoundNode *temp = getCompound(educt);	
-
-	  						F = temp->weight * F;	
+  						if(compound.id != 0) {
+  							double F = 0;
+  							for(auto educt : r->tail) {
+  								CompoundNode *temp = getCompound(educt);	
+  								F += temp->cost * (1/r->yield);
+  							}
+  							if (c->cost > F) {
+  								c->cost = F;
+  								c->maxYieldEdge = reaction;	
+  								if(!vectorContainsCompoundNode(Q, *c)) {
+  									Q.push_back(*c); 
+									std::push_heap (Q.begin(),Q.end(), cmp());
+  								}
+  								
+  							}
   						}
-  						if (c->weight < r->yield *  F) {
+  						else{
+  							c->cost = c->molecularWeight;
+  							c->maxYieldEdge = reaction;	
   							if(!vectorContainsCompoundNode(Q, *c)) {
   								Q.push_back(*c); 
 								std::push_heap (Q.begin(),Q.end(), cmp());
   							}
-  							c->weight = r->yield * F;
-  							c->maxYieldEdge = reaction;	
   						}
   					}
   				}
   			}
 		}
-		double result = goal.weight;
+		double result = goal.cost;
 
 		std::vector<int> shortest = getShortestPathYield(goal.id);
 
@@ -401,7 +419,8 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 			s->eductOfReaction.push_back(r->id);
 			++startingCompoundIterator;
 		}
-		s->weight = 1; // Need to be 1 to start out the weight calculations.
+		s->molecularWeight = 1; // Need to be 1 to start out the molecularWeight calculations.
+		s->cost = 1;
 		compoundList.at(s->id) = *s;
 		return s;
 	}
@@ -448,13 +467,13 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 		}
 	}
 
-	void resetNodeWeight(){
+	void resetNodeCost(){
 		for (CompoundNode &compound : compoundList) {
 			if( compound.id == 0) {
-				compound.weight = 1;
+				compound.cost = 1;
 			}
 			else {
-				compound.weight = 0;
+				compound.cost = std::numeric_limits<double>::max();
 			}
 		}
 	}
@@ -463,7 +482,6 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 		for(auto compound : startingCompounds) {
 			reactionList.pop_back();
 		}
-	//	compoundList.at(0) = NULL;
 	}
 
 	/********************************
