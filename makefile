@@ -10,6 +10,7 @@ make: src/CreateRandomHyperNoCycles.cpp src/CycleTest.cpp src/DeadEndTest.cpp sr
 	$(CC) $(CFLAGS) src/ThesisTest.cpp -o ThesisTest
 	$(CC) $(CFLAGS) src/ThesisTestWithCycles.cpp -o ThesisTestWithCycles
 	$(CC) $(CFLAGS) src/Beilstein.cpp -o runBeilstein
+	$(CC) $(CFLAGS) src/BeilsteinTest.cpp -o runBeilsteinTest
 
 
 
@@ -21,4 +22,5 @@ clean:
 	rm ThesisTest
 	rm ThesisTestWithCycles
 	rm runBeilstein
+	rm runBeilsteinTest
 	rm *.gv

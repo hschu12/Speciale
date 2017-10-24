@@ -140,7 +140,7 @@ public:
 	*****************************/
 
 
-	// Function used to reduce the size of the graph befor applying Nielsens Shortest path algorithm. If a part
+	// Function used to reduce the size of the graph before applying Nielsens Shortest path algorithm. If a part
 	// of a graph is not used there is no need to check for shortest path in that direction. 
 	// This function uses a recursive top down approach to find the shortest path from goal to starting compounds
 	// and makes an overlay to the graph containing only the used edges using a vector of booleans.
@@ -233,60 +233,30 @@ public:
 		return B;
 	}
 
-	std::vector< std::pair < double, std::vector<int>> > yenHypDynamic (CompoundNode &v, std::vector<int> &startingCompounds, int K) {
+	std::vector< std::pair < double, std::vector<int>> > yenHyp (CompoundNode &v, std::vector<int> &startingCompounds, int K, bool cycles) {
 		std::vector< std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > > L;
 		
 		std::make_heap (L.begin(),L.end(), cmpPair());
 
 		std::vector< std::pair < double, std::vector<int> > >A; //list of k shortest hyperpaths.
 		
-		CompoundNode *s = createDummyNode(startingCompounds);
-
-		std::vector<int> toRemove;
-		std::vector<bool> overlay = createOverlay(toRemove, true);
-
-		std::pair< std::vector<bool> , std::pair<double, std::vector<int>> > pair = shortestPathMaximumYield(v, startingCompounds, overlay, *s);
-		L.push_back(pair);
-		for ( int k = 0; k < K; k++) {
-			if (L.empty()) {
-				break;
-			}
-			pair = L.front(); 	//Get shortest path with max yield and remove from heap
-  			std::pop_heap (L.begin(),L.end(), cmpPair() ); 
-  			L.pop_back();	
-
-  			std::pair < double, std::vector<int> > toA (pair.second.first, pair.second.second);
-  			A.push_back(toA);	//Add current best plan to k-best
-
-  			for (auto newOverlay : backwardBranching(pair.second, pair.first)) { //Potential danger (function call in for loop)
-  				std::pair < std::vector<bool> , std::pair<double, std::vector<int>> >potentialNewPlan = shortestPathMaximumYield(v, startingCompounds, newOverlay, *s);
-  				
-  				if (pathIsComplete(potentialNewPlan.second.first)) {
-  					if(pathNotAlreadyFound(potentialNewPlan.second.second, A)){
-  						L.push_back(potentialNewPlan); 
-						std::push_heap (L.begin(),L.end(), cmpPair());
-  					}
-  				}
-  			}
-  		}
-  		removeDummy(startingCompounds);
-  		return A;
-	}
-
-std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode &v, std::vector<int> &startingCompounds, int K) {
-		std::vector< std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > > L;
-		
-		std::make_heap (L.begin(),L.end(), cmpPair());
-
-		std::vector< std::pair < double, std::vector<int> > >A; //list of k shortest hyperpaths.
-
 		CompoundNode *s = createDummyNode(startingCompounds);
 
 		std::vector<int> toRemove;
 		std::vector<bool> overlay = createOverlay(toRemove, true);
 		std::vector<bool> graphOverlay = createOverlay(toRemove, false);
-		graphOverlay = reduceGraph(graphOverlay, v, *s);
-		std::pair< std::vector<bool> , std::pair<double, std::vector<int>> > pair = ShortestHyperNielsen(graphOverlay, v, startingCompounds, overlay);
+
+		if(cycles) {
+			graphOverlay = reduceGraph(graphOverlay, v, *s);
+		}
+
+		std::pair< std::vector<bool> , std::pair<double, std::vector<int>> > pair;
+		if(cycles) {
+			pair = ShortestHyperNielsen(graphOverlay, v, startingCompounds, overlay);
+		} 
+		else{
+			pair = shortestPathMaximumYield(v, startingCompounds, overlay, *s);
+		}
 		L.push_back(pair);
 		for ( int k = 0; k < K; k++) {
 			if (L.empty()) {
@@ -300,9 +270,13 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
   			A.push_back(toA);	//Add current best plan to k-best
 
   			for (auto newOverlay : backwardBranching(pair.second, pair.first)) { //Potential danger (function call in for loop)
-
-  				std::pair < std::vector<bool> , std::pair<double, std::vector<int>> >potentialNewPlan = ShortestHyperNielsen(graphOverlay, v, startingCompounds, newOverlay);
-  				
+  				std::pair < std::vector<bool> , std::pair<double, std::vector<int>> >potentialNewPlan; 
+  				if(cycles){
+  					potentialNewPlan = ShortestHyperNielsen(graphOverlay, v, startingCompounds, newOverlay);
+				}
+				else{
+  					potentialNewPlan = shortestPathMaximumYield(v, startingCompounds, newOverlay, *s);
+  				}
   				if (pathIsComplete(potentialNewPlan.second.first)) {
   					if(pathNotAlreadyFound(potentialNewPlan.second.second, A)){
   						L.push_back(potentialNewPlan); 
@@ -312,6 +286,7 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
   			}
   		}
   		removeDummy(startingCompounds);
+  		resetVisited();
   		return A;
 	}
 
@@ -458,6 +433,12 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 		}
 		resetMaxYieldEdges();
 		return shortestPath;
+	}
+
+	void resetVisited(){
+		for (CompoundNode &compound : compoundList) {
+			compound.visited = false;
+		}
 	}
 
 	void resetMaxYieldEdges(){
@@ -607,12 +588,17 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 	void printResults(std::vector< std::pair < double, std::vector<int>>> bestPlans) {
 		int i = 1;
 		for( auto plan : bestPlans) {
-    		std::cout << "Plan: " << i << std::endl;
-    		for( auto pathElement : plan.second) {
-      			std::cout << "Reaction: " << pathElement << std::endl;
+			if (!plan.second.empty()){
+    			std::cout << "Plan: " << i << std::endl;
+    			for( auto pathElement : plan.second) {
+      				std::cout << "Reaction: " << pathElement << std::endl;
+    			}
+    			std::cout << "With yield: " << plan.first << "\n" << std::endl;
+    			i++;
     		}
-    		std::cout << "With yield: " << plan.first << "\n" << std::endl;
-    		i++;
+    		else{
+    			std::cout << "No plan found" << std::endl;
+    		}
   		} 
 	}
 
@@ -641,12 +627,16 @@ std::vector< std::pair < double, std::vector<int>> > yenHypNielsen (CompoundNode
 	void printoverlay(std::vector<bool> v) {
 		std::cout << "printing overlay" << std::endl;
 		for (int i = 0; i <= v.size()-1; i++) {
-			std::cout <<  i << " ";
+			if(v.at(i) == 1){
+				std::cout <<  i << " ";
+			}
 		}
 		std::cout << std::endl;
 
 		for (auto k : v) {
-			std::cout << k << " ";
+			if (k==1){
+				std::cout << k << " ";
+			}
 		}
 		 std::cout << std::endl;
 	}

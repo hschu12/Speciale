@@ -78,10 +78,10 @@ int main(int argc, char const *argv[])
 
     h.graphToGraphviz("Deadend");
 
-    auto dBest = h.yenHypNielsen(*goal, startingCompound, 10);
+    auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
     h.printResults(dBest);
 
-    dBest = h.yenHypDynamic(*goal, startingCompound, 10);
+    dBest = h.yenHyp(*goal, startingCompound, 9, false);
     h.printResults(dBest);
 
  

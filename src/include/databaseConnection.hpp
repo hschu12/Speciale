@@ -7,11 +7,6 @@
 #include <string.h>
 
 std::vector<int> reactions;
-/*std::vector<int> educts;
-#pragma threadprivate(educts)
-std::vector<int> products;
-#pragma threadprivate(products)
-*/
 
 int getReactionList(void *NotUsed, int argc, char **argv, char **azColName) {
     
@@ -21,29 +16,6 @@ int getReactionList(void *NotUsed, int argc, char **argv, char **azColName) {
         
     return 0;
 }
-
-/*int getEducts(void *NotUsed, int argc, char **argv, char **azColName) {
-    std::cout << "start" << std::endl;
-    for (int i = 0; i < argc; i++) {
-    	educts.push_back(atoi(argv[i]));
-    }
-    std::cout << "finished" << std::endl;
-
-    return 0;
-}
-
-int getProducts(void *NotUsed, int argc, char **argv, char **azColName) {
- 
- 	std::cout << "start" << std::endl;
-
-    for (int i = 0; i < argc; i++) {
-    	products.push_back(atoi(argv[i]));
-    }
-    std::cout << "finished" << std::endl;
-
-    return 0;
-}
-*/
 
 HyperGraph createGraph(int numberOfCompounds, int numberOfReactions)
 {
@@ -106,7 +78,7 @@ HyperGraph createGraph(int numberOfCompounds, int numberOfReactions)
 	
 		sqlite3_finalize(res);
 					
-		h.addReaction(reaction, products, educts, 1);
+		h.addReaction(reaction, products, educts, 0.9);
 	}
 	std::cout << "Done!" << std::endl;
 	sqlite3_close(db);

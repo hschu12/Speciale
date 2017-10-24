@@ -45,14 +45,10 @@ int main(int argc, char const *argv[])
         startingCompound.push_back(i);
     }
 
-    std::cout << "Using Dynamic:" << std::endl;
-
-    auto dBest = h.yenHypDynamic(*goal, startingCompound, 4);
+    auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
     h.printResults(dBest);
-  
-    std::cout << "Using Nielsen:" << std::endl;
 
-    dBest = h.yenHypNielsen(*goal, startingCompound, 4);
+    dBest = h.yenHyp(*goal, startingCompound, 9, false);
     h.printResults(dBest);
 
     h.graphToGraphviz("Random");
