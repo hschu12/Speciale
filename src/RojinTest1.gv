@@ -1,0 +1,16 @@
+digraph G { 
+{
+	R3 [label = "R3. Yield: 0.8"]
+	R6 [label = "R6. Yield: 0.8"]
+	R8 [label = "R8. Yield: 0.8"]
+}
+	R3 -> 1;
+	2 -> R3;
+	3 -> R3;
+	R6 -> 1;
+	5 -> R6;
+	6 -> R6;
+	R8 -> 1;
+	8 -> R8;
+	8 -> R8;
+}

@@ -50,7 +50,7 @@ struct ReactionNode
 	struct cmp //Compare function used to sort compounds on molecularWeight.
 	{
 		bool operator()(CompoundNode a, CompoundNode b){
-			return a.cost < b.cost;
+			return a.cost > b.cost;
 		}
 
 	};
@@ -292,7 +292,7 @@ public:
 
 	std::pair < std::vector<bool> , std::pair< double, std::vector<int>> > ShortestHyperNielsen ( std::vector<bool> &graphOverlay, CompoundNode &goal, std::vector<int> &startingCompounds, std::vector<bool> &overlay) {
 		//Initinalize
-		std::vector< CompoundNode > Q;		
+ 		std::vector< CompoundNode > Q;		
 		std::make_heap (Q.begin(),Q.end(), cmp());
 
 		resetNodeCost();
@@ -317,6 +317,7 @@ public:
   					r->kj++;
 	
 	  				if (r->kj == r->tail.size()) {
+
 						CompoundNode *c = getCompound(*(r->head.begin()));
   						if(compound.id != 0) {
   							double F = 0;
@@ -349,7 +350,6 @@ public:
 		double result = goal.cost;
 
 		std::vector<int> shortest = getShortestPathYield(goal.id);
-
 		std::pair<double, std::vector<int>> pair (result, shortest);
 		std::pair<std::vector<bool> , std::pair<double, std::vector<int>> > pair2 (overlay, pair);
 
@@ -627,18 +627,14 @@ public:
 	void printoverlay(std::vector<bool> v) {
 		std::cout << "printing overlay" << std::endl;
 		for (int i = 0; i <= v.size()-1; i++) {
-			if(v.at(i) == 1){
-				std::cout <<  i << " ";
-			}
+			std::cout <<  i << " ";
 		}
 		std::cout << std::endl;
 
 		for (auto k : v) {
-			if (k==1){
-				std::cout << k << " ";
-			}
+			std::cout << k << " ";
 		}
-		 std::cout << std::endl;
+		std::cout << std::endl;
 	}
 
 	void graphToGraphviz(std::string s) {

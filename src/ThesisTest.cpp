@@ -83,7 +83,7 @@ int main(int argc, char const *argv[])
     auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
     h.printResults(dBest);
 
-     dBest = h.yenHyp(*goal, startingCompound, 9, false);
+    dBest = h.yenHyp(*goal, startingCompound, 9, false);
     h.printResults(dBest);
 
 	return 0;
