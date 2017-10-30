@@ -43,6 +43,8 @@ int main(int argc, char const *argv[])
 	std::vector<int> startingCompound;
 	for (int i = 1; i <= numberOfReactions/2; i++) {
         startingCompound.push_back(i);
+        auto com = h.getCompound(i);
+        com->molecularWeight = 2;
     }
 
     auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
