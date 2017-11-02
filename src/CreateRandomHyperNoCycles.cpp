@@ -8,12 +8,12 @@ int main(int argc, char const *argv[])
 	HyperGraph h (atoi(argv[1]), atoi(argv[2]));
     srand(time(0));
   
-    if( argc < 3 ){
-        std::cout << "To few arguments. Must have 2 arguments: Number of Compounds and Number of Reactions" << std::endl;
+    if( argc < 4 ){
+        std::cout << "To few arguments. Must have 3 arguments: Number of Compounds and Number of Reactions" << std::endl;
         exit(1);
     }
-    if (argc > 3) {
-        std::cout << "To many arguments. Must have 2 arguments: Number of Compounds and Number of Reactions" << std::endl;
+    if (argc > 4) {
+        std::cout << "To many arguments. Must have 3 arguments: Number of Compounds and Number of Reactions" << std::endl;
         exit(1);
     }
 
@@ -41,16 +41,16 @@ int main(int argc, char const *argv[])
 
 	auto goal = h.getCompound(numberOfCompounds);
 	std::vector<int> startingCompound;
-	for (int i = 1; i <= numberOfReactions/2; i++) {
+	for (int i = 1; i <= numberOfReactions/4; i++) {
         startingCompound.push_back(i);
         auto com = h.getCompound(i);
         com->molecularWeight = 2;
     }
 
-    auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
+    auto dBest = h.yenHyp(*goal, startingCompound, atoi(argv[3]), true);
     h.printResults(dBest);
 
-    dBest = h.yenHyp(*goal, startingCompound, 9, false);
+    dBest = h.yenHyp(*goal, startingCompound, atoi(argv[3]), false);
     h.printResults(dBest);
 
     h.graphToGraphviz("Random");

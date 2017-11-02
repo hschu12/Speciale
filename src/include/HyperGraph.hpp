@@ -259,6 +259,7 @@ public:
 		}
 		L.push_back(pair);
 		for ( int k = 0; k < K; k++) {
+			std::cout << k << std::endl;
 			if (L.empty()) {
 				break;
 			}
