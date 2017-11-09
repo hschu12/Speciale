@@ -1,5 +1,0 @@
-Synth plan 3 L. E. Overman
-
-Compound 52979 : strychnidin-10-one
-^ Reaction 18762882  (12 step multireaction)
-Compound 6624574 : (4R)-4-<1-((triisopropylsiloxy)methyl)-3-tert-butoxy-1(E)-propenyl>-1-<1-(2-<5-(1,3-dimethylhexahydro-2-oxo-1,3,5-triazinyl)>benzoyl)>cyclopentene

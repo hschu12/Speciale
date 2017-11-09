@@ -67,13 +67,10 @@ int main(int argc, char const *argv[]){
     std::string str;
     getline(inFile,str);
     std::cout << "Building" << std::endl;
-    int loop = 0;
+
     bool reactbool = false;
     int startingCompoundID = 0;
     while(getline(inFile,str)) {
-        /*if (loop%1000 == 0) {
-        std::cout << loop << "." << std::endl;
-        }*/
         if (str.compare("REACTIONS") == 0){
             reactbool = true;
         }
@@ -89,7 +86,7 @@ int main(int argc, char const *argv[]){
 	    	std::string type = str.substr(first+1, 1); //compound("N") or reaction("R")
 
 	    	if(!type.compare("R")){ //Returns true if type is R
-	    		reactions.at(stoi(id)) = stod(id);
+	    		reactions.at(stoi(id)) = stoi(id);
 	    		std::string yield = str.substr(third+1, fouth-third-1);
 	    		yields.at(stoi(id)) = stod(yield);
 
@@ -98,7 +95,6 @@ int main(int argc, char const *argv[]){
 	    	if(!type.compare("N")){ //Returns true if type is N
 	    	  	int idINT = stoi(id);
 	    	  	compounds.at(idINT) = idINT+1;
-                //std::cout << compounds.at(idINT) << std::endl;
                 if((str.substr(second+1, third-second-1)).compare("S") == 0){
                     startingCompoundID = idINT+1;
                 }
@@ -128,9 +124,9 @@ int main(int argc, char const *argv[]){
     }
 
 
-   	h.graphToGraphviz("Output");
+  	h.graphToGraphviz("Output");
 
-   	auto goal = h.getCompound(1);
+    auto goal = h.getCompound(1);
    	auto starting = h.getCompound(startingCompoundID);
 
    	starting->molecularWeight = weights.at(startingCompoundID-1);
@@ -149,7 +145,7 @@ int main(int argc, char const *argv[]){
 
     std::cout << "Checking scores" << std::endl;
     testResults(dBest, argv[5]);
-
+    
     inFile.close();
 	return 0;
 }

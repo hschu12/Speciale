@@ -1,0 +1,4552 @@
+<?xml version="1.0"?>
+<xf>
+  <citations>
+    <citation index="1">
+      <CNR>
+        <CNR.CNR>6371975</CNR.CNR>
+        <CNR.CED>2007/10/03</CNR.CED>
+        <CNR.CUPD>2016/06/27</CNR.CUPD>
+      </CNR>
+      <CIT>
+        <CIT.DT>Article</CIT.DT>
+        <CIT.AU highlight="true"><hi>Bodwell, Graham J.</hi>; Li, Jiang</CIT.AU>
+        <CIT.ABPR>Y</CIT.ABPR>
+        
+        <CIT.PREPY>2002</CIT.PREPY>
+        <CIT.PUI>35014406</CIT.PUI>
+        <CIT01>
+          <CIT.CO>ACIEA</CIT.CO>
+          <CIT.JT>Angewandte Chemie - International Edition</CIT.JT>
+          <CIT.JTS>Angewandte Chemie - International Edition</CIT.JTS>
+          <CIT.CC>deu</CIT.CC>
+          <CIT.LA>English</CIT.LA>
+          <CIT.PUB>Wiley-VCH Verlag</CIT.PUB>
+          <CIT.VL>41</CIT.VL>
+          <CIT.NB>17</CIT.NB>
+          <CIT.PY highlight="true">2002</CIT.PY>
+          <CIT.PAG>3261 - 3262</CIT.PAG>
+          <CIT.DOI>10.1002/1521-3773(20020902)41:17&lt;3261::AID-ANIE3261&gt;3.0.CO;2-K</CIT.DOI>
+          <CIT.ISSN>1433-7851</CIT.ISSN>
+          <CIT.SCOPUS>37009048</CIT.SCOPUS>
+          <CIT.CITBY>81</CIT.CITBY>
+        </CIT01>
+        <CIT.DOCQ>1</CIT.DOCQ>
+      </CIT>
+      <AB>
+        <AB.TI>A concise formal total synthesis of (&#177;)-strychnine by using a transannular inverse-electron-demand Diels-Alder reaction of a [3](1,3)indolo[3](3,6)pyridazinophane</AB.TI>
+        
+        <AB.ALA>English</AB.ALA>
+        <AB.KW>DRG Keywords: [3]indolo[3]pyridazinophane; cyclophane; pyridazinone derivative; strychnine; tryptamine; unclassified drug<br/>MED Keywords: article; chemical reaction kinetics; chemical structure; cycloaddition; electron transport; quantitative analysis; reaction analysis; synthesis<br/>Author Keywords: Cycloaddition; Cyclophanes; Heterocycles; Natural products; Pericyclic reaction<br/>CFL Keywords: Diels-Alder reactions<br/>CCV Keywords: Electrons; Organic compounds<br/>CMH Keywords: Synthesis (chemical)<br/>RXK Keywords: Diels-Alder reaction; total synthesis</AB.KW>
+      </AB>
+      <reactions>
+        <reaction index="1">
+          <RX>
+            <RX.ID>9182499</RX.ID>
+            <RX01>
+              <RX.RXRN>125513</RX.RXRN>
+              <RX.RCT>tryptamine</RX.RCT>
+            </RX01>
+            <RX01>
+              <RX.RXRN>606441</RX.RXRN>
+              <RX.RCT>3,6-Diiodopyridazine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9272532</RX.PXRN>
+              <RX.PRO>[2-(1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.PRO>
+            </RX02>
+            <RX.BLB>125513</RX.BLB>
+            <RX.BLB>606441</RX.BLB>
+            <RX.BLB>9272532</RX.BLB>
+            <RX.BLC>125513</RX.BLC>
+            <RX.BLC>606441</RX.BLC>
+            <RX.BLC>9272532</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>254013841387535</RX.BCODE>
+              <RX.MCODE>327215038769727</RX.MCODE>
+              <RX.NCODE>347101475060221</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/80F51(0206)|80F42(030405)|40FE1()|01E52(07)|01E42(08)|01E41(09)|01D52(0A)|01D42(0A)|01D41(0B)|01C42(0C)|01C42(0D0E)|01BE1()|01B45(1011)|01B42(0F)|01A51(10)|01A45(12)|01A45(13)|01945(14)|01945(14)|01845()|</RX.TRANS>
+              <RX.BIN>279365</RX.BIN>
+              <RX.BFREQ>1343</RX.BFREQ>
+              <RX.BRANGE>278941-279418</RX.BRANGE>
+              <RX.BNAME>NH2 + -C(=)-X to -C(=)-NH-</RX.BNAME>
+              <RX.QRY0>0/80F51(02*)|80F42(03*)|40FE1()|*</RX.QRY0>
+              <RX.QRY1>0/80F51(02*)|80F42(03*)|40FE1()|01E52(*)|01E42(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>0/80F51(0206)|80F42(030405)|40FE1()|01E52(*)|01E42(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>0/80F51(0206)|80F42(030405)|40FE1()|01E52(*)|01E42(*)|01E41(*)|01D52(*)|01D42(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/80F51(0206)|80F42(030405)|40FE1()|01E52(07*)|01E42(08*)|01E41(09*)|01D52(*)|01D42(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/80F51(0206)|80F42(030405)|40FE1()|01E52(07*)|01E42(08*)|01E41(09*)|01D52(*)|01D42(*)|01D41(*)|01C42(*)|01C42(*)|*</RX.QRY5>
+              <RX.QRY6>0/80F51(0206)|80F42(030405)|40FE1()|01E52(07)|01E42(08)|01E41(09)|01D52(0A)|01D42(0A)|01D41(0B)|01C42(0C)|01C42(0D0E)|01BE1()|01B45(*)|01B42(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJy1V02P3CAMvc+v4LBnhD/AcOlld1VV6kylPVT9Jf39dYDsAGFGQW2jHBKPeTEP28/z8vHrdtHLGDQGLi/XH9+3l48v199sXXPhmwGjLsVotsu1z7oK0ADp4/ROKZmfqO6XzR1tcujqE0R3hzOv5hFEvqE8DCikKGEBBRsUstG7GksAt4BCXSyOqKIw8AIKT2Nhi9ih3J6j+CEWqSi8xG5oUHRtRSFFkQUU6VD0YPJasMGvxBIbFFCUUNlNgAsoaYqy5cvCGYFrULwFinVH7BfyBaBDYd4z1rsO5flJwz13IScytj8XK33WSWvloxVz4kys4WilfLDj1ygf1OjLmfjR12eE0TdkekffmOkafVP2HazquJHSW6/axN6/6g/eA21v77e3v2tv2z7jo2Pp2xtYCgHNDojnU6RtKXcULWiHfD5F2paC2kgifyYanI+lbSnt2gHl21OU5vByLOS4PPmlHbWNiaxLPpS1KfkFdmWKAooifB4ldigpoJQdcfItynNe4N6Y/lcZUy7jeRGO1jAtTZkUdy2s4AIz/JPCUiqw+0Z7j3MDEufkU32MRKcPrZsbyEIkrMcnfgGlV/w9Fq+xwPkE6qaPXORQYhFJC7H0c4OIo8KLRFxA6UuC086LQzpfWKYviZ1db31M54u8m2GUF3GVXYm0wG7bKu7aqvkissBLOzfoJCRA5cwjrDQcmMai+SJpoeG4LpY9S8DG4NtGfHpuyJz6IgrbVCYLotBWQLAu7C1P3MK02glUsIyhigK7hazrBEqsY/I9z+vSIlsEvsQCiRd4kQ5FAHxhFzksoLR1FG1IrgqUkntecg/SMhGRh9IyCkORlon14YQ4scYjQpkQR99nE+JofTghwuFr4CYT4v5/dbRSTs+J9ciDOsJRYtURjrtQRzhOyuoIR3bUBAd2qvAmFPSEu/L+AYBvbuc=</RX.RXNFILE>
+            <RX.REG>d214c2bc02f4cd371056ba54877c1bb0</RX.REG>
+            <RX.RANK>77</RX.RANK>
+            <RX.MYD>100</RX.MYD>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>6</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>364.189</RX.MAXPMW>
+            <RX.ED>2007/12/13</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>25</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXD01>
+              <RXD.YXRN>9272532</RXD.YXRN>
+              <RXD.YPRO>[2-(1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RXD.YPRO>
+              <RXD.YD>100 percent</RXD.YD>
+              <RXD.NYD>100</RXD.NYD>
+            </RXD01>
+            <RXDS01>
+              <RXD05>
+                <RXD.SOLXRN>773649</RXD.SOLXRN>
+                <RXD.SOL>Sec-butyl alcohol</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>96</RXD.TIM>
+              <RXD.COND>Heating</RXD.COND>
+              <RXD.DED>2007/12/13</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="125513">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 12 13 0 0 0 REGNO=125513
+M  V30 BEGIN ATOM
+M  V30 1 C     6.6259    10.2017     0.0000 0
+M  V30 2 C     6.6259    11.1998     0.0000 0
+M  V30 3 C     7.5740     9.8936     0.0000 0
+M  V30 4 C     5.7569     9.6978     0.0000 0
+M  V30 5 N     7.5740    11.5076     0.0000 0
+M  V30 6 C     5.7608    11.7016     0.0000 0
+M  V30 7 C     8.1609    10.7008     0.0000 0
+M  V30 8 C     7.8840     8.9416     0.0000 0
+M  V30 9 C     4.8899    10.1956     0.0000 0
+M  V30 10 C     4.8899    11.1977     0.0000 0
+M  V30 11 C     8.8619     8.7335     0.0000 0
+M  V30 12 N     9.1700     7.7836     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 2 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 2 5
+M  V30 5 1 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 2 4 9
+M  V30 9 1 5 7
+M  V30 10 2 6 10
+M  V30 11 1 8 11
+M  V30 12 1 9 10
+M  V30 13 1 11 12
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.RCT rn="606441">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 8 8 0 0 0 REGNO=606441
+M  V30 BEGIN ATOM
+M  V30 1 C    13.9917     9.2414     0.0000 0
+M  V30 2 N    13.9917    10.2438     0.0000 0
+M  V30 3 C    14.8540     8.7415     0.0000 0
+M  V30 4 I    13.1256     8.7415     0.0000 0
+M  V30 5 N    14.8559    10.7438     0.0000 0
+M  V30 6 C    15.7210     9.2366     0.0000 0
+M  V30 7 C    15.7210    10.2386     0.0000 0
+M  V30 8 I    16.5882    10.7368     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 2 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 2 5
+M  V30 5 2 3 6
+M  V30 6 2 5 7
+M  V30 7 1 6 7
+M  V30 8 1 7 8
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9272532">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 19 21 0 0 0 REGNO=9272532
+M  V30 BEGIN ATOM
+M  V30 1 C     4.6685     4.2830     0.0000 0
+M  V30 2 C     5.6175     3.9752     0.0000 0
+M  V30 3 C     4.6685     5.2810     0.0000 0
+M  V30 4 C     3.8004     3.7790     0.0000 0
+M  V30 5 C     6.2047     4.7820     0.0000 0
+M  V30 6 C     5.9274     3.0229     0.0000 0
+M  V30 7 N     5.6175     5.5891     0.0000 0
+M  V30 8 C     3.8044     5.7831     0.0000 0
+M  V30 9 C     2.9344     4.2772     0.0000 0
+M  V30 10 C     6.9056     2.8148     0.0000 0
+M  V30 11 C     2.9344     5.2792     0.0000 0
+M  V30 12 N     7.2137     1.8650     0.0000 0
+M  V30 13 C     8.1926     1.6569     0.0000 0
+M  V30 14 N     8.4997     0.7037     0.0000 0
+M  V30 15 C     8.8606     2.4030     0.0000 0
+M  V30 16 N     9.4777     0.4999     0.0000 0
+M  V30 17 C     9.8379     2.1941     0.0000 0
+M  V30 18 C    10.1457     1.2458     0.0000 0
+M  V30 19 I    11.1248     1.0399     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 2 2 5
+M  V30 5 1 2 6
+M  V30 6 1 3 7
+M  V30 7 2 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 6 10
+M  V30 11 1 8 11
+M  V30 12 2 9 11
+M  V30 13 1 10 12
+M  V30 14 1 12 13
+M  V30 15 1 13 14
+M  V30 16 2 13 15
+M  V30 17 2 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 17 18
+M  V30 21 1 18 19
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="2">
+          <RX>
+            <RX.ID>9204333</RX.ID>
+            <RX01>
+              <RX.RXRN>605308</RX.RXRN>
+              <RX.RCT>allyl bromide</RX.RCT>
+            </RX01>
+            <RX01>
+              <RX.RXRN>9272532</RX.RXRN>
+              <RX.RCT>[2-(1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9279802</RX.PXRN>
+              <RX.PRO>[2-(1-allyl-1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.PRO>
+            </RX02>
+            <RX.BLB>605308</RX.BLB>
+            <RX.BLB>9272532</RX.BLB>
+            <RX.BLB>9279802</RX.BLB>
+            <RX.BLC>605308</RX.BLC>
+            <RX.BLC>9272532</RX.BLC>
+            <RX.BLC>9279802</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>253016154595506</RX.BCODE>
+              <RX.MCODE>321190370008467</RX.MCODE>
+              <RX.NCODE>366170789602578</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/80F51(020405)|80F41(0306)|40FE1()|01E45(0708)|01E42(09)|01E42(0A)|01D45(090B)|01D45(0C)|01D42(0D)|01D42()|01C45(0E)|01C45(0E)|01C41(0F)|01B45()|01B41(10)|01A51(11)|01942(1213)|01852(14)|01842(15)|01752(16)|01742(16)|01642(17)|015E1()|</RX.TRANS>
+              <RX.BIN>284795</RX.BIN>
+              <RX.BFREQ>326</RX.BFREQ>
+              <RX.BRANGE>284672-285027</RX.BRANGE>
+              <RX.BNAME>CH2-X + &gt;N to -CH2-N&lt;</RX.BNAME>
+              <RX.QRY0>0/80F51(02*)|80F41(03*)|40FE1()|*</RX.QRY0>
+              <RX.QRY1>0/80F51(02*)|80F41(03*)|40FE1()|01E45(*)|01E42(*)|01E42(*)|*</RX.QRY1>
+              <RX.QRY2>0/80F51(020405)|80F41(0306)|40FE1()|01E45(*)|01E42(*)|01E42(*)|*</RX.QRY2>
+              <RX.QRY3>0/80F51(020405)|80F41(0306)|40FE1()|01E45(*)|01E42(*)|01E42(*)|01D45(*)|01D45(*)|01D42(*)|01D42(*)|*</RX.QRY3>
+              <RX.QRY4>0/80F51(020405)|80F41(0306)|40FE1()|01E45(0708*)|01E42(09*)|01E42(0A*)|01D45(09*)|01D45(*)|01D42(*)|01D42(*)|*</RX.QRY4>
+              <RX.QRY5>0/80F51(020405)|80F41(0306)|40FE1()|01E45(0708*)|01E42(09*)|01E42(0A*)|01D45(09*)|01D45(*)|01D42(*)|01D42(*)|01C45(*)|01C45(*)|01C41(*)|*</RX.QRY5>
+              <RX.QRY6>0/80F51(020405)|80F41(0306)|40FE1()|01E45(0708)|01E42(09)|01E42(0A)|01D45(090B)|01D45(0C)|01D42(0D)|01D42()|01C45(0E)|01C45(0E)|01C41(0F)|01B45()|01B41(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJzFV0GOGyEQvPsVHPaM6KabhksOm11FkWJH2kOUd+SQ94eBsQcYbIFnpYx8YFq4XBQNVX75+H05xUcpVApOL+efP5aXjy/nv6RN8eCbAhWn5KJaHlOOl2+RUjYOu58QgvqFcfpJJRjrnMkgvGJkOPVV3YNIH8iDhIIaLRp1ozWOggXKxmCH8vrnIYopUKw2wcMzK7I3FMi70GBDmtJWMcmNVfUcN+79m3KGrfHL2/vl7diWQlAI96jXW7psBiUBSKO3dlwAqmQEbzGPgvAECjeNkblw5AI0juIKlNSkkLmIhAkuUq1IxNisi3icQPEVCoWrLgbzaAwldNVlzT6UulweooCpdRGzqivejqsL5eHdjknsF5FxXaA8vKRJwOY998DjuoDtcon9ImFiRVRxuXYJaO8YxtUtezdqyp4yimOBcS5l7zptHK/rEENmnItUKISOsrpkJroOyt4VbchyrfMYl1ChRAacuUCgcV3QVCgCwFldJDeBUvau1y4Yl1GiuCXK98coW+/OXPbQuezTO3erbo9g06XUqfo9AqVLo53LXQSXroa26tNRb6shVZtfg3ygm7mxBHsdYmk5cJ3qXoc4cTkQbZVTg7cILjVsW5VUbRF8ast67mq8AQXZ4qc4b+wUpHt91DpvcCadzeS8E95Q3l4bSvLMCZ8q753o2iZs/j3BpfbvCLI57wSKdLkktytXNOF2Cxe3ud2ET5U3RvSpwOsePZ8C4v6CP5wC4s2HfE1qIhO3Ona5OM00k7GgyyU574S6Ze9ydAR3OAVsKE4L+YkVYYXChj8hBVxRJHrNRCJR5Yqif6/57FiWkGAOZwnRwLBliQkudZYQd92Z57OE14B+5fJ8lvCarBzOEkET8Iryv7NE50/m3kPXLNGp7j10KktwN0u4bpbwvdRwP2F0sgROZ4lOaribJVoESQ24zxK4X/H6n7upYm6bBiGWcKfDlkaCN7c08g8QMcVp</RX.RXNFILE>
+            <RX.REG>244081660b375d0b05750c6351c4f118</RX.REG>
+            <RX.RANK>87</RX.RANK>
+            <RX.MYD>91</RX.MYD>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>5</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>404.253</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>35</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXD01>
+              <RXD.YXRN>9279802</RXD.YXRN>
+              <RXD.YPRO>[2-(1-allyl-1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RXD.YPRO>
+              <RXD.YD>91 percent</RXD.YD>
+              <RXD.NYD>91</RXD.NYD>
+            </RXD01>
+            <RXD.SNR>2</RXD.SNR>
+            <RXDS01>
+              <RXD.STG>1</RXD.STG>
+              <RXD02>
+                <RXD.SXRN>9272532</RXD.SXRN>
+                <RXD.SRCT>[2-(1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RXD.SRCT>
+              </RXD02>
+              <RXD03>
+                <RXD.RGTXRN>11342937</RXD.RGTXRN>
+                <RXD.RGT>potassium hydroxide</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>1</RXD.TIM>
+              <RXD.T>20</RXD.T>
+            </RXDS01>
+            <RXDS01>
+              <RXD.STG>2</RXD.STG>
+              <RXD02>
+                <RXD.SXRN>605308</RXD.SXRN>
+                <RXD.SRCT>allyl bromide</RXD.SRCT>
+              </RXD02>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>2</RXD.TIM>
+              <RXD.T>20</RXD.T>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="605308">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 4 3 0 0 0 REGNO=605308
+M  V30 BEGIN ATOM
+M  V30 1 C     6.8575    12.0906     0.0000 0
+M  V30 2 C     7.7234    12.5906     0.0000 0
+M  V30 3 Br     5.9917    12.5906     0.0000 0
+M  V30 4 C     8.5896    12.0906     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 2 4
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.RCT rn="9272532">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 19 21 0 0 0 REGNO=9272532
+M  V30 BEGIN ATOM
+M  V30 1 C    15.1198    13.4822     0.0000 0
+M  V30 2 C    16.0689    13.1741     0.0000 0
+M  V30 3 C    15.1198    14.4804     0.0000 0
+M  V30 4 C    14.2517    12.9782     0.0000 0
+M  V30 5 C    16.6561    13.9811     0.0000 0
+M  V30 6 C    16.3790    12.2223     0.0000 0
+M  V30 7 N    16.0689    14.7885     0.0000 0
+M  V30 8 C    14.2559    14.9824     0.0000 0
+M  V30 9 C    13.3858    13.4764     0.0000 0
+M  V30 10 C    17.3571    12.0141     0.0000 0
+M  V30 11 C    13.3858    14.4785     0.0000 0
+M  V30 12 N    17.6652    11.0642     0.0000 0
+M  V30 13 C    18.6441    10.8560     0.0000 0
+M  V30 14 N    18.9510     9.9030     0.0000 0
+M  V30 15 C    19.3121    11.6022     0.0000 0
+M  V30 16 N    19.9291     9.6990     0.0000 0
+M  V30 17 C    20.2891    11.3932     0.0000 0
+M  V30 18 C    20.5972    10.4453     0.0000 0
+M  V30 19 I    21.5761    10.2390     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 2 2 5
+M  V30 5 1 2 6
+M  V30 6 1 3 7
+M  V30 7 2 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 6 10
+M  V30 11 1 8 11
+M  V30 12 2 9 11
+M  V30 13 1 10 12
+M  V30 14 1 12 13
+M  V30 15 1 13 14
+M  V30 16 2 13 15
+M  V30 17 2 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 17 18
+M  V30 21 1 18 19
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9279802">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 22 24 0 0 0 REGNO=9279802
+M  V30 BEGIN ATOM
+M  V30 1 C     4.9306     4.2830     0.0000 0
+M  V30 2 C     4.9306     5.2812     0.0000 0
+M  V30 3 C     5.8797     3.9749     0.0000 0
+M  V30 4 C     4.0627     3.7790     0.0000 0
+M  V30 5 N     5.8797     5.5894     0.0000 0
+M  V30 6 C     4.0666     5.7833     0.0000 0
+M  V30 7 C     6.4657     4.7823     0.0000 0
+M  V30 8 C     6.1889     3.0231     0.0000 0
+M  V30 9 C     3.1957     4.2772     0.0000 0
+M  V30 10 C     6.1889     6.5412     0.0000 0
+M  V30 11 C     3.1957     5.2793     0.0000 0
+M  V30 12 C     7.1667     2.8148     0.0000 0
+M  V30 13 C     7.1667     6.7483     0.0000 0
+M  V30 14 N     7.4760     1.8649     0.0000 0
+M  V30 15 C     7.4760     7.6993     0.0000 0
+M  V30 16 C     8.4541     1.6571     0.0000 0
+M  V30 17 N     8.7610     0.7037     0.0000 0
+M  V30 18 C     9.1218     2.4030     0.0000 0
+M  V30 19 N     9.7392     0.4997     0.0000 0
+M  V30 20 C    10.0992     2.1939     0.0000 0
+M  V30 21 C    10.4080     1.2460     0.0000 0
+M  V30 22 I    11.3862     1.0397     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 2 13 15
+M  V30 17 1 14 16
+M  V30 18 1 16 17
+M  V30 19 2 16 18
+M  V30 20 2 17 19
+M  V30 21 1 18 20
+M  V30 22 1 19 21
+M  V30 23 2 20 21
+M  V30 24 1 21 22
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="3">
+          <RX>
+            <RX.ID>9204343</RX.ID>
+            <RX01>
+              <RX.RXRN>605308</RX.RXRN>
+              <RX.RCT>allyl bromide</RX.RCT>
+            </RX01>
+            <RX01>
+              <RX.RXRN>9279768</RX.RXRN>
+              <RX.RCT>C<sub>17</sub>H<sub>18</sub>N<sub>2</sub>O</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9286145</RX.PXRN>
+              <RX.PRO>C<sub>20</sub>H<sub>22</sub>N<sub>2</sub>O</RX.PRO>
+            </RX02>
+            <RX.BLB>605308</RX.BLB>
+            <RX.BLB>9279768</RX.BLB>
+            <RX.BLB>9286145</RX.BLB>
+            <RX.BLC>605308</RX.BLC>
+            <RX.BLC>9279768</RX.BLC>
+            <RX.BLC>9286145</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>253002197341965</RX.BCODE>
+              <RX.MCODE>320906465509776</RX.MCODE>
+              <RX.NCODE>331382968791266</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/80F51(020506)|80F41(0304)|40FE1()|01E42(07)|01E41(0809)|01E41(0A)|01D42()|01D41(0A0B0D)|01D41(0C)|01D41()|01C45(0F10)|01C42(11)|01C41(0E11)|01B51(0F14)|01B45(12)|01B45(13)|01B42(15)|01A45(17)|01A45(17)|01A42(1618)|01A41(18)|01962()|01945()|01941()|</RX.TRANS>
+              <RX.BIN>281617</RX.BIN>
+              <RX.BFREQ>358</RX.BFREQ>
+              <RX.BRANGE>281491-281632</RX.BRANGE>
+              <RX.BNAME>CH2-X + &gt;N to -CH2-N&lt;</RX.BNAME>
+              <RX.QRY0>0/80F51(02*)|80F41(03*)|40FE1()|*</RX.QRY0>
+              <RX.QRY1>0/80F51(02*)|80F41(03*)|40FE1()|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>0/80F51(020506)|80F41(0304)|40FE1()|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>0/80F51(020506)|80F41(0304)|40FE1()|01E42(*)|01E41(*)|01E41(*)|01D42(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/80F51(020506)|80F41(0304)|40FE1()|01E42(07*)|01E41(0809*)|01E41(0A*)|01D42(*)|01D41(0A*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/80F51(020506)|80F41(0304)|40FE1()|01E42(07*)|01E41(0809*)|01E41(0A*)|01D42(*)|01D41(0A*)|01D41(*)|01D41(*)|01C45(*)|01C42(*)|01C41(*)|*</RX.QRY5>
+              <RX.QRY6>0/80F51(020506)|80F41(0304)|40FE1()|01E42(07)|01E41(0809)|01E41(0A)|01D42()|01D41(0A0B0D)|01D41(0C)|01D41()|01C45(0F10)|01C42(11)|01C41(0E11)|01B51(0F*)|01B45(*)|01B45(*)|01B42(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJzVWE1vIzcMvedX6LDXCqJEaaRLAaf2pkDtLOAYRfcULIo99rIo+vsrURrrYybuMJvutgPHnhCcZ+qRlB797vzb4128hNBCwN2704dj+uf84+kvlKq59F6AiC7ZKNKl2vv0FAph4u3qK4QgftXR/U4QjHFOZRBbMDKc+Em8BEEvyDeEoqU2WolrWNtRdINSI1ig3H+5iaIaFCNV8PCaFZkrCuQsDNhALqNVE926s55i4g4PwilrlE//HR73X5dSDULbbSk1Eicd8p1BF7YTgF1KHWLId955BoptUFBqtAXFTshAcV1K5xWhNIqDMnWxGG8KL8oqBopf5QVkANOW1+NtlNCggPQwqVfkCFTHiwu+xOIMo9ShbV4rjZlekyNom7fygnLymoFiGpSaI5Q2lfVWdgE7lFA4NdJrzora2q05AonGMth1qyjM2oW2dpUM3qvMM6sboa3d2o1KOs9ZUVu7VnpvfF4bq+q0Wl3Roo/+AaWt3cquinuEb1E+3EZpa7d2AJMX3dZu3aV0rOKudn++iTK/mAcP0Ia9YrX0Dq1V04a6cnRNa1YNSwRD2+Doa2hb04MVaZsafZG2nRHX0jYy+rrVb3O0WYzWiZp/jGGiZh59PTXn6Buo2QZfyJvKaIW1eGNYsIw3WZfsxLDWfB21x2idyLoQF0+Xj5T86L/fXVLFlU9TPjF9kufuSG6JDBIZmrzy08kW6UhFkOhOqaTEpRylRSayEwW2RaJCSn+JsrSQtMQUJJDX/Zt934ykXvo+QV2celCnAshP7S/01Gl/vH94fn/ePZwOj5fnp8vhfEg7Qr7eZ9d9iZFOL0M74w9RNPosZfe79L47HmenuAB67pCf+/Lp989/fPrzcyUnF4aAGogugeTvf/7l8FF0VxOIJkOUA9dNxPt8iN0ORIunGoEppNcIzPYITKHCXoUfKr8hAiPONYLcMgJrBLg9Ahw4iMd3ieV2BJgjSJo76ClM7o1ENwrtX9qte9Ed5YrNTybWGMdZJ7rjQeTnOSpozUDpRbc3qDJ/6DgoveiervKHF8sgui2UWAxyeGmFi5Ma7Dq7DNFd2Y3iw8H2WDrRbWUw84pY7HaiO0oxn+dulAgclFa4xEFGYeHFuk64MORyzTSXl17+mGBnXjiZ7kT3JBVeZSGn6jrRXbsxykKvGCht7daq46L0tYtTeFWm29qtPR2rmFN1nejWUrmcmShRHUPodr/21Bwx60X3KL5wuuhplnSfu5HLS1u7EOtl3jGBk+nx96tgZhScGChtLHWXSgqg4+X/NkbgG40RMFhhifCfHiNWBga1OgTA6siRx4ildTka0HCx4uvmka6zTllDD1ZPDTb4RhPp7M76vQeRsGUw+JeGErN1KIl/qVSin/ZfMaDEMzVu2KIMKHmH+i4DSjzEytEaD+hyzH/bAcVG6TSL5FmAfesBxdVfBjdF0A0o3gHaeUD5G8TyLcU=</RX.RXNFILE>
+            <RX.REG>a278bedc15cca4eb635832d8a6f4e2d1</RX.REG>
+            <RX.RANK>77</RX.RANK>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>5</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>306.407</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>25</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>3999191</RXD.RGTXRN>
+                <RXD.RGT>lithium carbonate</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>24</RXD.TIM>
+              <RXD.T>20</RXD.T>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="605308">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 4 3 0 0 0 REGNO=605308
+M  V30 BEGIN ATOM
+M  V30 1 C     5.8686     9.2848     0.0000 0
+M  V30 2 C     6.7349     9.7848     0.0000 0
+M  V30 3 Br     5.0027     9.7848     0.0000 0
+M  V30 4 C     7.6008     9.2848     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 2 4
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.RCT rn="9279768">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 25 1 0 0 REGNO=9279768
+M  V30 BEGIN ATOM
+M  V30 1 C    14.4301    10.2509     0.0000 0
+M  V30 2 C    13.6020     9.7728     0.0000 0
+M  V30 3 C    15.2031     9.4788     0.0000 0
+M  V30 4 C    14.4301    11.2091     0.0000 0
+M  V30 5 C    15.3411     9.9550     0.0000 0
+M  V30 6 N    13.6020     8.8170     0.0000 0
+M  V30 7 C    12.7742    10.2509     0.0000 0
+M  V30 8 C    14.6562     8.5340     0.0000 0
+M  V30 9 C    16.2950     9.4788     0.0000 0
+M  V30 10 C    13.6020    11.6868     0.0000 0
+M  V30 11 N    15.3411    11.5040     0.0000 0
+M  V30 12 C    15.9041    10.7289     0.0000 0
+M  V30 13 C    12.7742     8.3390     0.0000 0
+M  V30 14 C    12.7742    11.2091     0.0000 0
+M  V30 15 C    11.9452     9.7728     0.0000 0
+M  V30 16 C    15.2031     7.5889     0.0000 0
+M  V30 17 C    16.8410     8.5340     0.0000 0
+M  V30 18 C    11.9452     8.8170     0.0000 0
+M  V30 19 O    12.7742     7.3820     0.0000 0
+M  V30 20 C    16.2950     7.5889     0.0000 0
+M  V30 21 H    14.4301     9.2939     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 21 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 1 4 11 CFG=1
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 14
+M  V30 20 1 11 12
+M  V30 21 1 13 18
+M  V30 22 2 13 19
+M  V30 23 1 15 18
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(21 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21) -
+M  V30 CBONDS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   13.5931    6.3220    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9286145">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9286145
+M  V30 BEGIN ATOM
+M  V30 1 C     6.6152     2.4228     0.0000 0
+M  V30 2 C     7.4470     1.9420     0.0000 0
+M  V30 3 C     6.8992     3.4819     0.0000 0
+M  V30 4 C     5.7822     1.9420     0.0000 0
+M  V30 5 C     6.4160     3.3631     0.0000 0
+M  V30 6 N     8.2800     2.4228     0.0000 0
+M  V30 7 C     7.4470     0.9808     0.0000 0
+M  V30 8 C     7.9960     3.4819     0.0000 0
+M  V30 9 C     6.3511     4.4319     0.0000 0
+M  V30 10 N     5.0690     2.5849     0.0000 0
+M  V30 11 C     5.7822     0.9808     0.0000 0
+M  V30 12 C     5.4602     3.4630     0.0000 0
+M  V30 13 C     9.1133     1.9420     0.0000 0
+M  V30 14 C     6.6152     0.5000     0.0000 0
+M  V30 15 C     8.2800     0.5000     0.0000 0
+M  V30 16 C     8.5442     4.4319     0.0000 0
+M  V30 17 C     6.8992     5.3819     0.0000 0
+M  V30 18 C     4.1281     2.3850     0.0000 0
+M  V30 19 C     9.1133     0.9808     0.0000 0
+M  V30 20 O     9.9451     2.4228     0.0000 0
+M  V30 21 C     7.9960     5.3819     0.0000 0
+M  V30 22 C     3.6190     3.2001     0.0000 0
+M  V30 23 C     2.6580     3.1669     0.0000 0
+M  V30 24 H     7.4470     2.9030     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 22 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    5.5016   -0.5600    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="4">
+          <RX>
+            <RX.ID>9205044</RX.ID>
+            <RX01>
+              <RX.RXRN>605437</RX.RXRN>
+              <RX.RCT>methyl chloroformate</RX.RCT>
+            </RX01>
+            <RX01>
+              <RX.RXRN>9277624</RX.RXRN>
+              <RX.RCT>C<sub>17</sub>H<sub>18</sub>N<sub>4</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9285924</RX.PXRN>
+              <RX.PRO>C<sub>19</sub>H<sub>20</sub>N<sub>4</sub>O<sub>2</sub></RX.PRO>
+            </RX02>
+            <RX.BLB>605437</RX.BLB>
+            <RX.BLB>9277624</RX.BLB>
+            <RX.BLB>9285924</RX.BLB>
+            <RX.BLC>605437</RX.BLC>
+            <RX.BLC>9277624</RX.BLC>
+            <RX.BLC>9285924</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>254003783250429</RX.BCODE>
+              <RX.MCODE>327738895365054</RX.MCODE>
+              <RX.NCODE>350389167532650</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/80F51(020607)|80F42(030405)|40FE1()|01E62()|01E61(0B)|01E42(0809)|01E41(0A)|01D52(0C)|01D42(0E)|01D41(0D)|01D41()|01C52(10)|01C42(0F11)|01C42(10)|01B45(1314)|01B42(15)|01B42(12)|01A51(1318)|01A45(16)|01A45(17)|01A41(19)|01945(1A)|01945(1A)|01941(19)|01941()|01845()|</RX.TRANS>
+              <RX.BIN>278038</RX.BIN>
+              <RX.BFREQ>283</RX.BFREQ>
+              <RX.BRANGE>278013-278226</RX.BRANGE>
+              <RX.BNAME>C(=)-X + &gt;NH to -C(=)-N&lt;</RX.BNAME>
+              <RX.QRY0>0/80F51(02*)|80F42(03*)|40FE1()|*</RX.QRY0>
+              <RX.QRY1>0/80F51(02*)|80F42(03*)|40FE1()|01E62(*)|01E61(*)|01E42(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>0/80F51(020607)|80F42(030405)|40FE1()|01E62(*)|01E61(*)|01E42(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>0/80F51(020607)|80F42(030405)|40FE1()|01E62(*)|01E61(*)|01E42(*)|01E41(*)|01D52(*)|01D42(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/80F51(020607)|80F42(030405)|40FE1()|01E62(*)|01E61(0B*)|01E42(0809*)|01E41(0A*)|01D52(*)|01D42(*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/80F51(020607)|80F42(030405)|40FE1()|01E62(*)|01E61(0B*)|01E42(0809*)|01E41(0A*)|01D52(*)|01D42(*)|01D41(*)|01D41(*)|01C52(*)|01C42(*)|01C42(*)|*</RX.QRY5>
+              <RX.QRY6>0/80F51(020607)|80F42(030405)|40FE1()|01E62()|01E61(0B)|01E42(0809)|01E41(0A)|01D52(0C)|01D42(0E)|01D41(0D)|01D41()|01C52(10)|01C42(0F11)|01C42(10)|01B45(*)|01B42(*)|01B42(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJzVWLtyGyEU7f0VFK53uE8uTRrbkya2Z1xk8hGp8/1hAcuAVgoocZEdFegOe3Tuk4Pu33683KXHOXQO7u6fX7/tX96+PP/izTcPPjpwaUsxuv3x7Xp/S5zjtDz8xBjdd0zb71yGIVVfVlIxCpx7cJcg8gfKIqPghoS+rHyP8nodBRsUf2JwhvLw8yqKb1A+PPKjR3/gQg0KbT4a3BIXPqFAyeXAEPIPHVj5FI2TFXMq+73PqSievjr1whT2b08vj39XLggOJ8slJUa5hiVAWc2FRbpy8eyhrCwCzqNolyLQ8i5saNRyebmOErpy8fKeaG+24JF1XFKIsK6YFzyKPRcvUFBY/DwK+I6LRcISXRSY9wigQ2GLlQGK+HmUvqU9si++qSzUC/TNKKSZC28McSEu3HM5jRcjW0Bpa5c3SY3X482haIcSTegWj9ralRRTqlwUV7hYh2KkVOJMseNyvY8g9lyqRynTvJBp9B1KUKOSo9SWCyht7eoGgJWL8cJkQOy4kPcVJQItcKGei0j1iAAXuHDPhfEdxXCBy0ftfs5xlK16vpfymB33Uh6bo5XzGBytkhFGXMnDbtyreXiNVsvDaLTGvHfAhTJyhr3p9X2EjFbKI2G0cm7x0Sq5ZUer5hY8sMZzZiG3yLg35JIf91reO1pj3nsoIyKGoMj/RkeIQ7tUiWc6QkI9oyJoO08XFEBCMaoKIODCRO/USDqx8X3+YcAFLsPZDaezO0SeRhnObkiHd8HDKLdrGj1pmhhv1jSpOLjEGcOKGul1hKhllHTSSZB5lItnt9J8jqDPtCDUzKAEP49yUdPoytndnguyefJyS1zaTCc1Erl9dxpFOy5mUUuEGGMb3SUFkIpEy7uKMl91oxoB05LpdMeZz/SgAFT2QGU17G2+G7trbfKIRGumZWG+dJpG091Aq0dEOK+vRgVgUQoKe1ngIh2X5EeOC6dsWVs5Cxf1kHSi1Ogye5pHGZSRao2u9dFdU2ksUlAiLdwlO5UW9mhYxQOc78ZPv+5f11cH1kV9dW79v/QVH+oruaKvzq1HmikcaKZsxUPVdeCb5QY+0GJ0ZsXS7APC/r/Mpb9/IprED932G0dDIHU=</RX.RXNFILE>
+            <RX.REG>b874ff82905d4d93ca67e4b49feb685f</RX.REG>
+            <RX.RANK>87</RX.RANK>
+            <RX.MYD>96</RX.MYD>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>5</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>336.393</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>35</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXD01>
+              <RXD.YXRN>9285924</RXD.YXRN>
+              <RXD.YPRO>C<sub>19</sub>H<sub>20</sub>N<sub>4</sub>O<sub>2</sub></RXD.YPRO>
+              <RXD.YD>96 percent</RXD.YD>
+              <RXD.NYD>96</RXD.NYD>
+            </RXD01>
+            <RXD.SNR>2</RXD.SNR>
+            <RXDS01>
+              <RXD.STG>1</RXD.STG>
+              <RXD02>
+                <RXD.SXRN>9277624</RXD.SXRN>
+                <RXD.SRCT>C<sub>17</sub>H<sub>18</sub>N<sub>4</sub></RXD.SRCT>
+              </RXD02>
+              <RXD03>
+                <RXD.RGTXRN>3629917</RXD.RGTXRN>
+                <RXD.RGT>sodium hexamethyldisilazane</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>1</RXD.TIM>
+              <RXD.T>-78</RXD.T>
+            </RXDS01>
+            <RXDS01>
+              <RXD.STG>2</RXD.STG>
+              <RXD02>
+                <RXD.SXRN>605437</RXD.SXRN>
+                <RXD.SRCT>methyl chloroformate</RXD.SRCT>
+              </RXD02>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>3</RXD.TIM>
+              <RXD.T>-78 - 20</RXD.T>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="605437">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 5 4 0 0 0 REGNO=605437
+M  V30 BEGIN ATOM
+M  V30 1 C     5.6742    10.2713     0.0000 0
+M  V30 2 O     6.5402    10.7713     0.0000 0
+M  V30 3 Cl     4.8081    10.7713     0.0000 0
+M  V30 4 O     5.6742     9.2713     0.0000 0
+M  V30 5 C     7.4062    10.2713     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.RCT rn="9277624">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 24 0 0 0 REGNO=9277624
+M  V30 BEGIN ATOM
+M  V30 1 C    14.0258     9.5265     0.0000 0
+M  V30 2 C    14.0020    10.7035     0.0000 0
+M  V30 3 N    15.1230     9.0955     0.0000 0
+M  V30 4 C    13.0200     8.9004     0.0000 0
+M  V30 5 C    15.1621    11.0565     0.0000 0
+M  V30 6 C    12.9669    11.2624     0.0000 0
+M  V30 7 C    15.8551    10.0634     0.0000 0
+M  V30 8 C    15.4511     8.0674     0.0000 0
+M  V30 9 C    11.9859     9.4663     0.0000 0
+M  V30 10 C    15.4979    12.2316     0.0000 0
+M  V30 11 C    11.9620    10.6504     0.0000 0
+M  V30 12 C    16.5161     7.8121     0.0000 0
+M  V30 13 C    16.9471    12.2316     0.0000 0
+M  V30 14 C    17.6152     8.4322     0.0000 0
+M  V30 15 N    17.7982    11.2115     0.0000 0
+M  V30 16 C    17.6470     9.4564     0.0000 0
+M  V30 17 C    17.7301    10.3935     0.0000 0
+M  V30 18 N    18.0742     9.6554     0.0000 0
+M  V30 19 C    17.2622     9.7254     0.0000 0
+M  V30 20 N    18.1172    10.1245     0.0000 0
+M  V30 21 C    17.3042    10.1946     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 1 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 2 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 16 19
+M  V30 21 1 17 20
+M  V30 22 2 17 21
+M  V30 23 2 18 20
+M  V30 24 1 19 21
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9285924">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 28 0 0 0 REGNO=9285924
+M  V30 BEGIN ATOM
+M  V30 1 C     4.3102     3.4161     0.0000 0
+M  V30 2 C     4.3363     2.2280     0.0000 0
+M  V30 3 C     5.4792     3.7720     0.0000 0
+M  V30 4 C     3.2681     3.9792     0.0000 0
+M  V30 5 N     5.4423     1.7948     0.0000 0
+M  V30 6 C     3.3213     1.5987     0.0000 0
+M  V30 7 C     6.1804     2.7700     0.0000 0
+M  V30 8 C     5.8214     4.9572     0.0000 0
+M  V30 9 C     2.2531     3.3630     0.0000 0
+M  V30 10 C     5.7743     0.7569     0.0000 0
+M  V30 11 C     2.2770     2.1688     0.0000 0
+M  V30 12 C     7.2836     4.9572     0.0000 0
+M  V30 13 C     6.8475     0.4997     0.0000 0
+M  V30 14 N     8.1426     3.9292     0.0000 0
+M  V30 15 C     7.9555     1.1248     0.0000 0
+M  V30 16 C     8.0716     3.1048     0.0000 0
+M  V30 17 C     8.9046     4.3079     0.0000 0
+M  V30 18 C     7.9886     2.1580     0.0000 0
+M  V30 19 N     8.4596     2.8321     0.0000 0
+M  V30 20 C     7.6426     2.9050     0.0000 0
+M  V30 21 O     8.9116     5.2080     0.0000 0
+M  V30 22 O     9.6487     3.9400     0.0000 0
+M  V30 23 N     8.4195     2.3578     0.0000 0
+M  V30 24 C     7.5983     2.4310     0.0000 0
+M  V30 25 C     9.9616     5.8121     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 14 17
+M  V30 19 1 15 18
+M  V30 20 1 16 19
+M  V30 21 2 16 20
+M  V30 22 1 17 21
+M  V30 23 2 17 22
+M  V30 24 1 18 23
+M  V30 25 2 18 24
+M  V30 26 2 19 23
+M  V30 27 1 20 24
+M  V30 28 1 21 25
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="5">
+          <RX>
+            <RX.ID>9221902</RX.ID>
+            <RX01>
+              <RX.RXRN>9279802</RX.RXRN>
+              <RX.RCT>[2-(1-allyl-1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9277624</RX.PXRN>
+              <RX.PRO>C<sub>17</sub>H<sub>18</sub>N<sub>4</sub></RX.PRO>
+            </RX02>
+            <RX.BLB>9279802</RX.BLB>
+            <RX.BLB>9277624</RX.BLB>
+            <RX.BLC>9279802</RX.BLC>
+            <RX.BLC>9277624</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>297395268144773</RX.BCODE>
+              <RX.MCODE>334889904065456</RX.MCODE>
+              <RX.NCODE>367324068706534</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/88F42(0204)|80F42(030506)|40FE1()|08F42(07)|01E52(08)|01E42(0A)|01E41(09)|01D52(0C)|01D51(0B0D)|01D42(0C)|01C45(0F10)|01C42(0E)|01C42(11)|01B51(14)|01B45(1112)|01B45(13)|01B42(15)|01A45(16)|01A45(16)|01A41(15)|01A41()|01945()|</RX.TRANS>
+              <RX.BIN>218115</RX.BIN>
+              <RX.BFREQ>252</RX.BFREQ>
+              <RX.QRY0>0/88F42(0204)|80F42(03*)|40FE1()|08F42(*)|*</RX.QRY0>
+              <RX.QRY1>0/88F42(0204)|80F42(03*)|40FE1()|08F42(*)|01E52(*)|01E42(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>0/88F42(0204)|80F42(030506)|40FE1()|08F42(07)|01E52(*)|01E42(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>0/88F42(0204)|80F42(030506)|40FE1()|08F42(07)|01E52(*)|01E42(*)|01E41(*)|01D52(*)|01D51(*)|01D42(*)|*</RX.QRY3>
+              <RX.QRY4>0/88F42(0204)|80F42(030506)|40FE1()|08F42(07)|01E52(08*)|01E42(0A*)|01E41(09*)|01D52(*)|01D51(*)|01D42(*)|*</RX.QRY4>
+              <RX.QRY5>0/88F42(0204)|80F42(030506)|40FE1()|08F42(07)|01E52(08*)|01E42(0A*)|01E41(09*)|01D52(*)|01D51(*)|01D42(*)|01C45(*)|01C42(*)|01C42(*)|*</RX.QRY5>
+              <RX.QRY6>0/88F42(0204)|80F42(030506)|40FE1()|08F42(07)|01E52(08)|01E42(0A)|01E41(09)|01D52(0C)|01D51(0B0D)|01D42(0C)|01C45(0F10)|01C42(0E)|01C42(11)|01B51(*)|01B45(11*)|01B45(*)|01B42(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJzNlrGOHCEMQPv7iimuRtjY2DRpcqcoUnYjXRHlS/L9YYDZA5acxpsiWU0xazFPBox5z28/r0/5t22Qn6fny/dv+5+3T5df5Hz3w5d9xAY1uO0/37/nrxA3pPy6fFJK2w/Mw5/24ehS9Li/kUMN+I7bPm9/QpQH6stE4UyBcJ6CHSW45BO2N2FDLmHIJUOgUkSSgULLXNixpn5G148pPOUSoVJEg2FdYkchR4nbHomigSIDBUHb6nq07LR2FHCIDI0nYqCkZS7RMQGdpoBf5pKrTtL5dYG+dtlBiqHuloKh6gCXlOiE1DCjMFDYc6hz01jndqrqgJYUcTElQy597UZHGqjmElngPCUOFEm+ZSCe/PkZ9bUrDrhWCTrywZCLDhSJx85w65fnculrVx2gtlwg0flc0A8UCsJ1dZGigdLXbnIE3Ch5cXvK1w8px1OvG7x18z4allG69exbFEvTm8diaWLz2FCa0iKq9wQqTWOOciHcR/fWMEdjOepzVMvRnaOpjJ0yg3pAp7H5870a52goB2gmUDkQ89hYCnwR1XuClAKco1oKaiakUiBTFGvZTIQcwrt1uGTleP2ypdxP1eP+9/X68pc2AgYb8bGeKHAChrM1eATezkLu6AkedJrgINZvYTej8714MIC8MKxtRl7VMKM45JKXqN3dSPSgGe2bxM2MiP3DZpR1COvq5uvXMCMZKKSHmyGzP00ZDCB/gfVO2e8oQ73AuNMcYvMrAosx6phLq/pcdUEfNiNmCiPP7hHkklYDMM5ocprIh7NGtOTCA0VDNaPgQhpyMTlN1MOMIllu3dH1sgE018vH8mGnAcDD0sjQGQaPYBe8b5QEBqcZPCLnwtxmFAANuciYC+FBUTSsy/sJ+BceMY+1e8TM/X88Yo6uPYI/8IhFdOERsvQIWRlDc445unKOd4+QiHR4xG9fE5pz</RX.RXNFILE>
+            <RX.REG>091afbde4c59e4ad3f1052a4578235f2</RX.REG>
+            <RX.RANK>86</RX.RANK>
+            <RX.MYD>65</RX.MYD>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>278.357</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>33</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXD01>
+              <RXD.YXRN>9277624</RXD.YXRN>
+              <RXD.YPRO>C<sub>17</sub>H<sub>18</sub>N<sub>4</sub></RXD.YPRO>
+              <RXD.YD>65 percent</RXD.YD>
+              <RXD.NYD>65</RXD.NYD>
+            </RXD01>
+            <RXD.SNR>2</RXD.SNR>
+            <RXDS01>
+              <RXD.STG>1</RXD.STG>
+              <RXD02>
+                <RXD.SXRN>9279802</RXD.SXRN>
+                <RXD.SRCT>[2-(1-allyl-1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RXD.SRCT>
+              </RXD02>
+              <RXD03>
+                <RXD.RGTXRN>605508</RXD.RGTXRN>
+                <RXD.RGT>9-bora-bicyclo[3.3.1]nonane</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>12</RXD.TIM>
+              <RXD.T>0 - 20</RXD.T>
+            </RXDS01>
+            <RXDS01>
+              <RXD.STG>2</RXD.STG>
+              <RXD03>
+                <RXD.RGTXRN>11604118</RXD.RGTXRN>
+                <RXD.RGT>tetrakis(triphenylphosphine) palladium<sup>(0)</sup></RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>4546405</RXD.RGTXRN>
+                <RXD.RGT>caesium carbonate</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>48</RXD.TIM>
+              <RXD.COND>Heating</RXD.COND>
+              <RXD.TYP>intramolecular Suzuki-Miyaura cross-coupling</RXD.TYP>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9279802">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 22 24 0 0 0 REGNO=9279802
+M  V30 BEGIN ATOM
+M  V30 1 C     2.2349     5.6041     0.0000 0
+M  V30 2 C     2.2349     6.6020     0.0000 0
+M  V30 3 C     3.1840     5.2959     0.0000 0
+M  V30 4 C     1.3668     5.0999     0.0000 0
+M  V30 5 N     3.1840     6.9101     0.0000 0
+M  V30 6 C     1.3709     7.1039     0.0000 0
+M  V30 7 C     3.7700     6.1030     0.0000 0
+M  V30 8 C     3.4930     4.3438     0.0000 0
+M  V30 9 C     0.4998     5.5978     0.0000 0
+M  V30 10 C     3.4930     7.8620     0.0000 0
+M  V30 11 C     0.4998     6.6001     0.0000 0
+M  V30 12 C     4.4712     4.1359     0.0000 0
+M  V30 13 C     4.4712     8.0691     0.0000 0
+M  V30 14 N     4.7801     3.1859     0.0000 0
+M  V30 15 C     4.7801     9.0201     0.0000 0
+M  V30 16 C     5.7583     2.9778     0.0000 0
+M  V30 17 N     6.0651     2.0249     0.0000 0
+M  V30 18 C     6.4261     3.7239     0.0000 0
+M  V30 19 N     7.0432     1.8208     0.0000 0
+M  V30 20 C     7.4031     3.5147     0.0000 0
+M  V30 21 C     7.7124     2.5666     0.0000 0
+M  V30 22 I     8.6903     2.3607     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 2 13 15
+M  V30 17 1 14 16
+M  V30 18 1 16 17
+M  V30 19 2 16 18
+M  V30 20 2 17 19
+M  V30 21 1 18 20
+M  V30 22 1 19 21
+M  V30 23 2 20 21
+M  V30 24 1 21 22
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9277624">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 24 0 0 0 REGNO=9277624
+M  V30 BEGIN ATOM
+M  V30 1 C    12.7543     4.9249     0.0000 0
+M  V30 2 C    12.7305     6.1019     0.0000 0
+M  V30 3 N    13.8515     4.4939     0.0000 0
+M  V30 4 C    11.7483     4.2988     0.0000 0
+M  V30 5 C    13.8905     6.4551     0.0000 0
+M  V30 6 C    11.6954     6.6611     0.0000 0
+M  V30 7 C    14.5835     5.4620     0.0000 0
+M  V30 8 C    14.1797     3.4659     0.0000 0
+M  V30 9 C    10.7143     4.8650     0.0000 0
+M  V30 10 C    14.2266     7.6300     0.0000 0
+M  V30 11 C    10.6905     6.0491     0.0000 0
+M  V30 12 C    15.2445     3.2109     0.0000 0
+M  V30 13 C    15.6757     7.6300     0.0000 0
+M  V30 14 C    16.3436     3.8307     0.0000 0
+M  V30 15 N    16.5268     6.6101     0.0000 0
+M  V30 16 C    16.3755     4.8549     0.0000 0
+M  V30 17 C    16.4588     5.7919     0.0000 0
+M  V30 18 N    16.8027     5.0539     0.0000 0
+M  V30 19 C    15.9907     5.1238     0.0000 0
+M  V30 20 N    16.8458     5.5230     0.0000 0
+M  V30 21 C    16.0327     5.5929     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 1 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 2 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 16 19
+M  V30 21 1 17 20
+M  V30 22 2 17 21
+M  V30 23 2 18 20
+M  V30 24 1 19 21
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="6">
+          <RX>
+            <RX.ID>9223123</RX.ID>
+            <RX01>
+              <RX.RXRN>9283985</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>20</sub>N<sub>2</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9283986</RX.PXRN>
+              <RX.PRO>C<sub>19</sub>H<sub>22</sub>N<sub>2</sub>O<sub>2</sub></RX.PRO>
+            </RX02>
+            <RX.BLB>9283985</RX.BLB>
+            <RX.BLB>9283986</RX.BLB>
+            <RX.BLC>9283985</RX.BLC>
+            <RX.BLC>9283986</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>242815105630000</RX.BCODE>
+              <RX.MCODE>321149305969550</RX.MCODE>
+              <RX.NCODE>353374273883202</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/08F42(020305)|08F42(04)|01E51(090A)|01E45(06)|01E44(07080B)|01D45(0811)|01D45(0F10)|01D44(0E)|01D42(0C0D)|01D41(0B)|01D41()|01C62()|01C61(16)|01C51(0F14)|01C45(12)|01C45(13)|01C41(15)|01B45(17)|01B45(17)|01B41(15)|01B41()|01B41()|01A45()|</RX.TRANS>
+              <RX.BIN>330195</RX.BIN>
+              <RX.BFREQ>201</RX.BFREQ>
+              <RX.BRANGE>330170-330275</RX.BRANGE>
+              <RX.BNAME>&gt;C=CH- to &gt;CH-CH2-</RX.BNAME>
+              <RX.QRY0>0/08F42(02*)|08F42(*)|*</RX.QRY0>
+              <RX.QRY1>0/08F42(02*)|08F42(*)|01E51(*)|01E45(*)|01E44(*)|*</RX.QRY1>
+              <RX.QRY2>0/08F42(020305)|08F42(04)|01E51(*)|01E45(*)|01E44(*)|*</RX.QRY2>
+              <RX.QRY3>0/08F42(020305)|08F42(04)|01E51(*)|01E45(*)|01E44(*)|01D45(*)|01D45(*)|01D44(*)|01D42(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/08F42(020305)|08F42(04)|01E51(090A*)|01E45(06*)|01E44(07080B*)|01D45(08*)|01D45(*)|01D44(*)|01D42(*)|01D41(0B*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/08F42(020305)|08F42(04)|01E51(090A*)|01E45(06*)|01E44(07080B*)|01D45(08*)|01D45(*)|01D44(*)|01D42(*)|01D41(0B*)|01D41(*)|01C62(*)|01C61(*)|01C51(*)|01C45(*)|01C45(*)|01C41(*)|*</RX.QRY5>
+              <RX.QRY6>0/08F42(020305)|08F42(04)|01E51(090A)|01E45(06)|01E44(07080B)|01D45(0811)|01D45(0F10)|01D44(0E)|01D42(0C0D)|01D41(0B)|01D41()|01C62()|01C61(16)|01C51(0F14)|01C45(12)|01C45(13)|01C41(15)|01B45(*)|01B45(*)|01B41(15)|01B41()|01B41()|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJztV01v2zAMvedX6NDrBJH6sHQZkM5uByxJgTQY1lNRDD3uMgz7/RMpJ5YVrbWDoRswG27r0tTzE/VIiVf7L7tVvISAeK+utncb+mf/fvvTSJVd2JKHgGQUdKn8OY5CI9DHx+odQhCfMbqvyN1IaxXhCZRGaTXAiQ/idxB8Q3pgFCu1R0YBGRBnoGCGYqTXhlG0NC7hTUPRGYqWDfiLuJgRF22h56KNnsHFZihOIth6dHcvo7hqdJUMDmbMqBmhBA0XRdeP4oLeQXoyMAcljNZIKdPHxTo7PS6gqis9My4AIxQd7DEuc1Yacu02UpmLVAe5dodsVNJ4NQMl1+6gurkoY+3GsZesNOTaHXI6qniO6iDXLkrlUvZgRBnp5RWUXLvDGs3VS67dIY9mzghVhgLSYFqZmAtNyFHuXkaBEUrjnOrx7GhGr6Dk2h1UgtKPubwyo1y7Q5WKKH6URx9fRDneaevD086SW3XVaqpWm7bQ3IpcUEtf5AJ5bkVzjqC5DJa+mssaFlbDZar0NVx2Sl/LZaT0ddWvOS4WpbXh5C9xG07m0tdzcpa+gZOt8AVVYwYppUorMIfSqjlxSqutWh2nR2lt2FrwjQQQzn09i7rwjY54FrOtEPeHB169+KZdH0iz/V9Nf9ljveHXFEY+cKFII4xgidEakXxooUgEvOREi4JGn6SA2ByJvUiGFGwKIkmHpkeyIOpxFBoecf3Hvn1E0lO+HX8iOpJEoh96RmgPjLBtN9e3jzf79e222x0e7w/dvqMak66b5Nr2fKkGBMd1/52Stq8u7Zp+rzebo1OcDI/r0rjvT1+fvz39eB6ClgQYj8MnItgTSd9//NQ9iNGVEUE2xM2r31Ljxmz0BCIo9gMD3S/AwEBPZ6ATdDwyHQ/H8eA1gYFODPbdrQjodfD8rtu1S1uwtAWV6C5tgaqu9NIWLG1BHWVpC+ooS1vwBm0BFNbzw+zSFvTWv9EW0CG72hYIere0B/99e3D/b7QHiUFKMGEGBmY6A8MGLd3paDyNgSkbFHdsUH4Bpav3Sg==</RX.RXNFILE>
+            <RX.REG>c29092ec3fd16c9e2cba791e9a070c03</RX.REG>
+            <RX.RANK>88</RX.RANK>
+            <RX.MYD>100</RX.MYD>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>310.396</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>35</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXD01>
+              <RXD.YXRN>9283986</RXD.YXRN>
+              <RXD.YPRO>C<sub>19</sub>H<sub>22</sub>N<sub>2</sub>O<sub>2</sub></RXD.YPRO>
+              <RXD.YD>100 percent</RXD.YD>
+              <RXD.NYD>100</RXD.NYD>
+            </RXD01>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11343078</RXD.RGTXRN>
+                <RXD.RGT>sodium tetrahydroborate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>742035</RXD.RGTXRN>
+                <RXD.RGT>trifluoroacetic acid</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>969212</RXD.SOLXRN>
+                <RXD.SOL>benzene</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>12</RXD.TIM>
+              <RXD.T>0 - 20</RXD.T>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9283985">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283985
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5699     4.5245     0.0000 0
+M  V30 2 C     5.4019     4.0435     0.0000 0
+M  V30 3 C     4.8541     5.5835     0.0000 0
+M  V30 4 C     3.7379     4.0435     0.0000 0
+M  V30 5 C     4.3710     5.4645     0.0000 0
+M  V30 6 N     6.2350     4.5245     0.0000 0
+M  V30 7 C     5.4019     3.0826     0.0000 0
+M  V30 8 C     5.9511     5.5835     0.0000 0
+M  V30 9 C     4.3059     6.5335     0.0000 0
+M  V30 10 N     3.0241     4.6864     0.0000 0
+M  V30 11 C     3.7379     3.0826     0.0000 0
+M  V30 12 C     3.4149     5.5646     0.0000 0
+M  V30 13 C     7.0680     4.0435     0.0000 0
+M  V30 14 C     4.5699     2.6015     0.0000 0
+M  V30 15 C     6.2350     2.6015     0.0000 0
+M  V30 16 C     6.5000     6.5335     0.0000 0
+M  V30 17 C     4.8541     7.4836     0.0000 0
+M  V30 18 C     2.0829     4.4865     0.0000 0
+M  V30 19 C     7.0680     3.0826     0.0000 0
+M  V30 20 C     5.9511     7.4836     0.0000 0
+M  V30 21 O     1.4399     5.2005     0.0000 0
+M  V30 22 O     1.7859     3.5725     0.0000 0
+M  V30 23 C     0.5000     5.0006     0.0000 0
+M  V30 24 H     5.4019     5.0046     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 2 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    2.9840    1.5415    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9283986">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283986
+M  V30 BEGIN ATOM
+M  V30 1 C    13.1384     4.5245     0.0000 0
+M  V30 2 C    13.9704     4.0435     0.0000 0
+M  V30 3 C    13.4223     5.5835     0.0000 0
+M  V30 4 C    12.3064     4.0435     0.0000 0
+M  V30 5 C    12.9392     5.4645     0.0000 0
+M  V30 6 N    14.8032     4.5245     0.0000 0
+M  V30 7 C    13.9704     3.0826     0.0000 0
+M  V30 8 C    14.5193     5.5835     0.0000 0
+M  V30 9 C    12.8742     6.5335     0.0000 0
+M  V30 10 N    11.5923     4.6864     0.0000 0
+M  V30 11 C    12.3064     3.0826     0.0000 0
+M  V30 12 C    11.9831     5.5646     0.0000 0
+M  V30 13 C    15.6363     4.0435     0.0000 0
+M  V30 14 C    13.1384     2.6015     0.0000 0
+M  V30 15 C    14.8032     2.6015     0.0000 0
+M  V30 16 C    15.0685     6.5335     0.0000 0
+M  V30 17 C    13.4223     7.4836     0.0000 0
+M  V30 18 C    10.6511     4.4865     0.0000 0
+M  V30 19 C    15.6363     3.0826     0.0000 0
+M  V30 20 C    14.5193     7.4836     0.0000 0
+M  V30 21 O    10.0082     5.2005     0.0000 0
+M  V30 22 O    10.3541     3.5725     0.0000 0
+M  V30 23 C     9.0682     5.0006     0.0000 0
+M  V30 24 H    13.9704     5.0046     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   11.5523    1.5415    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="7">
+          <RX>
+            <RX.ID>9223124</RX.ID>
+            <RX01>
+              <RX.RXRN>9283986</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>22</sub>N<sub>2</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9286046</RX.PXRN>
+              <RX.PRO>methyl (3aSR,11bRS,13aRS)-9-oxo-2,3,9,10,11,11b,13,13a-octahydro-1H-pyrido[1,2,3-lm]pyrrolo[2,3-d]carbazole-1-carboxylate</RX.PRO>
+            </RX02>
+            <RX.BLB>9283986</RX.BLB>
+            <RX.BLB>9286046</RX.BLB>
+            <RX.BLC>9283986</RX.BLC>
+            <RX.BLC>9286046</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>240448178385169</RX.BCODE>
+              <RX.MCODE>316398045458229</RX.MCODE>
+              <RX.NCODE>324237962013508</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/8CF41(020304)|80F62()|01E51(0506)|01E41(07)|01D45(0809)|01D41(0A0B)|01D41(0A)|01C45(0B0C)|01C45(0D)|01C42(0E)|01C41(0F10)|01B45(12)|01B45(12)|01B42(13)|01B41(1113)|01B41(14)|01A51(1415)|01A45()|01A41()|01A41()|01942(1617)|01862()|01861(18)|01741()|</RX.TRANS>
+              <RX.BIN>175383</RX.BIN>
+              <RX.BFREQ>30</RX.BFREQ>
+              <RX.BRANGE>175369-175391</RX.BRANGE>
+              <RX.BNAME>Alk-CH2-N&lt; to Alk-C(=O)-N&lt;</RX.BNAME>
+              <RX.QRY0>0/8CF41(02*)|80F62()|*</RX.QRY0>
+              <RX.QRY1>0/8CF41(02*)|80F62()|01E51(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>0/8CF41(020304)|80F62()|01E51(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>0/8CF41(020304)|80F62()|01E51(*)|01E41(*)|01D45(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/8CF41(020304)|80F62()|01E51(0506*)|01E41(07*)|01D45(*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/8CF41(020304)|80F62()|01E51(0506*)|01E41(07*)|01D45(*)|01D41(*)|01D41(*)|01C45(*)|01C45(*)|01C42(*)|01C41(*)|*</RX.QRY5>
+              <RX.QRY6>0/8CF41(020304)|80F62()|01E51(0506)|01E41(07)|01D45(0809)|01D41(0A0B)|01D41(0A)|01C45(0B0C)|01C45(0D)|01C42(0E)|01C41(0F10)|01B45(*)|01B45(*)|01B42(*)|01B41(*)|01B41(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJztV8FuEzEQvfcrfOCKZY/HXvuClJJQJJIipRGip6pCHLkgxPfjGTtZr3fb2ikFIbHaNJvp7Nu34ze236v95+uLeAih43nxavdxSz/2b3Y/UarigDVlCJ2Cgg5VXse7AAX4eLl4hhDEJ4jpF5SO0lpFeAIkKqNGOPFWPATBp04XjGKl8cAoWgaADhQoUFB6g4xiJLqE14ZiChQjB+3P4oITLsbqzMWg6eBiCxQnQdvl6l4/juIWq6tkcLrjjYYJSjD6rOr6SV3AO52uUPeghMkYKYW5LtbZ9rpotTjSnXXReoJigj3WpWekdandQSo8S3W61O7YjUqiVx0opXZH1fWiTLUb7z1npHWp3bGno4p7VKdL7YJULnUPRJSJXp5AKbU7jlGvXkrtjn3U+UagChQtEdLIxF4YQony8XEUPUEZnFMZz07e6AmUUrujSkD6KZcn3qjU7jhLRRQ/6aP3j6Icz7T0wWllKaNmMYqLUZuW0DIKPKHWucAT5DwKOEcwPA3WuYanNaiiyNNUjYA87dQIlqeROuoWn+Z4sqijAzd/zWHgZq5zPTdnnRu42apcrZaY6dRSdVQzhzpquHHqqF2MOm6POjpwtOIbCcC8khSFWW5MhFnNdkLcHG5ZPvE/69WBNJu/Tf5G+ubM1ZbTqJy88QLOSndTLBaUZEQDRmLgoSd6VDx6NBXGlkicRXKkolMxSUL0mqR+eoV4FyDfcfnbnn1EMi3Pjp+IDiSVmAeeEdYHRtitt5dXd+/2q6vd5vpwd3PY7Dc016TjXUpdZ740FwTH8/9rJW2eZdYr+rvabo9J8WX4vk267/v9l6/f7n98HYuWhBi3xScikImk59992NyKyVEQAQ7ERSwvrXGBRtNABMTNyMDkARgZmHYGJkHHrdNxkxw3YA0MjNiPDFKDCRwZYDsD5ICR7rQ1bmOAicF+cyUCeBO8o5+b6/UzDYoVEB5aB+YGxWGSEioHI1ynQQnK5tEH24FSGRRUmCqJbjDtKJVBAWPO4VIblCFzMdjDpTIoYOxidfsMSq4ubax6TEFtUII9p7qVQQmA6Qq1x3aU2qB4k+pinW+vS21Q8kh31mVmUILJdUHfXpfaoNiB1ote1c0Miss1jXtp1Y5SGZSsul6U2qB4d8ZI1wYl9zRt54NtR6kNSuoeMii+o7qVQclj1KuXMEHxgcgt9PTjpuB4Vt3YWZeZzYFsrmNDldrttDkBMp6dWItOm5O0xgalvY9qm5PnOkKZzFL/ms1ZQPhvc07RZ9ocs2hdHjQ/C4ZmSLvyKppszoL5MXPzc7KyRfQvmx/OaDIgL2SA8BwDFD/hGSYoruCeV00yQUNQFPtrJigt32SC0tLwx03QaSOOzjYweAETdNp+tzGYmiCn8GSCfgH7ESFz</RX.RXNFILE>
+            <RX.REG>8c1aeb6481dfe955fe3558ab0734504d</RX.REG>
+            <RX.RANK>82</RX.RANK>
+            <RX.MYD>30</RX.MYD>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>324.379</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>29</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXD01>
+              <RXD.YXRN>9286046</RXD.YXRN>
+              <RXD.YPRO>methyl (3aSR,11bRS,13aRS)-9-oxo-2,3,9,10,11,11b,13,13a-octahydro-1H-pyrido[1,2,3-lm]pyrrolo[2,3-d]carbazole-1-carboxylate</RXD.YPRO>
+              <RXD.YD>30 percent</RXD.YD>
+              <RXD.NYD>30</RXD.NYD>
+            </RXD01>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11460878</RXD.RGTXRN>
+                <RXD.RGT>dipyridinium dichromate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>19261966</RXD.RGTXRN>
+                <RXD.RGT>Celite</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1730800</RXD.SOLXRN>
+                <RXD.SOL>dichloromethane</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>72</RXD.TIM>
+              <RXD.T>20</RXD.T>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9283986">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283986
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5699     4.7877     0.0000 0
+M  V30 2 C     5.4019     4.3068     0.0000 0
+M  V30 3 C     4.8541     5.8468     0.0000 0
+M  V30 4 C     3.7380     4.3068     0.0000 0
+M  V30 5 C     4.3710     5.7277     0.0000 0
+M  V30 6 N     6.2349     4.7877     0.0000 0
+M  V30 7 C     5.4019     3.3456     0.0000 0
+M  V30 8 C     5.9511     5.8468     0.0000 0
+M  V30 9 C     4.3060     6.7968     0.0000 0
+M  V30 10 N     3.0238     4.9498     0.0000 0
+M  V30 11 C     3.7380     3.3456     0.0000 0
+M  V30 12 C     3.4149     5.8277     0.0000 0
+M  V30 13 C     7.0679     4.3068     0.0000 0
+M  V30 14 C     4.5699     2.8646     0.0000 0
+M  V30 15 C     6.2349     2.8646     0.0000 0
+M  V30 16 C     6.4999     6.7968     0.0000 0
+M  V30 17 C     4.8541     7.7468     0.0000 0
+M  V30 18 C     2.0828     4.7498     0.0000 0
+M  V30 19 C     7.0679     3.3456     0.0000 0
+M  V30 20 C     5.9511     7.7468     0.0000 0
+M  V30 21 O     1.4400     5.4637     0.0000 0
+M  V30 22 O     1.7860     3.8356     0.0000 0
+M  V30 23 C     0.4998     5.2637     0.0000 0
+M  V30 24 H     5.4019     5.2677     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    2.9839    1.8046    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9286046">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 29 1 0 0 REGNO=9286046
+M  V30 BEGIN ATOM
+M  V30 1 C    13.1432     4.7866     0.0000 0
+M  V30 2 C    13.9773     4.3056     0.0000 0
+M  V30 3 C    13.4271     5.8478     0.0000 0
+M  V30 4 C    12.3102     4.3056     0.0000 0
+M  V30 5 C    12.9442     5.7276     0.0000 0
+M  V30 6 N    14.8103     4.7866     0.0000 0
+M  V30 7 C    13.9773     3.3424     0.0000 0
+M  V30 8 C    14.5262     5.8478     0.0000 0
+M  V30 9 C    12.8790     6.7988     0.0000 0
+M  V30 10 N    11.5950     4.9487     0.0000 0
+M  V30 11 C    12.3102     3.3424     0.0000 0
+M  V30 12 C    11.9860     5.8287     0.0000 0
+M  V30 13 C    15.6443     4.3056     0.0000 0
+M  V30 14 C    13.1432     2.8614     0.0000 0
+M  V30 15 C    14.8103     2.8614     0.0000 0
+M  V30 16 C    15.0753     6.7988     0.0000 0
+M  V30 17 C    13.4271     7.7499     0.0000 0
+M  V30 18 C    10.6529     4.7487     0.0000 0
+M  V30 19 C    15.6443     3.3424     0.0000 0
+M  V30 20 O    16.4784     4.7866     0.0000 0
+M  V30 21 C    14.5262     7.7499     0.0000 0
+M  V30 22 O    10.0088     5.4636     0.0000 0
+M  V30 23 O    10.3558     3.8334     0.0000 0
+M  V30 24 C     9.0678     5.2636     0.0000 0
+M  V30 25 H    13.9773     5.2676     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 25 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 18 23
+M  V30 29 1 22 24
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30  25) -
+M  V30 CBONDS=(29 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28 29) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   11.9731    1.8014    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="8">
+          <RX>
+            <RX.ID>9223710</RX.ID>
+            <RX01>
+              <RX.RXRN>9285924</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>20</sub>N<sub>4</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9283985</RX.PXRN>
+              <RX.PRO>C<sub>19</sub>H<sub>20</sub>N<sub>2</sub>O<sub>2</sub></RX.PRO>
+            </RX02>
+            <RX.BLB>9285924</RX.BLB>
+            <RX.BLB>9283985</RX.BLB>
+            <RX.BLC>9285924</RX.BLC>
+            <RX.BLC>9283985</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX03>
+              <RX.BCODE>287933490363589</RX.BCODE>
+              <RX.MCODE>410885174300231</RX.MCODE>
+              <RX.NCODE>418368608704815</RX.NCODE>
+            </RX03>
+            <RX.RXNFILE>eJytWE1vEzEQvfdX+MAVyzP2+OOClJJQJJIipRGCU4VQj1wQ4vczY3u1m9igrNNVlGwm9tvnN2P7OW+OXx/v+FIK+HX35vB5L1+O7w5/nDaLC7fSQkEJKrnM8p57ISmMfNt9pZTUF+Tmd9IctaGA5S6BtzOceq/+BbF8TSjRZhTQASOOoViNWBjwXcBBLiwMEBQUF5Ib5QIx2YKHqeBVlMdVXHyEepfSEmUVl4TBFZ0xmGF1yceM4rSjQGMotUfmEr0dzBFzQaiZQQpmmAs6U9T1Pg3qQtpYQ7fq4jQlt+w7yCXG5ItCDtNS3RVVR5qLxJe+Hmmw6pgLxIyC2hsazLTXniCUEUUTB2cjj8iSr5mm0fXFazS+jshaXKKsUtfGRAXFGRrmwuPIujjOVlxWzufrUYK2iaq6zhk7huI1eF/VjefqrtPFERWUZGFQlyBqxIoHODQbueAxv19GbTfqcvOzKH+nti1HfduWQUM3GlsEflRqo5QR2iiYNuoVQBuNCjojTrntBTMGhVYH7i7r8WXUKmh14Ibgu9F2FNwdWh24O7Q6cBRNyzcobEcsUWzbRoWdsXG0zTETkLYXUSaArQ5MABsdDmzOdg8qYaSETr7uHrc3+jZ3tW/j/YZMXtllFbJmZJ6UtQyrP0mIgyhOR+smx+Vx2OUEiK/AxRJULtbZQS68U1QP2ai7cqeY1EgehnPEq+nN6jqN0UO5czCeI2Nc1YU8DeoyZ/oWXazsfZMuw5kO2rjXqLppNhrtohlEmavuNhTue3Om5znNVTxcdXwu9GX2sOM6r5ehHL3OPLplRMC+vGSG50I4O9GtcFx8SvbeVDw6G9EKlLlK+CwWRk+X8yrFKPFsHn28FmW94+pEyw4Ly2hxXB0f1vFLOO3cZwh9H2azD7v0bK7ruFzPRYk764zYd5/me46LhwAd5xl6jkv8Xcd5pq7jMj1mEu34MPiX6+u4M/qPZ+u4M9N1Zx0nF3tOThxXoxlbrKfTt5w9/mW7OUnN1k8rn7nFZp9/Fhmz4UJVesjRU2Jy0JEjkxwyZEBCX2iJaPJIEYSWSLmVlKGILSJK6cjwpCyEutjIbACf7l/t2ROSvebZKttTOfKjHEViRtieMsJhu79/eP5w3Dwcdo+n56fT7riTNaZcH0rTbeWb/wX0ed1/azTV1WW7kffNfj814sHkfrvS79f3Hy8/v/9+mUUrBahgJoKVSHn+86fdN3V2LYjkk2P+M8ZMG7OzVxBBdZwZ2JqAmYG9noEt0GyZJnPMxusKBrYwqMcCmyJNx4K/XK1s9Q==</RX.RXNFILE>
+            <RX.REG>4d7404570409f320fb2da966982cec19</RX.REG>
+            <RX.RANK>68</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>308.38</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>15</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>742483</RXD.RGTXRN>
+                <RXD.RGT>N,N-diethylaniline</RXD.RGT>
+              </RXD03>
+              <RXD.TIM>1</RXD.TIM>
+              <RXD.COND>Heating</RXD.COND>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9285924">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 28 0 0 0 REGNO=9285924
+M  V30 BEGIN ATOM
+M  V30 1 C     2.5570     5.6590     0.0000 0
+M  V30 2 C     2.5832     4.4707     0.0000 0
+M  V30 3 C     3.7262     6.0151     0.0000 0
+M  V30 4 C     1.5150     6.2222     0.0000 0
+M  V30 5 N     3.6892     4.0377     0.0000 0
+M  V30 6 C     1.5679     3.8417     0.0000 0
+M  V30 7 C     4.4272     5.0128     0.0000 0
+M  V30 8 C     4.0682     7.2002     0.0000 0
+M  V30 9 C     0.5000     5.6059     0.0000 0
+M  V30 10 C     4.0212     2.9997     0.0000 0
+M  V30 11 C     0.5240     4.4119     0.0000 0
+M  V30 12 C     5.5305     7.2002     0.0000 0
+M  V30 13 C     5.0943     2.7427     0.0000 0
+M  V30 14 N     6.3895     6.1720     0.0000 0
+M  V30 15 C     6.2025     3.3677     0.0000 0
+M  V30 16 C     6.3185     5.3481     0.0000 0
+M  V30 17 C     7.1516     6.5510     0.0000 0
+M  V30 18 C     6.2354     4.4008     0.0000 0
+M  V30 19 N     6.7065     5.0749     0.0000 0
+M  V30 20 C     5.8896     5.1480     0.0000 0
+M  V30 21 O     7.1586     7.4513     0.0000 0
+M  V30 22 O     7.8956     6.1830     0.0000 0
+M  V30 23 N     6.6665     4.6008     0.0000 0
+M  V30 24 C     5.8456     4.6740     0.0000 0
+M  V30 25 C     8.2088     8.0552     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 14 17
+M  V30 19 1 15 18
+M  V30 20 1 16 19
+M  V30 21 2 16 20
+M  V30 22 1 17 21
+M  V30 23 2 17 22
+M  V30 24 1 18 23
+M  V30 25 2 18 24
+M  V30 26 2 19 23
+M  V30 27 1 20 24
+M  V30 28 1 21 25
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9283985">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283985
+M  V30 BEGIN ATOM
+M  V30 1 C    14.2792     4.8811     0.0000 0
+M  V30 2 C    15.1113     4.4001     0.0000 0
+M  V30 3 C    14.5632     5.9402     0.0000 0
+M  V30 4 C    13.4472     4.4001     0.0000 0
+M  V30 5 C    14.0800     5.8211     0.0000 0
+M  V30 6 N    15.9443     4.8811     0.0000 0
+M  V30 7 C    15.1113     3.4390     0.0000 0
+M  V30 8 C    15.6601     5.9402     0.0000 0
+M  V30 9 C    14.0152     6.8902     0.0000 0
+M  V30 10 N    12.7332     5.0431     0.0000 0
+M  V30 11 C    13.4472     3.4390     0.0000 0
+M  V30 12 C    13.1241     5.9210     0.0000 0
+M  V30 13 C    16.7772     4.4001     0.0000 0
+M  V30 14 C    14.2792     2.9579     0.0000 0
+M  V30 15 C    15.9443     2.9579     0.0000 0
+M  V30 16 C    16.2092     6.8902     0.0000 0
+M  V30 17 C    14.5632     7.8402     0.0000 0
+M  V30 18 C    11.7921     4.8431     0.0000 0
+M  V30 19 C    16.7772     3.4390     0.0000 0
+M  V30 20 C    15.6601     7.8402     0.0000 0
+M  V30 21 O    11.1491     5.5571     0.0000 0
+M  V30 22 O    11.4949     3.9290     0.0000 0
+M  V30 23 C    10.2091     5.3571     0.0000 0
+M  V30 24 H    15.1113     5.3611     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 2 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   12.6931    1.8979    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="9">
+          <RX>
+            <RX.ID>9223741</RX.ID>
+            <RX01>
+              <RX.RXRN>9286046</RX.RXRN>
+              <RX.RCT>methyl (3aSR,11bRS,13aRS)-9-oxo-2,3,9,10,11,11b,13,13a-octahydro-1H-pyrido[1,2,3-lm]pyrrolo[2,3-d]carbazole-1-carboxylate</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9279768</RX.PXRN>
+              <RX.PRO>C<sub>17</sub>H<sub>18</sub>N<sub>2</sub>O</RX.PRO>
+            </RX02>
+            <RX.BLB>9286046</RX.BLB>
+            <RX.BLB>9279768</RX.BLB>
+            <RX.BLC>9286046</RX.BLC>
+            <RX.BLC>9279768</RX.BLC>
+            <RX.NVAR>3</RX.NVAR>
+            <RX03>
+              <RX.BCODE>242291102573540</RX.BCODE>
+              <RX.MCODE>316830460470157</RX.MCODE>
+              <RX.NCODE>316830460470157</RX.NCODE>
+            </RX03>
+            <RX04>
+              <RX.TRANS>0/80F51(020304)|40F42()|01E41(0506)|01E41(07)|01D41(07080A)|01D41(09)|01D41()|01C45(0C0D)|01C42(0E)|01C41(0B0E)|01B51(0C11)|01B45(0F)|01B45(10)|01B42(12)|01A45(14)|01A45(14)|01A42(1315)|01A41(15)|01962()|01945()|01941()|00E62()|00E61()|00D41()|</RX.TRANS>
+              <RX.BIN>288276</RX.BIN>
+              <RX.BFREQ>996</RX.BFREQ>
+              <RX.BRANGE>288110-288374</RX.BRANGE>
+              <RX.BNAME>&gt;N-C(=)- to &gt;NH</RX.BNAME>
+              <RX.QRY0>0/80F51(02*)|40F42()|*</RX.QRY0>
+              <RX.QRY1>0/80F51(02*)|40F42()|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>0/80F51(020304)|40F42()|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>0/80F51(020304)|40F42()|01E41(*)|01E41(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/80F51(020304)|40F42()|01E41(0506*)|01E41(07*)|01D41(07*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/80F51(020304)|40F42()|01E41(0506*)|01E41(07*)|01D41(07*)|01D41(*)|01D41(*)|01C45(*)|01C42(*)|01C41(*)|*</RX.QRY5>
+              <RX.QRY6>0/80F51(020304)|40F42()|01E41(0506)|01E41(07)|01D41(07080A)|01D41(09)|01D41()|01C45(0C0D)|01C42(0E)|01C41(0B0E)|01B51(0C*)|01B45(*)|01B45(*)|01B42(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJzVV01vGzcQvftX8JBrCXL4scNLAKVSXKCSA8hCUJ+MoMixlyLo7+/McCWSK8ZYKk7SLmRrTc++fZwvvnlz/OPhji6lLH3u3hw+7PmP49vDP16b6oItWyibFxVfpr6npyAoSHTb/aSU1Ecg8zs29zqE6PkOtDcRCpz6VX0NQj423whK0C6ZoIRWgjCAAhWK1+iNcHHax8mtR3EVitMTOHcLF99wcWGauTg/wiVUKFEDuND17sPLKLHrXaNTBLuey9SgJJfCLd7Fxi+QwOc7b9GvR0lNjIxBl/0SIq73izXdSA/6xdoGxaXkZr94XO8XW+fupE2YIt8NZp2tc7dUo9EeebNrUercLVk3itLmrkeMN0Ta1rlbapqyOKawHqXOXdAm5uoBQsGBmjbdGI3mCzYomJhcp6Y/vIxSV0CpxkG/QL0jqz3kfVBFoatz92UuqkWZYoIZLzh7G0rJNdDYchmIUel1jNJ0qd/Wolg5Vuz1quuu+u5qyAdxvQrSlpe2IG32ehU6CE6a6dLWSXOExaqXZrdE8NK8lghBmtFyNXbfFqXlLFcnaSFLDpO0hKUtSokvbZOU7MLWmh4zm0tquWqFw3LVSeFcr3IhLDgQ2Z5tVHDtMyIL9hoBFXT40qq7siVDuOJ7UOrx9CRJRf/Zbk6cyfO3m789f4vlZi9m7GQRdSBW+Wle42bFrYacxSkiCcFbYYocRH59aJDYgpOUQ8Eu5sRiR/FW6SnZBgc6P/Xu1d5/RvJr308/nERkB2QHSVC2J0E5bPfv7p/fHzf3h93D6fnxtDvuuBPl63023c6c5QRHOTV/MTpMyfDadsO/N/v92Yg2JM/t8nN/f/rz81+fvnwuzsthJ+l9IQIzkfz+5993T6q5KiLSPfmgnI9vEgE+Hw0vEwH1WBi4OQiFgVvPwGVokmdnIe5jWMHAqWNhkNNZ+cLAr2fg52DEi/xex8BnBsfdvUqA0fjIf+4ett84BFnJMtP9tEMQCb+JB6Ys9mMqcCNDEOjofcp3GHEApR2CwIcZhSaQAZR2CDrviAYZM4KyGILQzX4xwQyg1EKy+IWqwjpToQwMQVajncwtMaqFJGVnwplLdMasR6klIIkUN90Uo1oCFr94PSGsR2nGlxIjGh44rdd6txmlPPerOdIIAztqhqASI6p9F9Z7txmCCspg7jZDEEl8RJP9PFSNzRBUqtHoiCM7agd4EsSY9zaUdc0QVHZ0VUcD40vxLgn2CWuUofHlXAGDfmnGl9KlaKzDJnf/b2LfvpLYX652cP/TYr8j4G13BHDdESCL/Y6s79hGSaaOrDdLhJ8syiWRuqL4O4lwMzQE3Ca66fRy0hlZdCPD/yTRTXLg0kQQ8yH2Y0U3iYCL8PMGVzB4fdHtLgIWZy4DontKU8Sz6P4XZiT0Qg==</RX.RXNFILE>
+            <RX.REG>325ef5af24b64354455cbf65b38866d9</RX.REG>
+            <RX.RANK>87</RX.RANK>
+            <RX.MYD>93</RX.MYD>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has preparation</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2015</RX.MAXPUB>
+            <RX.NUMREF>3</RX.NUMREF>
+            <RX.MAXPMW>266.343</RX.MAXPMW>
+            <RX.ED>2007/12/12</RX.ED>
+            <RX.UPD>2015/09/21</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Preparation</RXD.CL>
+            <RXD.SCO>30</RXD.SCO>
+            <RXD.STP>1</RXD.STP>
+            <RXD01>
+              <RXD.YXRN>9279768</RXD.YXRN>
+              <RXD.YPRO>C<sub>17</sub>H<sub>18</sub>N<sub>2</sub>O</RXD.YPRO>
+              <RXD.YD>93 percent</RXD.YD>
+              <RXD.NYD>93</RXD.NYD>
+            </RXD01>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>1731136</RXD.RGTXRN>
+                <RXD.RGT>trimethylsilyl iodide</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1731042</RXD.SOLXRN>
+                <RXD.SOL>chloroform</RXD.SOL>
+              </RXD05>
+              <RXD.TIM>6</RXD.TIM>
+              <RXD.COND>Heating</RXD.COND>
+              <RXD.DED>2007/12/12</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9286046">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 29 1 0 0 REGNO=9286046
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5753     4.2641     0.0000 0
+M  V30 2 C     5.4095     3.7831     0.0000 0
+M  V30 3 C     4.8594     5.3253     0.0000 0
+M  V30 4 C     3.7423     3.7831     0.0000 0
+M  V30 5 C     4.3763     5.2052     0.0000 0
+M  V30 6 N     6.2425     4.2641     0.0000 0
+M  V30 7 C     5.4095     2.8200     0.0000 0
+M  V30 8 C     5.9584     5.3253     0.0000 0
+M  V30 9 C     4.3112     6.2765     0.0000 0
+M  V30 10 N     3.0271     4.4263     0.0000 0
+M  V30 11 C     3.7423     2.8200     0.0000 0
+M  V30 12 C     3.4182     5.3062     0.0000 0
+M  V30 13 C     7.0765     3.7831     0.0000 0
+M  V30 14 C     4.5753     2.3391     0.0000 0
+M  V30 15 C     6.2425     2.3391     0.0000 0
+M  V30 16 C     6.5075     6.2765     0.0000 0
+M  V30 17 C     4.8594     7.2274     0.0000 0
+M  V30 18 C     2.0851     4.2261     0.0000 0
+M  V30 19 C     7.0765     2.8200     0.0000 0
+M  V30 20 O     7.9107     4.2641     0.0000 0
+M  V30 21 C     5.9584     7.2274     0.0000 0
+M  V30 22 O     1.4410     4.9412     0.0000 0
+M  V30 23 O     1.7880     3.3110     0.0000 0
+M  V30 24 C     0.4999     4.7413     0.0000 0
+M  V30 25 H     5.4095     4.7453     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 25 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 18 23
+M  V30 29 1 22 24
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30  25) -
+M  V30 CBONDS=(29 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28 29) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    3.4053    1.2791    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9279768">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 25 1 0 0 REGNO=9279768
+M  V30 BEGIN ATOM
+M  V30 1 C    12.3955     5.4996     0.0000 0
+M  V30 2 C    11.5675     5.0218     0.0000 0
+M  V30 3 C    13.1685     4.7276     0.0000 0
+M  V30 4 C    12.3955     6.4577     0.0000 0
+M  V30 5 C    13.3065     5.2038     0.0000 0
+M  V30 6 N    11.5675     4.0658     0.0000 0
+M  V30 7 C    10.7395     5.4996     0.0000 0
+M  V30 8 C    12.6215     3.7827     0.0000 0
+M  V30 9 C    14.2605     4.7276     0.0000 0
+M  V30 10 C    11.5675     6.9356     0.0000 0
+M  V30 11 N    13.3065     6.7526     0.0000 0
+M  V30 12 C    13.8695     5.9777     0.0000 0
+M  V30 13 C    10.7395     3.5877     0.0000 0
+M  V30 14 C    10.7395     6.4577     0.0000 0
+M  V30 15 C     9.9106     5.0218     0.0000 0
+M  V30 16 C    13.1685     2.8377     0.0000 0
+M  V30 17 C    14.8066     3.7827     0.0000 0
+M  V30 18 C     9.9106     4.0658     0.0000 0
+M  V30 19 O    10.7395     2.6308     0.0000 0
+M  V30 20 C    14.2605     2.8377     0.0000 0
+M  V30 21 H    12.3955     4.5427     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 21 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 1 4 11 CFG=1
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 14
+M  V30 20 1 11 12
+M  V30 21 1 13 18
+M  V30 22 2 13 19
+M  V30 23 1 15 18
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(21 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21) -
+M  V30 CBONDS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   11.5586    1.5708    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="10">
+          <RX>
+            <RX.ID>14556971</RX.ID>
+            <RX01>
+              <RX.RXRN>125513</RX.RXRN>
+              <RX.RCT>tryptamine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9277624</RX.PXRN>
+              <RX.PRO>C<sub>17</sub>H<sub>18</sub>N<sub>4</sub></RX.PRO>
+            </RX02>
+            <RX.BLC>125513</RX.BLC>
+            <RX.BLC>9277624</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>3/80F51(040607)|80F51(0309)|80F42(0508)|80F41(0A)|01E52()|01E45(0B0C)|01E42(0D)|01E42()|01E41(0E)|01E41()|01D45(0D0F)|01D45(10)|01D42(0E)|01D41()|01C45(11)|01C45(11)|01B45()|</RX.TRANS>
+              <RX.BIN>127858</RX.BIN>
+              <RX.BFREQ>2066</RX.BFREQ>
+              <RX.QRY0>3/80F51(04*)|80F51(03*)|80F42(*)|80F41(*)|*</RX.QRY0>
+              <RX.QRY1>3/80F51(04*)|80F51(03*)|80F42(*)|80F41(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>3/80F51(040607)|80F51(0309)|80F42(0508)|80F41(0A)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>3/80F51(040607)|80F51(0309)|80F42(0508)|80F41(0A)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|01D45(*)|01D45(*)|01D42(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>3/80F51(040607)|80F51(0309)|80F42(0508)|80F41(0A)|01E52(*)|01E45(0B0C*)|01E42(0D*)|01E42(*)|01E41(0E*)|01E41(*)|01D45(0D*)|01D45(*)|01D42(0E*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>3/80F51(040607)|80F51(0309)|80F42(0508)|80F41(0A)|01E52(*)|01E45(0B0C*)|01E42(0D*)|01E42(*)|01E41(0E*)|01E41(*)|01D45(0D*)|01D45(*)|01D42(0E*)|01D41(*)|01C45(*)|01C45(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJyllrlyGzEMhns/xRaud4iLSzZpbE+aSJlxkcmT5PkDHop5SSNsdlRQEPjpB4gF+Pr5+/qiz7aBfl5eLz9/pC+f3y5/eHfNg+/JY4Ni3NLj2rXuAtyAdLn8xBi3X6juL8kd9+jQ1RUE94Xb3rZ7iPyBshgopBRvoGBDoT2Iq1o8OAOFOi2OqFIY2EDhpRbeETvK9TFFBi1HpbApu76h6N5KIaUcBsrRUfRg8l7YvVi0hIYCSvE1uxHQQIlLSqoXwxmBayiyA4UaEYuhXgA6CvOtYsV1lMcnDV+1C7mQsf25WOnfe9JaebZiLpyF1c9Wygc7/hvlgxp9OSd+9JVMGH19Tu/oG3K6Rt+YfQerOqak9NaLNrGP7/qDCFD69nF9/7/2hrAh3zuWsb05z1BK5ICysjcmpbCDsgoxhfgspS000qIve2HHQK0WQ0vRxEioEbkQDBH5ToumCOuK2RAR9VqcQKHoC2igDK02EpbsooAhoqOjcIhVgZaae57iGoruqM0+NUlDvXSNiXYhn7Wkth8NeQm9llr1WnUUDJS21fIuwtTz7HnhPQahExENrdYLVS0ez2oRzYankmeKnZanG3bWUiPSk2ZLZ+i1HD5QOSN9LU9S/A6AVUtgS2fotZBzlRKBzmsRqRER4HktjDdKwFNaylBdjM+7Q3UcXY+G6mJ8Lkbio6E6WmU5lmU1KNOoXQzVsBifedTCxFUozHlIF//5cqGOMOdBHWG+XKgjzHlQR5jzkKzz5UK34xxxsi6iCNl3tMbsu7xGRDwOj3y7R/wFBYIH3g==</RX.RXNFILE>
+            <RX.REG>e747cbba3bcead8821d5049c212cefb4</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>6</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>278.357</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>3</RXD.STP>
+            <RXD.MID>Reaction-ID:14556971-Steps:9182499;9204333;9221902</RXD.MID>
+            <RXD.MTEXT>1.1: 100 percent / butan-2-ol / 96 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>2.1: KOH / dimethylformamide / 1 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.2: 91 percent / dimethylformamide / 2 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>3.1: 9-borabicyclo[3.3.1]nonane / tetrahydrofuran / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>3.2: 65 percent / Pd(PPh<sub>3</sub>)4; Cs<sub>2</sub>CO<sub>3</sub> / tetrahydrofuran / 48 h / Heating</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11342937</RXD.RGTXRN>
+                <RXD.RGT>potassium hydroxide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>605508</RXD.RGTXRN>
+                <RXD.RGT>9-bora-bicyclo[3.3.1]nonane</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>773649</RXD.SOLXRN>
+                <RXD.SOL>Sec-butyl alcohol</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+              <RXD.COM>3.2: intramolecular Suzuki-Miyaura cross-coupling</RXD.COM>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="125513">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 12 13 0 0 0 REGNO=125513
+M  V30 BEGIN ATOM
+M  V30 1 C     2.2359     4.6575     0.0000 0
+M  V30 2 C     2.2359     5.6555     0.0000 0
+M  V30 3 C     3.1840     4.3495     0.0000 0
+M  V30 4 C     1.3668     4.1534     0.0000 0
+M  V30 5 N     3.1840     5.9634     0.0000 0
+M  V30 6 C     1.3708     6.1574     0.0000 0
+M  V30 7 C     3.7709     5.1565     0.0000 0
+M  V30 8 C     3.4938     3.3975     0.0000 0
+M  V30 9 C     0.4998     4.6514     0.0000 0
+M  V30 10 C     0.4998     5.6534     0.0000 0
+M  V30 11 C     4.4719     3.1894     0.0000 0
+M  V30 12 N     4.7798     2.2395     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 2 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 2 5
+M  V30 5 1 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 2 4 9
+M  V30 9 1 5 7
+M  V30 10 2 6 10
+M  V30 11 1 8 11
+M  V30 12 1 9 10
+M  V30 13 1 11 12
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9277624">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 24 0 0 0 REGNO=9277624
+M  V30 BEGIN ATOM
+M  V30 1 C     8.8441     3.7029     0.0000 0
+M  V30 2 C     8.8201     4.8800     0.0000 0
+M  V30 3 N     9.9411     3.2719     0.0000 0
+M  V30 4 C     7.8381     3.0769     0.0000 0
+M  V30 5 C     9.9802     5.2331     0.0000 0
+M  V30 6 C     7.7850     5.4390     0.0000 0
+M  V30 7 C    10.6732     4.2399     0.0000 0
+M  V30 8 C    10.2690     2.2439     0.0000 0
+M  V30 9 C     6.8040     3.6429     0.0000 0
+M  V30 10 C    10.3161     6.4081     0.0000 0
+M  V30 11 C     6.7798     4.8271     0.0000 0
+M  V30 12 C    11.3342     1.9889     0.0000 0
+M  V30 13 C    11.7652     6.4081     0.0000 0
+M  V30 14 C    12.4332     2.6088     0.0000 0
+M  V30 15 N    12.6162     5.3880     0.0000 0
+M  V30 16 C    12.4653     3.6330     0.0000 0
+M  V30 17 C    12.5482     4.5699     0.0000 0
+M  V30 18 N    12.8923     3.8320     0.0000 0
+M  V30 19 C    12.0803     3.9019     0.0000 0
+M  V30 20 N    12.9353     4.3010     0.0000 0
+M  V30 21 C    12.1223     4.3709     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 1 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 2 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 16 19
+M  V30 21 1 17 20
+M  V30 22 2 17 21
+M  V30 23 2 18 20
+M  V30 24 1 19 21
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="11">
+          <RX>
+            <RX.ID>14556972</RX.ID>
+            <RX01>
+              <RX.RXRN>125513</RX.RXRN>
+              <RX.RCT>tryptamine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9279802</RX.PXRN>
+              <RX.PRO>[2-(1-allyl-1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.PRO>
+            </RX02>
+            <RX.BLC>125513</RX.BLC>
+            <RX.BLC>9279802</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>3/80F51(040607)|80F51(030A)|80F42(0508)|80F41(09)|01E52()|01E45(0B0C)|01E42(0D)|01E42()|01E42()|01E41(0E)|01D45(0D0F)|01D45(10)|01D42(0E)|01D41()|01C45(11)|01C45(11)|01B45()|</RX.TRANS>
+              <RX.BIN>127858</RX.BIN>
+              <RX.BFREQ>2066</RX.BFREQ>
+              <RX.QRY0>3/80F51(04*)|80F51(03*)|80F42(*)|80F41(*)|*</RX.QRY0>
+              <RX.QRY1>3/80F51(04*)|80F51(03*)|80F42(*)|80F41(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E42(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>3/80F51(040607)|80F51(030A)|80F42(0508)|80F41(09)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E42(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>3/80F51(040607)|80F51(030A)|80F42(0508)|80F41(09)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E42(*)|01E41(*)|01D45(*)|01D45(*)|01D42(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>3/80F51(040607)|80F51(030A)|80F42(0508)|80F41(09)|01E52(*)|01E45(0B0C*)|01E42(0D*)|01E42(*)|01E42(*)|01E41(0E*)|01D45(0D*)|01D45(*)|01D42(0E*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>3/80F51(040607)|80F51(030A)|80F42(0508)|80F41(09)|01E52(*)|01E45(0B0C*)|01E42(0D*)|01E42(*)|01E42(*)|01E41(0E*)|01D45(0D*)|01D45(*)|01D42(0E*)|01D41(*)|01C45(*)|01C45(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJyll82OGyEMgO/7FBz2jLDBgC+9dFdVpSaV9lD1Sfr8NT/pMkCieDqaA3E8X/w3tvP68fv6IpcxIPfL6+Xnj/Lh48vlT7BuuPCtaBhoQlMuN57lKUADXo7bm5nNLxT1l6KOlh26foLsPnHmq7mHqDe0w0TxQokKCg4UbzO5bksEp6D4gy3O+04JEBSUsLUlWMQD5fqYQpMtqVOCKrpxoMizneKFkhSUdKBIYuqzYCNpbMkDBYQSe3QZUEHhLaXUiyJH4AYKWfC5exRIUS8AB0oIt4old6A8zjR81i7UQsbx6yb1/96TURpWKdbC2UjjKvU1sfOv+ZqoWTfUwM+6VAmzbqzhnXVzDdesy1V3kopiCcpRepEm9v5NviACXz69X9/+r70hGgz30rK0t+iwnOQ1zh6fLpG5vXUKCaW01mcpx/bGjrGfEilsmdobIzRKSqyghK0tZCnz6JGuvXGERknZK+IytTemnqOUUUE5tjeE3KPrUJPpY3tDJOi8lBQU3toSLckMep7itrZI1SV+Pi5zk+ToW7YyKKpuapI3SrQp5JMeSa058s23HJtv2lY7UpKNzCdtiTZkH5otkRKcpSR23YLkNGvCSEkWqFWJrCzOn7Ql2RRvmVENsgMlW8DcbQEOJ23JZWWhFl0M8SSFZd2hTpHgjpTvz1LaaN4M4bujeR6Aj0bzZggrR/Ms3Y9m2o3bMrA3ozlvhnAd2LBYJlBY41D+PqwriigCrYRgYF1RRASrF0WaV0IysK4oooirx6KIq8eiiKtvIsJ7ywhLP80Ob9vIXxHdE1w=</RX.RXNFILE>
+            <RX.REG>5fba9d86114fb8d88315ec0f3d4466a2</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>6</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>404.253</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>2</RXD.STP>
+            <RXD.MID>Reaction-ID:14556972-Steps:9182499;9204333</RXD.MID>
+            <RXD.MTEXT>1.1: 100 percent / butan-2-ol / 96 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>2.1: KOH / dimethylformamide / 1 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.2: 91 percent / dimethylformamide / 2 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11342937</RXD.RGTXRN>
+                <RXD.RGT>potassium hydroxide</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>773649</RXD.SOLXRN>
+                <RXD.SOL>Sec-butyl alcohol</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="125513">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 12 13 0 0 0 REGNO=125513
+M  V30 BEGIN ATOM
+M  V30 1 C     2.2360     5.2933     0.0000 0
+M  V30 2 C     2.2360     6.2914     0.0000 0
+M  V30 3 C     3.1838     4.9853     0.0000 0
+M  V30 4 C     1.3670     4.7893     0.0000 0
+M  V30 5 N     3.1838     6.5993     0.0000 0
+M  V30 6 C     1.3708     6.7934     0.0000 0
+M  V30 7 C     3.7709     5.7925     0.0000 0
+M  V30 8 C     3.4939     4.0334     0.0000 0
+M  V30 9 C     0.4999     5.2875     0.0000 0
+M  V30 10 C     0.4999     6.2894     0.0000 0
+M  V30 11 C     4.4719     3.8253     0.0000 0
+M  V30 12 N     4.7799     2.8753     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 2 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 2 5
+M  V30 5 1 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 2 4 9
+M  V30 9 1 5 7
+M  V30 10 2 6 10
+M  V30 11 1 8 11
+M  V30 12 1 9 10
+M  V30 13 1 11 12
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9279802">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 22 24 0 0 0 REGNO=9279802
+M  V30 BEGIN ATOM
+M  V30 1 C     8.5153     5.0181     0.0000 0
+M  V30 2 C     8.5153     6.0162     0.0000 0
+M  V30 3 C     9.4643     4.7099     0.0000 0
+M  V30 4 C     7.6472     4.5141     0.0000 0
+M  V30 5 N     9.4643     6.3242     0.0000 0
+M  V30 6 C     7.6511     6.5181     0.0000 0
+M  V30 7 C    10.0503     5.5171     0.0000 0
+M  V30 8 C     9.7733     3.7580     0.0000 0
+M  V30 9 C     6.7801     5.0121     0.0000 0
+M  V30 10 C     9.7733     7.2762     0.0000 0
+M  V30 11 C     6.7801     6.0141     0.0000 0
+M  V30 12 C    10.7513     3.5498     0.0000 0
+M  V30 13 C    10.7513     7.4833     0.0000 0
+M  V30 14 N    11.0605     2.5998     0.0000 0
+M  V30 15 C    11.0605     8.4343     0.0000 0
+M  V30 16 C    12.0385     2.3919     0.0000 0
+M  V30 17 N    12.3455     1.4388     0.0000 0
+M  V30 18 C    12.7067     3.1379     0.0000 0
+M  V30 19 N    13.3236     1.2348     0.0000 0
+M  V30 20 C    13.6838     2.9288     0.0000 0
+M  V30 21 C    13.9927     1.9808     0.0000 0
+M  V30 22 I    14.9708     1.7748     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 2 13 15
+M  V30 17 1 14 16
+M  V30 18 1 16 17
+M  V30 19 2 16 18
+M  V30 20 2 17 19
+M  V30 21 1 18 20
+M  V30 22 1 19 21
+M  V30 23 2 20 21
+M  V30 24 1 21 22
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="12">
+          <RX>
+            <RX.ID>14556974</RX.ID>
+            <RX01>
+              <RX.RXRN>125513</RX.RXRN>
+              <RX.RCT>tryptamine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9285924</RX.PXRN>
+              <RX.PRO>C<sub>19</sub>H<sub>20</sub>N<sub>4</sub>O<sub>2</sub></RX.PRO>
+            </RX02>
+            <RX.BLC>125513</RX.BLC>
+            <RX.BLC>9285924</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>4/80F51()|80F51(05090A)|80F42(0607)|80F42(080B)|80F41(0D)|01E62()|01E61()|01E52()|01E45(0E0F)|01E42(10)|01E42()|01E41(11)|01E41()|01D45(1012)|01D45(13)|01D42(11)|01D41()|01C45(14)|01C45(14)|01B45()|</RX.TRANS>
+              <RX.BIN>103966</RX.BIN>
+              <RX.BFREQ>745</RX.BFREQ>
+              <RX.QRY0>4/80F51()|80F51(05*)|80F42(*)|80F42(*)|80F41(*)|*</RX.QRY0>
+              <RX.QRY1>4/80F51()|80F51(05*)|80F42(*)|80F42(*)|80F41(*)|01E62(*)|01E61(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>4/80F51()|80F51(05090A)|80F42(0607)|80F42(080B)|80F41(0D)|01E62(*)|01E61(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>4/80F51()|80F51(05090A)|80F42(0607)|80F42(080B)|80F41(0D)|01E62(*)|01E61(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|01D45(*)|01D45(*)|01D42(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>4/80F51()|80F51(05090A)|80F42(0607)|80F42(080B)|80F41(0D)|01E62(*)|01E61(*)|01E52(*)|01E45(0E0F*)|01E42(10*)|01E42(*)|01E41(11*)|01E41(*)|01D45(10*)|01D45(*)|01D42(11*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>4/80F51()|80F51(05090A)|80F42(0607)|80F42(080B)|80F41(0D)|01E62(*)|01E61(*)|01E52(*)|01E45(0E0F*)|01E42(10*)|01E42(*)|01E41(11*)|01E41(*)|01D45(10*)|01D45(*)|01D42(11*)|01D41(*)|01C45(*)|01C45(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJyll8ly2zAMhu95Ch1y1hAbCV56STK91M5MDp0+SZ+/4JKGi+yKrkYHGgY/gz8gCH7++HV9smvbwO6n58v7j/Th49vlN++uufA1eWxQjFu6XLu2XYAbkC0P7xjj9hPN/Sm54x4duroCdV+47WW7hcg3lMVAIaP4BQo2FNpVXI3Fg1ugUBeLI6oUBl6g8GEsvCN2lOt9igyxhErhJXV9Q7G9lUJGCQuU0FEsMXkv7F5WYtGGAkbxVd0IuECJh5RULws5AtdQZAfSeiKWhXoB6CjMnxUrrqPczzR81S7kQsb262Klv89Ja+XZirlwDqx+tlJO7PhrlBM1+nIWfvSVTBh9fZZ39NUs1+gbs+9gNcckSm+9WBN7+25fiAClT2/X1/9rbygb6q20jO3NScCyssZEp0tkaG9OCUuhBVQ8T+nbG2KJwFYBF2Jp25sJAwKFwiHyeUrf3kAjFR7GwltvbxaLV6irGFvKQnuzFoCBi84Y3IK6oaOI10yxdilBzlPa9lZ35FjU00KOYh8LQs0MykrDdn0s9cVjDdvH87oMTdKRkwd06Zok7xK53fvQiWRXjb4oxBhbdU+32kSxIvFlr0dZqLohFlBfMu2dLGS6pXh7lUIoJ1KnC09jH0sg8TXTstJf+ljQ+XoiImwp/3im+1hIoxQKO3k4FjtH1oUtW9pWzvt5StgpSlWX2dFjFJ+Gjaqu9uqu6cIihRIJHtQlJDW08uyV+AilDBsHY8XNYWN8pd8bNg7GisVhY7QeDxtyNECkEeRg2NCDsSKPIDBFZlCYdUh/iOahyxxh1sEcYR66knU+hW2HWQfbDrMOZk3j8hhv2HA+cbLOA6X9FB6czaxzji2A5DtYLQCcdbAAcNKhjm0RVSLy59z2B/mLQPQ=</RX.RXNFILE>
+            <RX.REG>46c47a2c56dc1c885fc487832a3ac624</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>6</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>336.393</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>4</RXD.STP>
+            <RXD.MID>Reaction-ID:14556974-Steps:9182499;9204333;9221902;9205044</RXD.MID>
+            <RXD.MTEXT>1.1: 100 percent / butan-2-ol / 96 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>2.1: KOH / dimethylformamide / 1 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.2: 91 percent / dimethylformamide / 2 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>3.1: 9-borabicyclo[3.3.1]nonane / tetrahydrofuran / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>3.2: 65 percent / Pd(PPh<sub>3</sub>)4; Cs<sub>2</sub>CO<sub>3</sub> / tetrahydrofuran / 48 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>4.1: NaHMDS / tetrahydrofuran / 1 h / -78 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>4.2: 96 percent / tetrahydrofuran / 3 h / -78 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11342937</RXD.RGTXRN>
+                <RXD.RGT>potassium hydroxide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>3629917</RXD.RGTXRN>
+                <RXD.RGT>sodium hexamethyldisilazane</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>605508</RXD.RGTXRN>
+                <RXD.RGT>9-bora-bicyclo[3.3.1]nonane</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>773649</RXD.SOLXRN>
+                <RXD.SOL>Sec-butyl alcohol</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+              <RXD.COM>3.2: intramolecular Suzuki-Miyaura cross-coupling</RXD.COM>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="125513">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 12 13 0 0 0 REGNO=125513
+M  V30 BEGIN ATOM
+M  V30 1 C     2.2359     5.1427     0.0000 0
+M  V30 2 C     2.2359     6.1409     0.0000 0
+M  V30 3 C     3.1839     4.8347     0.0000 0
+M  V30 4 C     1.3668     4.6387     0.0000 0
+M  V30 5 N     3.1839     6.4488     0.0000 0
+M  V30 6 C     1.3708     6.6427     0.0000 0
+M  V30 7 C     3.7708     5.6418     0.0000 0
+M  V30 8 C     3.4937     3.8827     0.0000 0
+M  V30 9 C     0.4998     5.1369     0.0000 0
+M  V30 10 C     0.4998     6.1388     0.0000 0
+M  V30 11 C     4.4717     3.6748     0.0000 0
+M  V30 12 N     4.7797     2.7249     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 2 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 2 5
+M  V30 5 1 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 2 4 9
+M  V30 9 1 5 7
+M  V30 10 2 6 10
+M  V30 11 1 8 11
+M  V30 12 1 9 10
+M  V30 13 1 11 12
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9285924">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 28 0 0 0 REGNO=9285924
+M  V30 BEGIN ATOM
+M  V30 1 C     8.8372     4.9440     0.0000 0
+M  V30 2 C     8.8632     3.7559     0.0000 0
+M  V30 3 C    10.0063     5.3000     0.0000 0
+M  V30 4 C     7.7952     5.5070     0.0000 0
+M  V30 5 N     9.9693     3.3229     0.0000 0
+M  V30 6 C     7.8481     3.1268     0.0000 0
+M  V30 7 C    10.7075     4.2979     0.0000 0
+M  V30 8 C    10.3485     6.4851     0.0000 0
+M  V30 9 C     6.7799     4.8909     0.0000 0
+M  V30 10 C    10.3014     2.2846     0.0000 0
+M  V30 11 C     6.8041     3.6969     0.0000 0
+M  V30 12 C    11.8106     6.4851     0.0000 0
+M  V30 13 C    11.3745     2.0277     0.0000 0
+M  V30 14 N    12.6697     5.4569     0.0000 0
+M  V30 15 C    12.4825     2.6528     0.0000 0
+M  V30 16 C    12.5987     4.6330     0.0000 0
+M  V30 17 C    13.4318     5.8361     0.0000 0
+M  V30 18 C    12.5156     3.6859     0.0000 0
+M  V30 19 N    12.9868     4.3599     0.0000 0
+M  V30 20 C    12.1697     4.4330     0.0000 0
+M  V30 21 O    13.4388     6.7361     0.0000 0
+M  V30 22 O    14.1758     5.4679     0.0000 0
+M  V30 23 N    12.9467     3.8859     0.0000 0
+M  V30 24 C    12.1256     3.9590     0.0000 0
+M  V30 25 C    14.4890     7.3402     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 14 17
+M  V30 19 1 15 18
+M  V30 20 1 16 19
+M  V30 21 2 16 20
+M  V30 22 1 17 21
+M  V30 23 2 17 22
+M  V30 24 1 18 23
+M  V30 25 2 18 24
+M  V30 26 2 19 23
+M  V30 27 1 20 24
+M  V30 28 1 21 25
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="13">
+          <RX>
+            <RX.ID>14584462</RX.ID>
+            <RX01>
+              <RX.RXRN>9272532</RX.RXRN>
+              <RX.RCT>[2-(1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9277624</RX.PXRN>
+              <RX.PRO>C<sub>17</sub>H<sub>18</sub>N<sub>4</sub></RX.PRO>
+            </RX02>
+            <RX.BLC>9272532</RX.BLC>
+            <RX.BLC>9277624</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>4/80F51()|80F42(04050609)|80F41(0A)|80F41(0A)|40FE1()|01E52(0B)|01E45(0C0D)|01E42(0E)|01E42(0F)|01E41()|01D52(12)|01D45(0E10)|01D45(11)|01D42(13)|01D42(12)|01C45(15)|01C45(15)|01C42(14)|01C41(16)|01B51(16)|01B45()|01B41()|</RX.TRANS>
+              <RX.BIN>106766</RX.BIN>
+              <RX.BFREQ>6552</RX.BFREQ>
+              <RX.QRY0>4/80F51()|80F42(0405*)|80F41(*)|80F41(*)|40FE1()|*</RX.QRY0>
+              <RX.QRY1>4/80F51()|80F42(0405*)|80F41(*)|80F41(*)|40FE1()|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>4/80F51()|80F42(04050609)|80F41(0A)|80F41(0A)|40FE1()|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>4/80F51()|80F42(04050609)|80F41(0A)|80F41(0A)|40FE1()|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E41(*)|01D52(*)|01D45(*)|01D45(*)|01D42(*)|01D42(*)|*</RX.QRY3>
+              <RX.QRY4>4/80F51()|80F42(04050609)|80F41(0A)|80F41(0A)|40FE1()|01E52(0B*)|01E45(0C0D*)|01E42(0E*)|01E42(0F*)|01E41(*)|01D52(*)|01D45(0E*)|01D45(*)|01D42(*)|01D42(*)|*</RX.QRY4>
+              <RX.QRY5>4/80F51()|80F42(04050609)|80F41(0A)|80F41(0A)|40FE1()|01E52(0B*)|01E45(0C0D*)|01E42(0E*)|01E42(0F*)|01E41(*)|01D52(*)|01D45(0E*)|01D45(*)|01D42(*)|01D42(*)|01C45(*)|01C45(*)|01C42(*)|01C41(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJytV8GO3CAMve9X5LBnhI1tzKWX7qqq1N1Ke6j6Jf3+OkBmgWFGYdooh4zlvDw/DH7z/PH7/cmubQO7n57ffv7Yf3x8eftDzjcXvuwZG5Tgtl++fba3IG1oOX56p5S2X2jpT3s6Ogy0423kUEP4hNu+brcg8l0/kFGCAw1YnlLkBRRsUD65sHEBOo8SGhRwQQQKlxjTAhfqKorRh6JLVFxA4Q6F0qGLx/J0DkWm6rJjTa0u7/dRYq9L9FXdqGFBXW1QvOPaadYvMS7okhoUchQhlDVX4PO6gJ9ysX6J6XxFAB2Xo0vAqTCcVhfa3jVNWamgCEc4z6XtXXFeuNYRPfnzXKhDIRQq6pJf6Dpoezc6T4F7nc9xkQ7FGHDhAokWdIkdSgTgoi6SLKC0vatOkpeCYuK2KN/vohx3OZzxcva10TCN0uWEu0QxHxGTqFwjhLyFJ1G9RqC8xcZcniJI3khjVPPGGKMpR4evQWn/IddCcK2Dhfb2nESvdbDEvX3GKOd2GBEkL+8YjTk6Iug+FIfcNxuvr9+2hBE54P7z9f3l3yavjV2kW+0zTl4vZT+AdffCzuimHV462U7SBAsTZpjfUt6F3QWcPwOHCeNZa0VedaEi7biYRHVmItFCRdhz8VxdALFfQOldgNb5bd6EYaGiwQVoqgyQ2Z9H8Q2KvYFlIuwTZuUk7Veag2QuNoMhPehI6htZFw26gNK7AGYKPd66LuSScnigos5LsGl6uF/BR7mwqSGh6BxSx2XJS0ityFaaVlZaO5QoWj2WbcuHHQkAHu6IFk6GzgWwC95XlARhgUvsuTDXigLgAhfquRAeKIoLXD739P9yAWNucQFj7j0XMEbvuYARl6cuQKYuQGfz/rY3mLgAvOMCxmhxAWN0xQVInvcjs7jhdcV7dFKF5twxWv5Z3/IRUZAOH/EXLkZvjw==</RX.RXNFILE>
+            <RX.REG>976d5346b39366281da0da6e7f16ef12</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>278.357</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>2</RXD.STP>
+            <RXD.MID>Reaction-ID:14584462-Steps:9204333;9221902</RXD.MID>
+            <RXD.MTEXT>1.1: KOH / dimethylformamide / 1 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>1.2: 91 percent / dimethylformamide / 2 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.1: 9-borabicyclo[3.3.1]nonane / tetrahydrofuran / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.2: 65 percent / Pd(PPh<sub>3</sub>)4; Cs<sub>2</sub>CO<sub>3</sub> / tetrahydrofuran / 48 h / Heating</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11342937</RXD.RGTXRN>
+                <RXD.RGT>potassium hydroxide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>605508</RXD.RGTXRN>
+                <RXD.RGT>9-bora-bicyclo[3.3.1]nonane</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+              <RXD.COM>2.2: intramolecular Suzuki-Miyaura cross-coupling</RXD.COM>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9272532">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 19 21 0 0 0 REGNO=9272532
+M  V30 BEGIN ATOM
+M  V30 1 C     2.2341     6.5619     0.0000 0
+M  V30 2 C     3.1830     6.2540     0.0000 0
+M  V30 3 C     2.2341     7.5601     0.0000 0
+M  V30 4 C     1.3660     6.0580     0.0000 0
+M  V30 5 C     3.7700     7.0611     0.0000 0
+M  V30 6 C     3.4930     5.3019     0.0000 0
+M  V30 7 N     3.1830     7.8680     0.0000 0
+M  V30 8 C     1.3701     8.0620     0.0000 0
+M  V30 9 C     0.4998     6.5559     0.0000 0
+M  V30 10 C     4.4712     5.0940     0.0000 0
+M  V30 11 C     0.4998     7.5582     0.0000 0
+M  V30 12 N     4.7791     4.1438     0.0000 0
+M  V30 13 C     5.7583     3.9359     0.0000 0
+M  V30 14 N     6.0654     2.9827     0.0000 0
+M  V30 15 C     6.4264     4.6820     0.0000 0
+M  V30 16 N     7.0432     2.7789     0.0000 0
+M  V30 17 C     7.4034     4.4728     0.0000 0
+M  V30 18 C     7.7113     3.5247     0.0000 0
+M  V30 19 I     8.6903     3.3188     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 2 2 5
+M  V30 5 1 2 6
+M  V30 6 1 3 7
+M  V30 7 2 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 6 10
+M  V30 11 1 8 11
+M  V30 12 2 9 11
+M  V30 13 1 10 12
+M  V30 14 1 12 13
+M  V30 15 1 13 14
+M  V30 16 2 13 15
+M  V30 17 2 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 17 18
+M  V30 21 1 18 19
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9277624">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 24 0 0 0 REGNO=9277624
+M  V30 BEGIN ATOM
+M  V30 1 C    12.7546     4.9249     0.0000 0
+M  V30 2 C    12.7305     6.1019     0.0000 0
+M  V30 3 N    13.8515     4.4939     0.0000 0
+M  V30 4 C    11.7486     4.2988     0.0000 0
+M  V30 5 C    13.8905     6.4551     0.0000 0
+M  V30 6 C    11.6954     6.6611     0.0000 0
+M  V30 7 C    14.5835     5.4620     0.0000 0
+M  V30 8 C    14.1797     3.4659     0.0000 0
+M  V30 9 C    10.7143     4.8650     0.0000 0
+M  V30 10 C    14.2266     7.6300     0.0000 0
+M  V30 11 C    10.6905     6.0491     0.0000 0
+M  V30 12 C    15.2445     3.2109     0.0000 0
+M  V30 13 C    15.6758     7.6300     0.0000 0
+M  V30 14 C    16.3436     3.8307     0.0000 0
+M  V30 15 N    16.5268     6.6101     0.0000 0
+M  V30 16 C    16.3756     4.8549     0.0000 0
+M  V30 17 C    16.4588     5.7919     0.0000 0
+M  V30 18 N    16.8027     5.0539     0.0000 0
+M  V30 19 C    15.9907     5.1238     0.0000 0
+M  V30 20 N    16.8458     5.5230     0.0000 0
+M  V30 21 C    16.0327     5.5929     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 1 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 2 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 16 19
+M  V30 21 1 17 20
+M  V30 22 2 17 21
+M  V30 23 2 18 20
+M  V30 24 1 19 21
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="14">
+          <RX>
+            <RX.ID>14584463</RX.ID>
+            <RX01>
+              <RX.RXRN>9272532</RX.RXRN>
+              <RX.RCT>[2-(1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9285924</RX.PXRN>
+              <RX.PRO>C<sub>19</sub>H<sub>20</sub>N<sub>4</sub>O<sub>2</sub></RX.PRO>
+            </RX02>
+            <RX.BLC>9272532</RX.BLC>
+            <RX.BLC>9285924</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>5/80F51()|80F51(050B0D)|80F42(06070A0E)|80F42(0809)|80F41(10)|80F41(10)|40FE1()|01E62()|01E61()|01E52(11)|01E45(1213)|01E42(1115)|01E42(14)|01E42(15)|01E41(16)|01E41()|01D52()|01D45(1417)|01D45(18)|01D42(16)|01D42()|01D41()|01C45(19)|01C45(19)|01B45()|</RX.TRANS>
+              <RX.BIN>69647</RX.BIN>
+              <RX.BFREQ>40</RX.BFREQ>
+              <RX.QRY0>5/80F51()|80F51(05*)|80F42(0607*)|80F42(*)|80F41(*)|80F41(*)|40FE1()|*</RX.QRY0>
+              <RX.QRY1>5/80F51()|80F51(05*)|80F42(0607*)|80F42(*)|80F41(*)|80F41(*)|40FE1()|01E62(*)|01E61(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>5/80F51()|80F51(050B0D)|80F42(06070A0E)|80F42(0809)|80F41(10)|80F41(10)|40FE1()|01E62(*)|01E61(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>5/80F51()|80F51(050B0D)|80F42(06070A0E)|80F42(0809)|80F41(10)|80F41(10)|40FE1()|01E62(*)|01E61(*)|01E52(*)|01E45(*)|01E42(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|01D52(*)|01D45(*)|01D45(*)|01D42(*)|01D42(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>5/80F51()|80F51(050B0D)|80F42(06070A0E)|80F42(0809)|80F41(10)|80F41(10)|40FE1()|01E62(*)|01E61(*)|01E52(11*)|01E45(1213*)|01E42(1115*)|01E42(14*)|01E42(15*)|01E41(16*)|01E41(*)|01D52(*)|01D45(14*)|01D45(*)|01D42(16*)|01D42(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>5/80F51()|80F51(050B0D)|80F42(06070A0E)|80F42(0809)|80F41(10)|80F41(10)|40FE1()|01E62(*)|01E61(*)|01E52(11*)|01E45(1213*)|01E42(1115*)|01E42(14*)|01E42(15*)|01E41(16*)|01E41(*)|01D52(*)|01D45(14*)|01D45(*)|01D42(16*)|01D42(*)|01D41(*)|01C45(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJytWMtu3DAMvOcrfMhZICnxoUsvSVAUaBIgh6Jf0u+vLGl3JVkJrG0NH7QDepYaU+TAjx+/3x7StW2Y7ofH1/ef+4+Pb69/goPmouc9YsMCbvsF7To9hXGjFAPTO8a4/aIU/rCHkyMfdr4tODLvb3Tb0/YZRb7rH2QW79A8lVVUXmChhuWWC6dcMJxn8Q0LOi+CJRfVuJBL6HakCr7ookYLLNyxhHjRBaiszrHIVF12bLHV5e1rFu11UajqqvkFda1hAce10lK9qC7oEhuW4IKiL+/ckM/rgjDNJdWLxvM7QuxyuVQJOhPG0+piW7tJU7ZQWIQVz+fS1q44EK77UAhwPpfQsQSSUNQNsFB12NauOgiee53P5SIdS8qASy4Yw4Iu2rEoIhd1KcgCS1u75iSCFJYkbsvy40uWy12aM117X4v6KRquHe6KUm4RE1SODD4f4QlqR4aQj9gYy1MGyQdpRC0fjBGNGR3+DUv5D7EJwqMOCdrLc4IedUiBe/mMKOdyGBkkv94R1YyODLYPxSH2NY3Xl+9bJCX2tP98eXv+t8lLvJF9Vj7j5AVWKquIcufkTSx1NqBTsoUJ0/Yd74hKBmmlK9Ou7YFJGOQ6ecNKPx4mL9qlH1Nc6MfDtAMxrKsYz3eMbtolN0NaOykpLKjbuwCWMhvS3GPl8yxtJ61P5FxMVpxa7HOhi7MiVjjPAn0uVKZTmnYSFyZMW7vswAPfoUvnAoLjGNpn79oRO7MoRaFAnWtccwFAUp4V4oWqG3JBk/KmBRbc9OAlkpnRsiMDWziNfS7quc5M4YX+0k1ecQRSd+Q9tSwLvoadt1i9RIAV18hdLmkfWZfk/MDaynk/r4s6H7mqGwL4+1jEoUhV13p1FzxW0iVwdUfR44Iug8cCs8qHtNClbjv6X+5ojC3uaIwt7miCHl3BkjviqTuSqTuymQ/63DNN3BF94Y5GtLijCTpxRzx1RzLxQTtKcMxX81eEo7/az+/RX9Fkbwk9vuP964Q/oCkBOuqQEqCDDlffZhwpXHzbX/faqKU=</RX.RXNFILE>
+            <RX.REG>3c9b5286644e1667e3ffbd4c9c60d72e</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>336.393</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>3</RXD.STP>
+            <RXD.MID>Reaction-ID:14584463-Steps:9204333;9221902;9205044</RXD.MID>
+            <RXD.MTEXT>1.1: KOH / dimethylformamide / 1 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>1.2: 91 percent / dimethylformamide / 2 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.1: 9-borabicyclo[3.3.1]nonane / tetrahydrofuran / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.2: 65 percent / Pd(PPh<sub>3</sub>)4; Cs<sub>2</sub>CO<sub>3</sub> / tetrahydrofuran / 48 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>3.1: NaHMDS / tetrahydrofuran / 1 h / -78 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>3.2: 96 percent / tetrahydrofuran / 3 h / -78 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11342937</RXD.RGTXRN>
+                <RXD.RGT>potassium hydroxide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>3629917</RXD.RGTXRN>
+                <RXD.RGT>sodium hexamethyldisilazane</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>605508</RXD.RGTXRN>
+                <RXD.RGT>9-bora-bicyclo[3.3.1]nonane</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+              <RXD.COM>2.2: intramolecular Suzuki-Miyaura cross-coupling</RXD.COM>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9272532">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 19 21 0 0 0 REGNO=9272532
+M  V30 BEGIN ATOM
+M  V30 1 C     2.2340     7.0474     0.0000 0
+M  V30 2 C     3.1831     6.7394     0.0000 0
+M  V30 3 C     2.2340     8.0456     0.0000 0
+M  V30 4 C     1.3658     6.5433     0.0000 0
+M  V30 5 C     3.7701     7.5465     0.0000 0
+M  V30 6 C     3.4932     5.7874     0.0000 0
+M  V30 7 N     3.1831     8.3536     0.0000 0
+M  V30 8 C     1.3699     8.5476     0.0000 0
+M  V30 9 C     0.4999     7.0415     0.0000 0
+M  V30 10 C     4.4712     5.5795     0.0000 0
+M  V30 11 C     0.4999     8.0435     0.0000 0
+M  V30 12 N     4.7792     4.6295     0.0000 0
+M  V30 13 C     5.7581     4.4213     0.0000 0
+M  V30 14 N     6.0652     3.4683     0.0000 0
+M  V30 15 C     6.4264     5.1675     0.0000 0
+M  V30 16 N     7.0433     3.2643     0.0000 0
+M  V30 17 C     7.4033     4.9584     0.0000 0
+M  V30 18 C     7.7113     4.0102     0.0000 0
+M  V30 19 I     8.6905     3.8044     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 2 2 5
+M  V30 5 1 2 6
+M  V30 6 1 3 7
+M  V30 7 2 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 6 10
+M  V30 11 1 8 11
+M  V30 12 2 9 11
+M  V30 13 1 10 12
+M  V30 14 1 12 13
+M  V30 15 1 13 14
+M  V30 16 2 13 15
+M  V30 17 2 14 16
+M  V30 18 1 15 17
+M  V30 19 1 16 18
+M  V30 20 2 17 18
+M  V30 21 1 18 19
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9285924">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 28 0 0 0 REGNO=9285924
+M  V30 BEGIN ATOM
+M  V30 1 C    12.7477     6.1659     0.0000 0
+M  V30 2 C    12.7737     4.9779     0.0000 0
+M  V30 3 C    13.9168     6.5221     0.0000 0
+M  V30 4 C    11.7055     6.7291     0.0000 0
+M  V30 5 N    13.8799     4.5447     0.0000 0
+M  V30 6 C    11.7587     4.3486     0.0000 0
+M  V30 7 C    14.6178     5.5198     0.0000 0
+M  V30 8 C    14.2587     7.7071     0.0000 0
+M  V30 9 C    10.6906     6.1131     0.0000 0
+M  V30 10 C    14.2118     3.5067     0.0000 0
+M  V30 11 C    10.7145     4.9189     0.0000 0
+M  V30 12 C    15.7211     7.7071     0.0000 0
+M  V30 13 C    15.2849     3.2495     0.0000 0
+M  V30 14 N    16.5801     6.6789     0.0000 0
+M  V30 15 C    16.3932     3.8747     0.0000 0
+M  V30 16 C    16.5090     5.8550     0.0000 0
+M  V30 17 C    17.3423     7.0581     0.0000 0
+M  V30 18 C    16.4260     4.9079     0.0000 0
+M  V30 19 N    16.8970     5.5818     0.0000 0
+M  V30 20 C    16.0802     5.6548     0.0000 0
+M  V30 21 O    17.3491     7.9581     0.0000 0
+M  V30 22 O    18.0862     6.6901     0.0000 0
+M  V30 23 N    16.8571     5.1079     0.0000 0
+M  V30 24 C    16.0362     5.1808     0.0000 0
+M  V30 25 C    18.3992     8.5623     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 14 17
+M  V30 19 1 15 18
+M  V30 20 1 16 19
+M  V30 21 2 16 20
+M  V30 22 1 17 21
+M  V30 23 2 17 22
+M  V30 24 1 18 23
+M  V30 25 2 18 24
+M  V30 26 2 19 23
+M  V30 27 1 20 24
+M  V30 28 1 21 25
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="15">
+          <RX>
+            <RX.ID>14586525</RX.ID>
+            <RX01>
+              <RX.RXRN>9279802</RX.RXRN>
+              <RX.RCT>[2-(1-allyl-1<i>H</i>-indol-3-yl)-ethyl]-(6-iodo-pyridazin-3-yl)-amine</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9285924</RX.PXRN>
+              <RX.PRO>C<sub>19</sub>H<sub>20</sub>N<sub>4</sub>O<sub>2</sub></RX.PRO>
+            </RX02>
+            <RX.BLC>9279802</RX.BLC>
+            <RX.BLC>9285924</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>4/88F42()|80F51(040A0C)|80F42(05090B)|80F42(0708)|40FE1()|08F42(0D)|01E62()|01E61()|01E52(0E)|01E42(0E10)|01E42(10)|01E41(11)|01E41(0F)|01D52()|01D51(1214)|01D42()|01D41(13)|01C45(1516)|01C42(1415)|01C42()|01B45(17)|01B45(18)|01A45(19)|01A45(19)|01945()|</RX.TRANS>
+              <RX.BIN>91166</RX.BIN>
+              <RX.BFREQ>3165</RX.BFREQ>
+              <RX.QRY0>4/88F42()|80F51(04*)|80F42(05*)|80F42(*)|40FE1()|08F42(*)|*</RX.QRY0>
+              <RX.QRY1>4/88F42()|80F51(04*)|80F42(05*)|80F42(*)|40FE1()|08F42(*)|01E62(*)|01E61(*)|01E52(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>4/88F42()|80F51(040A0C)|80F42(05090B)|80F42(0708)|40FE1()|08F42(0D)|01E62(*)|01E61(*)|01E52(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>4/88F42()|80F51(040A0C)|80F42(05090B)|80F42(0708)|40FE1()|08F42(0D)|01E62(*)|01E61(*)|01E52(*)|01E42(*)|01E42(*)|01E41(*)|01E41(*)|01D52(*)|01D51(*)|01D42(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>4/88F42()|80F51(040A0C)|80F42(05090B)|80F42(0708)|40FE1()|08F42(0D)|01E62(*)|01E61(*)|01E52(0E*)|01E42(0E10*)|01E42(10*)|01E41(11*)|01E41(0F*)|01D52(*)|01D51(*)|01D42(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>4/88F42()|80F51(040A0C)|80F42(05090B)|80F42(0708)|40FE1()|08F42(0D)|01E62(*)|01E61(*)|01E52(0E*)|01E42(0E10*)|01E42(10*)|01E41(11*)|01E41(0F*)|01D52(*)|01D51(*)|01D42(*)|01D41(*)|01C45(*)|01C42(*)|01C42(*)|*</RX.QRY5>
+              <RX.QRY6>4/88F42()|80F51(040A0C)|80F42(05090B)|80F42(0708)|40FE1()|08F42(0D)|01E62()|01E61()|01E52(0E)|01E42(0E10)|01E42(10)|01E41(11)|01E41(0F)|01D52()|01D51(1214)|01D42()|01D41(13)|01C45(1516)|01C42(1415)|01C42()|01B45(*)|01B45(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJztmLFu3DAMhvc8hYfMgkiRFLl0aYKiQJMAGYo+SZ+/tKS7SDonsNKONTzoCOoHSdHUl9y//nq+82fbwN+7+6eXH/uP1y9PvynE7sGH3WODatz2J/Zr34W4Ifny8DWz7Se6+93ujsEk4r6igJrwTW77ur0nUV6oi0mFXQXSeRXsVFKwaNhWmRdiSUMsLgJVJWdbUKHDWDiwWp/R88cqPMUiUFWypoW6SKdCgYzbGWXFBZU8qCBoq27ElZPWTgUCIkPTy3lBxQ5jkcAEdFoF4mEs3nXZztcF+t7lACapnpbCQtcBHqpIyKQLGaVBhSOnmptKze1U1wEdquQgZgux9L0rgTRRjUU4w3kVGVSyxRZBjhTPZ9T3bg7AtUswUEwLseigkuVyMtzm5blY+t7VAKgtFjA6HwvGQYVS5lpdJFlQ6XvXAgE3FS9ur/L9Q5XLW68bvE7z3poOrXSd2VcrlqE3+2IZYrNvKkPpwKq3ClSGxmzlonBr3UfDbJXyqc9WLZ/ubLXiO0UG9QOdfH373o2zNZUPaFag8kHMvlIa/MCqtwq5NOBs1dJQs4KVBpmsWNtmUnAT3tThyZHj8dtmPk814v7z8fnhL2mEN9T3GnCmkcj1TnGiAFm46UYaiY1kIGTUhTtqpBHEGoGv8sqt2090LwxwoxHKC7N4ohFoDOLTwhbuhYFGPBZRaCuz8zNnoBEnI8xt/mGOC9XNgwq3Wex0w3USrtNI21FiUVnhKxtjwQuDIOd4WmWgEd+B9X7z+1IWuHOikZgif6IuA41QYKN+72mVkUZUTWqFCBcYeKIRbxKpewX5fNcNNOKxgEo9aWl08xkacajKNSONC5R2eS8ZJZZ20rwwX4a7WwJGaRmlhL3KAhlxSGpcVSiu0KsOsXgepS7+F0bUvnNeztclh2TcqkuOaZ9TkQAirbo6VneB0rwudCEjS7BwRmNGXg1teoALU+pN5T9fbf+Ur2brMV/RIV9xafsD6rqtg1v3VrhlsQO+2q14SGgHuWn538zsa8V3JrRYfGeagx2p3uM2ZUO6cNsfzkvTiQ==</RX.RXNFILE>
+            <RX.REG>bd179e5361a556f3a9308c5dec786a1c</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>336.393</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>2</RXD.STP>
+            <RXD.MID>Reaction-ID:14586525-Steps:9221902;9205044</RXD.MID>
+            <RXD.MTEXT>1.1: 9-borabicyclo[3.3.1]nonane / tetrahydrofuran / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>1.2: 65 percent / Pd(PPh<sub>3</sub>)4; Cs<sub>2</sub>CO<sub>3</sub> / tetrahydrofuran / 48 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>2.1: NaHMDS / tetrahydrofuran / 1 h / -78 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2.2: 96 percent / tetrahydrofuran / 3 h / -78 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>3629917</RXD.RGTXRN>
+                <RXD.RGT>sodium hexamethyldisilazane</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>605508</RXD.RGTXRN>
+                <RXD.RGT>9-bora-bicyclo[3.3.1]nonane</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>102391</RXD.SOLXRN>
+                <RXD.SOL>tetrahydrofuran</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+              <RXD.COM>1.2: intramolecular Suzuki-Miyaura cross-coupling</RXD.COM>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9279802">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 22 24 0 0 0 REGNO=9279802
+M  V30 BEGIN ATOM
+M  V30 1 C     2.2349     6.0895     0.0000 0
+M  V30 2 C     2.2349     7.0876     0.0000 0
+M  V30 3 C     3.1840     5.7815     0.0000 0
+M  V30 4 C     1.3670     5.5854     0.0000 0
+M  V30 5 N     3.1840     7.3956     0.0000 0
+M  V30 6 C     1.3708     7.5896     0.0000 0
+M  V30 7 C     3.7701     6.5885     0.0000 0
+M  V30 8 C     3.4931     4.8294     0.0000 0
+M  V30 9 C     0.4999     6.0836     0.0000 0
+M  V30 10 C     3.4931     8.3477     0.0000 0
+M  V30 11 C     0.4999     7.0855     0.0000 0
+M  V30 12 C     4.4712     4.6212     0.0000 0
+M  V30 13 C     4.4712     8.5547     0.0000 0
+M  V30 14 N     4.7801     3.6712     0.0000 0
+M  V30 15 C     4.7801     9.5055     0.0000 0
+M  V30 16 C     5.7581     3.4633     0.0000 0
+M  V30 17 N     6.0652     2.5101     0.0000 0
+M  V30 18 C     6.4261     4.2093     0.0000 0
+M  V30 19 N     7.0433     2.3063     0.0000 0
+M  V30 20 C     7.4033     4.0002     0.0000 0
+M  V30 21 C     7.7125     3.0523     0.0000 0
+M  V30 22 I     8.6905     2.8461     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 2 13 15
+M  V30 17 1 14 16
+M  V30 18 1 16 17
+M  V30 19 2 16 18
+M  V30 20 2 17 19
+M  V30 21 1 18 20
+M  V30 22 1 19 21
+M  V30 23 2 20 21
+M  V30 24 1 21 22
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9285924">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 28 0 0 0 REGNO=9285924
+M  V30 BEGIN ATOM
+M  V30 1 C    12.7473     6.1658     0.0000 0
+M  V30 2 C    12.7733     4.9778     0.0000 0
+M  V30 3 C    13.9164     6.5219     0.0000 0
+M  V30 4 C    11.7052     6.7289     0.0000 0
+M  V30 5 N    13.8795     4.5446     0.0000 0
+M  V30 6 C    11.7581     4.3485     0.0000 0
+M  V30 7 C    14.6174     5.5197     0.0000 0
+M  V30 8 C    14.2584     7.7069     0.0000 0
+M  V30 9 C    10.6900     6.1129     0.0000 0
+M  V30 10 C    14.2114     3.5066     0.0000 0
+M  V30 11 C    10.7142     4.9187     0.0000 0
+M  V30 12 C    15.7207     7.7069     0.0000 0
+M  V30 13 C    15.2845     3.2494     0.0000 0
+M  V30 14 N    16.5797     6.6787     0.0000 0
+M  V30 15 C    16.3927     3.8746     0.0000 0
+M  V30 16 C    16.5085     5.8548     0.0000 0
+M  V30 17 C    17.3418     7.0579     0.0000 0
+M  V30 18 C    16.4255     4.9078     0.0000 0
+M  V30 19 N    16.8965     5.5817     0.0000 0
+M  V30 20 C    16.0794     5.6546     0.0000 0
+M  V30 21 O    17.3486     7.9579     0.0000 0
+M  V30 22 O    18.0857     6.6899     0.0000 0
+M  V30 23 N    16.8567     5.1077     0.0000 0
+M  V30 24 C    16.0354     5.1807     0.0000 0
+M  V30 25 C    18.3987     8.5621     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 2 1 4
+M  V30 4 1 2 5
+M  V30 5 2 2 6
+M  V30 6 2 3 7
+M  V30 7 1 3 8
+M  V30 8 1 4 9
+M  V30 9 1 5 7
+M  V30 10 1 5 10
+M  V30 11 1 6 11
+M  V30 12 1 8 12
+M  V30 13 2 9 11
+M  V30 14 1 10 13
+M  V30 15 1 12 14
+M  V30 16 1 13 15
+M  V30 17 1 14 16
+M  V30 18 1 14 17
+M  V30 19 1 15 18
+M  V30 20 1 16 19
+M  V30 21 2 16 20
+M  V30 22 1 17 21
+M  V30 23 2 17 22
+M  V30 24 1 18 23
+M  V30 25 2 18 24
+M  V30 26 2 19 23
+M  V30 27 1 20 24
+M  V30 28 1 21 25
+M  V30 END BOND
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="16">
+          <RX>
+            <RX.ID>14587541</RX.ID>
+            <RX01>
+              <RX.RXRN>9283985</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>20</sub>N<sub>2</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9279768</RX.PXRN>
+              <RX.PRO>C<sub>17</sub>H<sub>18</sub>N<sub>2</sub>O</RX.PRO>
+            </RX02>
+            <RX.BLC>9283985</RX.BLC>
+            <RX.BLC>9279768</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>3/8CF41(02070A)|80F62()|80F51(04050B)|40F42()|08F42(0609)|08F42(08)|01E51(0C0F)|01E45(0D)|01E44(0E0F10)|01E41(11)|01E41(10)|01D45(0E12)|01D45(0F11)|01D45(13)|01D44()|01D41()|01D41()|01C45(14)|01C45(15)|01B45(15)|01B45()|00E62()|00E61()|00D41()|</RX.TRANS>
+              <RX.BIN>116031</RX.BIN>
+              <RX.BFREQ>28</RX.BFREQ>
+              <RX.QRY0>3/8CF41(02*)|80F62()|80F51(0405*)|40F42()|08F42(06*)|08F42(*)|*</RX.QRY0>
+              <RX.QRY1>3/8CF41(02*)|80F62()|80F51(0405*)|40F42()|08F42(06*)|08F42(*)|01E51(*)|01E45(*)|01E44(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>3/8CF41(02070A)|80F62()|80F51(04050B)|40F42()|08F42(0609)|08F42(08)|01E51(*)|01E45(*)|01E44(*)|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>3/8CF41(02070A)|80F62()|80F51(04050B)|40F42()|08F42(0609)|08F42(08)|01E51(*)|01E45(*)|01E44(*)|01E41(*)|01E41(*)|01D45(*)|01D45(*)|01D45(*)|01D44(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>3/8CF41(02070A)|80F62()|80F51(04050B)|40F42()|08F42(0609)|08F42(08)|01E51(0C0F*)|01E45(0D*)|01E44(0E0F10*)|01E41(11*)|01E41(10*)|01D45(0E*)|01D45(0F11*)|01D45(*)|01D44(*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>3/8CF41(02070A)|80F62()|80F51(04050B)|40F42()|08F42(0609)|08F42(08)|01E51(0C0F*)|01E45(0D*)|01E44(0E0F10*)|01E41(11*)|01E41(10*)|01D45(0E*)|01D45(0F11*)|01D45(*)|01D44(*)|01D41(*)|01D41(*)|01C45(*)|01C45(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJzVV0tPGzEQvvMrfOBayx6PvfalUmgClZoEKURVOSFUceylqvr7Ox5v8CMLXQcitasFltnxt+N5+ZvL3bftBV1CaLovLje36/jP7uPmN0pVXLCMGkInoYiXKp9pFaAAT4+TdwhBfAVSv4jqKK1VEU+ARGVUhhOfxEsQfOv0wChWGg+MomUA6ECBAgWlN8goRqJLePNQTIFi5KD9SbZgZYuxerTFoOmwxRYoToK2097dvo7iJr2rZHC6Y0dDhRKMPsm7vvILeKfTE+oelFDFSCkc/WKdne8XrSYj3ekXrSsUE+zBLz2R1mXuDlLhSVmny9zN1agketWBUuZuzrpelDp3ae0pkdZl7uaapizuyTpd5i5I5VL1AKFU+fKXrFOTMerNl7ICch317qisAC0RUmSoFoZQotzO35GWg3NqxLPVjjpQcpaA9LUtHd7NXYpQfFVHn+eiaD4Q9LHUTEpxUmrTEVpKgRtqqwvcII+lgMcIhttgq2u4rUEjRW5TrS5y22l1LbeRVtdNfs1xs2ilAxd/iztwMbe6nouz1Q1cbI2uVlOW6VQMrVSzDa3UcMq3UjspdQKOfUZmRWljLxkA+liXpHCkS4pw5LONEHf7e44evVku9jFnx78m/mWNxZpfRzcy4QKRVqDgFIsxiukTAxWTgEMezYpOi5+MDrElEmvFNIzOjk6MqRO3F9Mimk6rAHnF1bt9+4Bk5nybfggdYoqQHnhGWO4ZYbNcX908XO8WN5vVdv9wt1/tVrHHpOs6qS5He2MPCI77/gcl7dhdlov4e7FeH5RoM7xuldb9fPz+9OPx11N2WkpAosPPhsBoSPr+w5fVvaiuwhBgAR1e45FKBzOaGYaA2GULzBiAbIGZb4FJ0ESZDuSYiNcMC0yyYLe6EQG8CZ7frbbLN44FmuOrJu96LCAqNEBITwZdyHA9YwFIhxjSk3e+A6UeCwDtiGIH7ECpx4LDjojaqx6UZiygeCQ8ZVUHSkmtsl8oJ/WpY4GWXg/qlBiV1MpIF/xoC3EsNR+lJkXGDCfFqCRF2S8oBw/zUSpCn2NEdDqm9VzvVsMFUrdwY6Q9dOyoGgtyjKj2TQdxrcaCjNKZu9VYQKTXe5X83FWN1ViQq1FJ53t2VI+0RBF92ltX1lVjQd7RUR11EPrsXSLCgy9ROkh0roBev9SD8aFL0aDjq9z930i0Ph+JbnH/aRI9QYz1JLU2k9Q6keiWAttJ3fkk+kCBI6GcpMAivjsfFXYv0dEz0V81l/6+ifI6w52RKe8cnncmykt04LmJeJ8Osb9R3rt3pbxEAp6JHyo/wwJTku5UMgKzBTjfAmx8QMf3aMvrFmBJuocwOH8g3X8AWzbKBA==</RX.RXNFILE>
+            <RX.REG>ea6a2b59bf61e10f9ac7a3f57cfd85a7</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>266.343</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>3</RXD.STP>
+            <RXD.MID>Reaction-ID:14587541-Steps:9223123;9223124;9223741</RXD.MID>
+            <RXD.MTEXT>1: 100 percent / NaBH<sub>4</sub>; CF<sub>3</sub>CO<sub>2</sub>H / benzene / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2: 30 percent / pyridinium dichromate; celite / CH<sub>2</sub>Cl<sub>2</sub> / 72 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>3: 93 percent / TMSI / CHCl<sub>3</sub> / 6 h / Heating</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11343078</RXD.RGTXRN>
+                <RXD.RGT>sodium tetrahydroborate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>11460878</RXD.RGTXRN>
+                <RXD.RGT>dipyridinium dichromate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>1731136</RXD.RGTXRN>
+                <RXD.RGT>trimethylsilyl iodide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>19261966</RXD.RGTXRN>
+                <RXD.RGT>Celite</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>742035</RXD.RGTXRN>
+                <RXD.RGT>trifluoroacetic acid</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1730800</RXD.SOLXRN>
+                <RXD.SOL>dichloromethane</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>1731042</RXD.SOLXRN>
+                <RXD.SOL>chloroform</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>969212</RXD.SOLXRN>
+                <RXD.SOL>benzene</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9283985">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283985
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5699     4.0018     0.0000 0
+M  V30 2 C     5.4021     3.5208     0.0000 0
+M  V30 3 C     4.8540     5.0608     0.0000 0
+M  V30 4 C     3.7380     3.5208     0.0000 0
+M  V30 5 C     4.3710     4.9419     0.0000 0
+M  V30 6 N     6.2349     4.0018     0.0000 0
+M  V30 7 C     5.4021     2.5599     0.0000 0
+M  V30 8 C     5.9510     5.0608     0.0000 0
+M  V30 9 C     4.3060     6.0109     0.0000 0
+M  V30 10 N     3.0239     4.1638     0.0000 0
+M  V30 11 C     3.7380     2.5599     0.0000 0
+M  V30 12 C     3.4148     5.0418     0.0000 0
+M  V30 13 C     7.0679     3.5208     0.0000 0
+M  V30 14 C     4.5699     2.0787     0.0000 0
+M  V30 15 C     6.2349     2.0787     0.0000 0
+M  V30 16 C     6.5000     6.0109     0.0000 0
+M  V30 17 C     4.8540     6.9610     0.0000 0
+M  V30 18 C     2.0828     3.9638     0.0000 0
+M  V30 19 C     7.0679     2.5599     0.0000 0
+M  V30 20 C     5.9510     6.9610     0.0000 0
+M  V30 21 O     1.4398     4.6780     0.0000 0
+M  V30 22 O     1.7858     3.0499     0.0000 0
+M  V30 23 C     0.4999     4.4779     0.0000 0
+M  V30 24 H     5.4021     4.4818     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 2 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    2.9839    1.0187    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9279768">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 25 1 0 0 REGNO=9279768
+M  V30 BEGIN ATOM
+M  V30 1 C    11.5528     5.2364     0.0000 0
+M  V30 2 C    10.7250     4.7584     0.0000 0
+M  V30 3 C    12.3259     4.4644     0.0000 0
+M  V30 4 C    11.5528     6.1944     0.0000 0
+M  V30 5 C    12.4638     4.9403     0.0000 0
+M  V30 6 N    10.7250     3.8024     0.0000 0
+M  V30 7 C     9.8969     5.2364     0.0000 0
+M  V30 8 C    11.7788     3.5195     0.0000 0
+M  V30 9 C    13.4177     4.4644     0.0000 0
+M  V30 10 C    10.7250     6.6724     0.0000 0
+M  V30 11 N    12.4638     6.4893     0.0000 0
+M  V30 12 C    13.0268     5.7144     0.0000 0
+M  V30 13 C     9.8969     3.3244     0.0000 0
+M  V30 14 C     9.8969     6.1944     0.0000 0
+M  V30 15 C     9.0679     4.7584     0.0000 0
+M  V30 16 C    12.3259     2.5743     0.0000 0
+M  V30 17 C    13.9637     3.5195     0.0000 0
+M  V30 18 C     9.0679     3.8024     0.0000 0
+M  V30 19 O     9.8969     2.3673     0.0000 0
+M  V30 20 C    13.4177     2.5743     0.0000 0
+M  V30 21 H    11.5528     4.2793     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 21 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 1 4 11 CFG=1
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 14
+M  V30 20 1 11 12
+M  V30 21 1 13 18
+M  V30 22 2 13 19
+M  V30 23 1 15 18
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(21 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21) -
+M  V30 CBONDS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   10.7158    1.3073    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="17">
+          <RX>
+            <RX.ID>14587542</RX.ID>
+            <RX01>
+              <RX.RXRN>9283985</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>20</sub>N<sub>2</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9286046</RX.PXRN>
+              <RX.PRO>methyl (3aSR,11bRS,13aRS)-9-oxo-2,3,9,10,11,11b,13,13a-octahydro-1H-pyrido[1,2,3-lm]pyrrolo[2,3-d]carbazole-1-carboxylate</RX.PRO>
+            </RX02>
+            <RX.BLC>9283985</RX.BLC>
+            <RX.BLC>9286046</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>0/8CF41(020509)|80F62()|08F42(040608)|08F42(07)|01E51(0A0D)|01E51(0E0F)|01E45(0B)|01E44(0C0D10)|01E41(11)|01D45(0C14)|01D45(0D11)|01D45(15)|01D44()|01D42(1213)|01D41(10)|01D41()|01D41()|01C62()|01C61(18)|01C45(16)|01C45(17)|01B45(17)|01B45()|01B41()|</RX.TRANS>
+              <RX.BIN>163878</RX.BIN>
+              <RX.BFREQ>459</RX.BFREQ>
+              <RX.QRY0>0/8CF41(02*)|80F62()|08F42(04*)|08F42(*)|*</RX.QRY0>
+              <RX.QRY1>0/8CF41(02*)|80F62()|08F42(04*)|08F42(*)|01E51(*)|01E51(*)|01E45(*)|01E44(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>0/8CF41(020509)|80F62()|08F42(040608)|08F42(07)|01E51(*)|01E51(*)|01E45(*)|01E44(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>0/8CF41(020509)|80F62()|08F42(040608)|08F42(07)|01E51(*)|01E51(*)|01E45(*)|01E44(*)|01E41(*)|01D45(*)|01D45(*)|01D45(*)|01D44(*)|01D42(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/8CF41(020509)|80F62()|08F42(040608)|08F42(07)|01E51(0A0D*)|01E51(0E0F*)|01E45(0B*)|01E44(0C0D10*)|01E41(11*)|01D45(0C*)|01D45(0D11*)|01D45(*)|01D44(*)|01D42(*)|01D41(10*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/8CF41(020509)|80F62()|08F42(040608)|08F42(07)|01E51(0A0D*)|01E51(0E0F*)|01E45(0B*)|01E44(0C0D10*)|01E41(11*)|01D45(0C*)|01D45(0D11*)|01D45(*)|01D44(*)|01D42(*)|01D41(10*)|01D41(*)|01D41(*)|01C62(*)|01C61(*)|01C45(*)|01C45(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJzlV8GO2zYQve9X8JBrBXI4pMhLAad2NkDsDeA1iua0CIoceymKfH84Q9qiRtpdUklQFBXktXY8ehoN3wznvTn/8XCXDqVMOu/enD4e6Z/zr6evOOjqgD15KJONig5dX6e7ABWEdLl6xhjV75Dc78gdB+c04SkYUFs9wanf1HMQfJp8wShusAEYxQwRoAMFKhQcgkVGsQP6jNeGYisUO4wmbIoFZ7FYZ0osFm1HLK5C8QMYt57dh5dR/Gp29RC96XijcYYSrdmU3TDLCwRv8hWaHpQ4WyOtseTFedeeF6NXV7ozL8bMUGx017z0rLSpuTsOGjexztTcnapRDxh0B0rN3Yl1vShz7qZ7t6y0qbk71XRicQ/rTM1dGLTP1QMJZcaXV1Bq7k5r1MuXmrtTHXW+EegKxQwIeWVSLYyxRvn4MoqZoYze64LnZm/0CkrN3YklMIR5LK+8Uc3dqUsllDCro/cvolzPvPXBbWeprXbViqtWl7fQ2grcUKUvcINcWgGXCJbboPS13NZAWJHblPRFbjvS13Ebkb5+9Wmem4W0jlz8EnfkYpa+gYtT+kYuNuFr9FpkJpeUtBqOQVotF460ulWr5/KQ1pGtIt4UAJilb2BSC9/kCIucnZR6vHzi1Uu/7HcX4mz5tvTNHrsj/0xp5IELVL4DFVOM1ojoQwtFJOAlp7AoafRISoirkdiLaEjJpiQSdej1iBYUeroLkO94+8OefUWyLc9On4QORJHkB4ER9hdGOO2Pb++f3p1396fDw+Xp8XI4H6jH5ONddt2XeKkHRM99/xc9uNJd9jv6uzser07pZfi+Q77v789/fvnr8z9fpqRlAqZx+BYIlEDy858+HD6p2VEFAmxIm1fZUtPGjLYhEFDnKQJbFmCKwLZHYDN0Gpmuw3EavBoisDmC8+FeRQg2Bv7t8LD/TlngFMTnuu9SFnjMC4nawwTXKQuidiX34DpQhCxAzbHQ4DradhQhC8DaLbFIWTCWWCz2xCJkAVi3mt0+WVCyS+NMzyguZUF0W7IrZEEEzFdoArajSFkQbM6L86E9L1IWlJXuzMtCFkRb8oKhPS9SFriRunUv6xaywJecpglWt6MIWVBY14siZUHwG1ZayoJS0zRER9eOImVBrh6SBaEju0IWlDXq5UucoYRIwa3U9Muj+PUU1diZl4W4gCJpU0HV3O0UFxEKnpsN9J3iInONZUF7HUlxUXodocy61H9NXKwgbBIXRliXI/H/UFzYVcHwrORYkRFjnomFNYuLFclhl5LjJiAr61VyUMtblRyKfvtp0oM9msb/nyQ/cIv8SJ/4HRIk7eCBd02SIGPUZPvXJEjevkmC5K3hNQny+KMlyG0QR+8aIrC1CMp0VjhFgO0RYFkMfxu/2yLAmQjyGv1VBH0D59UH2Q==</RX.RXNFILE>
+            <RX.REG>bfd220a5546a7157a73edd47f7f750df</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>mapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>324.379</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>2</RXD.STP>
+            <RXD.MID>Reaction-ID:14587542-Steps:9223123;9223124</RXD.MID>
+            <RXD.MTEXT>1: 100 percent / NaBH<sub>4</sub>; CF<sub>3</sub>CO<sub>2</sub>H / benzene / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2: 30 percent / pyridinium dichromate; celite / CH<sub>2</sub>Cl<sub>2</sub> / 72 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11343078</RXD.RGTXRN>
+                <RXD.RGT>sodium tetrahydroborate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>11460878</RXD.RGTXRN>
+                <RXD.RGT>dipyridinium dichromate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>19261966</RXD.RGTXRN>
+                <RXD.RGT>Celite</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>742035</RXD.RGTXRN>
+                <RXD.RGT>trifluoroacetic acid</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1730800</RXD.SOLXRN>
+                <RXD.SOL>dichloromethane</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>969212</RXD.SOLXRN>
+                <RXD.SOL>benzene</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9283985">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283985
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5699     4.7877     0.0000 0
+M  V30 2 C     5.4019     4.3068     0.0000 0
+M  V30 3 C     4.8541     5.8468     0.0000 0
+M  V30 4 C     3.7380     4.3068     0.0000 0
+M  V30 5 C     4.3710     5.7277     0.0000 0
+M  V30 6 N     6.2349     4.7877     0.0000 0
+M  V30 7 C     5.4019     3.3456     0.0000 0
+M  V30 8 C     5.9511     5.8468     0.0000 0
+M  V30 9 C     4.3060     6.7968     0.0000 0
+M  V30 10 N     3.0238     4.9498     0.0000 0
+M  V30 11 C     3.7380     3.3456     0.0000 0
+M  V30 12 C     3.4149     5.8277     0.0000 0
+M  V30 13 C     7.0679     4.3068     0.0000 0
+M  V30 14 C     4.5699     2.8646     0.0000 0
+M  V30 15 C     6.2349     2.8646     0.0000 0
+M  V30 16 C     6.4999     6.7968     0.0000 0
+M  V30 17 C     4.8541     7.7468     0.0000 0
+M  V30 18 C     2.0828     4.7498     0.0000 0
+M  V30 19 C     7.0679     3.3456     0.0000 0
+M  V30 20 C     5.9511     7.7468     0.0000 0
+M  V30 21 O     1.4400     5.4637     0.0000 0
+M  V30 22 O     1.7860     3.8356     0.0000 0
+M  V30 23 C     0.4998     5.2637     0.0000 0
+M  V30 24 H     5.4019     5.2677     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 2 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    2.9839    1.8046    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9286046">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 29 1 0 0 REGNO=9286046
+M  V30 BEGIN ATOM
+M  V30 1 C    13.1432     4.7866     0.0000 0
+M  V30 2 C    13.9773     4.3056     0.0000 0
+M  V30 3 C    13.4271     5.8478     0.0000 0
+M  V30 4 C    12.3102     4.3056     0.0000 0
+M  V30 5 C    12.9442     5.7276     0.0000 0
+M  V30 6 N    14.8103     4.7866     0.0000 0
+M  V30 7 C    13.9773     3.3424     0.0000 0
+M  V30 8 C    14.5262     5.8478     0.0000 0
+M  V30 9 C    12.8790     6.7988     0.0000 0
+M  V30 10 N    11.5950     4.9487     0.0000 0
+M  V30 11 C    12.3102     3.3424     0.0000 0
+M  V30 12 C    11.9860     5.8287     0.0000 0
+M  V30 13 C    15.6443     4.3056     0.0000 0
+M  V30 14 C    13.1432     2.8614     0.0000 0
+M  V30 15 C    14.8103     2.8614     0.0000 0
+M  V30 16 C    15.0753     6.7988     0.0000 0
+M  V30 17 C    13.4271     7.7499     0.0000 0
+M  V30 18 C    10.6529     4.7487     0.0000 0
+M  V30 19 C    15.6443     3.3424     0.0000 0
+M  V30 20 O    16.4784     4.7866     0.0000 0
+M  V30 21 C    14.5262     7.7499     0.0000 0
+M  V30 22 O    10.0088     5.4636     0.0000 0
+M  V30 23 O    10.3558     3.8334     0.0000 0
+M  V30 24 C     9.0678     5.2636     0.0000 0
+M  V30 25 H    13.9773     5.2676     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 25 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 18 23
+M  V30 29 1 22 24
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30  25) -
+M  V30 CBONDS=(29 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28 29) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   11.9731    1.8014    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="18">
+          <RX>
+            <RX.ID>14587543</RX.ID>
+            <RX01>
+              <RX.RXRN>9283985</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>20</sub>N<sub>2</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9286145</RX.PXRN>
+              <RX.PRO>C<sub>20</sub>H<sub>22</sub>N<sub>2</sub>O</RX.PRO>
+            </RX02>
+            <RX.BLC>9283985</RX.BLC>
+            <RX.BLC>9286145</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>4/8CF41()|88F42(0405060A)|80F62()|80F42(0D)|40F62()|40F61()|08F42(080A0C)|08F42(0B)|01E51(0F12)|01E51(13)|01E45(10)|01E44(111214)|01E42()|01E41(15)|01D45(1116)|01D45(1215)|01D45(17)|01D44()|01D41(14)|01D41()|01D41()|01C45(18)|01C45(19)|01B45(19)|01B45()|00E41()|</RX.TRANS>
+              <RX.BIN>80301</RX.BIN>
+              <RX.BFREQ>70</RX.BFREQ>
+              <RX.QRY0>4/8CF41()|88F42(040506*)|80F62()|80F42(*)|40F62()|40F61()|08F42(08*)|08F42(*)|*</RX.QRY0>
+              <RX.QRY1>4/8CF41()|88F42(040506*)|80F62()|80F42(*)|40F62()|40F61()|08F42(08*)|08F42(*)|01E51(*)|01E51(*)|01E45(*)|01E44(*)|01E42(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>4/8CF41()|88F42(0405060A)|80F62()|80F42(0D)|40F62()|40F61()|08F42(080A0C)|08F42(0B)|01E51(*)|01E51(*)|01E45(*)|01E44(*)|01E42(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>4/8CF41()|88F42(0405060A)|80F62()|80F42(0D)|40F62()|40F61()|08F42(080A0C)|08F42(0B)|01E51(*)|01E51(*)|01E45(*)|01E44(*)|01E42(*)|01E41(*)|01D45(*)|01D45(*)|01D45(*)|01D44(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>4/8CF41()|88F42(0405060A)|80F62()|80F42(0D)|40F62()|40F61()|08F42(080A0C)|08F42(0B)|01E51(0F12*)|01E51(13*)|01E45(10*)|01E44(111214*)|01E42(*)|01E41(15*)|01D45(11*)|01D45(1215*)|01D45(*)|01D44(*)|01D41(14*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>4/8CF41()|88F42(0405060A)|80F62()|80F42(0D)|40F62()|40F61()|08F42(080A0C)|08F42(0B)|01E51(0F12*)|01E51(13*)|01E45(10*)|01E44(111214*)|01E42(*)|01E41(15*)|01D45(11*)|01D45(1215*)|01D45(*)|01D44(*)|01D41(14*)|01D41(*)|01D41(*)|01C45(*)|01C45(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJztV8tu2zAQvOcreMi1BLl8SLwUcColBWo7gGMUzSkIihx7KYp+f5dLyiIpJRXltCiQCo6trJaj0b7EuTx82V/gwZjEz8Xl7nbr/zm83/3UXCQHdN6DyWBk/hDpOa4CzaDF09mPc459BnS/8O6aGyM8HgOuhRIjHPvAnoOgjwwnhGK4aoFQJHcAFSiQoGjeKk0oimsb8JahqARF8Ua2q7jojIsyMnJRWlVwMQmK5SDNfHT3L6PY2egK7qyseKImQ3FKropum8UFWivDmZY1KC7LkRA6xsVYszwuUsxmujIuUmYoypkhLjWZlmntNlzoVVUn09odu1Fw3YoKlLR2x6qrRclrF9euybRMa3fsaazimqqTae0CFzZ0DyBKVi+/QUlrd8xRbb2ktTv2UeUTgUhQJNcQMoO90LgU5fZFFJajNNaKiGeyJ6pAGasEeJtz+U1PpyjjlEKUNuujj0tRJL0Q5NSqZq161mrCKzS1Ag3U0hdoQE6toKcIisZg6atorEFh1TSmSl9NY6f0NTRGSl87ezdLw6K0NtT8JW5DzVz6ttScpa+jZit8pZhjJkNLlVZJHEqrosYprWbWaqk9SmtD1oIvEgA59UUrTHzRESYx2zF2d7yn7OGVbnP0NRt/lf8lj82WLvsw0oYLWFihGZWYz5EvH58oXwSUck/LB83f0gfEpEjk5cvQB9sH0ZeOfzxfFp46rgJNK65e7d4Dklpyb/xDdPAlgn7QEkJ3JIRdt726ebg+bG52/f74cHfsD72fMeG4Dq5d5OtngLM0998JbuJ06Tb+e7PdDk74MLSuD+u+P359+vb442kMWihA3A6fiEAkEu7/8Km/Z9mREAEy4MsrvlLxxazVAiLADiMDFRMwMlDLGagAjVumYXOMG68FDFRgcOhvmINWuZau9fvu78oCERJ5piwQMfbnyQJaq07xWycLmlVcJrIgclG6Ji4TWTAf3VpZENeeKQtWRXciC0Q4w81iBcpEFsS4nCcLmjVxmcqCIS41mZ7KAlp7tiyIa8+UBatQClnQuDWZnsoCWkub6AqUPyQL4tr1sqDBTa+IXIqertiKj91YGZdCXBgzTExZk+mMC764nRpQdLMSZZxSJAtSlLcqC2RhnW5m36AsULNb/WfFwowAaMJutrAGWVD4ool2vJl1kAV+kz0rC5i/9l8evIY8wHcqDmz2j8gDuv1yeXD3+vIgMqiSB4FBaDCmRwZ6OQMdk2FPW+NlDHQmUKzUJ4HyC4Aj9pg=</RX.RXNFILE>
+            <RX.REG>758b346998d361a8bbe87c70eb22d7e4</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>306.407</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>4</RXD.STP>
+            <RXD.MID>Reaction-ID:14587543-Steps:9223123;9223124;9223741;9204343</RXD.MID>
+            <RXD.MTEXT>1: 100 percent / NaBH<sub>4</sub>; CF<sub>3</sub>CO<sub>2</sub>H / benzene / 12 h / 0 - 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2: 30 percent / pyridinium dichromate; celite / CH<sub>2</sub>Cl<sub>2</sub> / 72 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>3: 93 percent / TMSI / CHCl<sub>3</sub> / 6 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>4: Li<sub>2</sub>CO<sub>3</sub> / dimethylformamide / 24 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11343078</RXD.RGTXRN>
+                <RXD.RGT>sodium tetrahydroborate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>11460878</RXD.RGTXRN>
+                <RXD.RGT>dipyridinium dichromate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>1731136</RXD.RGTXRN>
+                <RXD.RGT>trimethylsilyl iodide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>19261966</RXD.RGTXRN>
+                <RXD.RGT>Celite</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>3999191</RXD.RGTXRN>
+                <RXD.RGT>lithium carbonate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>742035</RXD.RGTXRN>
+                <RXD.RGT>trifluoroacetic acid</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1730800</RXD.SOLXRN>
+                <RXD.SOL>dichloromethane</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>1731042</RXD.SOLXRN>
+                <RXD.SOL>chloroform</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>969212</RXD.SOLXRN>
+                <RXD.SOL>benzene</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9283985">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283985
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5699     4.7492     0.0000 0
+M  V30 2 C     5.4021     4.2681     0.0000 0
+M  V30 3 C     4.8541     5.8082     0.0000 0
+M  V30 4 C     3.7379     4.2681     0.0000 0
+M  V30 5 C     4.3711     5.6892     0.0000 0
+M  V30 6 N     6.2351     4.7492     0.0000 0
+M  V30 7 C     5.4021     3.3071     0.0000 0
+M  V30 8 C     5.9510     5.8082     0.0000 0
+M  V30 9 C     4.3060     6.7582     0.0000 0
+M  V30 10 N     3.0239     4.9112     0.0000 0
+M  V30 11 C     3.7379     3.3071     0.0000 0
+M  V30 12 C     3.4150     5.7893     0.0000 0
+M  V30 13 C     7.0682     4.2681     0.0000 0
+M  V30 14 C     4.5699     2.8262     0.0000 0
+M  V30 15 C     6.2351     2.8262     0.0000 0
+M  V30 16 C     6.5001     6.7582     0.0000 0
+M  V30 17 C     4.8541     7.7081     0.0000 0
+M  V30 18 C     2.0829     4.7111     0.0000 0
+M  V30 19 C     7.0682     3.3071     0.0000 0
+M  V30 20 C     5.9510     7.7081     0.0000 0
+M  V30 21 O     1.4398     5.4250     0.0000 0
+M  V30 22 O     1.7859     3.7972     0.0000 0
+M  V30 23 C     0.4999     5.2251     0.0000 0
+M  V30 24 H     5.4021     5.2291     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 2 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    2.9840    1.7662    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9286145">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9286145
+M  V30 BEGIN ATOM
+M  V30 1 C    13.0250     4.7492     0.0000 0
+M  V30 2 C    13.8569     4.2680     0.0000 0
+M  V30 3 C    13.3089     5.8081     0.0000 0
+M  V30 4 C    12.1920     4.2680     0.0000 0
+M  V30 5 C    12.8259     5.6891     0.0000 0
+M  V30 6 N    14.6900     4.7492     0.0000 0
+M  V30 7 C    13.8569     3.3070     0.0000 0
+M  V30 8 C    14.4058     5.8081     0.0000 0
+M  V30 9 C    12.7608     6.7581     0.0000 0
+M  V30 10 N    11.4788     4.9111     0.0000 0
+M  V30 11 C    12.1920     3.3070     0.0000 0
+M  V30 12 C    11.8699     5.7892     0.0000 0
+M  V30 13 C    15.5230     4.2680     0.0000 0
+M  V30 14 C    13.0250     2.8261     0.0000 0
+M  V30 15 C    14.6900     2.8261     0.0000 0
+M  V30 16 C    14.9538     6.7581     0.0000 0
+M  V30 17 C    13.3089     7.7080     0.0000 0
+M  V30 18 C    10.5378     4.7110     0.0000 0
+M  V30 19 C    15.5230     3.3070     0.0000 0
+M  V30 20 O    16.3549     4.7492     0.0000 0
+M  V30 21 C    14.4058     7.7080     0.0000 0
+M  V30 22 C    10.0290     5.5261     0.0000 0
+M  V30 23 C     9.0680     5.4932     0.0000 0
+M  V30 24 H    13.8569     5.2290     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 22 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   11.9115    1.7661    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="19">
+          <RX>
+            <RX.ID>14587544</RX.ID>
+            <RX01>
+              <RX.RXRN>9283986</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>22</sub>N<sub>2</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9279768</RX.PXRN>
+              <RX.PRO>C<sub>17</sub>H<sub>18</sub>N<sub>2</sub>O</RX.PRO>
+            </RX02>
+            <RX.BLC>9283986</RX.BLC>
+            <RX.BLC>9279768</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>3/8CF41(020507)|80F62()|80F51(040608)|40F42()|01E51(090B)|01E41(0A0C)|01E41(0D)|01E41(0E)|01D45(0F10)|01D41(0B0E0F)|01D41(11)|01D41(12)|01D41(11)|01D41()|01C45(13)|01C45(14)|01C42(12)|01C42()|01B45(15)|01B45(15)|01A45()|00E62()|00E61()|00D41()|</RX.TRANS>
+              <RX.BIN>116316</RX.BIN>
+              <RX.BFREQ>1330</RX.BFREQ>
+              <RX.QRY0>3/8CF41(02*)|80F62()|80F51(04*)|40F42()|*</RX.QRY0>
+              <RX.QRY1>3/8CF41(02*)|80F62()|80F51(04*)|40F42()|01E51(*)|01E41(*)|01E41(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>3/8CF41(020507)|80F62()|80F51(040608)|40F42()|01E51(*)|01E41(*)|01E41(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>3/8CF41(020507)|80F62()|80F51(040608)|40F42()|01E51(*)|01E41(*)|01E41(*)|01E41(*)|01D45(*)|01D41(*)|01D41(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>3/8CF41(020507)|80F62()|80F51(040608)|40F42()|01E51(090B*)|01E41(0A0C*)|01E41(0D*)|01E41(0E*)|01D45(*)|01D41(0B0E*)|01D41(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>3/8CF41(020507)|80F62()|80F51(040608)|40F42()|01E51(090B*)|01E41(0A0C*)|01E41(0D*)|01E41(0E*)|01D45(*)|01D41(0B0E*)|01D41(*)|01D41(*)|01D41(*)|01D41(*)|01C45(*)|01C45(*)|01C42(*)|01C42(*)|*</RX.QRY5>
+              <RX.QRY6>3/8CF41(020507)|80F62()|80F51(040608)|40F42()|01E51(090B)|01E41(0A0C)|01E41(0D)|01E41(0E)|01D45(0F10)|01D41(0B0E0F)|01D41(11)|01D41(12)|01D41(11)|01D41()|01C45(13)|01C45(14)|01C42(12)|01C42()|01B45(*)|01B45(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJzVV01vEzEQvfdX+MAVyx6PvfYFKSWhSCRFSiMEpwqhHrkgxO9nPN7EH1nATsvXattsJrNvx+M3s2+e7d/fXtEhhKbz6tnu7TZ+2b/YfUOpigPW0UPoZBTxUOU13QUowNPl4hlCEO+A3K+iO0prVcQTIFEZleHES/EjCD51umAUK40HRtEyAAygQIGC0htkFCPRJbw+FFOgGDlpf1EsWMVirJ5jMWgGYrEFipOg7XJ2b3+O4hazq2RwemBFU4USjL4ou77KC3in0xXqEZRQ7ZFSOOfFOtufF60Wd3owL1pXKCbYY15GdlqX3J2kwotYp0vu5mpUEr0aQCm5m1k3ilJzl+69ZKd1yd1c08TiEdbpkrsglUvVA4RS8eUXrFOLezTKl7ICch2NrqisAC0R0s5QLUyhRHnbvyItJ+fUjGerFQ2gZJaA9HUsA9nNXYpQfFVHr3tRNL8Q9LnVLFpx0WrTK7S0AjfU1he4QZ5bAc8RDLfB1tdwW4PGitymWgTkttMiWG4jrdUtPs1xs2itExd/G8PExdz6ei7O1jdwsTW+Wi1FplMxtFbNMbRWw5RvrXbR6gSoc+vE1iZeCgDOMxmtcOZLjnCWs50Qd4cPTB/6Zb06RM7On2b+xPjJnqstu8V0svAC9kp3RxslNNIoblgkA299DC8mLz46JsaWSOwV6RiTHpMZKRSXGdkfl0B3AfId10/27COS6Xk2/RE6RKqQH3hGWB8YYbfeXt/cv9qvbnab28P93WGz38Rek45XyXU9xxt7QXDc/58raecus17F/6vt9uhEi+H7Num+Lx8/PXz++PUhJy0RkWTxKRCYA0nPv3+z+SCqowgE2EAvsfnVSi9oNB2BgLjLEZh5A3IEpj8Ck6BJOh1FMgmwjgiM2OcIUoEJzBFgfwTIBiPdSRr3RYApgv3mRgTwJngXv25u148cUDQzTC2e9YBComyCkK4MupDhRgYUkA4xpCvv/ABKPaAA2hnFTjiAUg8oxxXRkKFGUJoBhfYj4SmrBlBKkZfzQlWhLx1QtPR6UpfsUSnyiJ3Bz7GQ2lP9KLU8M2a6aI9KeZbzgnLy0I9SjRZ5j0jYR1r3Zrcac5D6lZt32sPAiqoBJe8R1b4ZkNDVgJJRBrlbDSgkv71XKc9D1VgNKLkalXR+ZEX1cE1i1ae1DbGuGlDyis7qaGC0yNklST75EmVAzucKGM1LPaIfuxSNXL7i7v8m5/UTyfnWuoD7T8v5BYmuF0W+WRT5Sc63Ytwu+vbL+b8txt2PBPFvEuCqV4A/SnQ7w52RRXePzvtNopvkwKmJeJ9eYn9WdJMIOAk/VL4jgqcX3eYkYP0cy4DonsLk/FF0fwdBbuOe</RX.RXNFILE>
+            <RX.REG>5cb5515897d9f6771d83aaa34fec9d94</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>266.343</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>2</RXD.STP>
+            <RXD.MID>Reaction-ID:14587544-Steps:9223124;9223741</RXD.MID>
+            <RXD.MTEXT>1: 30 percent / pyridinium dichromate; celite / CH<sub>2</sub>Cl<sub>2</sub> / 72 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2: 93 percent / TMSI / CHCl<sub>3</sub> / 6 h / Heating</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11460878</RXD.RGTXRN>
+                <RXD.RGT>dipyridinium dichromate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>1731136</RXD.RGTXRN>
+                <RXD.RGT>trimethylsilyl iodide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>19261966</RXD.RGTXRN>
+                <RXD.RGT>Celite</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1730800</RXD.SOLXRN>
+                <RXD.SOL>dichloromethane</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>1731042</RXD.SOLXRN>
+                <RXD.SOL>chloroform</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9283986">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283986
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5699     4.0018     0.0000 0
+M  V30 2 C     5.4021     3.5208     0.0000 0
+M  V30 3 C     4.8540     5.0608     0.0000 0
+M  V30 4 C     3.7380     3.5208     0.0000 0
+M  V30 5 C     4.3710     4.9419     0.0000 0
+M  V30 6 N     6.2349     4.0018     0.0000 0
+M  V30 7 C     5.4021     2.5599     0.0000 0
+M  V30 8 C     5.9510     5.0608     0.0000 0
+M  V30 9 C     4.3060     6.0109     0.0000 0
+M  V30 10 N     3.0239     4.1638     0.0000 0
+M  V30 11 C     3.7380     2.5599     0.0000 0
+M  V30 12 C     3.4148     5.0418     0.0000 0
+M  V30 13 C     7.0679     3.5208     0.0000 0
+M  V30 14 C     4.5699     2.0787     0.0000 0
+M  V30 15 C     6.2349     2.0787     0.0000 0
+M  V30 16 C     6.5000     6.0109     0.0000 0
+M  V30 17 C     4.8540     6.9610     0.0000 0
+M  V30 18 C     2.0828     3.9638     0.0000 0
+M  V30 19 C     7.0679     2.5599     0.0000 0
+M  V30 20 C     5.9510     6.9610     0.0000 0
+M  V30 21 O     1.4398     4.6780     0.0000 0
+M  V30 22 O     1.7858     3.0499     0.0000 0
+M  V30 23 C     0.4999     4.4779     0.0000 0
+M  V30 24 H     5.4021     4.4818     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    2.9839    1.0187    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9279768">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 21 25 1 0 0 REGNO=9279768
+M  V30 BEGIN ATOM
+M  V30 1 C    11.5528     5.2364     0.0000 0
+M  V30 2 C    10.7250     4.7584     0.0000 0
+M  V30 3 C    12.3259     4.4644     0.0000 0
+M  V30 4 C    11.5528     6.1944     0.0000 0
+M  V30 5 C    12.4638     4.9403     0.0000 0
+M  V30 6 N    10.7250     3.8024     0.0000 0
+M  V30 7 C     9.8969     5.2364     0.0000 0
+M  V30 8 C    11.7788     3.5195     0.0000 0
+M  V30 9 C    13.4177     4.4644     0.0000 0
+M  V30 10 C    10.7250     6.6724     0.0000 0
+M  V30 11 N    12.4638     6.4893     0.0000 0
+M  V30 12 C    13.0268     5.7144     0.0000 0
+M  V30 13 C     9.8969     3.3244     0.0000 0
+M  V30 14 C     9.8969     6.1944     0.0000 0
+M  V30 15 C     9.0679     4.7584     0.0000 0
+M  V30 16 C    12.3259     2.5743     0.0000 0
+M  V30 17 C    13.9637     3.5195     0.0000 0
+M  V30 18 C     9.0679     3.8024     0.0000 0
+M  V30 19 O     9.8969     2.3673     0.0000 0
+M  V30 20 C    13.4177     2.5743     0.0000 0
+M  V30 21 H    11.5528     4.2793     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 21 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10
+M  V30 11 1 4 11 CFG=1
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 14
+M  V30 20 1 11 12
+M  V30 21 1 13 18
+M  V30 22 2 13 19
+M  V30 23 1 15 18
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(21 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21) -
+M  V30 CBONDS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   10.7158    1.3073    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="20">
+          <RX>
+            <RX.ID>14587545</RX.ID>
+            <RX01>
+              <RX.RXRN>9283986</RX.RXRN>
+              <RX.RCT>C<sub>19</sub>H<sub>22</sub>N<sub>2</sub>O<sub>2</sub></RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9286145</RX.PXRN>
+              <RX.PRO>C<sub>20</sub>H<sub>22</sub>N<sub>2</sub>O</RX.PRO>
+            </RX02>
+            <RX.BLC>9283986</RX.BLC>
+            <RX.BLC>9286145</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>4/8CF41()|88F42(04050608)|80F62()|80F42(09)|40F62()|40F61()|01E51(0B0C)|01E51(0D0E)|01E42()|01E41(0F)|01D45(1011)|01D41(1213)|01D41(1314)|01D41(15)|01D41(12)|01C45(1316)|01C45(17)|01C42(18)|01C41(15)|01C41(18)|01C41()|01B45(19)|01B45(19)|01B42()|01A45()|00E41()|</RX.TRANS>
+              <RX.BIN>80311</RX.BIN>
+              <RX.BFREQ>553</RX.BFREQ>
+              <RX.QRY0>4/8CF41()|88F42(040506*)|80F62()|80F42(*)|40F62()|40F61()|*</RX.QRY0>
+              <RX.QRY1>4/8CF41()|88F42(040506*)|80F62()|80F42(*)|40F62()|40F61()|01E51(*)|01E51(*)|01E42(*)|01E41(*)|*</RX.QRY1>
+              <RX.QRY2>4/8CF41()|88F42(04050608)|80F62()|80F42(09)|40F62()|40F61()|01E51(*)|01E51(*)|01E42(*)|01E41(*)|*</RX.QRY2>
+              <RX.QRY3>4/8CF41()|88F42(04050608)|80F62()|80F42(09)|40F62()|40F61()|01E51(*)|01E51(*)|01E42(*)|01E41(*)|01D45(*)|01D41(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>4/8CF41()|88F42(04050608)|80F62()|80F42(09)|40F62()|40F61()|01E51(0B0C*)|01E51(0D0E*)|01E42(*)|01E41(0F*)|01D45(*)|01D41(*)|01D41(*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>4/8CF41()|88F42(04050608)|80F62()|80F42(09)|40F62()|40F61()|01E51(0B0C*)|01E51(0D0E*)|01E42(*)|01E41(0F*)|01D45(*)|01D41(*)|01D41(*)|01D41(*)|01D41(*)|01C45(*)|01C45(*)|01C42(*)|01C41(*)|01C41(*)|01C41(*)|*</RX.QRY5>
+            </RX04>
+            <RX.RXNFILE>eJztV01P3DAQvfMrfOBayx5/JL5UWppApe4u0rKqygmhimMvVdXf3/HYwY4TIM620ANRYLOz45eX+Yrf+eHb/gwPxiSeZ+e7663/cvi4+625yA7ovAeTwcj8IfJrXAWaQYuXs6dzjn0FdD/z7pobIzweA66FEgmOfWJPQdApwwWhGK5aIBTJHUAFCmQomrdKE4ri2ga8ZSgqQ1G8ke0qLnrERRkZuSitKriYDMVykGY+uvvnUexsdAV3VlY8UTNCcUquim47igu0VoYrLWtQ3ChHQugYF2PN8rhIMZvpyrhIOUJRzgxxqcm0zGu34UKvqjqZ127qRsF1KypQ8tpNVVeLMq5dXLsm0zKv3dTTWMU1VSfz2gUubOgeQJRRvbyAktduylFtveS1m/qo8olAZCiSawiZwV5oXI5y/SwKG6M01oqIZ0ZPVIGSqgR4O+byQk/nKGlKIUo76qPPS1EkvRDk1KpmrXrWasIrNLcCDdTSF2hATq2gpwiKxmDpq2isQWHVNKZKBE1jp0QwNEZKq529m6VhUVobav6SQ0PNXPq21Jylr6NmK3ylmGMmQ0uVVkkcSquiximtZtZqqT1Ka0PWgi8SgGkkvRUmvugIk5jtGLs53lL54C/d5uhrNn6q+Kn9J3lutuTmw0kbLyCvsNrbMKC+jHzCfDFQ6j09Hzx/ax8YkyORly9HH3QfTF9C/jF99ftHwFWgacXFX7v3gKSW3Bv/EB18qaAftITQHQlh120vru4uD5urXb8/3t0c+0PvZ004LoNrF/n6WeAszf8Pgps4ZbqN/7/ZbgcnfBha14d1P++/P/y4//WQghYKEbfFj0QgEgn3v/vS37LRkREBMuBLLL5a8QWt1QIiwG4SAxUTkBio5QxUgMat07BJxg3YAgaKHRKD0GBMJwZ6OQNNBsXt49Z4GQMdGBz6K+agVa61/mu/715XoNDKkwWKiNk/TaCIEMkhfusESrOKy0SgRC5K18RlIlDmo1srUOLaEwXKquhOBIoIV7htrUCZCJQYl9MESrMmLlOBMsSlJtNTgUJrTxYoce2JAmUVSiFQGrcm01OBQmtpO1+B8o8ESly7XqA0uP0WkUvR0xWiIHVjZVwKmWPMMDFlTaZHXHDr4NSAopuVKGlKkUDJUd4FyrtAyaxzouNJ2TIjRZqwny6sQaAUvmiiPffI+i5QXk+g4DsVBzb7TwQK3f5NBUpk8HYCZdgarxEoVmozCJQ/ckkQQQ==</RX.RXNFILE>
+            <RX.REG>0d64ba5ea59a0badde3de62fbb811067</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>306.407</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>3</RXD.STP>
+            <RXD.MID>Reaction-ID:14587545-Steps:9223124;9223741;9204343</RXD.MID>
+            <RXD.MTEXT>1: 30 percent / pyridinium dichromate; celite / CH<sub>2</sub>Cl<sub>2</sub> / 72 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXD.MTEXT>2: 93 percent / TMSI / CHCl<sub>3</sub> / 6 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>3: Li<sub>2</sub>CO<sub>3</sub> / dimethylformamide / 24 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>11460878</RXD.RGTXRN>
+                <RXD.RGT>dipyridinium dichromate</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>1731136</RXD.RGTXRN>
+                <RXD.RGT>trimethylsilyl iodide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>19261966</RXD.RGTXRN>
+                <RXD.RGT>Celite</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>3999191</RXD.RGTXRN>
+                <RXD.RGT>lithium carbonate</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1730800</RXD.SOLXRN>
+                <RXD.SOL>dichloromethane</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>1731042</RXD.SOLXRN>
+                <RXD.SOL>chloroform</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9283986">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9283986
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5699     4.7492     0.0000 0
+M  V30 2 C     5.4021     4.2681     0.0000 0
+M  V30 3 C     4.8541     5.8082     0.0000 0
+M  V30 4 C     3.7379     4.2681     0.0000 0
+M  V30 5 C     4.3711     5.6892     0.0000 0
+M  V30 6 N     6.2351     4.7492     0.0000 0
+M  V30 7 C     5.4021     3.3071     0.0000 0
+M  V30 8 C     5.9510     5.8082     0.0000 0
+M  V30 9 C     4.3060     6.7582     0.0000 0
+M  V30 10 N     3.0239     4.9112     0.0000 0
+M  V30 11 C     3.7379     3.3071     0.0000 0
+M  V30 12 C     3.4150     5.7893     0.0000 0
+M  V30 13 C     7.0682     4.2681     0.0000 0
+M  V30 14 C     4.5699     2.8262     0.0000 0
+M  V30 15 C     6.2351     2.8262     0.0000 0
+M  V30 16 C     6.5001     6.7582     0.0000 0
+M  V30 17 C     4.8541     7.7081     0.0000 0
+M  V30 18 C     2.0829     4.7111     0.0000 0
+M  V30 19 C     7.0682     3.3071     0.0000 0
+M  V30 20 C     5.9510     7.7081     0.0000 0
+M  V30 21 O     1.4398     5.4250     0.0000 0
+M  V30 22 O     1.7859     3.7972     0.0000 0
+M  V30 23 C     0.4999     5.2251     0.0000 0
+M  V30 24 H     5.4021     5.2291     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 1 15 19
+M  V30 24 1 16 20
+M  V30 25 2 17 20
+M  V30 26 1 18 21
+M  V30 27 2 18 22
+M  V30 28 1 21 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    2.9840    1.7662    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9286145">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9286145
+M  V30 BEGIN ATOM
+M  V30 1 C    13.0250     4.7492     0.0000 0
+M  V30 2 C    13.8569     4.2680     0.0000 0
+M  V30 3 C    13.3089     5.8081     0.0000 0
+M  V30 4 C    12.1920     4.2680     0.0000 0
+M  V30 5 C    12.8259     5.6891     0.0000 0
+M  V30 6 N    14.6900     4.7492     0.0000 0
+M  V30 7 C    13.8569     3.3070     0.0000 0
+M  V30 8 C    14.4058     5.8081     0.0000 0
+M  V30 9 C    12.7608     6.7581     0.0000 0
+M  V30 10 N    11.4788     4.9111     0.0000 0
+M  V30 11 C    12.1920     3.3070     0.0000 0
+M  V30 12 C    11.8699     5.7892     0.0000 0
+M  V30 13 C    15.5230     4.2680     0.0000 0
+M  V30 14 C    13.0250     2.8261     0.0000 0
+M  V30 15 C    14.6900     2.8261     0.0000 0
+M  V30 16 C    14.9538     6.7581     0.0000 0
+M  V30 17 C    13.3089     7.7080     0.0000 0
+M  V30 18 C    10.5378     4.7110     0.0000 0
+M  V30 19 C    15.5230     3.3070     0.0000 0
+M  V30 20 O    16.3549     4.7492     0.0000 0
+M  V30 21 C    14.4058     7.7080     0.0000 0
+M  V30 22 C    10.0290     5.5261     0.0000 0
+M  V30 23 C     9.0680     5.4932     0.0000 0
+M  V30 24 H    13.8569     5.2290     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 22 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   11.9115    1.7661    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+        <reaction index="21">
+          <RX>
+            <RX.ID>14588068</RX.ID>
+            <RX01>
+              <RX.RXRN>9286046</RX.RXRN>
+              <RX.RCT>methyl (3aSR,11bRS,13aRS)-9-oxo-2,3,9,10,11,11b,13,13a-octahydro-1H-pyrido[1,2,3-lm]pyrrolo[2,3-d]carbazole-1-carboxylate</RX.RCT>
+            </RX01>
+            <RX02>
+              <RX.PXRN>9286145</RX.PXRN>
+              <RX.PRO>C<sub>20</sub>H<sub>22</sub>N<sub>2</sub>O</RX.PRO>
+            </RX02>
+            <RX.BLC>9286046</RX.BLC>
+            <RX.BLC>9286145</RX.BLC>
+            <RX.NVAR>1</RX.NVAR>
+            <RX04>
+              <RX.TRANS>0/88F42(02030405)|80F42(06)|40F62()|40F61()|01E51(0708)|01E42()|01D41(090A)|01D41(0B)|01C41(0B0C0E)|01C41(0D)|01C41()|01B45(1011)|01B42(12)|01B41(0F12)|01A51(1015)|01A45(13)|01A45(14)|01A42(16)|01945(18)|01945(18)|01942(1719)|01941(19)|01862()|01845()|01841()|00E41()|</RX.TRANS>
+              <RX.BIN>227926</RX.BIN>
+              <RX.BFREQ>951</RX.BFREQ>
+              <RX.QRY0>0/88F42(020304*)|80F42(*)|40F62()|40F61()|*</RX.QRY0>
+              <RX.QRY1>0/88F42(020304*)|80F42(*)|40F62()|40F61()|01E51(*)|01E42(*)|*</RX.QRY1>
+              <RX.QRY2>0/88F42(02030405)|80F42(06)|40F62()|40F61()|01E51(*)|01E42(*)|*</RX.QRY2>
+              <RX.QRY3>0/88F42(02030405)|80F42(06)|40F62()|40F61()|01E51(*)|01E42(*)|01D41(*)|01D41(*)|*</RX.QRY3>
+              <RX.QRY4>0/88F42(02030405)|80F42(06)|40F62()|40F61()|01E51(0708*)|01E42(*)|01D41(*)|01D41(*)|*</RX.QRY4>
+              <RX.QRY5>0/88F42(02030405)|80F42(06)|40F62()|40F61()|01E51(0708*)|01E42(*)|01D41(*)|01D41(*)|01C41(*)|01C41(*)|01C41(*)|*</RX.QRY5>
+              <RX.QRY6>0/88F42(02030405)|80F42(06)|40F62()|40F61()|01E51(0708)|01E42()|01D41(090A)|01D41(0B)|01C41(0B0C0E)|01C41(0D)|01C41()|01B45(*)|01B42(*)|01B41(*)|*</RX.QRY6>
+            </RX04>
+            <RX.RXNFILE>eJztV8Fu2zAMvfcrdNh1hkRRsnQZkC5pByxJgTQY1lNRDD3uMgz7/omUHMuyl1ruumLDDLdxGOr5iaQovTeHz/uLcAmhwn3xZnezpS+Hd7sf2MjsgjV5CBWNgi6ZP4dRYAT48Dh5e+/FJwjuF+SOjTEW6QkalBZ6OPFe/AqCbxUfGMU02ksjmJYHU4ECGQo2DiVz0Q3aVs9H0RmKblrQegkXHHDRpk1cNNZwMRmKbQC0mYzu/jyKnYyubLwFNZ9LO0Dx2psl0XWDuIAHjE+oHM5H8YMcSel0jIuxbn5clJzMdGVclBqgaO91igu6+XFRee22jTStpafKqlN57farUTboaLJzUfLa7auuFmVYu+icXZBpldduv6ZDFVtv5qPktQuNtHH1QEBxFdHNa7fPUW29+AGK80RuYk3fnEUBmaH0q7EyLpDXrmoQ4jzCinI6r93zXLo7obTWQ8IzWi1D6WsNGjfk8kRnGMal63WEMuhSH+aiKN5W1NiqJ604aTVxI86twG259AVus2MrTCBobqalr+bmCIUVudmVCMjNq0Qw3IxKq518m+WWU1pbbiElh5ZbQunreImXvp6XbOGr5BQzFRdmaVXMobRqXn5jKy2ngkMgO+VredGU1patJYITMME3WPXINzjCiO9OiNvjHRdV+GW9OlIlp0+dPpE+2XO1ZTcKMh/qgL3iaLJRs6JWE4JFJcIFQVMhipREer0ZIJEHFSmlgkJMhUWBoqmGUTwNSnQcdfnb3t8h4dz3hz8qouAHwQ88o6yPjLJbby+v768Oq+vdZn+8vz1uDhvqRPG6iq7rxJl3cMe75lvZmNZLsq1X9H+13XZOYUI8bhPHfXv48vj14ftjH7yY9nD0PhGBRCS+//7j5k4MrowId0/aKNP2HQ4BGLeG80RA3PYMdEpCz0DPZ6AjdDiedQdxtGYGAy0OPYNYzgJ7BjifAaZk2NPxex4DjAwOm2vhwVmJlr5u9utniiDkypKT91gExZG0pWvZw1WKIAcyZR+gAqUQQRpljGQooQqUQgSpdhGXUgSpxEVjTVwKEaTMdHTrRJDr5uFtxaF2JIK6GdVFtxBBoU7jE6oalFIEYYqLsWZ+XEoRlDJdGZeRCDJdXGoyXYogdDy2supGIkimsQGuAqUQQcosQilEUNpQKjNdiqC0pumwX4NSiqCYGRJBpgKlEEEpR7X1UoigFNPRmq4UQWpJXAoRZEzXMVVNprs7yRfjdYeC7UKUvkuxCMpR/jb5gv/lyz8iX0iojOTLKwsV9npSKLyQSNFLRMqzBAqGhi2iQEkd6tUESnw9CRQ9g8gLCJTTIbk7gP1xgXI6Gs9jUAgUhaYTKD8BMlog5w==</RX.RXNFILE>
+            <RX.REG>e4a872c0a3e6b0758720339ce02fe3af</RX.REG>
+            <RX.RANK>73</RX.RANK>
+            <RX.SKW>nonmapped reaction</RX.SKW>
+            <RX.RTYP>full reaction</RX.RTYP>
+            <RX.RTYP>has multi-step</RX.RTYP>
+            <RX.RAVAIL>4</RX.RAVAIL>
+            <RX.PAVAIL>4</RX.PAVAIL>
+            <RX.MAXPUB>2002</RX.MAXPUB>
+            <RX.NUMREF>1</RX.NUMREF>
+            <RX.MAXPMW>306.407</RX.MAXPMW>
+            <RX.ED>2008/05/01</RX.ED>
+            <RX.UPD>2013/10/04</RX.UPD>
+          </RX>
+          <RXD>
+            <RXD.L>6371975</RXD.L>
+            <RXD.CL>Multi-step reaction</RXD.CL>
+            <RXD.SCO>20</RXD.SCO>
+            <RXD.STP>2</RXD.STP>
+            <RXD.MID>Reaction-ID:14588068-Steps:9223741;9204343</RXD.MID>
+            <RXD.MTEXT>1: 93 percent / TMSI / CHCl<sub>3</sub> / 6 h / Heating</RXD.MTEXT>
+            <RXD.MTEXT>2: Li<sub>2</sub>CO<sub>3</sub> / dimethylformamide / 24 h / 20 &#x00B0;C</RXD.MTEXT>
+            <RXDS01>
+              <RXD03>
+                <RXD.RGTXRN>1731136</RXD.RGTXRN>
+                <RXD.RGT>trimethylsilyl iodide</RXD.RGT>
+              </RXD03>
+              <RXD03>
+                <RXD.RGTXRN>3999191</RXD.RGTXRN>
+                <RXD.RGT>lithium carbonate</RXD.RGT>
+              </RXD03>
+              <RXD05>
+                <RXD.SOLXRN>1731042</RXD.SOLXRN>
+                <RXD.SOL>chloroform</RXD.SOL>
+              </RXD05>
+              <RXD05>
+                <RXD.SOLXRN>605365</RXD.SOLXRN>
+                <RXD.SOL>N,N-dimethyl-formamide</RXD.SOL>
+              </RXD05>
+              <RXD.DED>2008/05/01</RXD.DED>
+            </RXDS01>
+          </RXD>
+          <RY>
+            <RY.RCT rn="9286046">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 25 29 1 0 0 REGNO=9286046
+M  V30 BEGIN ATOM
+M  V30 1 C     4.5750     5.0111     0.0000 0
+M  V30 2 C     5.4093     4.5302     0.0000 0
+M  V30 3 C     4.8590     6.0724     0.0000 0
+M  V30 4 C     3.7421     4.5302     0.0000 0
+M  V30 5 C     4.3762     5.9524     0.0000 0
+M  V30 6 N     6.2422     5.0111     0.0000 0
+M  V30 7 C     5.4093     3.5671     0.0000 0
+M  V30 8 C     5.9582     6.0724     0.0000 0
+M  V30 9 C     4.3112     7.0233     0.0000 0
+M  V30 10 N     3.0271     5.1731     0.0000 0
+M  V30 11 C     3.7421     3.5671     0.0000 0
+M  V30 12 C     3.4181     6.0533     0.0000 0
+M  V30 13 C     7.0764     4.5302     0.0000 0
+M  V30 14 C     4.5750     3.0860     0.0000 0
+M  V30 15 C     6.2422     3.0860     0.0000 0
+M  V30 16 C     6.5073     7.0233     0.0000 0
+M  V30 17 C     4.8590     7.9746     0.0000 0
+M  V30 18 C     2.0850     4.9732     0.0000 0
+M  V30 19 C     7.0764     3.5671     0.0000 0
+M  V30 20 O     7.9104     5.0111     0.0000 0
+M  V30 21 C     5.9582     7.9746     0.0000 0
+M  V30 22 O     1.4409     5.6883     0.0000 0
+M  V30 23 O     1.7880     4.0582     0.0000 0
+M  V30 24 C     0.4999     5.4884     0.0000 0
+M  V30 25 H     5.4093     5.4922     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 25 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 18 23
+M  V30 29 1 22 24
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(25 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30  25) -
+M  V30 CBONDS=(29 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28 29) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="    3.4052    2.0260    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.RCT>
+            <RY.PRO rn="9286145">
+
+
+  0  0  0     0  0            999 V3000
+M  V30 BEGIN CTAB
+M  V30 COUNTS 24 28 1 0 0 REGNO=9286145
+M  V30 BEGIN ATOM
+M  V30 1 C    13.8674     5.0123     0.0000 0
+M  V30 2 C    14.6995     4.5314     0.0000 0
+M  V30 3 C    14.1514     6.0714     0.0000 0
+M  V30 4 C    13.0346     4.5314     0.0000 0
+M  V30 5 C    13.6684     5.9525     0.0000 0
+M  V30 6 N    15.5324     5.0123     0.0000 0
+M  V30 7 C    14.6995     3.5705     0.0000 0
+M  V30 8 C    15.2484     6.0714     0.0000 0
+M  V30 9 C    13.6034     7.0212     0.0000 0
+M  V30 10 N    12.3214     5.1743     0.0000 0
+M  V30 11 C    13.0346     3.5705     0.0000 0
+M  V30 12 C    12.7124     6.0523     0.0000 0
+M  V30 13 C    16.3656     4.5314     0.0000 0
+M  V30 14 C    13.8674     3.0893     0.0000 0
+M  V30 15 C    15.5324     3.0893     0.0000 0
+M  V30 16 C    15.7965     7.0212     0.0000 0
+M  V30 17 C    14.1514     7.9714     0.0000 0
+M  V30 18 C    11.3804     4.9744     0.0000 0
+M  V30 19 C    16.3656     3.5705     0.0000 0
+M  V30 20 O    17.1974     5.0123     0.0000 0
+M  V30 21 C    15.2484     7.9714     0.0000 0
+M  V30 22 C    10.8716     5.7893     0.0000 0
+M  V30 23 C     9.9104     5.7564     0.0000 0
+M  V30 24 H    14.6995     5.4923     0.0000 0
+M  V30 END ATOM
+M  V30 BEGIN BOND
+M  V30 1 1 1 2
+M  V30 2 1 1 3
+M  V30 3 1 1 4
+M  V30 4 1 1 5 CFG=1
+M  V30 5 1 2 6
+M  V30 6 1 2 7
+M  V30 7 1 2 24 CFG=1
+M  V30 8 1 3 8
+M  V30 9 2 3 9
+M  V30 10 1 4 10 CFG=1
+M  V30 11 1 4 11
+M  V30 12 1 5 12
+M  V30 13 1 6 8
+M  V30 14 1 6 13
+M  V30 15 2 7 14
+M  V30 16 1 7 15
+M  V30 17 2 8 16
+M  V30 18 1 9 17
+M  V30 19 1 10 12
+M  V30 20 1 10 18
+M  V30 21 1 11 14
+M  V30 22 1 13 19
+M  V30 23 2 13 20
+M  V30 24 1 15 19
+M  V30 25 1 16 21
+M  V30 26 2 17 21
+M  V30 27 1 18 22
+M  V30 28 2 22 23
+M  V30 END BOND
+M  V30 BEGIN SGROUP
+M  V30 1 DAT 1 -
+M  V30 ATOMS=(24 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24-
+M  V30 ) -
+M  V30 CBONDS=(28 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 2-
+M  V30 4 25 26 27 28) -
+M  V30 FIELDNAME="C" -
+M  V30 FIELDDISP="   12.7539    2.0293    DA    ALL  1       5" -
+M  V30 FIELDDATA="racemate"
+M  V30 END SGROUP
+M  V30 END CTAB
+M  END
+</RY.PRO>
+          </RY>
+        </reaction>
+      </reactions>
+    </citation>
+  </citations>
+</xf>

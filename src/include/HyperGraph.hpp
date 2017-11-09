@@ -47,7 +47,7 @@ struct ReactionNode
 	};
 
 
-	struct cmp //Compare function used to sort compounds on molecularWeight.
+	struct cmp //Compare function used to sort compounds on cost.
 	{
 		bool operator()(CompoundNode a, CompoundNode b){
 			return a.cost > b.cost;
@@ -259,7 +259,7 @@ public:
 		}
 		L.push_back(pair);
 		for ( int k = 0; k < K; k++) {
-			std::cout << k << std::endl;
+			std::cout << "k = " << k << std::endl;
 			if (L.empty()) {
 				break;
 			}
@@ -329,20 +329,20 @@ public:
   							if (c->cost > F) {
   								c->cost = F;
   								c->maxYieldEdge = reaction;	
-  								if(!vectorContainsCompoundNode(Q, *c)) {
+  								//if(!vectorContainsCompoundNode(Q, *c)) {
   									Q.push_back(*c); 
 									std::push_heap (Q.begin(),Q.end(), cmp());
-  								}
+  								//}
   								
   							}
   						}
   						else{
   							c->cost = c->molecularWeight;
   							c->maxYieldEdge = reaction;	
-  							if(!vectorContainsCompoundNode(Q, *c)) {
+  							//if(!vectorContainsCompoundNode(Q, *c)) {
   								Q.push_back(*c); 
 								std::push_heap (Q.begin(),Q.end(), cmp());
-  							}
+  							//}
   						}
   					}
   				}
@@ -638,7 +638,7 @@ public:
 		std::cout << std::endl;
 	}
 
-	void graphToGraphviz(std::string s) {
+	void graphToGraphviz(std::string s, CompoundNode &v, std::vector<int> &startingCompounds) {
 		std::ofstream graphFile;
 		std::cout << "Creating Graphviz Graph" << std::endl;
 		graphFile.open(s + ".gv");
@@ -650,8 +650,14 @@ public:
 				continue;
 			}
 			graphFile << "	R" << reaction.id << " [label = \"R" << reaction.id << ". Yield: " << reaction.yield << "\"]\n";
+		}
+
+		for(auto s : startingCompounds){
+			graphFile << "	" << s << " [color = green, fontcolor = green]\n";
 
 		}
+		graphFile << "	" << v.id << " [color = red, fontcolor = red]\n";
+
 
 		graphFile << "}\n";
 
