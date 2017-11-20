@@ -9,11 +9,11 @@ int main(int argc, char const *argv[])
     srand(time(0));
   
     if( argc < 4 ){
-        std::cout << "To few arguments. Must have 3 arguments: Number of Compounds and Number of Reactions" << std::endl;
+        std::cout << "To few arguments. Must have 3 arguments: Number of Compounds, Number of Reactions and K" << std::endl;
         exit(1);
     }
     if (argc > 4) {
-        std::cout << "To many arguments. Must have 3 arguments: Number of Compounds and Number of Reactions" << std::endl;
+        std::cout << "To many arguments. Must have 3 arguments: Number of Compounds, Number of Reactions and K" << std::endl;
         exit(1);
     }
 
@@ -41,7 +41,7 @@ int main(int argc, char const *argv[])
 
 	auto goal = h.getCompound(numberOfCompounds);
 	std::vector<int> startingCompound;
-	for (int i = 1; i <= numberOfReactions/4; i++) {
+	for (int i = 1; i <= numberOfReactions/2; i++) {
         startingCompound.push_back(i);
         auto com = h.getCompound(i);
         com->molecularWeight = 2;
@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
     dBest = h.yenHyp(*goal, startingCompound, atoi(argv[3]), false);
     h.printResults(dBest);
 
-    h.graphToGraphviz("Random");
+    h.graphToGraphviz("Random", *goal, startingCompound);
 
 	return 0;
 }

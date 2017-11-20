@@ -78,13 +78,15 @@ int main(int argc, char const *argv[])
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
 
-    h.graphToGraphviz("ThesisTest");
+    h.graphToGraphviz("ThesisTest", *goal, startingCompound);
 
-    auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
+    auto dBest = h.yenHyp(*goal, startingCompound, 9, false);
+    h.printResults(dBest);
+    
+    dBest = h.yenHyp(*goal, startingCompound, 9, true);
     h.printResults(dBest);
 
-    dBest = h.yenHyp(*goal, startingCompound, 9, false);
-    h.printResults(dBest);
+   
 
 	return 0;
 }

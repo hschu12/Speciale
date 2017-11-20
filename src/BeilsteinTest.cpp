@@ -6,8 +6,6 @@ int main(int argc, char const *argv[])
 {
 	HyperGraph h = createGraph(6000000, 1000000);
 
-	h.graphToGraphviz("MergedDump");
-
 	auto goal = h.getCompound(4989);
 
     auto start = h.getCompound(112069);
@@ -25,6 +23,8 @@ int main(int argc, char const *argv[])
 	startingCompound.push_back(112067);
 	startingCompound.push_back(112072);
 	startingCompound.push_back(3598088);
+
+	h.graphToGraphviz("MergedDump", *goal, startingCompound);
 
   	auto starttime = std::chrono::high_resolution_clock::now();
 

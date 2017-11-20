@@ -99,32 +99,8 @@
   \strng{namehash}{FRFCKR+1}
   \strng{fullhash}{FRFCKRMDSPF1}
   \field{note}{Unpublished Article}
-  \field{title}{Finding the K Best Synthesis Plans}
+  \field{title}{Finding the {K} Best Synthesis Plans}
   \field{year}{2017}
-\endentry
-
-\entry{Carsten}{thesis}{}
-  \name{author}{2}{}{%
-    {{}%
-     {L{\"u}tzen}{L.}%
-     {Carsten~Gr{\o}nbjerg}{C.~G.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Johansen}{J.}%
-     {Daniel~Fentz}{D.~F.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{LCGJDF1}
-  \strng{fullhash}{LCGJDF1}
-  \field{title}{A Computational and Mathematical Approach to Synthesis
-  Planning}
-  \list{institution}{1}{%
-    {University of Southern Denmark}%
-  }
-  \field{type}{mathesis}
-  \field{year}{2015}
 \endentry
 
 \entry{Yen}{article}{}
@@ -139,7 +115,7 @@
   \strng{fullhash}{YJY1}
   \field{number}{11}
   \field{pages}{712\bibrangedash 716}
-  \field{title}{Finding the K Shortest Loopless Paths in a Network}
+  \field{title}{Finding the {K} Shortest Loopless Paths in a Network}
   \field{volume}{17}
   \field{journaltitle}{Management Science}
   \field{month}{07}
@@ -166,8 +142,33 @@
   }
   \strng{namehash}{NLRAKAPD1}
   \strng{fullhash}{NLRAKAPD1}
-  \field{title}{Finding the K shortest hyperpaths: algorithms and applications}
+  \field{title}{Finding the {K} shortest hyperpaths: algorithms and
+  applications}
   \field{year}{2002}
+\endentry
+
+\entry{Carsten}{thesis}{}
+  \name{author}{2}{}{%
+    {{}%
+     {L{\"u}tzen}{L.}%
+     {Carsten~Gr{\o}nbjerg}{C.~G.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Johansen}{J.}%
+     {Daniel~Fentz}{D.~F.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{LCGJDF1}
+  \strng{fullhash}{LCGJDF1}
+  \field{title}{A Computational and Mathematical Approach to Synthesis
+  Planning}
+  \list{institution}{1}{%
+    {University of Southern Denmark}%
+  }
+  \field{type}{mathesis}
+  \field{year}{2015}
 \endentry
 
 \entry{VectorBool}{misc}{}

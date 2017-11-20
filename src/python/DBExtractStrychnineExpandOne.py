@@ -61,11 +61,7 @@ for r in rs:
 print("REACTIONS")
 for r in rs:
 	for c in r.educts:
-		print(r.id ,end='')
-		print("->")
-		print(c[1].id)
+		print(str(r.id)+"->"+str(c[1].id) )	
 	for c in r.products:
-		print(r.id ,end='')
-		print("->")
-		print(c[1].id)
+		print(str(c[1].id)+"->"+str(r.id) )
 print("}")

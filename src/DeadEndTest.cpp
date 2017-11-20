@@ -76,7 +76,7 @@ int main(int argc, char const *argv[])
     start3->molecularWeight = 2;
     start4->molecularWeight = 2;
 
-    h.graphToGraphviz("Deadend");
+    h.graphToGraphviz("Deadend", *goal, startingCompound);
 
     auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
     h.printResults(dBest);

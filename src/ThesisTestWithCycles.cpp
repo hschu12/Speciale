@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
     start->molecularWeight = 2;
     start2->molecularWeight = 2;
    
-    h.graphToGraphviz("ThesisTestWithCycles");
+    h.graphToGraphviz("ThesisTestWithCycles", *goal, startingCompound);
     
     auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
     h.printResults(dBest);

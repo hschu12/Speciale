@@ -36,7 +36,7 @@ void testResults(std::vector< std::pair < double, std::vector<int>>> bestPlans, 
 
 int main(int argc, char const *argv[]){
 	if(argc < 6){
-		std::cout << "To few arguments. Need txt file, number of compounds, number of reactions, number of max synthplans(K), .txt file with scores" << std::endl;
+		std::cout << "To few arguments. Need txt file, number of highest compound ID, number of highest reaction ID, number of max synthplans(K), .txt file with scores" << std::endl;
 		exit(1);
 	}
 
@@ -123,9 +123,6 @@ int main(int argc, char const *argv[]){
      	}
     }
 
-
-  	h.graphToGraphviz("Output");
-
     auto goal = h.getCompound(1);
    	auto starting = h.getCompound(startingCompoundID);
 
@@ -134,6 +131,7 @@ int main(int argc, char const *argv[]){
    	std::vector<int> startingCompound;
    	startingCompound.push_back(starting->id);
 
+    h.graphToGraphviz("Output", *goal, startingCompound);
 
     std::cout << "Test for Carstens" << std::endl;
     auto dBest = h.yenHyp(*goal, startingCompound, atoi(argv[4]), false);

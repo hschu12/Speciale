@@ -6,39 +6,11 @@
 #include <queue>
 #include <algorithm>
 #include <fstream>
+#include "PriorityQueue.hpp"
+#include "ReactionNode.hpp"
 
 struct HyperGraph
 {
-
-struct ReactionNode
-	{
-		ReactionNode(){};
-
-		ReactionNode(int id, std::vector<int> head, std::vector<int> tail, double yield) : id(id), head(head), tail(tail), yield(yield) {};
-		int id;
-		double yield;	
-		int kj;
-		std::vector<int> head;
-		std::vector<int> tail;
-	};
-
-	struct CompoundNode
-	{
-		CompoundNode(){};
-
-		CompoundNode(int id) : id(id) {};
-
-		int id;
-		std::string name;
-		double molecularWeight;
-		double cost;
-		int maxYieldEdge = -1;
-		bool visited = false;
-
-		std::vector<int> productOfReaction; //Contains a reference to the ID of a reaction in which the compound is a product of. 
-		std::vector<int> eductOfReaction; //Contains a reference to the ID of a reaction in which the compound is a educt of. 
-	};
-
 	struct cmpPair //Compare function used to sort pair(vector, pair(double, vector)) on the double value.
 	{	
 		bool operator()(std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > a, std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > b) {
@@ -61,8 +33,8 @@ private:
 
 public:
 	HyperGraph(int compoundListSize, int reactionListSize) {
-		compoundList.resize(compoundListSize);
-		reactionList.resize(reactionListSize);
+		compoundList.reserve(compoundListSize);
+		reactionList.reserve(reactionListSize);
 	}
 
 
@@ -70,7 +42,7 @@ public:
 
 	inline void addCompound(int compoundID) {
 		CompoundNode *cn = new CompoundNode(compoundID);
-		compoundList.at(compoundID) = *cn;
+		compoundList[compoundID] = *cn;
 	} 
 	
 	inline void addPointerFromReactionToCompound (int compoundID, int reactionID) {
@@ -88,10 +60,11 @@ public:
 		auto tailIterator = tail.begin();
 		//add active compounds if not existing
 		while(headIterator != head.end()) {
+			
 			if ( *headIterator >= compoundList.size()) {
-				compoundList.resize(*headIterator+1);
+				compoundList.resize(*headIterator+1, CompoundNode(0));
 			}
-			if ( compoundList.at(*headIterator).id == 0) {
+			if ( compoundList[*headIterator].id == 0) {
 				addCompound(*headIterator);
 			}
 			addPointerFromReactionToCompound(*headIterator, id);
@@ -99,19 +72,19 @@ public:
 		}
 		while(tailIterator != tail.end()) {
 			if ( *tailIterator >= compoundList.size()) {
-				compoundList.resize(*tailIterator+1);
+				compoundList.resize(*tailIterator+1, CompoundNode(0));
 			}
-			if ( compoundList.at(*tailIterator).id == 0) {
+			if ( compoundList[*tailIterator].id == 0) {
 				addCompound(*tailIterator);
 			}
 			addPointerFromCompoundToReaction(*tailIterator, id);
 			++tailIterator;
 		}
 		if(id >= reactionList.size()) {
-			reactionList.resize(id+1);
+			reactionList.resize(id+1, ReactionNode(id, head, tail, yield));
 		}
 		ReactionNode *rn = new ReactionNode(id, head, tail, yield);
-		reactionList.at(id) = *rn;
+		reactionList[id] = *rn;
 	}
 
 	void addReactionToS(int id, std::vector<int> head, std::vector<int> tail, double yield) {
@@ -127,10 +100,10 @@ public:
 			++tailIterator;
 		}
 		if(id >= reactionList.size()) {
-			reactionList.resize(id+1);
+			reactionList.resize(id+1, ReactionNode(id, head, tail, yield));
 		}
 		ReactionNode *rn = new ReactionNode(id, head, tail, yield);
-		reactionList.at(id) = *rn;
+		reactionList[id] = *rn;
 	}
 
 	/****************************
@@ -155,7 +128,7 @@ public:
 					v.visited = true;
 					graphOverlay = reduceGraph(graphOverlay, *getCompound(tailCompound), s);
 				}
-				graphOverlay.at(r1->id) = true;
+				graphOverlay[r1->id] = true;
 			}
 		}
 		return graphOverlay;
@@ -164,7 +137,7 @@ public:
 	double maxYield(CompoundNode &v, CompoundNode &s, std::vector<bool> &overlay) {
 		double maximumYield = std::numeric_limits<double>::max(); // infinity
 		for(auto reaction : v.productOfReaction ) {
-			if (overlay.at(reaction)) {
+			if (overlay[reaction]) {
 
 				ReactionNode *r1 = getReaction(reaction);
 				double cost = 0;
@@ -208,10 +181,10 @@ public:
 
 		for(int i = 0; i < pair.second.size(); i++) { //for each edge in path
 
-			std::vector<int> toRemove (1,pair.second.at(i)); //pick edge i to remove
+			std::vector<int> toRemove (1,pair.second[i]); //pick edge i to remove
 
 			for(auto it = toRemove.begin(); it != toRemove.end(); ++it) {
-				overlay.at(*it) = false; //remove edge i
+				overlay[*it] = false; //remove edge i
 			}
 
 			if(i == 0) {
@@ -220,12 +193,12 @@ public:
 			}
 			else {
 				for (int j = i-1; j >= 0; j--){
-					ReactionNode* reaction = getReaction(pair.second.at(j));
+					ReactionNode* reaction = getReaction(pair.second[j]);
 					CompoundNode* compound = getCompound(reaction->head.front());
 					for (auto reaction : compound->productOfReaction) {
-						overlay.at(reaction) = false;
+						overlay[reaction] = false;
 					}
-					overlay.at(pair.second.at(j)) = true;
+					overlay[pair.second[j]] = true;
 				}
 				B.push_back(overlay);
 			}
@@ -234,6 +207,7 @@ public:
 	}
 
 	std::vector< std::pair < double, std::vector<int>> > yenHyp (CompoundNode &v, std::vector<int> &startingCompounds, int K, bool cycles) {
+
 		std::vector< std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > > L;
 		
 		std::make_heap (L.begin(),L.end(), cmpPair());
@@ -293,9 +267,9 @@ public:
 
 	std::pair < std::vector<bool> , std::pair< double, std::vector<int>> > ShortestHyperNielsen ( std::vector<bool> &graphOverlay, CompoundNode &goal, std::vector<int> &startingCompounds, std::vector<bool> &overlay) {
 		//Initinalize
- 		std::vector< CompoundNode > Q;		
-		std::make_heap (Q.begin(),Q.end(), cmp());
+		PriorityQueue Q (compoundList.capacity());
 
+		resetNodeIndex();
 		resetNodeCost();
 
 		for(auto reaction : reactionList) {
@@ -304,16 +278,12 @@ public:
 		}
 
 		CompoundNode *s = getCompound(0);
-		Q.push_back(*s); 
-		std::push_heap (Q.begin(),Q.end(), cmp());
+		Q.push(*s); 
 		//Initiliaze done
 		while(!Q.empty()) {
-			CompoundNode compound = Q.front(); 	//Get node with highest molecularWeight
-
-  			std::pop_heap (Q.begin(),Q.end(), cmp() ); 
-  			Q.pop_back();	
+  			auto compound = Q.pop();
   			for (auto reaction : compound.eductOfReaction) {
-  				if(overlay.at(reaction) && graphOverlay.at(reaction)) {
+  				if(overlay[reaction] && graphOverlay[reaction]) {
   					ReactionNode *r = getReaction(reaction);
   					r->kj++;
 	
@@ -329,20 +299,20 @@ public:
   							if (c->cost > F) {
   								c->cost = F;
   								c->maxYieldEdge = reaction;	
-  								//if(!vectorContainsCompoundNode(Q, *c)) {
-  									Q.push_back(*c); 
-									std::push_heap (Q.begin(),Q.end(), cmp());
-  								//}
+  								if(!Q.contains(*c)) {
+									Q.push(*c); 
+  								}
+  								else{
+  									Q.decrease_key(c->index, *c);
+  								}
   								
   							}
   						}
   						else{
   							c->cost = c->molecularWeight;
   							c->maxYieldEdge = reaction;	
-  							//if(!vectorContainsCompoundNode(Q, *c)) {
-  								Q.push_back(*c); 
-								std::push_heap (Q.begin(),Q.end(), cmp());
-  							//}
+							Q.push(*c); 
+							//std::push_heap (Q.begin(),Q.end(), cmp());
   						}
   					}
   				}
@@ -373,14 +343,14 @@ public:
 		overlay.resize(reactionList.size(), filler);
 
 		for(auto it : toRemove) {
-			overlay.at(it) = !filler;
+			overlay[it] = !filler;
 		}
 
 		return overlay;
 	}
 
 	CompoundNode* createDummyNode(std::vector<int> &startingCompounds) {
-		CompoundNode *s = new CompoundNode(); //MIGHT NOT BE NEEDED
+		CompoundNode *s = new CompoundNode(0); //MIGHT NOT BE NEEDED
 		s->id = 0;
 		auto startingCompoundIterator = startingCompounds.begin();
 		while (startingCompoundIterator != startingCompounds.end()) {
@@ -397,7 +367,7 @@ public:
 		}
 		s->molecularWeight = 1; // Need to be 1 to start out the molecularWeight calculations.
 		s->cost = 1;
-		compoundList.at(s->id) = *s;
+		compoundList[s->id] = *s;
 		return s;
 	}
 
@@ -442,6 +412,12 @@ public:
 		}
 	}
 
+	void resetNodeIndex(){
+		for (CompoundNode &compound : compoundList) {
+			compound.index = -1;
+		}
+	}
+
 	void resetMaxYieldEdges(){
 		for (CompoundNode &compound : compoundList) {
 			compound.maxYieldEdge = -1;
@@ -473,11 +449,11 @@ public:
 	*********************************/
 
 	ReactionNode* getReaction(int id){
-		return &reactionList.at(id);
+		return &reactionList[id];
 	}	
 
 	CompoundNode* getCompound(int id){
-		return &compoundList.at(id);
+		return &compoundList[id];
 	}	
 
 	/************************
@@ -519,7 +495,7 @@ public:
 		OutDegreeList.resize(compoundList.size());
 		for (auto reactionIterator : reactionList) {
 			for (auto tailIterator : reactionIterator.tail) {
-				OutDegreeList.at(tailIterator)++;
+				OutDegreeList[tailIterator]++;
 			}
 		}
 		int highest = -1;

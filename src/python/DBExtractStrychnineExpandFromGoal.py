@@ -1,6 +1,6 @@
 from PyReaxys import *
 
-K = 5
+K = 4
 
 cIds = [
 	52979,
@@ -10,20 +10,28 @@ db = Database("/scr/k61san/jlandersen")
 
 cs = set()
 rs = set()
+iterationRs = set()
+iterationCs = set()
 for i in cIds:
 	c = db.compoundFromId(i)
 	if not c:
 		raise Exception("Compound %d does not exist." % i)
 	cs.add(c)
+	iterationCs.add(c)
 for i in range(0, K): #expand K steps out from target compound
-	for c in cs:
-		for r in c.inReactions:
+	for c in iterationCs:
+		for r_tup in c.inReactions:
+			r = r_tup[1]
+			if not r:
+				raise Exception("Reaction %d does not exist." % i)
+			iterationRs.add(r)
 			rs.add(r)
-	for r in rs:
+	iterationCs.clear()
+	for r in iterationRs:
 		for c in r.educts:
 			cs.add(c[1])
-		for c in r.products:
-			cs.add(c[1])
+			iterationCs.add(c[1])
+	iterationRs.clear()
 
 print("digraph G {")
 for c in cs:
@@ -40,11 +48,7 @@ for r in rs:
 print("REACTIONS")
 for r in rs:
 	for c in r.educts:
-		print(r.id ,end='')
-		print("->")
-		print(c[1].id)
+		print(str(r.id)+"->"+str(c[1].id) )	
 	for c in r.products:
-		print(r.id ,end='')
-		print("->")
-		print(c[1].id)
+		print(str(c[1].id)+"->"+str(r.id) )
 print("}")

@@ -5,7 +5,7 @@
 
 int main(int argc, char const *argv[]){
 	if(argc < 6){
-		std::cout << "To few arguments. Need txt file, number of compounds, number of reactions, number of max synthplans(K), .txt file with startingCompoundsID" << std::endl;
+		std::cout << "To few arguments. Need graph file, number of highest compound ID, number of highest reactionID, number of max synthplans(K), .txt file with startingCompoundsID" << std::endl;
 		exit(1);
 	}
 
@@ -15,6 +15,7 @@ int main(int argc, char const *argv[]){
 	std::vector<double> weights;
 	std::vector<std::vector<int>> eductsToReaction;
 	std::vector<std::vector<int>> productsToReaction;
+
     compounds.resize(atoi(argv[2]));
     reactions.resize(atoi(argv[3]));
     weights.resize(atoi(argv[2]));
@@ -38,7 +39,6 @@ int main(int argc, char const *argv[]){
     std::cout << "Building" << std::endl;
 
     bool reactbool = false;
-    int startingCompoundID = 0;
     while(getline(inFile,str)) {
         if (str.compare("REACTIONS") == 0){
             reactbool = true;
@@ -64,9 +64,6 @@ int main(int argc, char const *argv[]){
 	    	if(!type.compare("N")){ //Returns true if type is N
 	    	  	int idINT = stoi(id);
 	    	  	compounds.at(idINT) = idINT;
-                if((str.substr(second+1, third-second-1)).compare("S") == 0){
-                    startingCompoundID = idINT;
-                }
                 std::string weight = str.substr(fouth+1, fifth-fouth-1);
                 weights.at(idINT) = stod(weight);
             }
@@ -91,6 +88,17 @@ int main(int argc, char const *argv[]){
             h.addReaction(reactions.at(i), productsToReaction.at(i), eductsToReaction.at(i), yields.at(i));
      	}
     }
+    compounds.clear();
+    reactions.clear();
+    yields.clear();
+    productsToReaction.clear();
+    eductsToReaction.clear();
+
+    compounds.shrink_to_fit();
+    reactions.shrink_to_fit();
+    yields.shrink_to_fit();
+    productsToReaction.shrink_to_fit();
+    eductsToReaction.shrink_to_fit();
 
     std::ifstream inputFile;
     inputFile.open(argv[5]);
@@ -109,6 +117,9 @@ int main(int argc, char const *argv[]){
         starting->molecularWeight = weights.at(stoi(str2));
         startingCompound.push_back(starting->id);
     }
+
+    weights.clear();
+    weights.shrink_to_fit();
 
     h.graphToGraphviz("Output", *goal, startingCompound);
 
