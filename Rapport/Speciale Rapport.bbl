@@ -179,6 +179,22 @@
   \field{year}{2017}
 \endentry
 
+\entry{WikiReaxys}{misc}{}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Reaxys
+  \endverb
+  \field{month}{10}
+  \field{year}{2017}
+\endentry
+
+\entry{WikiBeilstein}{misc}{}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Beilstein_database
+  \endverb
+  \field{month}{10}
+  \field{year}{2017}
+\endentry
+
 \entry{SynthesisPlans}{book}{}
   \name{author}{1}{}{%
     {{}%

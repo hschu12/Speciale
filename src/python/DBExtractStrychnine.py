@@ -42,12 +42,12 @@ for c in cs:
 	print("N", end=' ')
 	print("notS", end=' ')
 	print("Weight", end=' ')
-	print("2") #Hardcoded Weight until real weight is added to DB
+	print(c.molWeight) #Hardcoded Weight until real weight is added to DB
 for r in rs:
 	print(r.id, end=' ')
 	print("R", end=' ')
 	print("Yield", end=' ')
-	print("0.8") #Hardcoded Yield until real yield is added to DB
+	print(r.yields[0]) #Hardcoded Yield until real yield is added to DB
 print("REACTIONS")
 for r in rs:
 	for c in r.educts:

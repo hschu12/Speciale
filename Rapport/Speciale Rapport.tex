@@ -14,6 +14,7 @@
 \bibliography{referencer}
 
 \usepackage{float}
+\usepackage{subcaption}
 \usepackage{hyperref}
 \hypersetup{%
     pdfborder = {0 0 0}
@@ -282,7 +283,110 @@ endfunction
 \subsubsection{Optimizing}
 
 \section{Work With Beilstein Data}
-\subsection{The Graph}
+This section HOFFMANN, REAXYS
+\subsection{The Database}
+The Beilstein database is the largest database in the field of organic chemistry. Since 2009, the content has been maintained and distributed by Elsevier Information Systems in Frankfurt under the name "Reaxys".
+The content covers more than 200 years of chemistry and has been abstracted from several thousands of journal titles, books and patents. Today the data is drawn from selected journals (400 titles) and chemistry patents, and the extraction process for each reaction or substance data included needs to meet three conditions:
+\begin{enumerate}
+\item
+It has a chemical structure
+\item
+It is supported by an experimental fact (property, preparation, reaction)
+\item
+It has a credible citation
+\end{enumerate}
+Journals covered include \textit{Advanced Synthesis and Catalysis, Angewandte Chemie , Journal of American Chemical Society, Journal of Organometallic Chemistry, Synlett} and \textit{Tetrahedron}. \cite{WikiReaxys}\cite{WikiBeilstein}
+\subsection{Data Assessment}
+During my work with the Beilstain database have I found several issues with the data stored.
+First problem is that there are multiple instances of the same compound, but with different Reaxys IDs. As seen in fig.\ref{fig::SameID} have I found four different IDs for the compound Dysidiolide. These were found when I tried to reproduce the different synthesis plans of Dysidiolide from \cite{SynthesisPlans} using the referenced articles where each synthesis plan origins. E. J. Corey's version of Dysidiolide have the ID 8171938, Boukouvalas have two different with ID 7601810 and 7910427 and Danishefsky have the ID 7910428. \\
+Since we have four different IDs for Dysidiolide we can't state a single goal compound to our program that would result in giving us these three synthesis plans.
+
+\begin{figure}[H]
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/Dysidiolide-7601810.png}
+
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/Dysidiolide-7910427.png}
+
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/Dysidiolide-7910428.png}
+
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/Dysidiolide-8171938.png}
+\caption{Four different instances of Dysidiolide in Reaxys.}
+\label{fig::SameID}
+\end{figure}
+
+So what is causing this multiple ID issue? If we study fig. \ref{fig::SameID} can we see that the molecular weight and molecular formular are exactly the same, however if we look at the close up of the molecular structure in fig. \ref{fig::SameIDClose} the compounds are not structured in the same way, even though the compound is the same. The main differences is:
+\begin{enumerate}
+\item
+Which way some of the substructures are facing. Example: The lower $C_4O_3H_4$ is rotated differently in each instance or that we write $H_2C$ instead of $CH_2$.
+\item
+The bond between two chemical elements are notated.Example: The bond to the $OH$ in the bottom of the structure is either a "single" (d), "single down" (a) (c) or "single up or down" (b).
+\end{enumerate}
+
+\begin{figure}[H]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \vspace{0.4cm}
+  \includegraphics[width=.8\linewidth]{Billeder/Dysidiolide-7601810-Close.png}
+  \vspace{1.3cm}
+  \caption{}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Billeder/Dysidiolide-7910427-Close.png}
+  \caption{}
+\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \vspace{0.4cm}
+  \includegraphics[width=.8\linewidth]{Billeder/Dysidiolide-7910428-Close.png}
+  \vspace{1.3cm}
+  \caption{}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{Billeder/Dysidiolide-8171938-Close.png}
+  \caption{}
+\end{subfigure}
+\caption{Different versions of Dysidiolide: ID 7601810 (a), ID 7910427(b), ID 7910428(c), ID 8171938(d)}
+\label{fig::SameIDClose}
+\end{figure}
+Benyt Dysidiolide til at vise at der er flere udgaver af samme compounds og at der er nogle som ikke hedder det som de er (Kun har REAXYSID eller et helt andet navn).
+
+Find reaktioner som ikke har et educt eller et product
+
+\begin{figure}[H]
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/LeftOnlyReaction.png}
+
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/RightOnlyReaction.png}
+\caption{Example of reactions that either is missing educts or products.}
+\end{figure}
+
+\begin{figure}[H]
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/MissingIngredientReaction.png}
+\caption{Example of an reaction with a missing educt.}
+\end{figure}
+
+\begin{figure}[H]
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/MultistepReactions.png}
+\caption{Example of a multistep reaction.}
+\end{figure}
+
+\begin{figure}[H]
+\hspace{-1cm}
+\includegraphics[scale=0.5]{Billeder/DifferentYieldNotation.png}
+\caption{Example of inconsistent yield notation.}
+\end{figure}
+
+
+
+\subsection{Making A B-Hypergraph}
 \subsection{Testing}
 \subsubsection{Strychnine}
 \subsubsection{Compound 2} 

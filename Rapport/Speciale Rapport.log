@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  13 NOV 2017 14:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  22 NOV 2017 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -945,6 +945,30 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks37
 \@floatcapt=\box42
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen174
+\captionmargin@=\dimen175
+\captionwidth=\dimen176
+\caption@tempdima=\dimen177
+\caption@indent=\dimen178
+\caption@parindent=\dimen179
+\caption@hangindent=\dimen180
+)
+\c@ContinuedFloat=\count284
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+)
+\c@subfigure=\count285
+\c@subtable=\count286
+)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -1001,16 +1025,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen174
-\Hy@linkcounter=\count284
-\Hy@pagecounter=\count285
+\@linkdim=\dimen181
+\Hy@linkcounter=\count287
+\Hy@pagecounter=\count288
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count286
+\Hy@SavedSpaceFactor=\count289
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1022,12 +1046,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count287
+\c@Hy@tempcnt=\count290
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen175
-\Fld@menulength=\count288
-\Field@Width=\dimen176
-\Fld@charsize=\dimen177
+\XeTeXLinkMargin=\dimen182
+\Fld@menulength=\count291
+\Field@Width=\dimen183
+\Fld@charsize=\dimen184
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1037,17 +1061,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count289
-\c@Item=\count290
-\c@Hfootnote=\count291
+\Hy@abspage=\count292
+\c@Item=\count293
+\c@Hfootnote=\count294
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count292
-\c@bookmark@seq@number=\count293
+\Fld@listcount=\count295
+\c@bookmark@seq@number=\count296
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
@@ -1080,38 +1104,38 @@ File: english.lbx 2015/04/19 v3.0 biblatex localization (PK/JW/AB)
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count294
-\@quotereset=\count295
+\@quotelevel=\count297
+\@quotereset=\count298
 (./Speciale Rapport.aux)
 \openout1 = `"Speciale Rapport.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
  ABD: EveryShipout initializing macros
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
-\scratchdimen=\dimen178
+\scratchcounter=\count299
+\scratchdimen=\dimen185
 \scratchbox=\box43
-\nofMPsegments=\count297
-\nofMParguments=\count298
+\nofMPsegments=\count300
+\nofMParguments=\count301
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count299
-\MPscratchDim=\dimen179
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen186
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks39
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1128,7 +1152,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count302
+\c@lstlisting=\count305
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1142,10 +1166,13 @@ Package biblatex Warning: Data encoding is 'utf8'.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file '"Speciale Rapport".bbl' found.
 (./Speciale Rapport.bbl)
-Package biblatex Info: Reference section=0 on input line 54.
-Package biblatex Info: Reference segment=0 on input line 54.
+Package biblatex Info: Reference section=0 on input line 55.
+Package biblatex Info: Reference segment=0 on input line 55.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring OFF on input line 54.
+Package hyperref Info: Link coloring OFF on input line 55.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1153,11 +1180,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count303
+\c@section@level=\count306
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 55.
+LaTeX Info: Redefining \pageref on input line 55.
+LaTeX Info: Redefining \nameref on input line 55.
 
 (./Speciale Rapport.out) (./Speciale Rapport.out)
 \@outlinefile=\write5
@@ -1165,80 +1192,80 @@ LaTeX Info: Redefining \nameref on input line 54.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 54.
-LaTeX Font Info:    Try loading font information for U+msa on input line 75.
+(lastpage)             ! on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 76.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 75.
+LaTeX Font Info:    Try loading font information for U+msb on input line 76.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Billeder/logo.png, id=107, 547.8066pt x 542.5068pt>
+<Billeder/logo.png, id=115, 547.8066pt x 542.5068pt>
 File: Billeder/logo.png Graphic file (type png)
  <use Billeder/logo.png>
-Package pdftex.def Info: Billeder/logo.png used on input line 83.
+Package pdftex.def Info: Billeder/logo.png used on input line 84.
 (pdftex.def)             Requested size: 164.34325pt x 162.7533pt.
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Bille
 der/logo.png>]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 89.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 90.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.92 \newpage
+l.93 \newpage
               [1] (./Speciale Rapport.toc)
 \tf@toc=\write6
 \openout6 = `"Speciale Rapport.toc"'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-<Billeder/HyperEdge.png, id=160, 262.9825pt x 194.7275pt>
+<Billeder/HyperEdge.png, id=170, 262.9825pt x 194.7275pt>
 File: Billeder/HyperEdge.png Graphic file (type png)
 
 <use Billeder/HyperEdge.png>
-Package pdftex.def Info: Billeder/HyperEdge.png used on input line 114.
+Package pdftex.def Info: Billeder/HyperEdge.png used on input line 115.
 (pdftex.def)             Requested size: 131.49092pt x 97.3635pt.
  [3 <./Billeder/HyperEdge.png>]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 )
-<Billeder/BachBranch.png, id=185, 968.61874pt x 590.205pt>
+<Billeder/BachBranch.png, id=195, 968.61874pt x 590.205pt>
 File: Billeder/BachBranch.png Graphic file (type png)
 
 <use Billeder/BachBranch.png>
-Package pdftex.def Info: Billeder/BachBranch.png used on input line 148.
+Package pdftex.def Info: Billeder/BachBranch.png used on input line 149.
 (pdftex.def)             Requested size: 484.30818pt x 295.10178pt.
 
-Overfull \hbox (84.62436pt too wide) in paragraph at lines 147--149
+Overfull \hbox (84.62436pt too wide) in paragraph at lines 148--150
 []  [] 
  []
 
 [4] [5 <./Billeder/BachBranch.png>]
-<Billeder/OverlayIllustration.png, id=217, 762.85pt x 341.275pt>
+<Billeder/OverlayIllustration.png, id=227, 762.85pt x 341.275pt>
 File: Billeder/OverlayIllustration.png Graphic file (type png)
 
 <use Billeder/OverlayIllustration.png>
 Package pdftex.def Info: Billeder/OverlayIllustration.png used on input line 17
-7.
+8.
 (pdftex.def)             Requested size: 381.42407pt x 170.63707pt.
 
-Overfull \hbox (36.42407pt too wide) in paragraph at lines 177--178
+Overfull \hbox (36.42407pt too wide) in paragraph at lines 178--179
  [][] 
  []
 
@@ -1248,7 +1275,7 @@ File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 ) [7]
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
+Underfull \hbox (badness 10000) in paragraph at lines 231--233
 
  []
 
@@ -1257,39 +1284,191 @@ File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [8]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+) [8] [9]
+<Billeder/Dysidiolide-7601810.png, id=347, 800.9925pt x 205.76875pt>
+File: Billeder/Dysidiolide-7601810.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-7601810.png>
+Package pdftex.def Info: Billeder/Dysidiolide-7601810.png used on input line 30
+6.
+(pdftex.def)             Requested size: 400.49527pt x 102.88411pt.
+
+Overfull \hbox (29.2642pt too wide) in paragraph at lines 305--307
+[]  [] 
+ []
+
+<Billeder/Dysidiolide-7910427.png, id=348, 798.985pt x 210.7875pt>
+File: Billeder/Dysidiolide-7910427.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-7910427.png>
+Package pdftex.def Info: Billeder/Dysidiolide-7910427.png used on input line 30
+9.
+(pdftex.def)             Requested size: 399.49152pt x 105.3935pt.
+
+Overfull \hbox (28.26045pt too wide) in paragraph at lines 308--310
+[]  [] 
+ []
+
+<Billeder/Dysidiolide-7910428.png, id=349, 799.98875pt x 213.79875pt>
+File: Billeder/Dysidiolide-7910428.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-7910428.png>
+Package pdftex.def Info: Billeder/Dysidiolide-7910428.png used on input line 31
+2.
+(pdftex.def)             Requested size: 399.9934pt x 106.89911pt.
+
+Overfull \hbox (28.76233pt too wide) in paragraph at lines 311--313
+[]  [] 
+ []
+
+<Billeder/Dysidiolide-8171938.png, id=350, 799.98875pt x 204.765pt>
+File: Billeder/Dysidiolide-8171938.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-8171938.png>
+Package pdftex.def Info: Billeder/Dysidiolide-8171938.png used on input line 31
+5.
+(pdftex.def)             Requested size: 399.9934pt x 102.38223pt.
+
+Overfull \hbox (28.76233pt too wide) in paragraph at lines 314--316
+[]  [] 
+ []
+
+[10] <Billeder/Dysidiolide-7601810-Close.png, id=360, 475.7775pt x 477.785pt>
+File: Billeder/Dysidiolide-7601810-Close.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-7601810-Close.png>
+Package pdftex.def Info: Billeder/Dysidiolide-7601810-Close.png used on input l
+ine 332.
+(pdftex.def)             Requested size: 138.00052pt x 138.58325pt.
+
+<Billeder/Dysidiolide-7910427-Close.png, id=361, 366.36874pt x 499.8675pt>
+File: Billeder/Dysidiolide-7910427-Close.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-7910427-Close.png>
+Package pdftex.def Info: Billeder/Dysidiolide-7910427-Close.png used on input l
+ine 338.
+(pdftex.def)             Requested size: 138.00052pt x 188.28885pt.
+
+<Billeder/Dysidiolide-7910428-Close.png, id=362, 564.1075pt x 490.83376pt>
+File: Billeder/Dysidiolide-7910428-Close.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-7910428-Close.png>
+Package pdftex.def Info: Billeder/Dysidiolide-7910428-Close.png used on input l
+ine 344.
+(pdftex.def)             Requested size: 138.00052pt x 120.07182pt.
+
+<Billeder/Dysidiolide-8171938-Close.png, id=363, 407.5225pt x 488.82625pt>
+File: Billeder/Dysidiolide-8171938-Close.png Graphic file (type png)
+
+<use Billeder/Dysidiolide-8171938-Close.png>
+Package pdftex.def Info: Billeder/Dysidiolide-8171938-Close.png used on input l
+ine 350.
+(pdftex.def)             Requested size: 138.00052pt x 165.53488pt.
+ [11 <./Billeder/Dysidiolide-7601810.png> <./Billeder/Dysidiolide-7910427.png> 
+<./Billeder/Dysidiolide-7910428.png> <./Billeder/Dysidiolide-8171938.png>]
+<Billeder/LeftOnlyReaction.png, id=376, 782.925pt x 349.305pt>
+File: Billeder/LeftOnlyReaction.png Graphic file (type png)
+
+<use Billeder/LeftOnlyReaction.png>
+Package pdftex.def Info: Billeder/LeftOnlyReaction.png used on input line 362.
+(pdftex.def)             Requested size: 391.46155pt x 174.65207pt.
+
+Overfull \hbox (20.23048pt too wide) in paragraph at lines 361--363
+[]  [] 
+ []
+
+<Billeder/RightOnlyReaction.png, id=377, 785.93625pt x 351.3125pt>
+File: Billeder/RightOnlyReaction.png Graphic file (type png)
+
+<use Billeder/RightOnlyReaction.png>
+Package pdftex.def Info: Billeder/RightOnlyReaction.png used on input line 365.
+
+(pdftex.def)             Requested size: 392.96716pt x 175.6558pt.
+
+Overfull \hbox (21.7361pt too wide) in paragraph at lines 364--366
+[]  [] 
+ []
+
+[12 <./Billeder/Dysidiolide-7601810-Close.png> <./Billeder/Dysidiolide-7910427-
+Close.png> <./Billeder/Dysidiolide-7910428-Close.png> <./Billeder/Dysidiolide-8
+171938-Close.png>]
+<Billeder/MissingIngredientReaction.png, id=389, 781.92125pt x 325.215pt>
+File: Billeder/MissingIngredientReaction.png Graphic file (type png)
+
+<use Billeder/MissingIngredientReaction.png>
+Package pdftex.def Info: Billeder/MissingIngredientReaction.png used on input l
+ine 371.
+(pdftex.def)             Requested size: 390.95967pt x 162.6071pt.
+
+Overfull \hbox (19.7286pt too wide) in paragraph at lines 370--372
+[]  [] 
+ []
+
+<Billeder/MultistepReactions.png, id=390, 817.0525pt x 529.98pt>
+File: Billeder/MultistepReactions.png Graphic file (type png)
+
+<use Billeder/MultistepReactions.png>
+Package pdftex.def Info: Billeder/MultistepReactions.png used on input line 377
+.
+(pdftex.def)             Requested size: 408.52525pt x 264.98933pt.
+
+Overfull \hbox (37.29419pt too wide) in paragraph at lines 376--378
+[]  [] 
+ []
+
+[13 <./Billeder/LeftOnlyReaction.png> <./Billeder/RightOnlyReaction.png> <./Bil
+leder/MissingIngredientReaction.png>]
+<Billeder/DifferentYieldNotation.png, id=401, 814.04124pt x 532.99126pt>
+File: Billeder/DifferentYieldNotation.png Graphic file (type png)
+
+<use Billeder/DifferentYieldNotation.png>
+Package pdftex.def Info: Billeder/DifferentYieldNotation.png used on input line
+ 383.
+(pdftex.def)             Requested size: 407.01962pt x 266.49498pt.
+
+Overfull \hbox (35.78856pt too wide) in paragraph at lines 382--384
+[]  [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
 
  []
 
-[9]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 298.
+[14 <./Billeder/MultistepReactions.png> <./Billeder/DifferentYieldNotation.png>
+] [15]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 402.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [10]
+)
+Overfull \hbox (15.4822pt too wide) in paragraph at lines 402--402
+[]\T1/cmr/m/n/10 Oct. 2017. [On-line]. Avail-able: []$\T1/cmtt/m/n/10 https : /
+ / en . wikipedia . org / wiki / Beilstein _
+ []
 
+[16] 
 AED: lastpage setting LastPage
-[11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 303.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 303.
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 407.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 407.
  (./Speciale Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 303.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 303.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 407.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 407.
 Package rerunfilecheck Info: File `"Speciale Rapport".out' has not changed.
-(rerunfilecheck)             Checksum: FDFCE308D05D28FBD6035598E9F4F108;1549.
+(rerunfilecheck)             Checksum: 76BE630F890259FF576DCFEAFFB8C95D;1688.
 Package logreq Info: Writing requests to '"Speciale Rapport".run.xml'.
 \openout1 = `"Speciale Rapport.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24230 strings out of 493089
- 429050 string characters out of 6134842
- 618702 words of memory out of 5000000
- 27149 multiletter control sequences out of 15000+600000
- 16722 words of font info for 38 fonts, out of 8000000 for 9000
+ 25372 strings out of 493089
+ 451023 string characters out of 6134842
+ 639007 words of memory out of 5000000
+ 28246 multiletter control sequences out of 15000+600000
+ 18256 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,56p,814b,2236s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,56p,829b,2228s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
@@ -1304,16 +1483,17 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "Speciale Rapport.pdf" (12 pages, 505999 bytes).
+texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/cm-super/sftt1000.pfb>
+Output written on "Speciale Rapport.pdf" (18 pages, 784396 bytes).
 PDF statistics:
- 437 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
- 144 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 166 named destinations out of 1000 (max. 500000)
+ 314 words of extra memory for PDF output out of 10000 (max. 10000000)
 

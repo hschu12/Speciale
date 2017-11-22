@@ -81,7 +81,7 @@ public:
 			++tailIterator;
 		}
 		if(id >= reactionList.size()) {
-			reactionList.resize(id+1, ReactionNode(id, head, tail, yield));
+			reactionList.resize(id+1, ReactionNode(0, head, tail, yield));
 		}
 		ReactionNode *rn = new ReactionNode(id, head, tail, yield);
 		reactionList[id] = *rn;
@@ -232,7 +232,7 @@ public:
 			pair = shortestPathMaximumYield(v, startingCompounds, overlay, *s);
 		}
 		L.push_back(pair);
-		for ( int k = 0; k < K; k++) {
+		for ( int k = 1; k <= K; k++) {
 			std::cout << "k = " << k << std::endl;
 			if (L.empty()) {
 				break;
@@ -312,7 +312,6 @@ public:
   							c->cost = c->molecularWeight;
   							c->maxYieldEdge = reaction;	
 							Q.push(*c); 
-							//std::push_heap (Q.begin(),Q.end(), cmp());
   						}
   					}
   				}
@@ -568,7 +567,9 @@ public:
 			if (!plan.second.empty()){
     			std::cout << "Plan: " << i << std::endl;
     			for( auto pathElement : plan.second) {
-      				std::cout << "Reaction: " << pathElement << std::endl;
+    				if(pathElement < reactionList.size()) {
+	      				std::cout << "Reaction: " << pathElement << std::endl;
+	      			}
     			}
     			std::cout << "With yield: " << plan.first << "\n" << std::endl;
     			i++;
@@ -620,6 +621,8 @@ public:
 		graphFile.open(s + ".gv");
 		graphFile << "digraph G { \n";
 		graphFile << "{\n";
+
+		std::cout << reactionList[2].id << std::endl;
 
 		for( auto reaction : reactionList) {
 			if(reaction.id == 0) {

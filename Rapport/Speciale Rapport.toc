@@ -38,16 +38,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Work With Beilstein Data}{9}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}The Graph}{9}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}The Database}{9}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Testing}{9}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}Data Assessment}{10}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.1}Strychnine}{9}{subsubsection.6.2.1}
+\contentsline {subsection}{\numberline {6.3}Making A B-Hypergraph}{15}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.2}Compound 2}{9}{subsubsection.6.2.2}
+\contentsline {subsection}{\numberline {6.4}Testing}{15}{subsection.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.2.3}Compound 3}{9}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.4.1}Strychnine}{15}{subsubsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Konklusion}{9}{section.7}
+\contentsline {subsubsection}{\numberline {6.4.2}Compound 2}{15}{subsubsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Appendiks}{11}{section.8}
+\contentsline {subsubsection}{\numberline {6.4.3}Compound 3}{15}{subsubsection.6.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Konklusion}{15}{section.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Appendiks}{17}{section.8}
