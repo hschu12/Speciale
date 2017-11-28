@@ -17,7 +17,7 @@ rIds = [
 ]
 
 
-db = Database("/home/jla/stuff/reaxys")
+db = Database("/scr/k61san/jlandersen/")
 
 cs = set()
 rs = set()
@@ -44,10 +44,11 @@ for c in cs:
 	print("Weight", end=' ')
 	print(c.molWeight) #Hardcoded Weight until real weight is added to DB
 for r in rs:
-	print(r.id, end=' ')
-	print("R", end=' ')
-	print("Yield", end=' ')
-	print(r.yields[0]) #Hardcoded Yield until real yield is added to DB
+	if(r.yields):
+		print(r.id, end=' ')
+		print("R", end=' ')
+		print("Yield", end=' ')
+		print(r.yields[0][1]) #Hardcoded Yield until real yield is added to DB #rojin: yields has (object, yield)
 print("REACTIONS")
 for r in rs:
 	for c in r.educts:

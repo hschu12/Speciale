@@ -21,8 +21,8 @@ int main(int argc, char const *argv[]){
 
     int largestReactionID = 0;
     int largestCompoundID = 0;
-
     while(getline(firstRead,line)) {
+
         if (line.compare("REACTIONS") == 0){
             break;
         }
@@ -43,6 +43,7 @@ int main(int argc, char const *argv[]){
             }          
         }
     }
+
     largestCompoundID++;
     largestReactionID++;
     std::vector<int> reactions;
@@ -59,7 +60,7 @@ int main(int argc, char const *argv[]){
     productsToReaction.resize(largestReactionID);
     eductsToReaction.resize(largestReactionID);
 
-    HyperGraph h(largestCompoundID,largestReactionID);
+    HyperGraph h(largestCompoundID+100,largestReactionID+100);
 
     firstRead.close();
 
@@ -158,9 +159,12 @@ int main(int argc, char const *argv[]){
     weights.clear();
     weights.shrink_to_fit();
 
-    //h.graphToGraphviz("Output", *goal, startingCompound);
+    h.graphToGraphviz("Output", *goal, startingCompound);
+    h.convertToBHypergraph();
+    h.graphToGraphviz("Output2", *goal, startingCompound);
 
-   /* std::cout << "Test for Carstens" << std::endl;
+
+    /*std::cout << "Test for Carstens" << std::endl;
     auto dBest = h.yenHyp(*goal, startingCompound, atoi(argv[4]), false);
     h.printResults(dBest);*/
     

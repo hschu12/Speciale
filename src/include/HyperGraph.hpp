@@ -81,10 +81,32 @@ public:
 			++tailIterator;
 		}
 		if(id >= reactionList.size()) {
-			reactionList.resize(id+1, ReactionNode(0, head, tail, yield));
+			std::vector<int> v;
+			reactionList.resize(id+1, ReactionNode(0, v, v, 0));
 		}
 		ReactionNode *rn = new ReactionNode(id, head, tail, yield);
 		reactionList[id] = *rn;
+	}
+
+	void convertToBHypergraph() {
+		std::vector<int> toHandle;
+		for(ReactionNode &reaction : reactionList) {
+			if(reaction.head.size() > 1) { //If it is NOT a B-hyperedge
+				toHandle.push_back(reaction.id);
+			}
+		}
+		for(auto r : toHandle) {
+			ReactionNode *rn = getReaction(r);
+			for(int i = 1; i < rn->head.size(); i++) {
+				std::vector<int> headCompound;
+				headCompound.push_back(rn->head[i]);
+				addReaction(reactionList.size(), headCompound, rn->tail, rn->yield);
+			}
+			int size = rn->head.size();
+			for(int i = 1; i < size; i++) {
+				rn->head.pop_back();
+			}
+		}
 	}
 
 	void addReactionToS(int id, std::vector<int> head, std::vector<int> tail, double yield) {
@@ -571,13 +593,16 @@ public:
 				graphFile.open("plan" + str + ".gv");
 				graphFile << "digraph G { \n";
 				graphFile << "{\n";
+				
 				for( auto pathElement : plan.second) {
     				if(pathElement < reactionList.size()) {
     					auto reaction = getReaction(pathElement);
 						graphFile << "	R" << reaction->id << " [label = \"R" << reaction->id << ". Yield: " << reaction->yield << "\"]\n";
 	      			}
     			}
+
 				graphFile << "}\n";
+    			
     			for( auto pathElement : plan.second) {
     				if(pathElement < reactionList.size()) {
 	      				std::cout << "Reaction: " << pathElement << std::endl;
@@ -590,6 +615,7 @@ public:
     					}
 			      	}
     			}
+
     			std::cout << "With yield: " << plan.first << "\n" << std::endl;
     			i++;
 				graphFile << "}";
