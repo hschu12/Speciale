@@ -566,13 +566,34 @@ public:
 		for( auto plan : bestPlans) {
 			if (!plan.second.empty()){
     			std::cout << "Plan: " << i << std::endl;
+    			std::string str = std::to_string(i);
+    			std::ofstream graphFile;
+				graphFile.open("plan" + str + ".gv");
+				graphFile << "digraph G { \n";
+				graphFile << "{\n";
+				for( auto pathElement : plan.second) {
+    				if(pathElement < reactionList.size()) {
+    					auto reaction = getReaction(pathElement);
+						graphFile << "	R" << reaction->id << " [label = \"R" << reaction->id << ". Yield: " << reaction->yield << "\"]\n";
+	      			}
+    			}
+				graphFile << "}\n";
     			for( auto pathElement : plan.second) {
     				if(pathElement < reactionList.size()) {
 	      				std::cout << "Reaction: " << pathElement << std::endl;
-	      			}
+	      				auto reaction = getReaction(pathElement);
+	      				for( auto headelement : reaction->head) {
+							graphFile << "	R" << reaction->id << " -> " << headelement << ";\n";
+						}
+    					for( auto tailelement : reaction->tail) {
+    			  			graphFile << "	" << tailelement << " -> R" << reaction->id << ";\n";
+    					}
+			      	}
     			}
     			std::cout << "With yield: " << plan.first << "\n" << std::endl;
     			i++;
+				graphFile << "}";
+    			graphFile.close();
     		}
     		else{
     			std::cout << "No plan found" << std::endl;
@@ -621,8 +642,6 @@ public:
 		graphFile.open(s + ".gv");
 		graphFile << "digraph G { \n";
 		graphFile << "{\n";
-
-		std::cout << reactionList[2].id << std::endl;
 
 		for( auto reaction : reactionList) {
 			if(reaction.id == 0) {
