@@ -75,9 +75,11 @@ int main(int argc, char const *argv[])
   	h.addReaction(10, reacthead10, reacttail10,0.7);
     h.addReaction(11, reacthead11, reacttail11,0.7);
 
-
-	auto goal = h.getCompound(8);
 	std::vector<int> startingCompound;
+    std::vector<int> goalCompound;
+
+    goalCompound.push_back(8);
+
 	startingCompound.push_back(1);
 	startingCompound.push_back(2);
 
@@ -86,12 +88,12 @@ int main(int argc, char const *argv[])
     start->molecularWeight = 2;
     start2->molecularWeight = 2;
    
-    h.graphToGraphviz("ThesisTestWithCycles", *goal, startingCompound);
+    h.graphToGraphviz("ThesisTestWithCycles", goalCompound, startingCompound);
     
-    auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
+    auto dBest = h.yenHyp(goalCompound, startingCompound, 9, true);
     h.printResults(dBest);
 
-    dBest = h.yenHyp(*goal, startingCompound, 9, false);
+    dBest = h.yenHyp(goalCompound, startingCompound, 9, false);
     h.printResults(dBest);
 
  

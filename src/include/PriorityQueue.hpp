@@ -88,7 +88,7 @@ public:
 		if (compound.index == -1) {
 			return false;
 		}
-		if (compound.index > heap.size()-1) {
+		if (compound.index >= heap.size()-1) {
 			return false;
 		}
 		return true;

@@ -4,6 +4,7 @@ struct ReactionNode
 		int id;
 		double yield;	
 		int kj;
+		int originalID = 0;
 		std::vector<int> head;
 		std::vector<int> tail;
 	};

@@ -146,9 +146,15 @@ int main(int argc, char const *argv[]){
     }
     std::string str2;
     std::vector<int> startingCompound;
+    std::vector<int> goalCompound;
 
-    getline(inputFile,str2);
-    auto goal = h.getCompound(stoi(str2));
+    while(getline(inputFile,str2)) {
+        if(str2.compare("STARTINGCOMPOUNDS") == 0) {
+            break;
+        }
+        auto goal = h.getCompound(stoi(str2));
+        goalCompound.push_back(goal->id);
+    }
 
     while(getline(inputFile,str2)) {
         auto starting = h.getCompound(stoi(str2));
@@ -159,9 +165,9 @@ int main(int argc, char const *argv[]){
     weights.clear();
     weights.shrink_to_fit();
 
-    h.graphToGraphviz("Output", *goal, startingCompound);
+    h.graphToGraphviz("Output", goalCompound, startingCompound);
     h.convertToBHypergraph();
-    h.graphToGraphviz("Output2", *goal, startingCompound);
+    h.graphToGraphviz("Output2", goalCompound, startingCompound);
 
 
     /*std::cout << "Test for Carstens" << std::endl;
@@ -169,7 +175,7 @@ int main(int argc, char const *argv[]){
     h.printResults(dBest);*/
     
     std::cout << "Test for Nielsens" << std::endl;
-    auto dBest = h.yenHyp(*goal, startingCompound, atoi(argv[2]), true);
+    auto dBest = h.yenHyp(goalCompound, startingCompound, atoi(argv[2]), true);
     h.printResults(dBest);
 
     inputFile.close();

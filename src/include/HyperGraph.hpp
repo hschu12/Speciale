@@ -101,6 +101,11 @@ public:
 				std::vector<int> headCompound;
 				headCompound.push_back(rn->head[i]);
 				addReaction(reactionList.size(), headCompound, rn->tail, rn->yield);
+				ReactionNode* node = getReaction(reactionList.size()-1);
+				std::cout << "Orignal = " << node->originalID;
+				node->originalID = rn->id;
+				std::cout << " to " << node->originalID << std::endl;
+
 			}
 			int size = rn->head.size();
 			for(int i = 1; i < size; i++) {
@@ -189,7 +194,6 @@ public:
 		}
 
 		double result = maxYield(v, s, overlay);
-
 		std::vector<int> shortest = getShortestPathYield(v.id);
 
 		std::pair<double, std::vector<int>> pair (result, shortest);
@@ -228,30 +232,30 @@ public:
 		return B;
 	}
 
-	std::vector< std::pair < double, std::vector<int>> > yenHyp (CompoundNode &v, std::vector<int> &startingCompounds, int K, bool cycles) {
+	std::vector< std::pair < double, std::vector<int>> > yenHyp (std::vector<int> &goalCompounds, std::vector<int> &startingCompounds, int K, bool cycles) {
 
 		std::vector< std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > > L;
 		
 		std::make_heap (L.begin(),L.end(), cmpPair());
 
 		std::vector< std::pair < double, std::vector<int> > >A; //list of k shortest hyperpaths.
-		
-		CompoundNode *s = createDummyNode(startingCompounds);
+		CompoundNode *s = createDummyS(startingCompounds);
+		CompoundNode *v = createDummyT(goalCompounds);
 
 		std::vector<int> toRemove;
 		std::vector<bool> overlay = createOverlay(toRemove, true);
 		std::vector<bool> graphOverlay = createOverlay(toRemove, false);
 
 		if(cycles) {
-			graphOverlay = reduceGraph(graphOverlay, v, *s);
+			graphOverlay = reduceGraph(graphOverlay, *v, *s);
 		}
 
 		std::pair< std::vector<bool> , std::pair<double, std::vector<int>> > pair;
 		if(cycles) {
-			pair = ShortestHyperNielsen(graphOverlay, v, startingCompounds, overlay);
+			pair = ShortestHyperNielsen(graphOverlay, *v, startingCompounds, overlay);
 		} 
 		else{
-			pair = shortestPathMaximumYield(v, startingCompounds, overlay, *s);
+			pair = shortestPathMaximumYield(*v, startingCompounds, overlay, *s);
 		}
 		L.push_back(pair);
 		for ( int k = 1; k <= K; k++) {
@@ -269,10 +273,10 @@ public:
   			for (auto newOverlay : backwardBranching(pair.second, pair.first)) { //Potential danger (function call in for loop)
   				std::pair < std::vector<bool> , std::pair<double, std::vector<int>> >potentialNewPlan; 
   				if(cycles){
-  					potentialNewPlan = ShortestHyperNielsen(graphOverlay, v, startingCompounds, newOverlay);
+  					potentialNewPlan = ShortestHyperNielsen(graphOverlay, *v, startingCompounds, newOverlay);
 				}
 				else{
-  					potentialNewPlan = shortestPathMaximumYield(v, startingCompounds, newOverlay, *s);
+  					potentialNewPlan = shortestPathMaximumYield(*v, startingCompounds, newOverlay, *s);
   				}
   				if (pathIsComplete(potentialNewPlan.second.first)) {
   					if(pathNotAlreadyFound(potentialNewPlan.second.second, A)){
@@ -282,7 +286,7 @@ public:
   				}
   			}
   		}
-  		removeDummy(startingCompounds);
+  		removeDummy(startingCompounds, goalCompounds);
   		resetVisited();
   		return A;
 	}
@@ -307,6 +311,7 @@ public:
   			for (auto reaction : compound.eductOfReaction) {
   				if(overlay[reaction] && graphOverlay[reaction]) {
   					ReactionNode *r = getReaction(reaction);
+  					std::cout << "raising " << r->id << std::endl;
   					r->kj++;
 	
 	  				if (r->kj == r->tail.size()) {
@@ -321,6 +326,7 @@ public:
   							if (c->cost > F) {
   								c->cost = F;
   								c->maxYieldEdge = reaction;	
+
   								if(!Q.contains(*c)) {
 									Q.push(*c); 
   								}
@@ -340,7 +346,6 @@ public:
   			}
 		}
 		double result = goal.cost;
-
 		std::vector<int> shortest = getShortestPathYield(goal.id);
 		std::pair<double, std::vector<int>> pair (result, shortest);
 		std::pair<std::vector<bool> , std::pair<double, std::vector<int>> > pair2 (overlay, pair);
@@ -370,7 +375,7 @@ public:
 		return overlay;
 	}
 
-	CompoundNode* createDummyNode(std::vector<int> &startingCompounds) {
+	CompoundNode* createDummyS(std::vector<int> &startingCompounds) {
 		CompoundNode *s = new CompoundNode(0); //MIGHT NOT BE NEEDED
 		s->id = 0;
 		auto startingCompoundIterator = startingCompounds.begin();
@@ -390,6 +395,27 @@ public:
 		s->cost = 1;
 		compoundList[s->id] = *s;
 		return s;
+	}
+
+	CompoundNode* createDummyT(std::vector<int> &goalCompounds) {
+		CompoundNode *t = new CompoundNode(0); //MIGHT NOT BE NEEDED
+		t->id = compoundList.size();
+		auto goalCompoundIterator = goalCompounds.begin();
+		while (goalCompoundIterator != goalCompounds.end()) {
+			std::vector<int> head;
+			head.push_back(t->id);
+			std::vector<int> tail;
+			tail.push_back(*goalCompoundIterator);
+			addReaction(reactionList.size(), head, tail, 1.0); 	
+			ReactionNode *r = getReaction(reactionList.size()-1);
+			CompoundNode *c = getCompound(*goalCompoundIterator);
+			t->productOfReaction.push_back(r->id);
+			c->eductOfReaction.push_back(r->id);
+			++goalCompoundIterator;
+		}
+		t->molecularWeight = 1; // Need to be 1 to start out the molecularWeight calculations.
+		t->cost = std::numeric_limits<double>::max();
+		return getCompound(compoundList.size()-1);
 	}
 
 	bool pathNotAlreadyFound(std::vector<int> potentialNewPlan, std::vector<std::pair < double, std::vector<int>> > A) {
@@ -457,10 +483,14 @@ public:
 		}
 	}
 
-	void removeDummy(std::vector<int> &startingCompounds) {
+	void removeDummy(std::vector<int> &startingCompounds, std::vector<int> &goalCompounds) {
 		for(auto compound : startingCompounds) {
 			reactionList.pop_back();
 		}
+		for(auto compound : goalCompounds) {
+			reactionList.pop_back();
+		}
+		compoundList.pop_back();
 	}
 
 	/********************************
@@ -597,7 +627,12 @@ public:
 				for( auto pathElement : plan.second) {
     				if(pathElement < reactionList.size()) {
     					auto reaction = getReaction(pathElement);
-						graphFile << "	R" << reaction->id << " [label = \"R" << reaction->id << ". Yield: " << reaction->yield << "\"]\n";
+    					if(reaction->originalID == 0) {
+							graphFile << "	R" << reaction->id << " [label = \"R" << reaction->id << ". Yield: " << reaction->yield << "\"]\n";
+						}
+						else {
+							graphFile << "	R" << reaction->originalID << " [label = \"R" << reaction->originalID << ". Yield: " << reaction->yield << "\"]\n";
+						}
 	      			}
     			}
 
@@ -605,14 +640,29 @@ public:
     			
     			for( auto pathElement : plan.second) {
     				if(pathElement < reactionList.size()) {
-	      				std::cout << "Reaction: " << pathElement << std::endl;
 	      				auto reaction = getReaction(pathElement);
-	      				for( auto headelement : reaction->head) {
-							graphFile << "	R" << reaction->id << " -> " << headelement << ";\n";
+	      				if(reaction->originalID == 0) {
+		      				std::cout << "Reaction: " << pathElement << std::endl;
 						}
-    					for( auto tailelement : reaction->tail) {
-    			  			graphFile << "	" << tailelement << " -> R" << reaction->id << ";\n";
-    					}
+						else{
+			   				std::cout << "Reaction: " << reaction->originalID << std::endl;
+						}
+	      				if(reaction->originalID == 0) {
+		      				for( auto headelement : reaction->head) {
+								graphFile << "	R" << reaction->id << " -> " << headelement << ";\n";
+							}
+	    					for( auto tailelement : reaction->tail) {
+	    			  			graphFile << "	" << tailelement << " -> R" << reaction->id << ";\n";
+	    					}
+	    				}
+	    				else{
+	    					for( auto headelement : reaction->head) {
+								graphFile << "	R" << reaction->originalID << " -> " << headelement << ";\n";
+							}
+	    					for( auto tailelement : reaction->tail) {
+	    			  			graphFile << "	" << tailelement << " -> R" << reaction->originalID << ";\n";
+	    					}
+	    				}
 			      	}
     			}
 
@@ -662,7 +712,7 @@ public:
 		std::cout << std::endl;
 	}
 
-	void graphToGraphviz(std::string s, CompoundNode &v, std::vector<int> &startingCompounds) {
+	void graphToGraphviz(std::string s, std::vector<int> &goalCompounds, std::vector<int> &startingCompounds) {
 		std::ofstream graphFile;
 		std::cout << "Creating Graphviz Graph" << std::endl;
 		graphFile.open(s + ".gv");
@@ -680,8 +730,9 @@ public:
 			graphFile << "	" << s << " [color = green, fontcolor = green]\n";
 
 		}
-		graphFile << "	" << v.id << " [color = red, fontcolor = red]\n";
-
+		for(auto t : goalCompounds) {
+			graphFile << "	" << t << " [color = red, fontcolor = red]\n";
+		}
 
 		graphFile << "}\n";
 

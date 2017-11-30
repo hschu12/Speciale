@@ -39,7 +39,8 @@ int main(int argc, char const *argv[])
         h.addReaction(r, head, tail, yield);
     }
 
-	auto goal = h.getCompound(numberOfCompounds);
+    std::vector<int> goalCompounds;
+	goalCompounds.push_back(numberOfCompounds);
 	std::vector<int> startingCompound;
 	for (int i = 1; i <= numberOfReactions/2; i++) {
         startingCompound.push_back(i);
@@ -47,13 +48,13 @@ int main(int argc, char const *argv[])
         com->molecularWeight = 2;
     }
 
-    auto dBest = h.yenHyp(*goal, startingCompound, atoi(argv[3]), true);
+    auto dBest = h.yenHyp(goalCompounds, startingCompound, atoi(argv[3]), true);
     h.printResults(dBest);
 
-    dBest = h.yenHyp(*goal, startingCompound, atoi(argv[3]), false);
+    dBest = h.yenHyp(goalCompounds, startingCompound, atoi(argv[3]), false);
     h.printResults(dBest);
 
-    h.graphToGraphviz("Random", *goal, startingCompound);
+    h.graphToGraphviz("Random", goalCompounds, startingCompound);
 
 	return 0;
 }

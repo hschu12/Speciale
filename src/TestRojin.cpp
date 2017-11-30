@@ -123,7 +123,8 @@ int main(int argc, char const *argv[]){
      	}
     }
 
-    auto goal = h.getCompound(1);
+    std::vector<int> goalCompounds;
+    goalCompounds.push_back(1);
    	auto starting = h.getCompound(startingCompoundID);
 
    	starting->molecularWeight = weights.at(startingCompoundID-1);
@@ -131,15 +132,15 @@ int main(int argc, char const *argv[]){
    	std::vector<int> startingCompound;
    	startingCompound.push_back(starting->id);
 
-    h.graphToGraphviz("Output", *goal, startingCompound);
+    h.graphToGraphviz("Output", goalCompounds, startingCompound);
 
     std::cout << "Test for Carstens" << std::endl;
-    auto dBest = h.yenHyp(*goal, startingCompound, atoi(argv[4]), false);
+    auto dBest = h.yenHyp(goalCompounds, startingCompound, atoi(argv[4]), false);
     std::cout << "Checking scores" << std::endl;
     testResults(dBest, argv[5]);
     
     std::cout << "Test for Nielsens" << std::endl;
-    dBest = h.yenHyp(*goal, startingCompound, atoi(argv[4]), true);
+    dBest = h.yenHyp(goalCompounds, startingCompound, atoi(argv[4]), true);
 
     std::cout << "Checking scores" << std::endl;
     testResults(dBest, argv[5]);

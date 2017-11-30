@@ -6,7 +6,8 @@ int main(int argc, char const *argv[])
 {
 	HyperGraph h = createGraph(6000000, 1000000);
 
-	auto goal = h.getCompound(4989);
+	std::vector<int> goalCompounds;
+	goalCompounds.push_back(4989);
 
     auto start = h.getCompound(112069);
     auto start2 = h.getCompound(112067);
@@ -24,11 +25,11 @@ int main(int argc, char const *argv[])
 	startingCompound.push_back(112072);
 	startingCompound.push_back(3598088);
 
-	h.graphToGraphviz("MergedDump", *goal, startingCompound);
+	h.graphToGraphviz("MergedDump", goalCompounds, startingCompound);
 
   	auto starttime = std::chrono::high_resolution_clock::now();
 
-	auto dBest = h.yenHyp(*goal, startingCompound, 9, true);
+	auto dBest = h.yenHyp(goalCompounds, startingCompound, 9, true);
     h.printResults(dBest);
 	
 	auto end = std::chrono::high_resolution_clock::now();
@@ -38,7 +39,7 @@ int main(int argc, char const *argv[])
     
    	starttime = std::chrono::high_resolution_clock::now();
 
-    dBest = h.yenHyp(*goal, startingCompound, 9, false);
+    dBest = h.yenHyp(goalCompounds, startingCompound, 9, false);
     h.printResults(dBest);
 
 	end = std::chrono::high_resolution_clock::now();
