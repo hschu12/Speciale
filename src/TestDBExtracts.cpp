@@ -94,8 +94,13 @@ int main(int argc, char const *argv[]){
 	    	if(!type.compare("R")){ //Returns true if type is R
 	    		reactions[stoi(id)] = stoi(id);
 	    		std::string yield = str.substr(third+1, fouth-third-1);
-	    		yields[stoi(id)] = stod(yield);
-
+                if(yield.compare("None") == 0) {
+                    std::cout << "'None' Found" << std::endl;
+                    yields[stoi(id)] = 0.1;
+                }
+                else{
+    	    		yields[stoi(id)] = stod(yield);
+                }
 
 	    	}
 	    	if(!type.compare("N")){ //Returns true if type is N
@@ -111,12 +116,14 @@ int main(int argc, char const *argv[]){
             if(first > 0) { //Removes last line "}"
    				std::string in = str.substr(0, first);
    				std::string out = str.substr(first+2, end-first-2);
-             	if(reactions[stoi(in)] == stoi(in) && stoi(in) != 0){
- 					eductsToReaction[stoi(in)].push_back(stod(out));
- 				}
- 			    if(reactions[stoi(out)] == stoi(out)){
- 					productsToReaction[stoi(out)].push_back(stod(in));
- 				}
+                if(in.compare("None") != 0 && out.compare("None") != 0) {
+                 	if(reactions[stoi(in)] == stoi(in) && stoi(in) != 0){
+     					eductsToReaction[stoi(in)].push_back(stod(out));
+     				}
+     			    if(reactions[stoi(out)] == stoi(out)){
+     					productsToReaction[stoi(out)].push_back(stod(in));
+     				}
+                }
    			}
    		}
    	}
@@ -125,6 +132,7 @@ int main(int argc, char const *argv[]){
             h.addReaction(reactions[i], productsToReaction[i], eductsToReaction[i], yields[i]);
      	}
     }
+    std::cout << "Done Build" << std::endl;
     compounds.clear();
     reactions.clear();
     yields.clear();

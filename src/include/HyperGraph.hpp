@@ -102,10 +102,7 @@ public:
 				headCompound.push_back(rn->head[i]);
 				addReaction(reactionList.size(), headCompound, rn->tail, rn->yield);
 				ReactionNode* node = getReaction(reactionList.size()-1);
-				std::cout << "Orignal = " << node->originalID;
 				node->originalID = rn->id;
-				std::cout << " to " << node->originalID << std::endl;
-
 			}
 			int size = rn->head.size();
 			for(int i = 1; i < size; i++) {
@@ -311,7 +308,6 @@ public:
   			for (auto reaction : compound.eductOfReaction) {
   				if(overlay[reaction] && graphOverlay[reaction]) {
   					ReactionNode *r = getReaction(reaction);
-  					std::cout << "raising " << r->id << std::endl;
   					r->kj++;
 	
 	  				if (r->kj == r->tail.size()) {

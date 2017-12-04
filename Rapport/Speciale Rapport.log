@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  22 NOV 2017 13:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  4 DEC 2017 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1203,7 +1203,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 76.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<Billeder/logo.png, id=115, 547.8066pt x 542.5068pt>
+<Billeder/logo.png, id=119, 547.8066pt x 542.5068pt>
 File: Billeder/logo.png Graphic file (type png)
  <use Billeder/logo.png>
 Package pdftex.def Info: Billeder/logo.png used on input line 84.
@@ -1235,7 +1235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 108--109
 
  []
 
-<Billeder/HyperEdge.png, id=170, 262.9825pt x 194.7275pt>
+<Billeder/HyperEdge.png, id=175, 262.9825pt x 194.7275pt>
 File: Billeder/HyperEdge.png Graphic file (type png)
 
 <use Billeder/HyperEdge.png>
@@ -1244,231 +1244,243 @@ Package pdftex.def Info: Billeder/HyperEdge.png used on input line 115.
  [3 <./Billeder/HyperEdge.png>]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-)
-<Billeder/BachBranch.png, id=195, 968.61874pt x 590.205pt>
+) [4]
+<Billeder/BachBranch.png, id=220, 968.61874pt x 590.205pt>
 File: Billeder/BachBranch.png Graphic file (type png)
 
 <use Billeder/BachBranch.png>
-Package pdftex.def Info: Billeder/BachBranch.png used on input line 149.
+Package pdftex.def Info: Billeder/BachBranch.png used on input line 160.
 (pdftex.def)             Requested size: 484.30818pt x 295.10178pt.
 
-Overfull \hbox (84.62436pt too wide) in paragraph at lines 148--150
+Overfull \hbox (84.62436pt too wide) in paragraph at lines 159--161
 []  [] 
  []
 
-[4] [5 <./Billeder/BachBranch.png>]
-<Billeder/OverlayIllustration.png, id=227, 762.85pt x 341.275pt>
+[5 <./Billeder/BachBranch.png>]
+<Billeder/OverlayIllustration.png, id=236, 762.85pt x 341.275pt>
 File: Billeder/OverlayIllustration.png Graphic file (type png)
 
 <use Billeder/OverlayIllustration.png>
-Package pdftex.def Info: Billeder/OverlayIllustration.png used on input line 17
-8.
+Package pdftex.def Info: Billeder/OverlayIllustration.png used on input line 18
+9.
 (pdftex.def)             Requested size: 381.42407pt x 170.63707pt.
 
-Overfull \hbox (36.42407pt too wide) in paragraph at lines 178--179
+Overfull \hbox (36.42407pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [6 <./Billeder/OverlayIllustration.png>]
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [7]
-Underfull \hbox (badness 10000) in paragraph at lines 231--233
-
- []
-
+[6 <./Billeder/OverlayIllustration.png>]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [8] [9]
-<Billeder/Dysidiolide-7601810.png, id=347, 800.9925pt x 205.76875pt>
+) [7]
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
+
+ []
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+) [8]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+) [9]
+Overfull \hbox (2.58032pt too wide) in paragraph at lines 309--310
+\T1/cmr/m/n/10 Journals cov-ered in-clude \T1/cmr/m/it/10 Ad-vanced Syn-the-sis
+ and Catal-y-sis, Ange-wandte Chemie,
+ []
+
+<Billeder/Dysidiolide-7601810.png, id=352, 800.9925pt x 205.76875pt>
 File: Billeder/Dysidiolide-7601810.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7601810.png>
-Package pdftex.def Info: Billeder/Dysidiolide-7601810.png used on input line 30
-6.
+Package pdftex.def Info: Billeder/Dysidiolide-7601810.png used on input line 31
+7.
 (pdftex.def)             Requested size: 400.49527pt x 102.88411pt.
 
-Overfull \hbox (29.2642pt too wide) in paragraph at lines 305--307
+Overfull \hbox (29.2642pt too wide) in paragraph at lines 316--318
 []  [] 
  []
 
-<Billeder/Dysidiolide-7910427.png, id=348, 798.985pt x 210.7875pt>
+<Billeder/Dysidiolide-7910427.png, id=353, 798.985pt x 210.7875pt>
 File: Billeder/Dysidiolide-7910427.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910427.png>
-Package pdftex.def Info: Billeder/Dysidiolide-7910427.png used on input line 30
-9.
+Package pdftex.def Info: Billeder/Dysidiolide-7910427.png used on input line 32
+0.
 (pdftex.def)             Requested size: 399.49152pt x 105.3935pt.
 
-Overfull \hbox (28.26045pt too wide) in paragraph at lines 308--310
+Overfull \hbox (28.26045pt too wide) in paragraph at lines 319--321
 []  [] 
  []
 
-<Billeder/Dysidiolide-7910428.png, id=349, 799.98875pt x 213.79875pt>
+<Billeder/Dysidiolide-7910428.png, id=354, 799.98875pt x 213.79875pt>
 File: Billeder/Dysidiolide-7910428.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910428.png>
-Package pdftex.def Info: Billeder/Dysidiolide-7910428.png used on input line 31
-2.
+Package pdftex.def Info: Billeder/Dysidiolide-7910428.png used on input line 32
+3.
 (pdftex.def)             Requested size: 399.9934pt x 106.89911pt.
 
-Overfull \hbox (28.76233pt too wide) in paragraph at lines 311--313
+Overfull \hbox (28.76233pt too wide) in paragraph at lines 322--324
 []  [] 
  []
 
-<Billeder/Dysidiolide-8171938.png, id=350, 799.98875pt x 204.765pt>
+<Billeder/Dysidiolide-8171938.png, id=355, 799.98875pt x 204.765pt>
 File: Billeder/Dysidiolide-8171938.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-8171938.png>
-Package pdftex.def Info: Billeder/Dysidiolide-8171938.png used on input line 31
-5.
+Package pdftex.def Info: Billeder/Dysidiolide-8171938.png used on input line 32
+6.
 (pdftex.def)             Requested size: 399.9934pt x 102.38223pt.
 
-Overfull \hbox (28.76233pt too wide) in paragraph at lines 314--316
+Overfull \hbox (28.76233pt too wide) in paragraph at lines 325--327
 []  [] 
  []
 
-[10] <Billeder/Dysidiolide-7601810-Close.png, id=360, 475.7775pt x 477.785pt>
+[10] <Billeder/Dysidiolide-7601810-Close.png, id=370, 475.7775pt x 477.785pt>
 File: Billeder/Dysidiolide-7601810-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7601810-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-7601810-Close.png used on input l
-ine 332.
+ine 343.
 (pdftex.def)             Requested size: 138.00052pt x 138.58325pt.
 
-<Billeder/Dysidiolide-7910427-Close.png, id=361, 366.36874pt x 499.8675pt>
+<Billeder/Dysidiolide-7910427-Close.png, id=371, 366.36874pt x 499.8675pt>
 File: Billeder/Dysidiolide-7910427-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910427-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-7910427-Close.png used on input l
-ine 338.
+ine 349.
 (pdftex.def)             Requested size: 138.00052pt x 188.28885pt.
 
-<Billeder/Dysidiolide-7910428-Close.png, id=362, 564.1075pt x 490.83376pt>
+<Billeder/Dysidiolide-7910428-Close.png, id=372, 564.1075pt x 490.83376pt>
 File: Billeder/Dysidiolide-7910428-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910428-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-7910428-Close.png used on input l
-ine 344.
+ine 355.
 (pdftex.def)             Requested size: 138.00052pt x 120.07182pt.
 
-<Billeder/Dysidiolide-8171938-Close.png, id=363, 407.5225pt x 488.82625pt>
+<Billeder/Dysidiolide-8171938-Close.png, id=373, 407.5225pt x 488.82625pt>
 File: Billeder/Dysidiolide-8171938-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-8171938-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-8171938-Close.png used on input l
-ine 350.
+ine 361.
 (pdftex.def)             Requested size: 138.00052pt x 165.53488pt.
  [11 <./Billeder/Dysidiolide-7601810.png> <./Billeder/Dysidiolide-7910427.png> 
 <./Billeder/Dysidiolide-7910428.png> <./Billeder/Dysidiolide-8171938.png>]
-<Billeder/LeftOnlyReaction.png, id=376, 782.925pt x 349.305pt>
+<Billeder/LeftOnlyReaction.png, id=387, 782.925pt x 349.305pt>
 File: Billeder/LeftOnlyReaction.png Graphic file (type png)
 
 <use Billeder/LeftOnlyReaction.png>
-Package pdftex.def Info: Billeder/LeftOnlyReaction.png used on input line 362.
+Package pdftex.def Info: Billeder/LeftOnlyReaction.png used on input line 372.
 (pdftex.def)             Requested size: 391.46155pt x 174.65207pt.
 
-Overfull \hbox (20.23048pt too wide) in paragraph at lines 361--363
+Overfull \hbox (20.23048pt too wide) in paragraph at lines 371--373
 []  [] 
  []
 
-<Billeder/RightOnlyReaction.png, id=377, 785.93625pt x 351.3125pt>
+<Billeder/RightOnlyReaction.png, id=388, 785.93625pt x 351.3125pt>
 File: Billeder/RightOnlyReaction.png Graphic file (type png)
 
 <use Billeder/RightOnlyReaction.png>
-Package pdftex.def Info: Billeder/RightOnlyReaction.png used on input line 365.
+Package pdftex.def Info: Billeder/RightOnlyReaction.png used on input line 375.
 
 (pdftex.def)             Requested size: 392.96716pt x 175.6558pt.
 
-Overfull \hbox (21.7361pt too wide) in paragraph at lines 364--366
+Overfull \hbox (21.7361pt too wide) in paragraph at lines 374--376
 []  [] 
  []
 
 [12 <./Billeder/Dysidiolide-7601810-Close.png> <./Billeder/Dysidiolide-7910427-
 Close.png> <./Billeder/Dysidiolide-7910428-Close.png> <./Billeder/Dysidiolide-8
 171938-Close.png>]
-<Billeder/MissingIngredientReaction.png, id=389, 781.92125pt x 325.215pt>
+<Billeder/MissingIngredientReaction.png, id=402, 781.92125pt x 325.215pt>
 File: Billeder/MissingIngredientReaction.png Graphic file (type png)
 
 <use Billeder/MissingIngredientReaction.png>
 Package pdftex.def Info: Billeder/MissingIngredientReaction.png used on input l
-ine 371.
+ine 384.
 (pdftex.def)             Requested size: 390.95967pt x 162.6071pt.
 
-Overfull \hbox (19.7286pt too wide) in paragraph at lines 370--372
+Overfull \hbox (19.7286pt too wide) in paragraph at lines 383--385
 []  [] 
  []
 
-<Billeder/MultistepReactions.png, id=390, 817.0525pt x 529.98pt>
+[13 <./Billeder/LeftOnlyReaction.png> <./Billeder/RightOnlyReaction.png>]
+<Billeder/MultistepReactions.png, id=412, 817.0525pt x 529.98pt>
 File: Billeder/MultistepReactions.png Graphic file (type png)
 
 <use Billeder/MultistepReactions.png>
-Package pdftex.def Info: Billeder/MultistepReactions.png used on input line 377
+Package pdftex.def Info: Billeder/MultistepReactions.png used on input line 394
 .
 (pdftex.def)             Requested size: 408.52525pt x 264.98933pt.
 
-Overfull \hbox (37.29419pt too wide) in paragraph at lines 376--378
+Overfull \hbox (37.29419pt too wide) in paragraph at lines 393--395
 []  [] 
  []
 
-[13 <./Billeder/LeftOnlyReaction.png> <./Billeder/RightOnlyReaction.png> <./Bil
-leder/MissingIngredientReaction.png>]
-<Billeder/DifferentYieldNotation.png, id=401, 814.04124pt x 532.99126pt>
-File: Billeder/DifferentYieldNotation.png Graphic file (type png)
+[14 <./Billeder/MissingIngredientReaction.png>]
+<Billeder/MultipleProducts.png, id=420, 805.0075pt x 439.6425pt>
+File: Billeder/MultipleProducts.png Graphic file (type png)
 
-<use Billeder/DifferentYieldNotation.png>
-Package pdftex.def Info: Billeder/DifferentYieldNotation.png used on input line
- 383.
-(pdftex.def)             Requested size: 407.01962pt x 266.49498pt.
+<use Billeder/MultipleProducts.png>
+Package pdftex.def Info: Billeder/MultipleProducts.png used on input line 401.
+(pdftex.def)             Requested size: 402.50278pt x 219.82071pt.
 
-Overfull \hbox (35.78856pt too wide) in paragraph at lines 382--384
+Overfull \hbox (31.27171pt too wide) in paragraph at lines 400--402
 []  [] 
  []
 
+[15 <./Billeder/MultistepReactions.png> <./Billeder/MultipleProducts.png>]
+<Billeder/CopyReaction.png, id=432, 617.30624pt x 293.095pt>
+File: Billeder/CopyReaction.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+<use Billeder/CopyReaction.png>
+Package pdftex.def Info: Billeder/CopyReaction.png used on input line 408.
+(pdftex.def)             Requested size: 308.65236pt x 146.54713pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
-[14 <./Billeder/MultistepReactions.png> <./Billeder/DifferentYieldNotation.png>
-] [15]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 402.
+[16 <./Billeder/CopyReaction.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 428.
 
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (15.4822pt too wide) in paragraph at lines 402--402
+Overfull \hbox (15.4822pt too wide) in paragraph at lines 428--428
 []\T1/cmr/m/n/10 Oct. 2017. [On-line]. Avail-able: []$\T1/cmtt/m/n/10 https : /
  / en . wikipedia . org / wiki / Beilstein _
  []
 
-[16] 
+[17] 
 AED: lastpage setting LastPage
-[17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 407.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 407.
+[18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
  (./Speciale Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 407.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 407.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 433.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
 Package rerunfilecheck Info: File `"Speciale Rapport".out' has not changed.
-(rerunfilecheck)             Checksum: 76BE630F890259FF576DCFEAFFB8C95D;1688.
+(rerunfilecheck)             Checksum: 1FEA370BF860E38BD87A491FF104BEB7;1765.
 Package logreq Info: Writing requests to '"Speciale Rapport".run.xml'.
 \openout1 = `"Speciale Rapport.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25372 strings out of 493089
- 451023 string characters out of 6134842
- 639007 words of memory out of 5000000
- 28246 multiletter control sequences out of 15000+600000
+ 25390 strings out of 493089
+ 451327 string characters out of 6134842
+ 635007 words of memory out of 5000000
+ 28256 multiletter control sequences out of 15000+600000
  18256 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,56p,829b,2228s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,56p,956b,2245s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
@@ -1476,24 +1488,25 @@ sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
 /local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
 al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/cm-super/sftt1000.pfb>
-Output written on "Speciale Rapport.pdf" (18 pages, 784396 bytes).
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on "Speciale Rapport.pdf" (19 pages, 793705 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 459 compressed objects within 5 object streams
- 166 named destinations out of 1000 (max. 500000)
- 314 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 566 PDF objects out of 1000 (max. 8388607)
+ 484 compressed objects within 5 object streams
+ 173 named destinations out of 1000 (max. 500000)
+ 327 words of extra memory for PDF output out of 10000 (max. 10000000)
 

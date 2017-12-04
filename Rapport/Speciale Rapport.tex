@@ -108,7 +108,7 @@ Hvad indeholder hver sektion??
 This section contains definitions that will be used throughout this paper. It is assumed that the reader have a basic understanding of graph theory. \\
 
 \textbf{Hypergraphs}\\
-A directed hypergraph $h$ is a set of $V$ of vertices and a set $E$ of hyperedges, where each hyperedge $e=(T(e),H(e))$ is an ordered pair of non-empty multi-sets of vertices. The set $T(e)$ is denoted as the tail of the hyperedge and $H(e)$ is the head. If $|H(e)|=1$ then the hyperedge is denoted as a B-hyperedge. If all edges in the hypergraph is B-hyperedges, then the graph is denoted a B-hypergraph. This paper will only consider hypergraphs that are B-hypergraphs. A hypergraph $H' = (V',E')$ is a subhypergraph of $H=(V,E)$ if $V' \subset V$ and $E'\subset E$.\cite{Fagerberg}
+A directed hypergraph $h$ is a set $V$ of vertices and a set $E$ of hyperedges, where each hyperedge $e=(T(e),H(e))$ is an ordered pair of non-empty multi-sets of vertices. The set $T(e)$ is denoted as the tail of the hyperedge and $H(e)$ is the head. If $|H(e)|=1$ then the hyperedge is denoted as a B-hyperedge. If all edges in the hypergraph is B-hyperedges, then the graph is denoted a B-hypergraph. This paper will only consider hypergraphs that are B-hypergraphs. A hypergraph $H' = (V',E')$ is a subhypergraph of $H=(V,E)$ if $V' \subseteq V$ and $E'\subseteq E$.\cite{Fagerberg}
 
 \begin{figure}[H]
 \centering
@@ -117,7 +117,18 @@ A directed hypergraph $h$ is a set of $V$ of vertices and a set $E$ of hyperedge
 \end{figure}
 
 \textbf{Hyperpaths}\\
-A path $P_{st}$ from $s$ to $t$ in a B-hypergraph is a sequence $P_{st}=\langle e_1, e_2, e_3, ... , e_q \rangle$ of B-hyperedges such that $s\in T(e_1)$ and $t=H(e_q)$ and $H(e_i) \in T(e_{i+1})$ for $i=1..q-1$. Its length $|P_{st}|$ is the number $q$ of hyperedges. If $t \in T(e_1)$, then $P_{st}$ is a cycle. A hypergraph is acyclic if it does not contain any cycles. \cite{Fagerberg}
+A path $P_{st}$ from $s$ to $t$ in a B-hypergraph is a sequence $P_{st}=\langle e_1, e_2, e_3, ... , e_q \rangle$ of B-hyperedges such that $s\in T(e_1)$ and $t=H(e_q)$ and $H(e_i) \in T(e_{i+1})$ for $i=1..q-1$. Its length $|P_{st}|$ is the number $q$ of hyperedges. If $t \in T(e_1)$, then $P_{st}$ is a cycle. A hypergraph is acyclic if it does not contain any cycles. \cite{Fagerberg} \\
+A hyperpath $\pi_{st} = (V_{\pi},E_{\pi}$ from a source vertex $s$ to a target vertex $t$ in a B-hypergraph $H$ is a subhypergraph of H with the following properties: If $t = s$, the $V_{\pi}=\{s\}$ and $E_{\pi} = \emptyset$. Otherwise, $E_{\pi}$ can be ordered in a sequence $\langle e_1, e_2,....,e_q \rangle$ such that 
+\begin{enumerate}
+\item 
+$T(e_i)\{s\} \cup \{H(e_1),h(e_2,...,h(e_i-1)\}$ for all i
+\item
+$t=H(e_q)$
+\item
+Every $v \in V_{\pi} \setminus \{t\} $ has at least one outgoing hyperarc in $E_{\pi}$, and $t$ has zero.
+\item
+Every $v \in V_{\pi} \setminus \{s\}$ has at least one ingoing hyperarc in $E_{\pi}$, and $s$ has zero. \cite{Fagerberg}
+\end{enumerate}
 
 \section{Finding The K-Best Synthetic Plans}
 This section describes how to find the K-Best paths of a hypergraph modifying an algorithm made by Jin Y. Yen. The section starts out by describing the work flow of the algorithm, and then proceeds to deal with the alterations that are needed to run the algorithm on a hypergraph.
@@ -151,10 +162,10 @@ function Back-Branch(H,$\pi$)
 \end{figure}
 However, this algorithm have a problem when working on a larger hypergraph. It demands that each time we make alterations on the hypergraph we have to make a copy, $H^i$, of the graph, $H$, with the exception of the hyperedges that is removed when fixing the back tree and removing $\pi.p(v_i)$.\\
 This could easily work for smaller graphs, but if we use this on the hypergraph that we generate from the beilstein database, we would have to copy a graph of multiple GigaBytes. \\
-To handle this problem I came up with the idea of creating an overlay for the graph instead of copying it. The overlay would work as an transparent on top of the original graph, stating which edges still were accessible. This is done by creating a \textit{vector<bool>} which has a length of $R$, where $R$ is the number of reactions. Normally a reaction would contain at least 24 bytes of data:
+To handle this problem I came up with the idea of creating an overlay for the graph instead of copying it. The overlay would work as an transparent on top of the original graph, stating which edges still is accessible. This is done by creating a \textit{vector<bool>} which has a length of $R$, where $R$ is the number of reactions. Normally a reaction would contain at least 28 bytes of data:
 \begin{itemize}
 \item
-2x ints of 4 bytes each
+3x ints of 4 bytes each
 \item
 1x double of 8 bytes
 \item
@@ -162,7 +173,7 @@ To handle this problem I came up with the idea of creating an overlay for the gr
 \item
 1x \textit{vector<int>} tail of length $N$ (number of educts) of at least 4 bytes
 \end{itemize}
-This can be reduced dramaticly by using the \textit{vector<bool>}, since c++ only uses 1 bit per boolean in the vector instead of the regular 1 byte per boolean.\cite{VectorBool} This means if working on a hypergraph with 40 million reactions, we would be able to create an overlay using 5 MB of space per alternated graph, instead of copying a hypergraph were the reactions alone uses at least 960 MB per copy. \\
+This can be reduced dramaticly by using the \textit{vector<bool>}, since c++ only uses 1 bit per boolean in the vector instead of the regular 1 byte per boolean.\cite{VectorBool} This means if working on a hypergraph with 40 million reactions, we would be able to create an overlay using 5 MB of space per alternated graph, instead of copying a hypergraph were the reactions alone uses at least 1,12 GB per copy. \\
 As the figure below shows, we never change or remove anything on the hypergraph. We simply create the following overlay:
 \begin{table}[H]
 \centering
@@ -179,7 +190,7 @@ And then when trying to use an edge, we ask: "Does overlay at reaction A exist?"
 \caption{a) The original hypergraph. b) The original hypergraph, but using the overlay. If the reaction is green it is still usable. If red then it have been "removed" from the hypergraph.}
 \end{figure}
 
-This of course means that the algorithm for back-branch have to be changed accordingly. Instead of the hypergraph as input we now give it an overlay. This overlay is changed so it fits with the new layout of the graph. Instead of deleting hyperedges in the copy, we now simply changes the boolean at the index of the hyperedge.id. True if we should add the hyperedge and false when we want to "remove" a hyperedge.
+This of course means that the algorithm for back-branch have to be changed accordingly. Instead of the hypergraph as input we now give it an overlay. This overlay is changed so it fits with the new layout of the graph. Instead of deleting hyperedges in the copy, we now simply changes the boolean at the index of the hyperedge.id. True if we should "add" the hyperedge and false when we want to "remove" a hyperedge.
 
 \begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Backwards Branching for B-Hypergraph using overlay]
 function BackwardsBranching($\pi$, Overlay) 						
@@ -200,7 +211,7 @@ function BackwardsBranching($\pi$, Overlay)
 	return B
 endfunction
 \end{lstlisting}
-Now that we have the branching in place are we able to construct an algorithm that are similar to Yen's algorithm but can run on hypergraphs. As input it takes a start vertex, a goal vertex, and an integer $K$, where $K$ is the number of best paths we want to find.\\
+Now that we have the branching in place are we able to construct an algorithm that are similar to Yen's algorithm, but can run on hypergraphs. As input it takes a start vertex, a goal vertex, and an integer $K$, where $K$ is the number of best paths we want to find.\\
 It creates a heap, $L$, and a list, $A$, which will contain the $K$-best paths once the algorithm is finished. It then finds the best path using a shortest path algorithm and inserts it into the heap. Inside the loop it extracts the best path found from the heap and performs a backward branching, and finds all possible paths in the branches. If there is a path from $s$ to $t$, then this path is added to the heap. The algorithm either terminates if the heaps is empty ( No more paths available) or once it have found the $K$-best paths.
 \begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = K-Shortest Paths Algorithm in B-Hypergraph]
 function YenHyp(s, t, K) 
@@ -295,11 +306,11 @@ It is supported by an experimental fact (property, preparation, reaction)
 \item
 It has a credible citation
 \end{enumerate}
-Journals covered include \textit{Advanced Synthesis and Catalysis, Angewandte Chemie , Journal of American Chemical Society, Journal of Organometallic Chemistry, Synlett} and \textit{Tetrahedron}. \cite{WikiReaxys}\cite{WikiBeilstein}
+Journals covered include \textit{Advanced Synthesis and Catalysis, Angewandte Chemie, Journal of American Chemical Society, Journal of Organometallic Chemistry, Synlett} and \textit{Tetrahedron}. \cite{WikiReaxys}\cite{WikiBeilstein}
 \subsection{Data Assessment}
-During my work with the Beilstain database have I found several issues with the data stored.
-First problem is that there are multiple instances of the same compound, but with different Reaxys IDs. As seen in fig.\ref{fig::SameID} have I found four different IDs for the compound Dysidiolide. These were found when I tried to reproduce the different synthesis plans of Dysidiolide from \cite{SynthesisPlans} using the referenced articles where each synthesis plan origins. E. J. Corey's version of Dysidiolide have the ID 8171938, Boukouvalas have two different with ID 7601810 and 7910427 and Danishefsky have the ID 7910428. \\
-Since we have four different IDs for Dysidiolide we can't state a single goal compound to our program that would result in giving us these three synthesis plans.
+During my work with the Beilstain database have I found several issues when it comes to using it to find shortest paths.
+First problem is that there are multiple instances of the same compound, each with a different Reaxys IDs. As seen in fig.\ref{fig::SameID} have I found four different IDs for the compound Dysidiolide. These were found when I tried to reproduce the different synthesis plans of Dysidiolide from \cite{SynthesisPlans} using the referenced articles where each synthesis plan origins. E. J. Corey's version of Dysidiolide have the ID 8171938, Boukouvalas have two different with ID 7601810 and 7910427 and Danishefsky have the ID 7910428. \\
+Since we have four different IDs for Dysidiolide we can't state a single goal compound to our program that would result in giving us these three synthesis plans. To handle this problem the program can take several goal compounds as an input, and by creating a dummy node $t$ are we able to give the illusion of a single target.
 
 \begin{figure}[H]
 \hspace{-1cm}
@@ -317,12 +328,12 @@ Since we have four different IDs for Dysidiolide we can't state a single goal co
 \label{fig::SameID}
 \end{figure}
 
-So what is causing this multiple ID issue? If we study fig. \ref{fig::SameID} can we see that the molecular weight and molecular formular are exactly the same, however if we look at the close up of the molecular structure in fig. \ref{fig::SameIDClose} the compounds are not structured in the same way, even though the compound is the same. The main differences is:
+So what is causing this multiple ID issue? If we study fig. \ref{fig::SameID} can we see that the molecular weight and molecular formular are exactly the same, however if we look at the close up of the molecular structure in fig. \ref{fig::SameIDClose} the compounds are not structured in the same way, even though the compounds are the same. The main differences is:
 \begin{enumerate}
 \item
 Which way some of the substructures are facing. Example: The lower $C_4O_3H_4$ is rotated differently in each instance or that we write $H_2C$ instead of $CH_2$.
 \item
-The bond between two chemical elements are notated.Example: The bond to the $OH$ in the bottom of the structure is either a "single" (d), "single down" (a) (c) or "single up or down" (b).
+How the bond between two chemical elements are notated. Example: The bond to the $OH$ in the bottom of the structure is either a "single" (d), "single down" (a) (c) or "single up or down" (b).
 \end{enumerate}
 
 \begin{figure}[H]
@@ -353,9 +364,8 @@ The bond between two chemical elements are notated.Example: The bond to the $OH$
 \caption{Different versions of Dysidiolide: ID 7601810 (a), ID 7910427(b), ID 7910428(c), ID 8171938(d)}
 \label{fig::SameIDClose}
 \end{figure}
-Benyt Dysidiolide til at vise at der er flere udgaver af samme compounds og at der er nogle som ikke hedder det som de er (Kun har REAXYSID eller et helt andet navn).
 
-Find reaktioner som ikke har et educt eller et product
+Second issue is the problem of a reaction not having an educt or a product(fig: \ref{fig::EductProductMissing}). This leaves the reaction incomplete and makes it useless in the graph construction. If there is no educt the hyperedge created will have an indegree of 0, and thereby making it unreachable. If there is no product the hyperedge will have an outdegree of 0, making it a deadend.
 
 \begin{figure}[H]
 \hspace{-1cm}
@@ -364,36 +374,52 @@ Find reaktioner som ikke har et educt eller et product
 \hspace{-1cm}
 \includegraphics[scale=0.5]{Billeder/RightOnlyReaction.png}
 \caption{Example of reactions that either is missing educts or products.}
+\label{fig::EductProductMissing}
 \end{figure}
+
+Third issue is that some reactions contains educts where a compound isn't linked to a compound in the database. This results that the name of the compound is written instead of the usual structure diagram (fig \ref{fig::NoCompound}). This issue does not give problems when it comes to the construction of the hypergraph. The compound is simply just not added to the hypergraph. This however results in a slightly misleading result if the user does not look up the reaction in Reaxys where the name of the educt is stated. Example: If $A+B\rightarrow C$ but $B$ is not given an compound ID the reaction would look like $A\rightarrow C$ in the hypergraph.
 
 \begin{figure}[H]
 \hspace{-1cm}
 \includegraphics[scale=0.5]{Billeder/MissingIngredientReaction.png}
 \caption{Example of an reaction with a missing educt.}
+\label{fig::NoCompound}
 \end{figure}
+
+Forth issue is multireactions. (fig \ref{fig::Multistep}) A mulitreaction is a reaction with its own ID, but it consists of an educt and a product were there are multiple reaction steps, $s$, between the two compounds. This means that instead of $s$ different reactions with their own ID and yield we get a single reaction without a yield. The yield for each reaction in the multistep reaction is often stored as a part of the reaction text, but not easy extractable. The multistep reaction should however only consist of individual reactions that already are in the database.\\
+The solution to this problem have been to not include all reactions labelled as "Multi-step reaction" to the extraction from the database. Since the steps should be saved as individual reactions this would not cause any harm to possibility of finding the exact same path, but only using all $s$ steps instead of one.
 
 \begin{figure}[H]
 \hspace{-1cm}
 \includegraphics[scale=0.5]{Billeder/MultistepReactions.png}
 \caption{Example of a multistep reaction.}
+\label{fig::Multistep}
 \end{figure}
 
 \begin{figure}[H]
 \hspace{-1cm}
-\includegraphics[scale=0.5]{Billeder/DifferentYieldNotation.png}
-\caption{Example of inconsistent yield notation.}
+\includegraphics[scale=0.5]{Billeder/MultipleProducts.png}
+\caption{Example of a reaction with multiple products}
+\label{fig::MultipleProducts}
+\end{figure}
+Fifth issue is reactions which have more than one product (fig. \ref{fig::MultipleProducts}). If this becomes a part of our hypergraph it is no longer a B-hypergraph. This is a problem since both shortest paths algorithms only works on B-hypergraphs. This problem is however solved after the graph have been created by the method $convertToBHypergraph()$ in Hypergraph.hpp. The method iterates through the reaction list and if it encounters a non B-hyperedge, the hyperedge is added to a list of non B-hyperedges. For each of the non fixed B-hyperedges ,$e$, it creates $|H(e)|$ new hyperedges ,$e_i$, where $T(e_i)=T(e)$ and $H(e_i) = H(e)[i], \forall\ i \in \mathbb{N}, 1 \leq i\leq|H(e)|$  (fig. \ref{fig::CopyReaction}). Each of the new reactions contains an original-ID variable that points to the original hyperedge. This is only used to print the correct ID when the edge is used in a synthesis plan.
+
+\begin{figure}[H]
+\includegraphics[scale=0.5]{Billeder/CopyReaction.png}
+\caption{Convertion to B-Hyperedge}
+\label{fig::CopyReaction}
 \end{figure}
 
 
-
-\subsection{Making A B-Hypergraph}
-\subsection{Testing}
+\subsection{Results}
 \subsubsection{Strychnine}
-\subsubsection{Compound 2} 
-\subsubsection{Compound 3}
+\subsubsection{Colchicine} 
+\subsubsection{Dysidiolide}
+\subsubsection{Asteriscanolide}
+\subsubsection{Lepadiformine}
 kkkk \cite{SynthesisPlans}\\
 
-\section{Konklusion}
+\section{Conclusion}
 
 \newpage
 
@@ -402,6 +428,6 @@ kkkk \cite{SynthesisPlans}\\
 \printbibliography[nottype=book, nottype=article, title={Other}]
 
 \newpage
-\section{Appendiks}
+\section{Appendix}
 
 \end{document}
