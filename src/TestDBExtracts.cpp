@@ -1,6 +1,7 @@
 #include "include/HyperGraph.hpp"
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 #include <math.h>
 
 int main(int argc, char const *argv[]){
@@ -63,7 +64,6 @@ int main(int argc, char const *argv[]){
     HyperGraph h(largestCompoundID+100,largestReactionID+100);
 
     firstRead.close();
-
 	std::ifstream inFile;
     
     inFile.open(argv[1]);
@@ -95,11 +95,13 @@ int main(int argc, char const *argv[]){
 	    		reactions[stoi(id)] = stoi(id);
 	    		std::string yield = str.substr(third+1, fouth-third-1);
                 if(yield.compare("None") == 0) {
-                    std::cout << "'None' Found" << std::endl;
+                    std::cout << "Yield: 'None' found. Reaction " << id << " is given yield: ";
                     yields[stoi(id)] = 0.1;
+                    std::cout << yields[stoi(id)] <<std::endl;
                 }
                 else{
-    	    		yields[stoi(id)] = stod(yield);
+                    double yieldFromExtract = stod(yield);
+    	    		yields[stoi(id)] = yieldFromExtract/100;
                 }
 
 	    	}
@@ -118,10 +120,16 @@ int main(int argc, char const *argv[]){
    				std::string out = str.substr(first+2, end-first-2);
                 if(in.compare("None") != 0 && out.compare("None") != 0) {
                  	if(reactions[stoi(in)] == stoi(in) && stoi(in) != 0){
-     					eductsToReaction[stoi(in)].push_back(stod(out));
+                        //Checks to see if the educt is already added
+                        if (!(std::find(eductsToReaction[stoi(in)].begin(), eductsToReaction[stoi(in)].end(), stod(out)) != eductsToReaction[stoi(in)].end())) {
+                            eductsToReaction[stoi(in)].push_back(stod(out));
+                        }
      				}
      			    if(reactions[stoi(out)] == stoi(out)){
-     					productsToReaction[stoi(out)].push_back(stod(in));
+                        //Checks to see if the product is already added
+                        if (!(std::find(productsToReaction[stoi(out)].begin(), productsToReaction[stoi(out)].end(), stod(in)) != productsToReaction[stoi(out)].end())) {
+                            productsToReaction[stoi(out)].push_back(stod(in));
+                        }
      				}
                 }
    			}
@@ -160,11 +168,17 @@ int main(int argc, char const *argv[]){
         if(str2.compare("STARTINGCOMPOUNDS") == 0) {
             break;
         }
+        if(largestCompoundID < stoi(str2)) {
+            continue;
+        }
         auto goal = h.getCompound(stoi(str2));
         goalCompound.push_back(goal->id);
     }
 
     while(getline(inputFile,str2)) {
+        if(largestCompoundID < stoi(str2)) {
+            continue;
+        }
         auto starting = h.getCompound(stoi(str2));
         starting->molecularWeight = weights.at(stoi(str2));
         startingCompound.push_back(starting->id);
@@ -173,7 +187,6 @@ int main(int argc, char const *argv[]){
     weights.clear();
     weights.shrink_to_fit();
 
-    h.graphToGraphviz("Output", goalCompound, startingCompound);
     h.convertToBHypergraph();
     h.graphToGraphviz("Output2", goalCompound, startingCompound);
 

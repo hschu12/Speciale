@@ -89,12 +89,17 @@ public:
 	}
 
 	void convertToBHypergraph() {
+		std::cout << "Converting to B-Hypergraph" << std::endl;
 		std::vector<int> toHandle;
 		for(ReactionNode &reaction : reactionList) {
 			if(reaction.head.size() > 1) { //If it is NOT a B-hyperedge
 				toHandle.push_back(reaction.id);
 			}
 		}
+		//Resizes reactionlist before copying. Making sure that we dont handle 
+		//reactions during a resize. 
+		std::vector<int> v;
+		reactionList.resize(reactionList.size()+toHandle.size(), ReactionNode(0, v, v, 0));
 		for(auto r : toHandle) {
 			ReactionNode *rn = getReaction(r);
 			for(int i = 1; i < rn->head.size(); i++) {
@@ -267,6 +272,9 @@ public:
   			std::pair < double, std::vector<int> > toA (pair.second.first, pair.second.second);
   			A.push_back(toA);	//Add current best plan to k-best
 
+  			if(k == K) {
+  				break; //If we have found K plans - no need for backwardBranching
+  			}
   			for (auto newOverlay : backwardBranching(pair.second, pair.first)) { //Potential danger (function call in for loop)
   				std::pair < std::vector<bool> , std::pair<double, std::vector<int>> >potentialNewPlan; 
   				if(cycles){
@@ -662,7 +670,7 @@ public:
 			      	}
     			}
 
-    			std::cout << "With yield: " << plan.first << "\n" << std::endl;
+    			std::cout << "Result: " << plan.first << "\n" << std::endl;
     			i++;
 				graphFile << "}";
     			graphFile.close();
