@@ -5,7 +5,7 @@
 int main(int argc, char const *argv[])
 {
 
-	HyperGraph h (atoi(argv[1]), atoi(argv[2]));
+	HyperGraph h (atoi(argv[1]), atoi(argv[2]), atoi(argv[1]), atoi(argv[2]));
     srand(time(0));
   
     if( argc < 4 ){

@@ -2,7 +2,7 @@
 #include <iostream>
 int main(int argc, char const *argv[])
 {
-	HyperGraph h (10, 10);
+	HyperGraph h (10, 10, 10, 10);
 
     std::vector<int> reacthead1;
         reacthead1.push_back(3);

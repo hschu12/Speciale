@@ -2,7 +2,7 @@
 #include <iostream>
 int main(int argc, char const *argv[])
 {
-	HyperGraph h (10, 10);
+	HyperGraph h (10, 10, 10, 10);
 
     std::vector<int> reacthead1;
         reacthead1.push_back(3);
@@ -58,6 +58,7 @@ int main(int argc, char const *argv[])
     std::vector<int> reacttail10;
         reacttail10.push_back(7);
 
+    std::cout << "Creation reactions" << std::endl;
     h.addReaction(1, reacthead1, reacttail1, 0.7);
     h.addReaction(2, reacthead2, reacttail2, 0.5);
     h.addReaction(3, reacthead3, reacttail3, 0.5);
@@ -68,6 +69,7 @@ int main(int argc, char const *argv[])
     h.addReaction(8, reacthead8, reacttail8, 0.7);
     h.addReaction(9, reacthead9, reacttail9, 0.7);
     h.addReaction(10, reacthead10, reacttail10,0.7);
+    std::cout << "Done creating" << std::endl;
 
     std::vector<int> goalCompound;
 	goalCompound.push_back(8);

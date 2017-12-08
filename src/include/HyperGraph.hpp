@@ -28,13 +28,17 @@ struct HyperGraph
 	};
 
 private: 
-	std::vector<CompoundNode> compoundList;
-	std::vector<ReactionNode> reactionList;
-
+	std::vector<CompoundNode*> compoundLookupList;
+	std::vector<ReactionNode*> reactionLookupList;
+	std::vector<CompoundNode*> compoundList;
+	std::vector<ReactionNode*> reactionList;
+	
 public:
-	HyperGraph(int compoundListSize, int reactionListSize) {
-		compoundList.reserve(compoundListSize);
-		reactionList.reserve(reactionListSize);
+	HyperGraph(int highestCompoundID, int highestReactionID, int numberOfCompounds, int numberOfReaction) {
+		compoundLookupList.reserve(highestCompoundID);
+		reactionLookupList.reserve(highestReactionID);
+		compoundList.reserve(numberOfCompounds);
+		reactionList.reserve(numberOfReaction);
 	}
 
 
@@ -42,7 +46,8 @@ public:
 
 	inline void addCompound(int compoundID) {
 		CompoundNode *cn = new CompoundNode(compoundID);
-		compoundList[compoundID] = *cn;
+		compoundLookupList[compoundID] = cn;
+		compoundList.push_back(cn);
 	} 
 	
 	inline void addPointerFromReactionToCompound (int compoundID, int reactionID) {
@@ -61,52 +66,57 @@ public:
 		//add active compounds if not existing
 		while(headIterator != head.end()) {
 			
-			if ( *headIterator >= compoundList.size()) {
-				compoundList.resize(*headIterator+1, CompoundNode(0));
+			if ( *headIterator >= compoundLookupList.size()) {
+				compoundLookupList.resize(*headIterator+1, NULL);
 			}
-			if ( compoundList[*headIterator].id == 0) {
+			if ( compoundLookupList[*headIterator] == NULL) {
 				addCompound(*headIterator);
 			}
 			addPointerFromReactionToCompound(*headIterator, id);
 			++headIterator;
 		}
 		while(tailIterator != tail.end()) {
-			if ( *tailIterator >= compoundList.size()) {
-				compoundList.resize(*tailIterator+1, CompoundNode(0));
+			if ( *tailIterator >= compoundLookupList.size()) {
+				compoundLookupList.resize(*tailIterator+1, NULL);
 			}
-			if ( compoundList[*tailIterator].id == 0) {
+			if ( compoundLookupList[*tailIterator] == NULL) {
 				addCompound(*tailIterator);
 			}
 			addPointerFromCompoundToReaction(*tailIterator, id);
 			++tailIterator;
 		}
-		if(id >= reactionList.size()) {
-			std::vector<int> v;
-			reactionList.resize(id+1, ReactionNode(0, v, v, 0));
+		if(id >= reactionLookupList.capacity()) {
+			reactionLookupList.reserve(id+10);
+		}
+		if(id >= reactionLookupList.size()) {
+			reactionLookupList.resize(id+1, NULL);
 		}
 		ReactionNode *rn = new ReactionNode(id, head, tail, yield);
-		reactionList[id] = *rn;
+		reactionLookupList[id] = rn;
+		reactionList.push_back(rn);
 	}
 
 	void convertToBHypergraph() {
 		std::cout << "Converting to B-Hypergraph" << std::endl;
 		std::vector<int> toHandle;
-		for(ReactionNode &reaction : reactionList) {
-			if(reaction.head.size() > 1) { //If it is NOT a B-hyperedge
-				toHandle.push_back(reaction.id);
+		for(auto reaction : reactionLookupList) {
+			if(reaction != NULL){
+				if(reaction->head.size() > 1) { //If it is NOT a B-hyperedge
+					toHandle.push_back(reaction->id);
+				}
 			}
 		}
-		//Resizes reactionlist before copying. Making sure that we dont handle 
+		//Resizes reactionLookupList before copying. Making sure that we dont handle 
 		//reactions during a resize. 
 		std::vector<int> v;
-		reactionList.resize(reactionList.size()+toHandle.size(), ReactionNode(0, v, v, 0));
+		reactionLookupList.resize(reactionLookupList.size()+toHandle.size(), NULL);
 		for(auto r : toHandle) {
 			ReactionNode *rn = getReaction(r);
 			for(int i = 1; i < rn->head.size(); i++) {
 				std::vector<int> headCompound;
 				headCompound.push_back(rn->head[i]);
-				addReaction(reactionList.size(), headCompound, rn->tail, rn->yield);
-				ReactionNode* node = getReaction(reactionList.size()-1);
+				addReaction(reactionLookupList.size(), headCompound, rn->tail, rn->yield);
+				ReactionNode* node = getReaction(reactionLookupList.size()-1);
 				node->originalID = rn->id;
 			}
 			int size = rn->head.size();
@@ -128,11 +138,15 @@ public:
 			addPointerFromCompoundToReaction(*tailIterator, id);
 			++tailIterator;
 		}
-		if(id >= reactionList.size()) {
-			reactionList.resize(id+1, ReactionNode(id, head, tail, yield));
+		if(id >= reactionLookupList.capacity()) {
+			reactionLookupList.reserve(id+10);
+		}
+		if(id >= reactionLookupList.size()) {
+			reactionLookupList.resize(id+1, NULL);
 		}
 		ReactionNode *rn = new ReactionNode(id, head, tail, yield);
-		reactionList[id] = *rn;
+		reactionLookupList[id] = rn;
+		reactionList.push_back(rn);
 	}
 
 	/****************************
@@ -188,7 +202,7 @@ public:
 	}
 
 	std::pair < std::vector<bool> , std::pair< double, std::vector<int>> >shortestPathMaximumYield(CompoundNode &v, std::vector<int> &startingCompounds, std::vector<bool> &overlay, CompoundNode &s) {
-		resetNodeCost();
+		resetNodeIndexAndCost();
 
 		for(auto compoundID : startingCompounds){
 			auto compound = getCompound(compoundID);
@@ -235,7 +249,6 @@ public:
 	}
 
 	std::vector< std::pair < double, std::vector<int>> > yenHyp (std::vector<int> &goalCompounds, std::vector<int> &startingCompounds, int K, bool cycles) {
-
 		std::vector< std::pair <std::vector<bool> , std::pair<double, std::vector<int> > > > L;
 		
 		std::make_heap (L.begin(),L.end(), cmpPair());
@@ -298,13 +311,12 @@ public:
 
 	std::pair < std::vector<bool> , std::pair< double, std::vector<int>> > ShortestHyperNielsen ( std::vector<bool> &graphOverlay, CompoundNode &goal, std::vector<int> &startingCompounds, std::vector<bool> &overlay) {
 		//Initinalize
-		PriorityQueue Q (compoundList.capacity());
+		PriorityQueue Q (compoundLookupList.capacity());
 
-		resetNodeIndex();
-		resetNodeCost();
+		resetNodeIndexAndCost();
 
 		for(auto reaction : reactionList) {
-			ReactionNode *r = getReaction(reaction.id);
+			ReactionNode *r = getReaction(reaction->id);
 			r->kj = 0;
 		}
 
@@ -370,7 +382,7 @@ public:
 
 	std::vector<bool> createOverlay(std::vector<int> toRemove, bool filler) {
 		std::vector<bool> overlay;
-		overlay.resize(reactionList.size(), filler);
+		overlay.resize(reactionLookupList.size(), filler);
 
 		for(auto it : toRemove) {
 			overlay[it] = !filler;
@@ -382,14 +394,15 @@ public:
 	CompoundNode* createDummyS(std::vector<int> &startingCompounds) {
 		CompoundNode *s = new CompoundNode(0); //MIGHT NOT BE NEEDED
 		s->id = 0;
+		compoundLookupList[s->id] = s;
 		auto startingCompoundIterator = startingCompounds.begin();
 		while (startingCompoundIterator != startingCompounds.end()) {
 			std::vector<int> head;
 			head.push_back(*startingCompoundIterator);
 			std::vector<int> tail;
 			tail.push_back(s->id);
-			addReactionToS(reactionList.size(), head, tail, 1.0); 	
-			ReactionNode *r = getReaction(reactionList.size()-1);
+			addReactionToS(reactionLookupList.size(), head, tail, 1.0);
+			ReactionNode *r = getReaction(reactionLookupList.size()-1);
 			CompoundNode *c = getCompound(*startingCompoundIterator);
 			c->productOfReaction.push_back(r->id);
 			s->eductOfReaction.push_back(r->id);
@@ -397,21 +410,20 @@ public:
 		}
 		s->molecularWeight = 1; // Need to be 1 to start out the molecularWeight calculations.
 		s->cost = 1;
-		compoundList[s->id] = *s;
 		return s;
 	}
 
 	CompoundNode* createDummyT(std::vector<int> &goalCompounds) {
 		CompoundNode *t = new CompoundNode(0); //MIGHT NOT BE NEEDED
-		t->id = compoundList.size();
+		t->id = compoundLookupList.size();
 		auto goalCompoundIterator = goalCompounds.begin();
 		while (goalCompoundIterator != goalCompounds.end()) {
 			std::vector<int> head;
 			head.push_back(t->id);
 			std::vector<int> tail;
 			tail.push_back(*goalCompoundIterator);
-			addReaction(reactionList.size(), head, tail, 1.0); 	
-			ReactionNode *r = getReaction(reactionList.size()-1);
+			addReaction(reactionLookupList.size(), head, tail, 1.0); 	
+			ReactionNode *r = getReaction(reactionLookupList.size()-1);
 			CompoundNode *c = getCompound(*goalCompoundIterator);
 			t->productOfReaction.push_back(r->id);
 			c->eductOfReaction.push_back(r->id);
@@ -419,7 +431,7 @@ public:
 		}
 		t->molecularWeight = 1; // Need to be 1 to start out the molecularWeight calculations.
 		t->cost = std::numeric_limits<double>::max();
-		return getCompound(compoundList.size()-1);
+		return getCompound(compoundLookupList.size()-1);
 	}
 
 	bool pathNotAlreadyFound(std::vector<int> potentialNewPlan, std::vector<std::pair < double, std::vector<int>> > A) {
@@ -458,57 +470,56 @@ public:
 	}
 
 	void resetVisited(){
-		for (CompoundNode &compound : compoundList) {
-			compound.visited = false;
+		for (auto compound : compoundList) {
+			compound->visited = false;
 		}
 	}
 
-	void resetNodeIndex(){
-		for (CompoundNode &compound : compoundList) {
-			compound.index = -1;
+	void resetNodeIndexAndCost(){
+		for (auto compound : compoundList) {
+			if( compound->id == 0) {
+				compound->cost = 1;
+			}
+			else {
+				compound->cost = std::numeric_limits<double>::max();
+			}
+			compound->index = -1;
 		}
 	}
 
 	void resetMaxYieldEdges(){
-		for (CompoundNode &compound : compoundList) {
-			compound.maxYieldEdge = -1;
+		for (auto compound : compoundList) {
+			compound->maxYieldEdge = -1;
 
-		}
-	}
-
-	void resetNodeCost(){
-		for (CompoundNode &compound : compoundList) {
-			if( compound.id == 0) {
-				compound.cost = 1;
-			}
-			else {
-				compound.cost = std::numeric_limits<double>::max();
-			}
 		}
 	}
 
 	void removeDummy(std::vector<int> &startingCompounds, std::vector<int> &goalCompounds) {
 		for(auto compound : startingCompounds) {
-			reactionList.pop_back();
+			reactionLookupList.pop_back();
 		}
 		for(auto compound : goalCompounds) {
-			reactionList.pop_back();
+			reactionLookupList.pop_back();
 		}
-		compoundList.pop_back();
+		compoundLookupList.pop_back();
 	}
 
-	/********************************
-	*								*
-	*		GETTERS AND SETTERS		*
-	*								*
-	*********************************/
+	std::vector<int> getZeroIndegreeCompounds(){
+		std::vector<int> returnList;
+		for(auto c : compoundList) {
+			if(c->id != 0 && compoundInDegree(c->id) == 0) {
+				returnList.push_back(c->id);
+			}
+		}
+		return returnList;
+	}
 
 	ReactionNode* getReaction(int id){
-		return &reactionList[id];
+		return reactionLookupList[id];
 	}	
 
 	CompoundNode* getCompound(int id){
-		return &compoundList[id];
+		return compoundLookupList[id];
 	}	
 
 	/************************
@@ -532,13 +543,13 @@ public:
 	int highestCompoundInDegree() {
 		int highest = -1;
 		for (auto it : compoundList) {
-			if (it.id != 0) {
-				int degree = compoundInDegree(it.id);
+			if (it->id != 0) {
+				int degree = compoundInDegree(it->id);
 				if (highest == -1) {
-					highest = it.id;
+					highest = it->id;
 				}
 				if (degree > compoundInDegree(highest)) {
-					highest = it.id;
+					highest = it->id;
 				}
 			}
 		}
@@ -549,7 +560,7 @@ public:
 		std::vector<int> OutDegreeList;
 		OutDegreeList.resize(compoundList.size());
 		for (auto reactionIterator : reactionList) {
-			for (auto tailIterator : reactionIterator.tail) {
+			for (auto tailIterator : reactionIterator->tail) {
 				OutDegreeList[tailIterator]++;
 			}
 		}
@@ -565,13 +576,13 @@ public:
 	int highestReactionInDegree() {
 		int highest = -1;
 		for (auto it : reactionList) {
-			if (it.id != 0) {
-				int degree = reactionInDegree(it.id);
+			if (it->id != 0) {
+				int degree = reactionInDegree(it->id);
 				if (highest == -1) {
-					highest = it.id;
+					highest = it->id;
 				}
 				if (degree > reactionInDegree(highest)) {
-					highest = it.id;
+					highest = it->id;
 				}
 			}
 		}
@@ -581,13 +592,13 @@ public:
 	int highestReactionOutDegree() {
 		int highest = -1;
 		for (auto it : reactionList) {
-			if (it.id != 0) {
-				int degree = reactionOutDegree(it.id);
+			if (it->id != 0) {
+				int degree = reactionOutDegree(it->id);
 				if (highest == -1) {
-					highest = it.id;
+					highest = it->id;
 				}
 				if (degree > reactionOutDegree(highest)) {
-					highest = it.id;
+					highest = it->id;
 				}
 			}
 		}
@@ -602,17 +613,17 @@ public:
 
 	void printCompoundList() {
 		int i = 0;
-		for (auto it : compoundList) {
-			std::cout << "Plads: " << i << ", ID: " << it.id<< std::endl;
+		for (auto it : compoundLookupList) {
+			std::cout << "Plads: " << i << ", ID: " << it->id<< std::endl;
 			i++;
 		}
 	}
 
 	void printReactionList() {
-		std::cout << "reactionList" << std::endl;
+		std::cout << "reactionLookupList" << std::endl;
 		int i = 0;
-		for (auto it :reactionList) {
-			std::cout << "Plads: " << i << ", ID: " << it.id << std::endl;
+		for (auto it :reactionLookupList) {
+			std::cout << "Plads: " << i << ", ID: " << it->id << std::endl;
 			i++;
 		}
 	}
@@ -629,7 +640,7 @@ public:
 				graphFile << "{\n";
 				
 				for( auto pathElement : plan.second) {
-    				if(pathElement < reactionList.size()) {
+    				if(pathElement < reactionLookupList.size()) {
     					auto reaction = getReaction(pathElement);
     					if(reaction->originalID == 0) {
 							graphFile << "	R" << reaction->id << " [label = \"R" << reaction->id << ". Yield: " << reaction->yield << "\"]\n";
@@ -643,7 +654,7 @@ public:
 				graphFile << "}\n";
     			
     			for( auto pathElement : plan.second) {
-    				if(pathElement < reactionList.size()) {
+    				if(pathElement < reactionLookupList.size()) {
 	      				auto reaction = getReaction(pathElement);
 	      				if(reaction->originalID == 0) {
 		      				std::cout << "Reaction: " << pathElement << std::endl;
@@ -683,12 +694,9 @@ public:
 
 	void printGraphConsole() {
 		for( auto reaction : reactionList) {
-			if (reaction.id == 0) {
-				continue;
-			}
-			std::cout << "ID: " << reaction.id << ". Yield: " << reaction.yield <<  std::endl;
-    		std::cout << "head: " << *reaction.head.begin() << std::endl;
-    		for( auto tailelement : reaction.tail) {
+			std::cout << "ID: " << reaction->id << ". Yield: " << reaction->yield <<  std::endl;
+    		std::cout << "head: " << *reaction->head.begin() << std::endl;
+    		for( auto tailelement : reaction->tail) {
       			std::cout << "tail: " << tailelement << std::endl;
     		}
     		
@@ -724,10 +732,7 @@ public:
 		graphFile << "{\n";
 
 		for( auto reaction : reactionList) {
-			if(reaction.id == 0) {
-				continue;
-			}
-			graphFile << "	R" << reaction.id << " [label = \"R" << reaction.id << ". Yield: " << reaction.yield << "\"]\n";
+			graphFile << "	R" << reaction->id << " [label = \"R" << reaction->id << ". Yield: " << reaction->yield << "\"]\n";
 		}
 
 		for(auto s : startingCompounds){
@@ -741,14 +746,11 @@ public:
 		graphFile << "}\n";
 
 		for( auto reaction : reactionList) {
-			if(reaction.id == 0) {
-				continue;
+			for( auto headelement : reaction->head) {
+				graphFile << "	R" << reaction->id << " -> " << headelement << ";\n";
 			}
-			for( auto headelement : reaction.head) {
-				graphFile << "	R" << reaction.id << " -> " << headelement << ";\n";
-			}
-    		for( auto tailelement : reaction.tail) {
-      			graphFile << "	" << tailelement << " -> R" << reaction.id << ";\n";
+    		for( auto tailelement : reaction->tail) {
+      			graphFile << "	" << tailelement << " -> R" << reaction->id << ";\n";
     		}
   		} 
 		graphFile << "}";
