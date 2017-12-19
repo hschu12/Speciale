@@ -48,10 +48,11 @@ int main(int argc, char const *argv[]){
         }
     }
 
-    largestCompoundID++;
-    largestReactionID++;
-    numberOfReactions++;
-    numberOfCompounds++;
+    //Arbitrarily chosen + values to decrease the risk of needed resize 
+    largestCompoundID = largestCompoundID + 1000;
+    largestReactionID = largestReactionID + 1000;
+    numberOfReactions = numberOfReactions + 100;
+    numberOfCompounds = numberOfCompounds + 100;
 
     std::vector<int> reactions;
     std::vector<int> compounds;
@@ -67,7 +68,7 @@ int main(int argc, char const *argv[]){
     productsToReaction.resize(largestReactionID);
     eductsToReaction.resize(largestReactionID);
 
-    HyperGraph h(largestCompoundID+100,largestReactionID+100, numberOfCompounds, numberOfReactions);
+    HyperGraph h(largestCompoundID,largestReactionID, numberOfCompounds, numberOfReactions);
 
     firstRead.close();
 	std::ifstream inFile;
