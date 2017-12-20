@@ -98,8 +98,8 @@ Daniel Merkle
 
 \section{Acknowledgements}
 I would like to thank my supervisor, Daniel Merkle, for giving me the opportunity to work with this interesting subject, always guiding me when I was stuck, and asking questions to my code and thereby making it better and faster. I also want to thank Rojin Kianian for giving me answers to different questions regarding the algorithms and cost functions and for helping me produce my tests and results.\\
-I would also like to thank Brian Alberg, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \# KNAWLEGE, and also, regarding some of them, for the daily trip to the canteen of SDU.\\
-And last but not least, I would like to thank my girlfriend, Louisa Høj, for being a huge support throughout the project, listening when I had the need to talk about problems and to always bring a smile to my face - I love you.
+I would also like to thank Brian Alberg, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \#KNAWLEGE, and also, regarding some of them, for the daily trip to the canteen of SDU.\\
+And last but not least, I would like to thank my girlfriend, Louisa Høj, for being a huge support throughout the project, listening when I had the need to talk about problems and to always bring a smile to my face.
 \section{Introduction}
 kkk \cite{Grzybowski}\\
 \subsection{Overview}
@@ -213,8 +213,8 @@ function BackwardsBranching($\pi$, Overlay)
 	return B
 endfunction
 \end{lstlisting}
-Now that we have the branching in place are we able to construct an algorithm that are similar to Yen's algorithm, but can run on hypergraphs. As input it takes a start vertex, a goal vertex, and an integer $K$, where $K$ is the number of best paths we want to find.\\
-It creates a heap, $L$, and a list, $A$, which will contain the $K$-best paths once the algorithm is finished. It then finds the best path using a shortest path algorithm and inserts it into the heap. Inside the loop it extracts the best path found from the heap and performs a backward branching, and finds all possible paths in the branches. If there is a path from $s$ to $t$, then this path is added to the heap. The algorithm either terminates if the heaps is empty ( No more paths available) or once it have found the $K$-best paths.
+Now that we have the branching in place are we able to construct an algorithm that are similar to Yen's algorithm, but can run on hypergraphs. As input it takes a start node ($s$), a goal node ($t$), and an integer $K$, where $K$ is the number of best paths we want to find. The algorithm, however, only takes a single node as its starting node, which is a problem when working with hypergraphs. The reason for this is that the size of the tail of a hyperedge usually is larger than 1 and this by default gives us more than one starting node. This is fixed by making $s$ a dummy node that have an hyperedge $e = (H|1|, T|1|)$ to each of the starting nodes, transforming the multiple sources to a single source.\\
+The algorithm creates a heap, $L$, and a list, $A$, which will contain the $K$-best paths once the algorithm is finished. It then finds the best path using a shortest path algorithm and inserts it into the heap. Inside the loop it extracts the best path found from the heap and performs a backward branching, and finds all possible paths in the branches. If there is a path from $s$ to $t$, then this path is added to the heap. The algorithm either terminates if the heaps is empty ( No more paths available) or once it have found the $K$-best paths.
 \begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = K-Shortest Paths Algorithm in B-Hypergraph]
 function YenHyp(s, t, K) 
 	L = new heap with elements (overlay, $\pi$)
@@ -238,8 +238,25 @@ function YenHyp(s, t, K)
 	return A
 endfunction
 \end{lstlisting}
+\subsection{Cost Function}
+Before we are able to find the K-best paths of our hypergraph, we should be able to compare them with each other. To do this we use a additive weight function defined in the following way on a given hyperpath $\pi_{st}$ from $s$ to $t$:
+
+\begin{equation}
+W(u)=\begin{cases}
+    w(p(u)) + F(p(u)) & \text{if $u\in V\setminus \{s\}$}.\\
+    C, & \text{otherwise}.
+  \end{cases}
+\end{equation}
+
+$W(u)$ define the cost of node $u$. The predecessor function $p$ is used to find the hyperedge $e=p(u)$ which have $u$ as head. The function $F$ is a non-decreasing function of the sum of the weights of the nodes in the tail to $e$. Each of the nodes are multiplied by the retroyield of the edge, $1/yield$.
+
+\begin{equation}
+F(p(u)) = \sum(W(Tail(p(u)) * (1/yield_{p(u)})
+\end{equation}
+
 \section{Shortest Path}
 This section describes two different approaches to the shortest path problem in a hypergraph. A dynamic approach proposed by Carsten Grønbjerg Lützen and Daniel Fentz Johansen \cite{Carsten} and a Dijkstra inspired approach proposed by Lars Relund Nielsen, Kim Allan Andersen and Daniele Pretolani \cite{Nielsen}. 
+
 \subsection{Dynamic Approach}
 kkk \cite{Carsten}\\
 kkkk \cite{Fagerberg}\\
@@ -491,9 +508,12 @@ Plan & Reactions & Starting weight \\ \hline
 \begin{tabular}{|r|r|r|}
 \hline
 Plan & Reactions & Starting weight \\ \hline
-1 & \ref{Appendix::Asteriscanolide1} & 649,346 \\\hline
-2 & \ref{Appendix::Asteriscanolide2} & 5175,63 \\\hline
-3 & \ref{Appendix::Asteriscanolide3} & 13549,2 \\\hline
+1 & \ref{Appendix::Lepadiformine1} & 841,29 \\\hline
+2 & \ref{Appendix::Lepadiformine2} & 1061,41 \\\hline
+3 & \ref{Appendix::Lepadiformine3} & 1129,16 \\\hline
+4 & \ref{Appendix::Lepadiformine4} & 5138,44 \\\hline
+5 & \ref{Appendix::Lepadiformine5} & 7629,88 \\\hline
+6 & \ref{Appendix::Lepadiformine6} & 8116,89 \\\hline
 \end{tabular}
 \end{table}
 
@@ -509,6 +529,8 @@ kkkk \cite{SynthesisPlans}\\
 
 \newpage
 \appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
 \section{Synthesis plans}
 \subsection{Strychnine plan 1}
 \centering
@@ -620,52 +642,52 @@ kkkk \cite{SynthesisPlans}\\
 
 \subsection{Dysidiolide plan 1}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan1.pdf}
+\includegraphics[scale=0.43]{Synteseplaner/Dysidiolide/plan1.pdf}
 \label{Appendix::Dysidiolide1}
 
 \subsection{Dysidiolide plan 2}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan2.pdf}
+\includegraphics[scale=0.43]{Synteseplaner/Dysidiolide/plan2.pdf}
 \label{Appendix::Dysidiolide2}
 
 \subsection{Dysidiolide plan 3}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan3.pdf}
+\includegraphics[scale=0.34]{Synteseplaner/Dysidiolide/plan3.pdf}
 \label{Appendix::Dysidiolide3}
 
 \subsection{Dysidiolide plan 4}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan4.pdf}
+\includegraphics[scale=0.3]{Synteseplaner/Dysidiolide/plan4.pdf}
 \label{Appendix::Dysidiolide4}
 
 \subsection{Dysidiolide plan 5}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan5.pdf}
+\includegraphics[scale=0.35]{Synteseplaner/Dysidiolide/plan5.pdf}
 \label{Appendix::Dysidiolide5}
 
 \subsection{Dysidiolide plan 6}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan6.pdf}
+\includegraphics[scale=0.3]{Synteseplaner/Dysidiolide/plan6.pdf}
 \label{Appendix::Dysidiolide6}
 
 \subsection{Dysidiolide plan 7}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan7.pdf}
+\includegraphics[scale=0.27]{Synteseplaner/Dysidiolide/plan7.pdf}
 \label{Appendix::Dysidiolide7}
 
 \subsection{Dysidiolide plan 8}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan8.pdf}
+\includegraphics[scale=0.2]{Synteseplaner/Dysidiolide/plan8.pdf}
 \label{Appendix::Dysidiolide8}
 
 \subsection{Dysidiolide plan 9}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan9.pdf}
+\includegraphics[scale=0.25]{Synteseplaner/Dysidiolide/plan9.pdf}
 \label{Appendix::Dysidiolide9}
 
 \subsection{Dysidiolide plan 10}
 \centering
-\includegraphics[scale=0.4]{Synteseplaner/Dysidiolide/plan10.pdf}
+\includegraphics[scale=0.2]{Synteseplaner/Dysidiolide/plan10.pdf}
 \label{Appendix::Dysidiolide10}
 
 \subsection{Asteriscanolide plan 1}
@@ -682,4 +704,34 @@ kkkk \cite{SynthesisPlans}\\
 \centering
 \includegraphics[scale=0.4]{Synteseplaner/Asteriscanolide/plan3.pdf}
 \label{Appendix::Asteriscanolide3}
+
+\subsection{Lepadiformine plan 1}
+\centering
+\includegraphics[scale=0.4]{Synteseplaner/Lepadiformine/plan1.pdf}
+\label{Appendix::Lepadiformine1}
+
+\subsection{Lepadiformine plan 2}
+\centering
+\includegraphics[scale=0.4]{Synteseplaner/Lepadiformine/plan2.pdf}
+\label{Appendix::Lepadiformine2}
+
+\subsection{Lepadiformine plan 3}
+\centering
+\includegraphics[scale=0.4]{Synteseplaner/Lepadiformine/plan3.pdf}
+\label{Appendix::Lepadiformine3}
+
+\subsection{Lepadiformine plan 4}
+\centering
+\includegraphics[scale=0.4]{Synteseplaner/Lepadiformine/plan4.pdf}
+\label{Appendix::Lepadiformine4}
+
+\subsection{Lepadiformine plan 5}
+\centering
+\includegraphics[scale=0.4]{Synteseplaner/Lepadiformine/plan5.pdf}
+\label{Appendix::Lepadiformine5}
+
+\subsection{Lepadiformine plan 6}
+\centering
+\includegraphics[scale=0.4]{Synteseplaner/Lepadiformine/plan6.pdf}
+\label{Appendix::Lepadiformine6}
 \end{document}

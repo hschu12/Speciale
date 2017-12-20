@@ -2,25 +2,27 @@
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Acknowledgements}{4}{section.1}
+\contentsline {section}{\numberline {1}Acknowledgements}{3}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Introduction}{4}{section.2}
+\contentsline {section}{\numberline {2}Introduction}{3}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Overview}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.1}Overview}{3}{subsection.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Preliminaries}{4}{section.3}
+\contentsline {section}{\numberline {3}Preliminaries}{3}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Finding The K-Best Synthetic Plans}{5}{section.4}
+\contentsline {section}{\numberline {4}Finding The K-Best Synthetic Plans}{4}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Yen's Algorithm}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Yen's Algorithm}{4}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Yen's Algorithm On Hypergraphs}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Yen's Algorithm On Hypergraphs}{5}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Shortest Path}{10}{section.5}
+\contentsline {subsection}{\numberline {4.3}Cost Function}{9}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Dynamic Approach}{10}{subsection.5.1}
+\contentsline {section}{\numberline {5}Shortest Path}{9}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.1.1}Approach}{10}{subsubsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1}Dynamic Approach}{9}{subsection.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {5.1.1}Approach}{9}{subsubsection.5.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.1.2}Testing}{10}{subsubsection.5.1.2}
 \defcounter {refsection}{0}\relax 
@@ -30,100 +32,114 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {5.2.1}Approach}{10}{subsubsection.5.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.2}Testing}{11}{subsubsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2}Testing}{10}{subsubsection.5.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.3}Problems}{11}{subsubsection.5.2.3}
+\contentsline {subsubsection}{\numberline {5.2.3}Problems}{10}{subsubsection.5.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {5.2.4}Optimizing}{11}{subsubsection.5.2.4}
+\contentsline {subsubsection}{\numberline {5.2.4}Optimizing}{10}{subsubsection.5.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Work With Beilstein Data}{11}{section.6}
+\contentsline {section}{\numberline {6}Work With Beilstein Data}{10}{section.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}The Database}{11}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Data Assessment}{12}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}Data Assessment}{11}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Results}{18}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Results}{17}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.1}Pre-work}{18}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.1}Pre-work}{17}{subsubsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.2}Strychnine}{18}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2}Strychnine}{17}{subsubsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.3}Colchicine}{19}{subsubsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3}Colchicine}{18}{subsubsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.4}Dysidiolide}{19}{subsubsection.6.3.4}
+\contentsline {subsubsection}{\numberline {6.3.4}Dysidiolide}{18}{subsubsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.5}Asteriscanolide}{19}{subsubsection.6.3.5}
+\contentsline {subsubsection}{\numberline {6.3.5}Asteriscanolide}{18}{subsubsection.6.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {6.3.6}Lepadiformine}{19}{subsubsection.6.3.6}
+\contentsline {subsubsection}{\numberline {6.3.6}Lepadiformine}{18}{subsubsection.6.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Conclusion}{19}{section.7}
+\contentsline {section}{\numberline {7}Conclusion}{18}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Synthesis plans}{21}{appendix.A}
+\setcounter {tocdepth}{0}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1}Strychnine plan 1}{21}{subsection.A.1}
+\contentsline {section}{\numberline {A}Synthesis plans}{20}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2}Strychnine plan 2}{22}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.1}Strychnine plan 1}{20}{subsection.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3}Strychnine plan 3}{23}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.2}Strychnine plan 2}{21}{subsection.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4}Strychnine plan 4}{24}{subsection.A.4}
+\contentsline {subsection}{\numberline {A.3}Strychnine plan 3}{22}{subsection.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.5}Strychnine plan 5}{25}{subsection.A.5}
+\contentsline {subsection}{\numberline {A.4}Strychnine plan 4}{23}{subsection.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.6}Strychnine plan 6}{26}{subsection.A.6}
+\contentsline {subsection}{\numberline {A.5}Strychnine plan 5}{24}{subsection.A.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.7}Strychnine plan 7}{27}{subsection.A.7}
+\contentsline {subsection}{\numberline {A.6}Strychnine plan 6}{25}{subsection.A.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.8}Strychnine plan 8}{28}{subsection.A.8}
+\contentsline {subsection}{\numberline {A.7}Strychnine plan 7}{26}{subsection.A.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.9}Strychnine plan 9}{29}{subsection.A.9}
+\contentsline {subsection}{\numberline {A.8}Strychnine plan 8}{27}{subsection.A.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.10}Strychnine plan 10}{30}{subsection.A.10}
+\contentsline {subsection}{\numberline {A.9}Strychnine plan 9}{28}{subsection.A.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.11}Strychnine plan 11}{31}{subsection.A.11}
+\contentsline {subsection}{\numberline {A.10}Strychnine plan 10}{29}{subsection.A.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.12}Strychnine plan 12}{32}{subsection.A.12}
+\contentsline {subsection}{\numberline {A.11}Strychnine plan 11}{30}{subsection.A.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.13}Strychnine plan 13}{33}{subsection.A.13}
+\contentsline {subsection}{\numberline {A.12}Strychnine plan 12}{31}{subsection.A.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.14}Strychnine plan 14}{34}{subsection.A.14}
+\contentsline {subsection}{\numberline {A.13}Strychnine plan 13}{32}{subsection.A.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.15}Strychnine plan 15}{35}{subsection.A.15}
+\contentsline {subsection}{\numberline {A.14}Strychnine plan 14}{33}{subsection.A.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.16}Strychnine plan 16}{36}{subsection.A.16}
+\contentsline {subsection}{\numberline {A.15}Strychnine plan 15}{34}{subsection.A.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.17}Colchicine plan 1}{37}{subsection.A.17}
+\contentsline {subsection}{\numberline {A.16}Strychnine plan 16}{35}{subsection.A.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.18}Colchicine plan 2}{38}{subsection.A.18}
+\contentsline {subsection}{\numberline {A.17}Colchicine plan 1}{36}{subsection.A.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.19}Colchicine plan 3}{39}{subsection.A.19}
+\contentsline {subsection}{\numberline {A.18}Colchicine plan 2}{37}{subsection.A.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.20}Colchicine plan 4}{40}{subsection.A.20}
+\contentsline {subsection}{\numberline {A.19}Colchicine plan 3}{38}{subsection.A.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.21}Colchicine plan 5}{41}{subsection.A.21}
+\contentsline {subsection}{\numberline {A.20}Colchicine plan 4}{39}{subsection.A.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.22}Dysidiolide plan 1}{42}{subsection.A.22}
+\contentsline {subsection}{\numberline {A.21}Colchicine plan 5}{40}{subsection.A.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.23}Dysidiolide plan 2}{43}{subsection.A.23}
+\contentsline {subsection}{\numberline {A.22}Dysidiolide plan 1}{41}{subsection.A.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.24}Dysidiolide plan 3}{45}{subsection.A.24}
+\contentsline {subsection}{\numberline {A.23}Dysidiolide plan 2}{42}{subsection.A.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.25}Dysidiolide plan 4}{47}{subsection.A.25}
+\contentsline {subsection}{\numberline {A.24}Dysidiolide plan 3}{44}{subsection.A.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.26}Dysidiolide plan 5}{49}{subsection.A.26}
+\contentsline {subsection}{\numberline {A.25}Dysidiolide plan 4}{45}{subsection.A.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.27}Dysidiolide plan 6}{51}{subsection.A.27}
+\contentsline {subsection}{\numberline {A.26}Dysidiolide plan 5}{47}{subsection.A.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.28}Dysidiolide plan 7}{53}{subsection.A.28}
+\contentsline {subsection}{\numberline {A.27}Dysidiolide plan 6}{48}{subsection.A.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.29}Dysidiolide plan 8}{55}{subsection.A.29}
+\contentsline {subsection}{\numberline {A.28}Dysidiolide plan 7}{49}{subsection.A.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.30}Dysidiolide plan 9}{57}{subsection.A.30}
+\contentsline {subsection}{\numberline {A.29}Dysidiolide plan 8}{50}{subsection.A.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.31}Dysidiolide plan 10}{59}{subsection.A.31}
+\contentsline {subsection}{\numberline {A.30}Dysidiolide plan 9}{52}{subsection.A.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.32}Asteriscanolide plan 1}{60}{subsection.A.32}
+\contentsline {subsection}{\numberline {A.31}Dysidiolide plan 10}{53}{subsection.A.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.33}Asteriscanolide plan 2}{60}{subsection.A.33}
+\contentsline {subsection}{\numberline {A.32}Asteriscanolide plan 1}{54}{subsection.A.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.34}Asteriscanolide plan 3}{61}{subsection.A.34}
+\contentsline {subsection}{\numberline {A.33}Asteriscanolide plan 2}{54}{subsection.A.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.34}Asteriscanolide plan 3}{55}{subsection.A.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.35}Lepadiformine plan 1}{56}{subsection.A.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.36}Lepadiformine plan 2}{57}{subsection.A.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.37}Lepadiformine plan 3}{58}{subsection.A.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.38}Lepadiformine plan 4}{59}{subsection.A.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.39}Lepadiformine plan 5}{59}{subsection.A.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {A.40}Lepadiformine plan 6}{60}{subsection.A.40}
