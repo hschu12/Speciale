@@ -101,10 +101,10 @@ I would like to thank my supervisor, Daniel Merkle, for giving me the opportunit
 I would also like to thank Brian Alberg, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \#KNAWLEGE. For some of you - thank you for the daily trip to the canteen of SDU. It been a pleasure spending my years at the university with you.\\
 And last but not least, I would like to thank my girlfriend, Louisa Høj, for being a huge support throughout the project, listening when I had the need to talk about problems and to always bring a smile to my face.
 
-\section{Introduction}
+\section{Introduction MANGLER}
 kkk \cite{Grzybowski}\\
 
-\subsection{Overview}
+\subsection{Overview MANGLER}
 Hvad indeholder hver sektion??
 
 \section{Preliminaries}
@@ -288,7 +288,7 @@ We are now able to distinguish between the paths found and extract the K-best pl
 \section{Shortest Path}
 This section describes two different approaches to the shortest path problem in a hypergraph. A dynamic approach proposed by Carsten Grønbjerg Lützen and Daniel Fentz Johansen \cite{Carsten} and a Dijkstra inspired approach proposed by Lars Relund Nielsen, Kim Allan Andersen and Daniele Pretolani \cite{Nielsen}. 
 
-\subsection{Dynamic Approach}
+\subsection{Dynamic Approach MANGLER}
 kkk \cite{Carsten}\\
 kkkk \cite{Fagerberg}\\
 
@@ -394,7 +394,59 @@ The $(V+E)$ is however removed since the $E\ log_2 (V) + size(h)$ dominates. Thi
 \end{equation}
 The reason that the terms $V$ and $E$ does not change since in worst case are we not able to prune any of the hypergraph away using the dynamic approach.
 \subsection{Testing}
-Rojin tests - using Carstens Synthworker. 
+In the development phase of my implementation of the algorithms have I used some small instances of hypergraphs that would be easy to check if they were correct by running the algorithms by hand and check the results. The hypergraphs have previously been used in \cite{Carsten} (\ref{Appendix::ThesisGraph}) and \cite{Fagerberg} (\ref{Appendix::Paper Graph}). In this phase I also created small tests to check how the algorithms would handle cycles (\ref{Appendix::Cycle Graph}) and deadends (\ref{Appendix::DeadEnd Graph}).
+However, to be able to test my implementations on a larger automated scale, I had my colleague Rojin Kianian use the program SynthWorker to create some random generated hypergraph. SynthWorker is the product of Carsten Grønbjerg Lützens and Daniel Fentz Johansens master thesis \cite{Carsten}. It have been tested thoroughly and can therefore be used to test the correctness of my implementations.
+The smaller graphs, \ref{Appendix::Cycle Graph},\ref{Appendix::DeadEnd Graph}, \ref{Appendix::Paper Graph}, \ref{Appendix::ThesisGraph}, were all hardcoded in seperate testprograms, but when we started working with the automated test, we had to agree on a input format. We decided to go with a dot inspired format, which I already had used to visualize the hypergraphs and the output plans. The format contains of declarations and edges. It starts of by declaring all reactions and compounds. A compound is declared as following:
+\begin{center}
+ID, Identifier, notS/S, "Weight", Weight, "Cost", Cost;
+\end{center}
+An example could be the following compound: ID: 4, Weight = 5, Cost = 6,25, which is not a starting compound. This would be written in the input file as:
+\begin{center}
+4 N notS Weight 5 Cost 6.25 ;
+\end{center}
+The notS/S argument is to determine whether a compound is a starting compound (S) or a just a compound (notS).
+As for a reaction the format should be:
+\begin{center}
+ID, Identifier, "Yield", Yield in decimal;
+\end{center}
+So the reaction with ID = 6 and a yield of 80 \% would be:
+\begin{center}
+6 R Yield 0.8 ;
+\end{center}
+As the reader might have guessed the "identifier" is either N or R, which tells us whether it is a compound = N or a reaction = R. The format then states that once all compounds and reactions have been declared, they should be followed by a line which separates the declarations and the edges. This line should always state "REACTIONS" to indicate that the following lines are edges. The connections between compounds and reactions are written in the regular dot notation: s->t. This creates an edge going from s to t. If s is an ID of a reaction, then it states that t is a part of s' tail. If t is an ID of a reaction, then s is a part of t's head. The example shows how reaction ID=3 is connected to its educts and products. The educts are compound ID=1 and compound ID=2 and the product is compound ID=0.
+\begin{center}
+0->3 ;\\
+3->1 ;\\
+3->2 ;\\
+\end{center}
+The test program written takes a hypergraph in the described format, the number of compounds and reactions, number of plans we wish (K) and a score table from SynthWorker. It then creates the hypergraph, tries to find $K$ best plans of the graph and the compares the results with those from the score table. To handle the minor issue of rounding errors a $\sigma$ can be assigned in the code. As of this moment $\sigma = 0,00007$. This constant have been chosen by running the tests with different values and noticing at what value the results became noticeable different.\\
+
+\begin{table}[H]
+\hspace{-2.5cm}
+\begin{tabular}{|r|r|r|r|r|r|r|r|}
+\hline
+Test & Compounds & Reactions & Hypergraph & Plans existing & Plans found & Algorithm & \#Errors\\\hline
+1 & 7 & 13 & \ref{Appendix::Rojin1} & 22 & 22 & Dynamic & 0\\\hline
+1 & 7 & 13 & \ref{Appendix::Rojin1} & 22 & 22 & STB-Dijkstra & 0\\\hline
+2 & 11 & 20 & \ref{Appendix::Rojin2}  & 20 & 20 & Dynamic & 0\\\hline
+2 & 11 & 20 & \ref{Appendix::Rojin2} & 20 & 20 & STB-Dijkstra & 0\\\hline
+3 & 8 & 14 & \ref{Appendix::Rojin3} & 22 & 22 & Dynamic & 0\\\hline
+3 & 8 & 14 & \ref{Appendix::Rojin3} & 22 & 22 & STB-Dijkstra & 0\\\hline
+4 & 40 & 128 & \ref{Appendix::Rojin4} & 476 & 476 & Dynamic & 17\\\hline
+4 & 40 & 128 & \ref{Appendix::Rojin4} & 476 & 473 & STB-Dijkstra & 85\\\hline
+5 & 13 & 46 & \ref{Appendix::Rojin5} & 2121 & 2121 & Dynamic & 5\\\hline
+5 & 13 & 46 & \ref{Appendix::Rojin5} & 2121 & 2121 & STB-Dijkstra & 5\\\hline
+6 & 206 & 1045 & \ref{Appendix::Rojin6} & 50 (limited) & 50 & Dynamic & 0 \\\hline
+6 & 206 & 1045 & \ref{Appendix::Rojin6} & 50 (limited) & 50 & STB-Dijkstra & 0 \\\hline
+7 & 35687 & 170002 & \ref{Appendix::Rojin7} & 50 (limited) & 50 & Dynamic & 0 \\\hline
+7 & 35687 & 170002 & \ref{Appendix::Rojin7} & 50 (limited) & 50 & STB-Dijkstra & 0 \\\hline
+\end{tabular}
+\end{table}
+
+As the table above shows, there is errors in the fourth and fifth test. However at a closer inspection the errors with the dynamic approach in test four and five and the errors with STB-Dijkstra in test five, are of minor concern since the problem is that the result is off by 0,0001. The 85 error in test four using STB-Dijkstra, is a misleading problem. The design of the test expects that the algorithms finds the same paths as SynthWorker. The problem is not that the STB-Dijkstra have found 85 wrong paths, but that it have only found 473 of the 476 path available. This means that each time a path is not found the path comparisons shifts by one, leading to faulty comparisons.\\
+
+Why the STB-Dijkstra algorithm fails to find the three missing paths is a problem that have not been solved. It is suspected to have something to do with the priority queue implemented and the ordering of the nodes within. There are a lot of error prints from the decrease-key function, stating that the key given is not smaller than the one already existing. These errors have only been seen when running on the tests from Rojin, and I suspect that it is because there are many paths with the same cost, and that this leads to some problems in the if statements that checks whether a newly calculated cost is lower than the existing, thus leading to a potential false instead of true.
+
 \section{Beilstein Data}
 The Beilstein database is the largest database in the field of organic chemistry. Since 2009, the content has been maintained and distributed by Elsevier Information Systems in Frankfurt under the name "Reaxys".
 The content covers more than 200 years of chemistry and has been abstracted from several thousands of journal titles, books and patents. Today the data is drawn from selected journals (400 titles) and chemistry patents, and the extraction process for each reaction or substance data included needs to meet three conditions:
@@ -503,7 +555,7 @@ The solution to this problem have been to not include all reactions labelled as 
 \label{fig::MultipleProducts}
 \end{figure}
 \label{ConvertToB-Hypergraph}
-Fifth issue is reactions which have more than one product (fig. \ref{fig::MultipleProducts}). If this becomes a part of our hypergraph it is no longer a B-hypergraph. This is a problem since both shortest paths algorithms only works on B-hypergraphs. This problem is however solved after the graph have been created by the method $convertToBHypergraph()$ in Hypergraph.hpp. The method iterates through the reaction list and if it encounters a non B-hyperedge, the hyperedge is added to a list of non B-hyperedges. For each of the non fixed B-hyperedges ,$e$, it creates $|H(e)|$ new hyperedges ,$e_i$, where $T(e_i)=T(e)$ and $H(e_i) = H(e)[i], \forall\ i \in \mathbb{N}, 1 \leq i\leq|H(e)|$  (fig. \ref{fig::CopyReaction}). Each of the new reactions contains an original-ID variable that points to the original hyperedge. This is only used to print the correct ID when the edge is used in a synthesis plan.
+Fifth issue is reactions which have more than one product (fig. \ref{fig::MultipleProducts}). If this becomes a part of our hypergraph it is no longer a B-hypergraph. This is a problem since both shortest paths algorithms only works on B-hypergraphs. This problem is however solved after the graph have been created by the method $convertToBHypergraph()$ in Hypergraph.hpp. The method iterates through the reaction list and if it encounters a non B-hyperedge, the hyperedge is added to a list of non B-hyperedges. For each of the non fixed B-hyperedges, $e$, it creates $|H(e)|$ new hyperedges, $e_i$, where $T(e_i)=T(e)$ and $H(e_i) = H(e)[i], \forall\ i \in \mathbb{N}, 1 \leq i\leq|H(e)|$  (fig. \ref{fig::CopyReaction}). Each of the new reactions contains an original-ID variable that points to the original hyperedge. This is only used to print the correct ID when the edge is used in a synthesis plan.
 
 \begin{figure}[H]
 \includegraphics[scale=0.5]{Billeder/CopyReaction.png}
@@ -511,8 +563,9 @@ Fifth issue is reactions which have more than one product (fig. \ref{fig::Multip
 \label{fig::CopyReaction}
 \end{figure}
 
-\section{Results}
+\section{Results MANGLER}
 \subsection{Pre-work}
+HOFFMAN - XML Files etc.
 \subsection{Strychnine}
 \begin{table}[H]
 \centering
@@ -601,9 +654,9 @@ Plan & Reactions & Starting weight \\ \hline
 
 kkkk \cite{SynthesisPlans}\\
 
-\section{Further work}
-Expand from compounds - making all nodes with indegree 0 as starting compounds - expand from existing plans - generating new synthesis based on already known reactions.
-\section{Conclusion}
+\section{Further work MANGLER}
+Expand from compounds - making all nodes with in-degree 0 as starting compounds - expand from existing plans - generating new synthesis based on already known reactions.
+\section{Conclusion MANGLER}
 
 \newpage
 
@@ -613,9 +666,69 @@ Expand from compounds - making all nodes with indegree 0 as starting compounds -
 
 \newpage
 \appendix
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+\section{Test Graphs}
 
-\section{Synthesis plans}
+\subsection{Thesis Graph}
+\centering
+\includegraphics[scale=0.4]{TestGrafer/ThesisTest.pdf}
+\label{Appendix::ThesisGraph}
+
+\subsection{Paper Graph}
+\centering
+\includegraphics[scale=0.4]{TestGrafer/PaperTest.pdf}
+\label{Appendix::Paper Graph}
+
+\subsection{Deadend Graph}
+\centering
+\includegraphics[scale=0.4]{TestGrafer/Deadend.pdf}
+\label{Appendix::DeadEnd Graph}
+
+\subsection{Cycle Graph}
+\centering
+\includegraphics[scale=0.4]{TestGrafer/CycleTest.pdf}
+\label{Appendix::Cycle Graph}
+
+\section{Rojin Tests MANGLER}
+\subsection{Rojin Test 1}
+\centering
+\includegraphics[scale=0.4]{RojinGrafer/Test1.pdf}
+\label{Appendix::Rojin1}
+
+\subsection{Rojin Test 2}
+\centering
+\includegraphics[scale=0.4, angle=90]{RojinGrafer/Test2.pdf}
+\label{Appendix::Rojin2}
+
+\subsection{Rojin Test 3}
+\includegraphics[scale=0.4]{RojinGrafer/Test3.pdf}
+\label{Appendix::Rojin3}
+
+\subsection{Rojin Test 4}
+\begin{flushleft}
+Hypergraph to big to be on page. \href{RojinGrafer/test4.pdf}{Press here to see pdf}.
+\label{Appendix::Rojin4}
+\end{flushleft}
+
+\subsection{Rojin Test 5}
+\begin{flushleft}
+Hypergraph to big to be on page. \href{RojinGrafer/test5.pdf}{Press here to see pdf}.
+\end{flushleft}
+\label{Appendix::Rojin5}
+
+\subsection{Rojin Test 6 MANGLER GRAF}
+\begin{flushleft}
+Hypergraph to big to be on page. \href{RojinGrafer/test5.pdf}{Press here to see pdf}.
+\end{flushleft}
+\label{Appendix::Rojin6}
+
+\subsection{Rojin Test 7 MANGLER GRAF}
+\begin{flushleft}
+Hypergraph to big to be on page. \href{RojinGrafer/test5.pdf}{Press here to see pdf}.
+\end{flushleft}
+\label{Appendix::Rojin7}
+
+\section{Synthesis Plans}
 \subsection{Strychnine plan 1}
 \centering
 \includegraphics[scale=0.4]{Synteseplaner/Strychnine/plan1.pdf}

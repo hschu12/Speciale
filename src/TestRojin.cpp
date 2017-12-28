@@ -22,7 +22,6 @@ void testResults(std::vector< std::pair < double, std::vector<int>>> bestPlans, 
             int third = str.find_first_of("\t", second+1);
             int fouth = str.find_first_of("\t", third+1);
             std::string score = str.substr(third+1, fouth-third-1);
-
             if(fabs(plan.first - stod(score)) > sigma) {
               std::cout << plan.first << " not equal " << score << std::endl;
             }
@@ -53,7 +52,7 @@ int main(int argc, char const *argv[]){
 	productsToReaction.resize(atoi(argv[3]));
 	eductsToReaction.resize(atoi(argv[3]));
 
-	HyperGraph h(atoi(argv[2]),atoi(argv[3]));
+	HyperGraph h(atoi(argv[2]),atoi(argv[3]), atoi(argv[2]),atoi(argv[3]));
 
 
 
@@ -144,6 +143,7 @@ int main(int argc, char const *argv[]){
 
     std::cout << "Checking scores" << std::endl;
     testResults(dBest, argv[5]);
+
     
     inFile.close();
 	return 0;
