@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  28 DEC 2017 12:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.4.19)  28 DEC 2017 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1235,582 +1235,606 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-<Billeder/HyperEdge.png, id=89, 262.9825pt x 194.7275pt>
+<Billeder/HyperEdge.png, id=91, 262.9825pt x 194.7275pt>
 File: Billeder/HyperEdge.png Graphic file (type png)
 
 <use Billeder/HyperEdge.png>
 Package pdftex.def Info: Billeder/HyperEdge.png used on input line 119.
 (pdftex.def)             Requested size: 131.49092pt x 97.3635pt.
- [3] [4 <./Billeder/HyperEdge.png>]
+ [3]
+<Billeder/Compound-ReactionNode.png, id=107, 636.3775pt x 202.7575pt>
+File: Billeder/Compound-ReactionNode.png Graphic file (type png)
+
+<use Billeder/Compound-ReactionNode.png>
+Package pdftex.def Info: Billeder/Compound-ReactionNode.png used on input line 
+141.
+(pdftex.def)             Requested size: 318.18797pt x 101.3785pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--147
+
+ []
+
+[4 <./Billeder/HyperEdge.png> <./Billeder/Compound-ReactionNode.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+<Billeder/ListOverview.png, id=127, 481.8pt x 243.91125pt>
+File: Billeder/ListOverview.png Graphic file (type png)
+
+<use Billeder/ListOverview.png>
+Package pdftex.def Info: Billeder/ListOverview.png used on input line 155.
+(pdftex.def)             Requested size: 240.8994pt x 121.95532pt.
+ [5] [6 <./Billeder/ListOverview.png>]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 )
-<Billeder/BachBranch.png, id=124, 968.61874pt x 590.205pt>
+<Billeder/BachBranch.png, id=146, 968.61874pt x 590.205pt>
 File: Billeder/BachBranch.png Graphic file (type png)
 
 <use Billeder/BachBranch.png>
-Package pdftex.def Info: Billeder/BachBranch.png used on input line 164.
+Package pdftex.def Info: Billeder/BachBranch.png used on input line 185.
 (pdftex.def)             Requested size: 484.30818pt x 295.10178pt.
 
-Overfull \hbox (84.62436pt too wide) in paragraph at lines 163--165
+Overfull \hbox (84.62436pt too wide) in paragraph at lines 184--186
 []  [] 
  []
 
-[5] [6 <./Billeder/BachBranch.png>]
-<Billeder/OverlayIllustration.png, id=156, 762.85pt x 341.275pt>
+[7] [8 <./Billeder/BachBranch.png>]
+<Billeder/OverlayIllustration.png, id=178, 762.85pt x 341.275pt>
 File: Billeder/OverlayIllustration.png Graphic file (type png)
 
 <use Billeder/OverlayIllustration.png>
-Package pdftex.def Info: Billeder/OverlayIllustration.png used on input line 19
-3.
+Package pdftex.def Info: Billeder/OverlayIllustration.png used on input line 21
+4.
 (pdftex.def)             Requested size: 381.42407pt x 170.63707pt.
 
-Overfull \hbox (36.42407pt too wide) in paragraph at lines 193--194
+Overfull \hbox (36.42407pt too wide) in paragraph at lines 214--215
  [][] 
  []
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [7 <./Billeder/OverlayIllustration.png>]
+) [9 <./Billeder/OverlayIllustration.png>]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [8]
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+) [10]
+Underfull \hbox (badness 10000) in paragraph at lines 292--294
 
  []
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [9]
-<Billeder/CycleGraph.png, id=226, 361.35pt x 337.26pt>
+) [11]
+<Billeder/CycleGraph.png, id=247, 361.35pt x 337.26pt>
 File: Billeder/CycleGraph.png Graphic file (type png)
 
 <use Billeder/CycleGraph.png>
-Package pdftex.def Info: Billeder/CycleGraph.png used on input line 302.
+Package pdftex.def Info: Billeder/CycleGraph.png used on input line 323.
 (pdftex.def)             Requested size: 180.67456pt x 168.62958pt.
- [10 <./Billeder/CycleGraph.png>]
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
-File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
-) [11]
-<Billeder/DeadEnd.pdf, id=284, 709.65125pt x 694.595pt>
-File: Billeder/DeadEnd.pdf Graphic file (type pdf)
-
-<use Billeder/DeadEnd.pdf>
-Package pdftex.def Info: Billeder/DeadEnd.pdf used on input line 342.
-(pdftex.def)             Requested size: 283.85547pt x 277.83307pt.
- [12 <./Billeder/DeadEnd.pdf>]
+ [12 <./Billeder/CycleGraph.png>]
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
 ) [13]
-Overfull \hbox (2.58032pt too wide) in paragraph at lines 388--389
+<Billeder/DeadEnd.pdf, id=306, 709.65125pt x 694.595pt>
+File: Billeder/DeadEnd.pdf Graphic file (type pdf)
+
+<use Billeder/DeadEnd.pdf>
+Package pdftex.def Info: Billeder/DeadEnd.pdf used on input line 363.
+(pdftex.def)             Requested size: 283.85547pt x 277.83307pt.
+ [14 <./Billeder/DeadEnd.pdf>]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+) [15]
+Overfull \hbox (2.58032pt too wide) in paragraph at lines 409--410
 \T1/cmr/m/n/10 Journals cov-ered in-clude \T1/cmr/m/it/10 Ad-vanced Syn-the-sis
  and Catal-y-sis, Ange-wandte Chemie,
  []
 
-<Billeder/Dysidiolide-7601810.png, id=332, 800.9925pt x 205.76875pt>
+<Billeder/Dysidiolide-7601810.png, id=353, 800.9925pt x 205.76875pt>
 File: Billeder/Dysidiolide-7601810.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7601810.png>
-Package pdftex.def Info: Billeder/Dysidiolide-7601810.png used on input line 39
-6.
+Package pdftex.def Info: Billeder/Dysidiolide-7601810.png used on input line 41
+7.
 (pdftex.def)             Requested size: 400.49527pt x 102.88411pt.
 
-Overfull \hbox (29.2642pt too wide) in paragraph at lines 395--397
+Overfull \hbox (29.2642pt too wide) in paragraph at lines 416--418
 []  [] 
  []
 
-<Billeder/Dysidiolide-7910427.png, id=333, 798.985pt x 210.7875pt>
+<Billeder/Dysidiolide-7910427.png, id=354, 798.985pt x 210.7875pt>
 File: Billeder/Dysidiolide-7910427.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910427.png>
-Package pdftex.def Info: Billeder/Dysidiolide-7910427.png used on input line 39
-9.
+Package pdftex.def Info: Billeder/Dysidiolide-7910427.png used on input line 42
+0.
 (pdftex.def)             Requested size: 399.49152pt x 105.3935pt.
 
-Overfull \hbox (28.26045pt too wide) in paragraph at lines 398--400
+Overfull \hbox (28.26045pt too wide) in paragraph at lines 419--421
 []  [] 
  []
 
-<Billeder/Dysidiolide-7910428.png, id=334, 799.98875pt x 213.79875pt>
+<Billeder/Dysidiolide-7910428.png, id=355, 799.98875pt x 213.79875pt>
 File: Billeder/Dysidiolide-7910428.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910428.png>
-Package pdftex.def Info: Billeder/Dysidiolide-7910428.png used on input line 40
-2.
+Package pdftex.def Info: Billeder/Dysidiolide-7910428.png used on input line 42
+3.
 (pdftex.def)             Requested size: 399.9934pt x 106.89911pt.
 
-Overfull \hbox (28.76233pt too wide) in paragraph at lines 401--403
+Overfull \hbox (28.76233pt too wide) in paragraph at lines 422--424
 []  [] 
  []
 
-<Billeder/Dysidiolide-8171938.png, id=335, 799.98875pt x 204.765pt>
+<Billeder/Dysidiolide-8171938.png, id=356, 799.98875pt x 204.765pt>
 File: Billeder/Dysidiolide-8171938.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-8171938.png>
-Package pdftex.def Info: Billeder/Dysidiolide-8171938.png used on input line 40
-5.
+Package pdftex.def Info: Billeder/Dysidiolide-8171938.png used on input line 42
+6.
 (pdftex.def)             Requested size: 399.9934pt x 102.38223pt.
 
-Overfull \hbox (28.76233pt too wide) in paragraph at lines 404--406
+Overfull \hbox (28.76233pt too wide) in paragraph at lines 425--427
 []  [] 
  []
 
-[14] <Billeder/Dysidiolide-7601810-Close.png, id=350, 475.7775pt x 477.785pt>
+[16] <Billeder/Dysidiolide-7601810-Close.png, id=371, 475.7775pt x 477.785pt>
 File: Billeder/Dysidiolide-7601810-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7601810-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-7601810-Close.png used on input l
-ine 422.
+ine 443.
 (pdftex.def)             Requested size: 138.00052pt x 138.58325pt.
 
-<Billeder/Dysidiolide-7910427-Close.png, id=351, 366.36874pt x 499.8675pt>
+<Billeder/Dysidiolide-7910427-Close.png, id=372, 366.36874pt x 499.8675pt>
 File: Billeder/Dysidiolide-7910427-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910427-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-7910427-Close.png used on input l
-ine 428.
+ine 449.
 (pdftex.def)             Requested size: 138.00052pt x 188.28885pt.
 
-<Billeder/Dysidiolide-7910428-Close.png, id=352, 564.1075pt x 490.83376pt>
+<Billeder/Dysidiolide-7910428-Close.png, id=373, 564.1075pt x 490.83376pt>
 File: Billeder/Dysidiolide-7910428-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-7910428-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-7910428-Close.png used on input l
-ine 434.
+ine 455.
 (pdftex.def)             Requested size: 138.00052pt x 120.07182pt.
 
-<Billeder/Dysidiolide-8171938-Close.png, id=353, 407.5225pt x 488.82625pt>
+<Billeder/Dysidiolide-8171938-Close.png, id=374, 407.5225pt x 488.82625pt>
 File: Billeder/Dysidiolide-8171938-Close.png Graphic file (type png)
 
 <use Billeder/Dysidiolide-8171938-Close.png>
 Package pdftex.def Info: Billeder/Dysidiolide-8171938-Close.png used on input l
-ine 440.
+ine 461.
 (pdftex.def)             Requested size: 138.00052pt x 165.53488pt.
- [15 <./Billeder/Dysidiolide-7601810.png> <./Billeder/Dysidiolide-7910427.png> 
+ [17 <./Billeder/Dysidiolide-7601810.png> <./Billeder/Dysidiolide-7910427.png> 
 <./Billeder/Dysidiolide-7910428.png> <./Billeder/Dysidiolide-8171938.png>]
-<Billeder/LeftOnlyReaction.png, id=367, 782.925pt x 349.305pt>
+<Billeder/LeftOnlyReaction.png, id=388, 782.925pt x 349.305pt>
 File: Billeder/LeftOnlyReaction.png Graphic file (type png)
 
 <use Billeder/LeftOnlyReaction.png>
-Package pdftex.def Info: Billeder/LeftOnlyReaction.png used on input line 451.
+Package pdftex.def Info: Billeder/LeftOnlyReaction.png used on input line 472.
 (pdftex.def)             Requested size: 391.46155pt x 174.65207pt.
 
-Overfull \hbox (20.23048pt too wide) in paragraph at lines 450--452
+Overfull \hbox (20.23048pt too wide) in paragraph at lines 471--473
 []  [] 
  []
 
-<Billeder/RightOnlyReaction.png, id=368, 785.93625pt x 351.3125pt>
+<Billeder/RightOnlyReaction.png, id=389, 785.93625pt x 351.3125pt>
 File: Billeder/RightOnlyReaction.png Graphic file (type png)
 
 <use Billeder/RightOnlyReaction.png>
-Package pdftex.def Info: Billeder/RightOnlyReaction.png used on input line 454.
+Package pdftex.def Info: Billeder/RightOnlyReaction.png used on input line 475.
 
 (pdftex.def)             Requested size: 392.96716pt x 175.6558pt.
 
-Overfull \hbox (21.7361pt too wide) in paragraph at lines 453--455
+Overfull \hbox (21.7361pt too wide) in paragraph at lines 474--476
 []  [] 
  []
 
-[16 <./Billeder/Dysidiolide-7601810-Close.png> <./Billeder/Dysidiolide-7910427-
+[18 <./Billeder/Dysidiolide-7601810-Close.png> <./Billeder/Dysidiolide-7910427-
 Close.png> <./Billeder/Dysidiolide-7910428-Close.png> <./Billeder/Dysidiolide-8
 171938-Close.png>]
-<Billeder/MissingIngredientReaction.png, id=381, 781.92125pt x 325.215pt>
+<Billeder/MissingIngredientReaction.png, id=403, 781.92125pt x 325.215pt>
 File: Billeder/MissingIngredientReaction.png Graphic file (type png)
 
 <use Billeder/MissingIngredientReaction.png>
 Package pdftex.def Info: Billeder/MissingIngredientReaction.png used on input l
-ine 463.
+ine 484.
 (pdftex.def)             Requested size: 390.95967pt x 162.6071pt.
 
-Overfull \hbox (19.7286pt too wide) in paragraph at lines 462--464
+Overfull \hbox (19.7286pt too wide) in paragraph at lines 483--485
 []  [] 
  []
 
-[17 <./Billeder/LeftOnlyReaction.png> <./Billeder/RightOnlyReaction.png>]
-<Billeder/MultistepReactions.png, id=391, 817.0525pt x 529.98pt>
+[19 <./Billeder/LeftOnlyReaction.png> <./Billeder/RightOnlyReaction.png>]
+<Billeder/MultistepReactions.png, id=414, 817.0525pt x 529.98pt>
 File: Billeder/MultistepReactions.png Graphic file (type png)
 
 <use Billeder/MultistepReactions.png>
-Package pdftex.def Info: Billeder/MultistepReactions.png used on input line 473
+Package pdftex.def Info: Billeder/MultistepReactions.png used on input line 494
 .
 (pdftex.def)             Requested size: 408.52525pt x 264.98933pt.
 
-Overfull \hbox (37.29419pt too wide) in paragraph at lines 472--474
+Overfull \hbox (37.29419pt too wide) in paragraph at lines 493--495
 []  [] 
  []
 
-[18 <./Billeder/MissingIngredientReaction.png>]
-<Billeder/MultipleProducts.png, id=400, 805.0075pt x 439.6425pt>
+[20 <./Billeder/MissingIngredientReaction.png>]
+<Billeder/MultipleProducts.png, id=422, 805.0075pt x 439.6425pt>
 File: Billeder/MultipleProducts.png Graphic file (type png)
 
 <use Billeder/MultipleProducts.png>
-Package pdftex.def Info: Billeder/MultipleProducts.png used on input line 480.
+Package pdftex.def Info: Billeder/MultipleProducts.png used on input line 501.
 (pdftex.def)             Requested size: 402.50278pt x 219.82071pt.
 
-Overfull \hbox (31.27171pt too wide) in paragraph at lines 479--481
+Overfull \hbox (31.27171pt too wide) in paragraph at lines 500--502
 []  [] 
  []
 
-[19 <./Billeder/MultistepReactions.png> <./Billeder/MultipleProducts.png>]
-<Billeder/CopyReaction.png, id=412, 617.30624pt x 293.095pt>
+[21 <./Billeder/MultistepReactions.png> <./Billeder/MultipleProducts.png>]
+<Billeder/CopyReaction.png, id=433, 617.30624pt x 293.095pt>
 File: Billeder/CopyReaction.png Graphic file (type png)
 
 <use Billeder/CopyReaction.png>
-Package pdftex.def Info: Billeder/CopyReaction.png used on input line 487.
+Package pdftex.def Info: Billeder/CopyReaction.png used on input line 509.
 (pdftex.def)             Requested size: 308.65236pt x 146.54713pt.
- [20 <./Billeder/CopyReaction.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 580--581
+ [22 <./Billeder/CopyReaction.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
 
  []
 
-[21] [22]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 590.
+[23] [24]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 612.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-[23] <Synteseplaner/Strychnine/plan1.pdf, id=534, 317.185pt x 1272.755pt>
+[25] <Synteseplaner/Strychnine/plan1.pdf, id=557, 317.185pt x 1272.755pt>
 File: Synteseplaner/Strychnine/plan1.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan1.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan1.pdf used on input line 
-599.
+621.
 (pdftex.def)             Requested size: 126.87173pt x 509.09299pt.
 
-<Synteseplaner/Strychnine/plan2.pdf, id=535, 317.185pt x 1272.755pt>
+<Synteseplaner/Strychnine/plan2.pdf, id=558, 317.185pt x 1272.755pt>
 File: Synteseplaner/Strychnine/plan2.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan2.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan2.pdf used on input line 
-604.
+626.
 (pdftex.def)             Requested size: 126.87173pt x 509.09299pt.
- [24 <./Synteseplaner/Strychnine/plan1.pdf>] <Synteseplaner/Strychnine/plan3.pd
-f, id=556, 317.185pt x 1417.295pt>
+ [26 <./Synteseplaner/Strychnine/plan1.pdf>] <Synteseplaner/Strychnine/plan3.pd
+f, id=577, 317.185pt x 1417.295pt>
 File: Synteseplaner/Strychnine/plan3.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan3.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan3.pdf used on input line 
-609.
+631.
 (pdftex.def)             Requested size: 126.87173pt x 566.90796pt.
- [25 <./Synteseplaner/Strychnine/plan2.pdf>] <Synteseplaner/Strychnine/plan4.pd
-f, id=574, 320.19624pt x 1417.295pt>
+ [27 <./Synteseplaner/Strychnine/plan2.pdf>] <Synteseplaner/Strychnine/plan4.pd
+f, id=595, 320.19624pt x 1417.295pt>
 File: Synteseplaner/Strychnine/plan4.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan4.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan4.pdf used on input line 
-615.
+637.
 (pdftex.def)             Requested size: 128.07622pt x 566.90796pt.
- [26 <./Synteseplaner/Strychnine/plan3.pdf>] <Synteseplaner/Strychnine/plan5.pd
-f, id=592, 317.185pt x 1272.755pt>
+ [28 <./Synteseplaner/Strychnine/plan3.pdf>] <Synteseplaner/Strychnine/plan5.pd
+f, id=613, 317.185pt x 1272.755pt>
 File: Synteseplaner/Strychnine/plan5.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan5.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan5.pdf used on input line 
-620.
+642.
 (pdftex.def)             Requested size: 126.87173pt x 509.09299pt.
- [27 <./Synteseplaner/Strychnine/plan4.pdf>] <Synteseplaner/Strychnine/plan6.pd
-f, id=610, 374.39874pt x 1128.215pt>
+ [29 <./Synteseplaner/Strychnine/plan4.pdf>] <Synteseplaner/Strychnine/plan6.pd
+f, id=631, 374.39874pt x 1128.215pt>
 File: Synteseplaner/Strychnine/plan6.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan6.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan6.pdf used on input line 
-626.
+648.
 (pdftex.def)             Requested size: 149.75684pt x 451.278pt.
- [28 <./Synteseplaner/Strychnine/plan5.pdf>] <Synteseplaner/Strychnine/plan7.pd
-f, id=628, 374.39874pt x 1128.215pt>
+ [30 <./Synteseplaner/Strychnine/plan5.pdf>] <Synteseplaner/Strychnine/plan7.pd
+f, id=650, 374.39874pt x 1128.215pt>
 File: Synteseplaner/Strychnine/plan7.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan7.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan7.pdf used on input line 
-631.
+653.
 (pdftex.def)             Requested size: 149.75684pt x 451.278pt.
- [29 <./Synteseplaner/Strychnine/plan6.pdf>] <Synteseplaner/Strychnine/plan8.pd
-f, id=646, 374.39874pt x 1128.215pt>
+ [31 <./Synteseplaner/Strychnine/plan6.pdf>] <Synteseplaner/Strychnine/plan8.pd
+f, id=669, 374.39874pt x 1128.215pt>
 File: Synteseplaner/Strychnine/plan8.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan8.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan8.pdf used on input line 
-637.
+659.
 (pdftex.def)             Requested size: 149.75684pt x 451.278pt.
- [30 <./Synteseplaner/Strychnine/plan7.pdf>] <Synteseplaner/Strychnine/plan9.pd
-f, id=666, 374.39874pt x 1128.215pt>
+ [32 <./Synteseplaner/Strychnine/plan7.pdf>] <Synteseplaner/Strychnine/plan9.pd
+f, id=687, 374.39874pt x 1128.215pt>
 File: Synteseplaner/Strychnine/plan9.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan9.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan9.pdf used on input line 
-642.
+664.
 (pdftex.def)             Requested size: 149.75684pt x 451.278pt.
- [31 <./Synteseplaner/Strychnine/plan8.pdf>] <Synteseplaner/Strychnine/plan10.p
-df, id=684, 374.39874pt x 1272.755pt>
+ [33 <./Synteseplaner/Strychnine/plan8.pdf>] <Synteseplaner/Strychnine/plan10.p
+df, id=705, 374.39874pt x 1272.755pt>
 File: Synteseplaner/Strychnine/plan10.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan10.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan10.pdf used on input line
- 647.
+ 669.
 (pdftex.def)             Requested size: 149.75684pt x 509.09299pt.
- [32 <./Synteseplaner/Strychnine/plan9.pdf>] <Synteseplaner/Strychnine/plan11.p
-df, id=702, 374.39874pt x 1128.215pt>
+ [34 <./Synteseplaner/Strychnine/plan9.pdf>] <Synteseplaner/Strychnine/plan11.p
+df, id=723, 374.39874pt x 1128.215pt>
 File: Synteseplaner/Strychnine/plan11.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan11.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan11.pdf used on input line
- 652.
+ 674.
 (pdftex.def)             Requested size: 149.75684pt x 451.278pt.
- [33 <./Synteseplaner/Strychnine/plan10.pdf>]
-<Synteseplaner/Strychnine/plan12.pdf, id=720, 374.39874pt x 1272.755pt>
+ [35 <./Synteseplaner/Strychnine/plan10.pdf>]
+<Synteseplaner/Strychnine/plan12.pdf, id=741, 374.39874pt x 1272.755pt>
 File: Synteseplaner/Strychnine/plan12.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan12.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan12.pdf used on input line
- 657.
+ 679.
 (pdftex.def)             Requested size: 149.75684pt x 509.09299pt.
- [34 <./Synteseplaner/Strychnine/plan11.pdf>]
-<Synteseplaner/Strychnine/plan13.pdf, id=738, 374.39874pt x 1128.215pt>
+ [36 <./Synteseplaner/Strychnine/plan11.pdf>]
+<Synteseplaner/Strychnine/plan13.pdf, id=760, 374.39874pt x 1128.215pt>
 File: Synteseplaner/Strychnine/plan13.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan13.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan13.pdf used on input line
- 662.
+ 684.
 (pdftex.def)             Requested size: 149.75684pt x 451.278pt.
- [35 <./Synteseplaner/Strychnine/plan12.pdf>] <Synteseplaner/Strychnine/plan14.
-pdf, id=756, 317.185pt x 983.675pt>
+ [37 <./Synteseplaner/Strychnine/plan12.pdf>] <Synteseplaner/Strychnine/plan14.
+pdf, id=778, 317.185pt x 983.675pt>
 File: Synteseplaner/Strychnine/plan14.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan14.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan14.pdf used on input line
- 667.
+ 689.
 (pdftex.def)             Requested size: 126.87173pt x 393.46303pt.
- [36 <./Synteseplaner/Strychnine/plan13.pdf>] <Synteseplaner/Strychnine/plan15.
-pdf, id=775, 317.185pt x 1272.755pt>
+ [38 <./Synteseplaner/Strychnine/plan13.pdf>] <Synteseplaner/Strychnine/plan15.
+pdf, id=797, 317.185pt x 1272.755pt>
 File: Synteseplaner/Strychnine/plan15.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan15.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan15.pdf used on input line
- 672.
+ 694.
 (pdftex.def)             Requested size: 126.87173pt x 509.09299pt.
- [37 <./Synteseplaner/Strychnine/plan14.pdf>] <Synteseplaner/Strychnine/plan16.
-pdf, id=794, 317.185pt x 1417.295pt>
+ [39 <./Synteseplaner/Strychnine/plan14.pdf>] <Synteseplaner/Strychnine/plan16.
+pdf, id=815, 317.185pt x 1417.295pt>
 File: Synteseplaner/Strychnine/plan16.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Strychnine/plan16.pdf>
 Package pdftex.def Info: Synteseplaner/Strychnine/plan16.pdf used on input line
- 677.
+ 699.
 (pdftex.def)             Requested size: 126.87173pt x 566.90796pt.
- [38 <./Synteseplaner/Strychnine/plan15.pdf>] <Synteseplaner/Colchicine/plan1.p
-df, id=812, 321.2pt x 694.595pt>
+ [40 <./Synteseplaner/Strychnine/plan15.pdf>] <Synteseplaner/Colchicine/plan1.p
+df, id=833, 321.2pt x 694.595pt>
 File: Synteseplaner/Colchicine/plan1.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Colchicine/plan1.pdf>
 Package pdftex.def Info: Synteseplaner/Colchicine/plan1.pdf used on input line 
-682.
+704.
 (pdftex.def)             Requested size: 128.47772pt x 277.83307pt.
- [39 <./Synteseplaner/Strychnine/plan16.pdf>] <Synteseplaner/Colchicine/plan2.p
-df, id=830, 269.005pt x 694.595pt>
+ [41 <./Synteseplaner/Strychnine/plan16.pdf>] <Synteseplaner/Colchicine/plan2.p
+df, id=851, 269.005pt x 694.595pt>
 File: Synteseplaner/Colchicine/plan2.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Colchicine/plan2.pdf>
 Package pdftex.def Info: Synteseplaner/Colchicine/plan2.pdf used on input line 
-687.
+709.
 (pdftex.def)             Requested size: 107.60008pt x 277.83307pt.
- [40 <./Synteseplaner/Colchicine/plan1.pdf>] <Synteseplaner/Colchicine/plan3.pd
-f, id=848, 321.2pt x 983.675pt>
+ [42 <./Synteseplaner/Colchicine/plan1.pdf>] <Synteseplaner/Colchicine/plan3.pd
+f, id=870, 321.2pt x 983.675pt>
 File: Synteseplaner/Colchicine/plan3.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Colchicine/plan3.pdf>
 Package pdftex.def Info: Synteseplaner/Colchicine/plan3.pdf used on input line 
-692.
+714.
 (pdftex.def)             Requested size: 128.47772pt x 393.46303pt.
- [41 <./Synteseplaner/Colchicine/plan2.pdf>] <Synteseplaner/Colchicine/plan4.pd
-f, id=866, 319.1925pt x 694.595pt>
+ [43 <./Synteseplaner/Colchicine/plan2.pdf>] <Synteseplaner/Colchicine/plan4.pd
+f, id=888, 319.1925pt x 694.595pt>
 File: Synteseplaner/Colchicine/plan4.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Colchicine/plan4.pdf>
 Package pdftex.def Info: Synteseplaner/Colchicine/plan4.pdf used on input line 
-697.
+719.
 (pdftex.def)             Requested size: 127.67473pt x 277.83307pt.
- [42 <./Synteseplaner/Colchicine/plan3.pdf>] <Synteseplaner/Colchicine/plan5.pd
-f, id=885, 319.1925pt x 694.595pt>
+ [44 <./Synteseplaner/Colchicine/plan3.pdf>] <Synteseplaner/Colchicine/plan5.pd
+f, id=906, 319.1925pt x 694.595pt>
 File: Synteseplaner/Colchicine/plan5.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Colchicine/plan5.pdf>
 Package pdftex.def Info: Synteseplaner/Colchicine/plan5.pdf used on input line 
-702.
+724.
 (pdftex.def)             Requested size: 127.67473pt x 277.83307pt.
- [43 <./Synteseplaner/Colchicine/plan4.pdf>] <Synteseplaner/Dysidiolide/plan1.p
-df, id=903, 321.2pt x 1272.755pt>
+ [45 <./Synteseplaner/Colchicine/plan4.pdf>] <Synteseplaner/Dysidiolide/plan1.p
+df, id=925, 321.2pt x 1272.755pt>
 File: Synteseplaner/Dysidiolide/plan1.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan1.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan1.pdf used on input line
- 707.
+ 729.
 (pdftex.def)             Requested size: 138.1133pt x 547.27399pt.
- [44 <./Synteseplaner/Colchicine/plan5.pdf>] <Synteseplaner/Dysidiolide/plan2.p
-df, id=922, 322.20375pt x 1272.755pt>
+ [46 <./Synteseplaner/Colchicine/plan5.pdf>] <Synteseplaner/Dysidiolide/plan2.p
+df, id=943, 322.20375pt x 1272.755pt>
 File: Synteseplaner/Dysidiolide/plan2.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan2.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan2.pdf used on input line
- 712.
+ 734.
 (pdftex.def)             Requested size: 138.5449pt x 547.27399pt.
- [45 <./Synteseplaner/Dysidiolide/plan1.pdf>]
-<Synteseplaner/Dysidiolide/plan3.pdf, id=940, 370.38374pt x 1706.375pt>
+ [47 <./Synteseplaner/Dysidiolide/plan1.pdf>]
+<Synteseplaner/Dysidiolide/plan3.pdf, id=961, 370.38374pt x 1706.375pt>
 File: Synteseplaner/Dysidiolide/plan3.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan3.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan3.pdf used on input line
- 717.
+ 739.
 (pdftex.def)             Requested size: 125.9288pt x 580.15984pt.
- [46 <./Synteseplaner/Dysidiolide/plan2.pdf>] [47]
+ [48 <./Synteseplaner/Dysidiolide/plan2.pdf>] [49]
 Overfull \vbox (1.94936pt too high) has occurred while \output is active []
 
 
-[48 <./Synteseplaner/Dysidiolide/plan3.pdf>]
-<Synteseplaner/Dysidiolide/plan4.pdf, id=981, 419.5675pt x 1850.915pt>
+[50 <./Synteseplaner/Dysidiolide/plan3.pdf>]
+<Synteseplaner/Dysidiolide/plan4.pdf, id=1002, 419.5675pt x 1850.915pt>
 File: Synteseplaner/Dysidiolide/plan4.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan4.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan4.pdf used on input line
- 722.
+ 744.
 (pdftex.def)             Requested size: 125.87122pt x 555.2788pt.
 
-<Synteseplaner/Dysidiolide/plan5.pdf, id=982, 371.3875pt x 1706.375pt>
+<Synteseplaner/Dysidiolide/plan5.pdf, id=1003, 371.3875pt x 1706.375pt>
 File: Synteseplaner/Dysidiolide/plan5.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan5.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan5.pdf used on input line
- 727.
+ 749.
 (pdftex.def)             Requested size: 129.98756pt x 597.2402pt.
- [49 <./Synteseplaner/Dysidiolide/plan4.pdf>] [50]
+ [51 <./Synteseplaner/Dysidiolide/plan4.pdf>] [52]
 Overfull \vbox (19.02972pt too high) has occurred while \output is active []
 
 
-[51 <./Synteseplaner/Dysidiolide/plan5.pdf>]
-<Synteseplaner/Dysidiolide/plan6.pdf, id=1022, 420.57124pt x 1850.915pt>
+[53 <./Synteseplaner/Dysidiolide/plan5.pdf>]
+<Synteseplaner/Dysidiolide/plan6.pdf, id=1044, 420.57124pt x 1850.915pt>
 File: Synteseplaner/Dysidiolide/plan6.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan6.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan6.pdf used on input line
- 732.
+ 754.
 (pdftex.def)             Requested size: 126.17235pt x 555.2788pt.
 
-<Synteseplaner/Dysidiolide/plan7.pdf, id=1023, 422.57875pt x 2139.995pt>
+<Synteseplaner/Dysidiolide/plan7.pdf, id=1045, 422.57875pt x 2139.995pt>
 File: Synteseplaner/Dysidiolide/plan7.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan7.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan7.pdf used on input line
- 737.
+ 759.
 (pdftex.def)             Requested size: 114.09778pt x 577.80638pt.
- [52 <./Synteseplaner/Dysidiolide/plan6.pdf>]
-<Synteseplaner/Dysidiolide/plan8.pdf, id=1042, 500.87125pt x 2718.155pt>
+ [54 <./Synteseplaner/Dysidiolide/plan6.pdf>]
+<Synteseplaner/Dysidiolide/plan8.pdf, id=1064, 500.87125pt x 2718.155pt>
 File: Synteseplaner/Dysidiolide/plan8.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan8.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan8.pdf used on input line
- 742.
+ 764.
 (pdftex.def)             Requested size: 100.17247pt x 543.62138pt.
- [53 <./Synteseplaner/Dysidiolide/plan7.pdf>]
-<Synteseplaner/Dysidiolide/plan9.pdf, id=1060, 422.57875pt x 2429.075pt>
+ [55 <./Synteseplaner/Dysidiolide/plan7.pdf>]
+<Synteseplaner/Dysidiolide/plan9.pdf, id=1082, 422.57875pt x 2429.075pt>
 File: Synteseplaner/Dysidiolide/plan9.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan9.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan9.pdf used on input line
- 747.
+ 769.
 (pdftex.def)             Requested size: 105.64442pt x 607.26727pt.
- [54 <./Synteseplaner/Dysidiolide/plan8.pdf>] [55]
+ [56 <./Synteseplaner/Dysidiolide/plan8.pdf>] [57]
 Overfull \vbox (29.0568pt too high) has occurred while \output is active []
 
 
-[56 <./Synteseplaner/Dysidiolide/plan9.pdf>]
-<Synteseplaner/Dysidiolide/plan10.pdf, id=1101, 498.86375pt x 2718.155pt>
+[58 <./Synteseplaner/Dysidiolide/plan9.pdf>]
+<Synteseplaner/Dysidiolide/plan10.pdf, id=1122, 498.86375pt x 2718.155pt>
 File: Synteseplaner/Dysidiolide/plan10.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Dysidiolide/plan10.pdf>
 Package pdftex.def Info: Synteseplaner/Dysidiolide/plan10.pdf used on input lin
-e 752.
+e 774.
 (pdftex.def)             Requested size: 99.77098pt x 543.62138pt.
 
-<Synteseplaner/Asteriscanolide/plan1.pdf, id=1102, 269.005pt x 550.055pt>
+<Synteseplaner/Asteriscanolide/plan1.pdf, id=1123, 269.005pt x 550.055pt>
 File: Synteseplaner/Asteriscanolide/plan1.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Asteriscanolide/plan1.pdf>
 Package pdftex.def Info: Synteseplaner/Asteriscanolide/plan1.pdf used on input 
-line 757.
+line 779.
 (pdftex.def)             Requested size: 107.60008pt x 220.0181pt.
- [57 <./Synteseplaner/Dysidiolide/plan10.pdf>]
-<Synteseplaner/Asteriscanolide/plan2.pdf, id=1120, 269.005pt x 694.595pt>
+ [59 <./Synteseplaner/Dysidiolide/plan10.pdf>]
+<Synteseplaner/Asteriscanolide/plan2.pdf, id=1141, 269.005pt x 694.595pt>
 File: Synteseplaner/Asteriscanolide/plan2.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Asteriscanolide/plan2.pdf>
 Package pdftex.def Info: Synteseplaner/Asteriscanolide/plan2.pdf used on input 
-line 762.
+line 784.
 (pdftex.def)             Requested size: 107.60008pt x 277.83307pt.
 
-<Synteseplaner/Asteriscanolide/plan3.pdf, id=1121, 419.5675pt x 1417.295pt>
+<Synteseplaner/Asteriscanolide/plan3.pdf, id=1142, 419.5675pt x 1417.295pt>
 File: Synteseplaner/Asteriscanolide/plan3.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Asteriscanolide/plan3.pdf>
 Package pdftex.def Info: Synteseplaner/Asteriscanolide/plan3.pdf used on input 
-line 767.
+line 789.
 (pdftex.def)             Requested size: 167.82402pt x 566.90796pt.
- [58 <./Synteseplaner/Asteriscanolide/plan1.pdf> <./Synteseplaner/Asteriscanoli
+ [60 <./Synteseplaner/Asteriscanolide/plan1.pdf> <./Synteseplaner/Asteriscanoli
 de/plan2.pdf>]
-<Synteseplaner/Lepadiformine/plan1.pdf, id=1151, 261.97874pt x 550.055pt>
+<Synteseplaner/Lepadiformine/plan1.pdf, id=1174, 261.97874pt x 550.055pt>
 File: Synteseplaner/Lepadiformine/plan1.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Lepadiformine/plan1.pdf>
 Package pdftex.def Info: Synteseplaner/Lepadiformine/plan1.pdf used on input li
-ne 772.
+ne 794.
 (pdftex.def)             Requested size: 104.78964pt x 220.0181pt.
- [59 <./Synteseplaner/Asteriscanolide/plan3.pdf>]
-<Synteseplaner/Lepadiformine/plan2.pdf, id=1170, 262.9825pt x 1272.755pt>
+ [61 <./Synteseplaner/Asteriscanolide/plan3.pdf>]
+<Synteseplaner/Lepadiformine/plan2.pdf, id=1192, 262.9825pt x 1272.755pt>
 File: Synteseplaner/Lepadiformine/plan2.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Lepadiformine/plan2.pdf>
 Package pdftex.def Info: Synteseplaner/Lepadiformine/plan2.pdf used on input li
-ne 777.
+ne 799.
 (pdftex.def)             Requested size: 105.19113pt x 509.09299pt.
- [60 <./Synteseplaner/Lepadiformine/plan1.pdf>]
-<Synteseplaner/Lepadiformine/plan3.pdf, id=1189, 262.9825pt x 1272.755pt>
+ [62 <./Synteseplaner/Lepadiformine/plan1.pdf>]
+<Synteseplaner/Lepadiformine/plan3.pdf, id=1210, 262.9825pt x 1272.755pt>
 File: Synteseplaner/Lepadiformine/plan3.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Lepadiformine/plan3.pdf>
 Package pdftex.def Info: Synteseplaner/Lepadiformine/plan3.pdf used on input li
-ne 782.
+ne 804.
 (pdftex.def)             Requested size: 105.19113pt x 509.09299pt.
- [61 <./Synteseplaner/Lepadiformine/plan2.pdf>]
-<Synteseplaner/Lepadiformine/plan4.pdf, id=1207, 262.9825pt x 405.515pt>
+ [63 <./Synteseplaner/Lepadiformine/plan2.pdf>]
+<Synteseplaner/Lepadiformine/plan4.pdf, id=1228, 262.9825pt x 405.515pt>
 File: Synteseplaner/Lepadiformine/plan4.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Lepadiformine/plan4.pdf>
 Package pdftex.def Info: Synteseplaner/Lepadiformine/plan4.pdf used on input li
-ne 787.
+ne 809.
 (pdftex.def)             Requested size: 105.19113pt x 162.20311pt.
- [62 <./Synteseplaner/Lepadiformine/plan3.pdf>]
-<Synteseplaner/Lepadiformine/plan5.pdf, id=1225, 313.17pt x 550.055pt>
+ [64 <./Synteseplaner/Lepadiformine/plan3.pdf>]
+<Synteseplaner/Lepadiformine/plan5.pdf, id=1246, 313.17pt x 550.055pt>
 File: Synteseplaner/Lepadiformine/plan5.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Lepadiformine/plan5.pdf>
 Package pdftex.def Info: Synteseplaner/Lepadiformine/plan5.pdf used on input li
-ne 792.
+ne 814.
 (pdftex.def)             Requested size: 125.26576pt x 220.0181pt.
 
-<Synteseplaner/Lepadiformine/plan6.pdf, id=1226, 313.17pt x 550.055pt>
+<Synteseplaner/Lepadiformine/plan6.pdf, id=1247, 313.17pt x 550.055pt>
 File: Synteseplaner/Lepadiformine/plan6.pdf Graphic file (type pdf)
 
 <use Synteseplaner/Lepadiformine/plan6.pdf>
 Package pdftex.def Info: Synteseplaner/Lepadiformine/plan6.pdf used on input li
-ne 797.
+ne 819.
 (pdftex.def)             Requested size: 125.26576pt x 220.0181pt.
  
 AED: lastpage setting LastPage
-[63 <./Synteseplaner/Lepadiformine/plan4.pdf> <./Synteseplaner/Lepadiformine/pl
-an5.pdf>] [64 <./Synteseplaner/Lepadiformine/plan6.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 799.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 799.
+[65 <./Synteseplaner/Lepadiformine/plan4.pdf> <./Synteseplaner/Lepadiformine/pl
+an5.pdf>] [66 <./Synteseplaner/Lepadiformine/plan6.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 821.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 821.
 
 (./Speciale Rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 799.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 799.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 821.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 821.
 Package rerunfilecheck Info: File `"Speciale Rapport".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to '"Speciale Rapport".run.xml'.
@@ -1818,13 +1842,13 @@ Package logreq Info: Writing requests to '"Speciale Rapport".run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25729 strings out of 493089
- 460482 string characters out of 6134842
- 637007 words of memory out of 5000000
- 28452 multiletter control sequences out of 15000+600000
+ 25748 strings out of 493089
+ 460922 string characters out of 6134842
+ 636007 words of memory out of 5000000
+ 28464 multiletter control sequences out of 15000+600000
  19790 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,56p,956b,2224s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,56p,1159b,2224s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
@@ -1848,10 +1872,10 @@ mf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015/texmf-d
 ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on "Speciale Rapport.pdf" (65 pages, 1395418 bytes).
+Output written on "Speciale Rapport.pdf" (67 pages, 1420798 bytes).
 PDF statistics:
- 1408 PDF objects out of 1440 (max. 8388607)
- 1147 compressed objects within 12 object streams
- 289 named destinations out of 1000 (max. 500000)
- 313 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1430 PDF objects out of 1440 (max. 8388607)
+ 1163 compressed objects within 12 object streams
+ 294 named destinations out of 1000 (max. 500000)
+ 323 words of extra memory for PDF output out of 10000 (max. 10000000)
 

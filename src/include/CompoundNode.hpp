@@ -6,7 +6,6 @@ struct CompoundNode
 		CompoundNode(int id) : id(id) {};
 
 		int id;
-		std::string name;
 		double molecularWeight;
 		double cost;
 		int maxYieldEdge = -1;
