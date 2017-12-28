@@ -179,6 +179,14 @@
   \field{year}{2017}
 \endentry
 
+\entry{Dijkstra}{misc}{}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Dijkstra's_algorithm
+  \endverb
+  \field{month}{12}
+  \field{year}{2017}
+\endentry
+
 \entry{WikiReaxys}{misc}{}
   \verb{url}
   \verb https://en.wikipedia.org/wiki/Reaxys

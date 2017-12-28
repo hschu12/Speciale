@@ -97,11 +97,13 @@ Daniel Merkle
 
 
 \section{Acknowledgements}
-I would like to thank my supervisor, Daniel Merkle, for giving me the opportunity to work with this interesting subject, always guiding me when I was stuck, and asking questions to my code and thereby making it better and faster. I also want to thank Rojin Kianian for giving me answers to different questions regarding the algorithms and cost functions and for helping me produce my tests and results.\\
-I would also like to thank Brian Alberg, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \#KNAWLEGE, and also, regarding some of them, for the daily trip to the canteen of SDU.\\
+I would like to thank my supervisor, Daniel Merkle, for giving me the opportunity to work with this interesting subject, always guiding me when I was stuck, and asking questions to my code and thereby making it better and faster. I also want to thank Rojin Kianian for giving me answers to different questions regarding the algorithms and cost functions and for helping me produce my tests and results. Thanks to Peter F. Stadler and Guillermo Restrepo from the University of Leipzig for helping me with Reaxys. Thanks to Jacob Lykke Andersen for helping me with Python scripts to make use of my XML extracts.\\
+I would also like to thank Brian Alberg, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \#KNAWLEGE. For some of you - thank you for the daily trip to the canteen of SDU. It been a pleasure spending my years at the university with you.\\
 And last but not least, I would like to thank my girlfriend, Louisa Høj, for being a huge support throughout the project, listening when I had the need to talk about problems and to always bring a smile to my face.
+
 \section{Introduction}
 kkk \cite{Grzybowski}\\
+
 \subsection{Overview}
 Hvad indeholder hver sektion??
 
@@ -238,21 +240,29 @@ function YenHyp(s, t, K)
 	return A
 endfunction
 \end{lstlisting}
+YenHyp makes $K$ iterations. In each iteration the length of a hyperpath determines the number of calls to the shortest path algorithm. The worst case for the length of the hyperpath is $\mathcal{O}(|V|)$. Hence the running time of YenHyp becomes:
+\begin{equation}
+\mathcal{O}(K \cdot |V| \cdot SP)
+\end{equation}
+Where $SP$ is the running time for the shortest path algorithm used.
 \subsection{Cost Function}
 Before we are able to find the K-best paths of our hypergraph, we should be able to compare them with each other. To do this we use a additive weight function defined in the following way on a given hyperpath $\pi_{st}$ from $s$ to $t$:
 
 \begin{equation}
 W(u)=\begin{cases}
-    w(p(u)) + F(p(u)) & \text{if $u\in V\setminus \{s\}$}.\\
-    C, & \text{otherwise}.
+    w(p(u)) + F(p(u)), & \text{if $u\in V\setminus \{s,\ starting\ nodes\}$}.\\
+    C, & \text{Starting Nodes}. \\
+    0, & \text{Otherwise}
   \end{cases}
 \end{equation}
 
-$W(u)$ define the cost of node $u$. The predecessor function $p$ is used to find the hyperedge $e=p(u)$ which have $u$ as head. The function $F$ is a non-decreasing function of the sum of the weights of the nodes in the tail to $e$. Each of the nodes are multiplied by the retroyield of the edge, $1/yield$.
+$W(u)$ define the cost of node $u$ and $C$ is in this particular case, the molecular weight of a compound. The predecessor function $p$ is used to find the hyperedge $e=p(u)$ which have $u$ as head. The function $F$ is a non-decreasing function of the sum of the weights of the nodes in the tail to $e$. Each of the nodes are multiplied by the retroyield of the edge, $1/yield$.
 
 \begin{equation}
-F(p(u)) = \sum(W(Tail(p(u)) * (1/yield_{p(u)})
+F(p(u)) = \sum(W(Tail(p(u)) \cdot (1/yield_{p(u)})
 \end{equation}
+
+We are now able to distinguish between the paths found and extract the K-best plans. \cite{Carsten}
 
 \section{Shortest Path}
 This section describes two different approaches to the shortest path problem in a hypergraph. A dynamic approach proposed by Carsten Grønbjerg Lützen and Daniel Fentz Johansen \cite{Carsten} and a Dijkstra inspired approach proposed by Lars Relund Nielsen, Kim Allan Andersen and Daniele Pretolani \cite{Nielsen}. 
@@ -281,14 +291,25 @@ function Min(V)
 	return mincost
 endfunction
 \end{lstlisting}
-\subsubsection{Testing}
-\subsubsection{Problems}
 
-\subsection{Nielsens Algorithm}
-k \cite{Nielsen}
+$\mathcal{O}(V+E)$
+
+
+\subsubsection{Problems}
+A problem with the dynamic approach is that it does not work on hypergraphs with cycles due to its recursive nature. When a cycle it hit, it will start an endless loop to figure out the cost of a node. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/CycleGraph.png}
+\caption{Example of graph with cycle.}
+\label{fig::CycleGraph}
+\end{figure}
+As seen in the example in fig. \ref{fig::CycleGraph}, the algorithm enters the cycle in reaction D. When trying to calculate the weight of 5, it needs the weight of 2 and 3. 3 is a starting node, so the weight is the weight of the compound itself. 2 however needs the weight of 1 and 4. Again 1 is a starting node, so no calculations are needed. 4 however needs the weight from 7 and 5. Now we hit 5 again, and the loop starts. This could of course be handled by removing an edge from  the hypergraph, and thereby breaking the cycle. This however would effect the results, because how do we know that the edge we remove would not have contributed to a better result in the end. This is where Nielsen et. el STB-Dijkstra algorithm comes into play.
+\subsection{The STB-Dijkstra Algorithm}
+Nielsen algorithm, or SBT-Dijkstra, is an algorithm that uses the same principles as shortest path algorithm conceived by Edsger W. Dijkstra in 1956. The original Dijkstra is asymptotically the fastest known single-source shortest-path algorithm for arbitrary directed graphs with unbounded non-negative weights. \cite{Dijkstra} Nielsen et. al. have modified it to be used on hypergraphs.
 \subsubsection{Approach}
-\begin{lstlisting} [emph={if,for, endif, while, endwhile, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Dynamic programming for finding the best path]
-Initialization: Set W(u) = $\inf \forall u \in V$, $k_j = 0 \forall e_j \in E$,$Q = \{s\}$ and $W(s)=0$
+The algorithm requires that the cost of all nodes in the hypergraph is $\infty$ and that the hyperedge property $kj=0$. It then adds the dummy node $s$ to its priority queue. As long as the priority queue is not empty it will extract the minimum, and for each hyperedge going out of $u$ increase the $kj$ counter in the given hyperedge. Once the counter is equal to the size of the tail of the hyperedge, the algorithm can proceed to calculate the weight of the node $v$, which is the head of the hyperedge. Should the existing weight of $v$ be larger than the newly calculated weight, the algorithm updates the weight to the newly found weight and adds $v$ to the priority queue, given that the node have not been added from another edge. If the cost changes, the min-edge attribute is also set to be the edge from which the new cost have been calculated.
+\begin{lstlisting} [emph={if,for, endif, while, endwhile, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = STB-Dijkstra for finding the best path]
+Initialization: Set W(u) = $\infty \ \forall\ u \in V$, $k_j = 0\ \forall\ e_j \in E$,$Q = \{s\}$ and $W(s)=0$
 function SBT-Dijkstra
 	while ($Q=\emptyset$) do
 		select and remove $u\in Q$ such that $W(u) = min\{W(x)|x\in Q\}$
@@ -300,21 +321,60 @@ function SBT-Dijkstra
 					if ($v \notin Q$  
 						Q <- Q $\cup$ \{v\}
 					endif
-				W(v) <- w($e_j$)+ F($e_j$)
-				p(v) <- $e_j$
+					W(v) <- w($e_j$)+ F($e_j$)
+					p(v) <- $e_j$
 				endif
 			endif
 		endfor
 	endwhile
 endfunction
 \end{lstlisting}
-\subsubsection{Testing}
-\subsubsection{Problems}
-\subsubsection{Optimizing}
+When node $u$ is removed from the candidate set $Q$ (the priority queue), $W(u)$ is the minimum weight of all hyperpath from $s$ to $u$. The condition in line 7 ensures that each hyperedge $e_j$ is processed only once after the minimum cost for its tail nodes have been determined. The implementation of the priority queue, $Q$, dictates the running time of the algorithm. I have followed Nielsen et. al. example and chosen a heap structure. Since I have decided to implement the simple binary heap the running time of the algorithm becomes: $\mathcal{O}(E\ log_2(V) + size(h))$. The size of the hypergraph, $h$, is the sum of the cardinalities of its hyperedges:
 
-\section{Work With Beilstein Data}
-This section HOFFMANN, REAXYS
-\subsection{The Database}
+\begin{equation}
+size(h) = \displaystyle\sum_{e\in E} |e|.
+\end{equation}
+Where the cardinality of a hyperedge $e$ is the number of nodes it contains, i.e. $|e| = |T(e)| + 1$.\cite{Nielsen}
+\subsubsection{Optimizing For Large Hypergraphs}
+Since the STB-Dijkstra algorithm expands to the whole graph it might check nodes that is not a part of the hyperpath we are looking for. If we look at the hypergraph in fig. \ref{fig::DeadEnd}, is it easy to see that given the starting nodes 1,2,3,4 and the goal 10, that there is no need to use the hyperedges R2, R4, and R8, since they never would lead to our goal.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{Billeder/DeadEnd.pdf}
+\caption{}
+\label{fig::DeadEnd}
+\end{figure}
+
+I therefore decided to combine the dynamic approach with STB-Dijkstra algorithm. The dynamic approach starts at the goal node, and travel through the hypergraph until it reaches $s$, thereby only using nodes on the way from goal to start. The algorithm however had the problem of not being able to work on hypergraphs that contained a cycle, and we could not just delete an edge when we hit a cycle since it could lead to wrong results.\\
+We can however use the dynamic algorithm to mark the edges it hits on the way from goal to start. This would make it able to detect when it hits a cycle, since the node would already have been marked, and simply just skip the node and proceed to the next in its potential path. Once the algorithm is finished, we can transform the markings to an overlay that limits the hypergraph so it only "consist" of the reactions hit by the dynamic algorithm. Using this overlay reduces the search space of the STB-Dijkstra from the whole hypergraph to only concern the hyperedges that will lead to a path from $s$ to $t$.
+\begin{lstlisting} [emph={if,for, endif, while, endwhile, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Reduce STB-Dijkstra search space]
+graphOverlay is a list of size = #hyperedges where all entries are false.
+function reduceGraph(graphOverlay, v, s)
+	if (v.id = s.id)
+		return graphOverlay;
+	endif
+	if (v.visited = false) 
+		for(reaction : v.ingoingEdge )
+			for (tailCompound : reaction->tail) 
+				v.visited <- true;
+				graphOverlay = reduceGraph(graphOverlay, tailCompound, s);
+			endfor
+			graphOverlay[reaction.id] <- true;
+		endfor
+	endif
+	return graphOverlay;
+\end{lstlisting}
+Since the running time for the dynamic approach was $\mathcal{O}(V+E)$, the combined running time becomes: 
+\begin{equation}
+\mathcal{O}((V+E)+(E\ log_2 (V) + size(h)))
+\end{equation}
+The $(V+E)$ is however removed since the $E\ log_2 (V) + size(h)$ dominates. This results in a running time of:
+\begin{equation}
+\mathcal{O}(E\ log_2 (V) + size(h))
+\end{equation}
+The reason that the terms $V$ and $E$ does not change since in worst case are we not able to prune any of the hypergraph away using the dynamic approach.
+\subsection{Testing}
+Rojin tests - using Carstens Synthworker. 
+\section{Beilstein Data}
 The Beilstein database is the largest database in the field of organic chemistry. Since 2009, the content has been maintained and distributed by Elsevier Information Systems in Frankfurt under the name "Reaxys".
 The content covers more than 200 years of chemistry and has been abstracted from several thousands of journal titles, books and patents. Today the data is drawn from selected journals (400 titles) and chemistry patents, and the extraction process for each reaction or substance data included needs to meet three conditions:
 \begin{enumerate}
@@ -327,7 +387,7 @@ It has a credible citation
 \end{enumerate}
 Journals covered include \textit{Advanced Synthesis and Catalysis, Angewandte Chemie, Journal of American Chemical Society, Journal of Organometallic Chemistry, Synlett} and \textit{Tetrahedron}. \cite{WikiReaxys}\cite{WikiBeilstein}
 \subsection{Data Assessment}
-During my work with the Beilstain database have I found several issues when it comes to using it to find shortest paths.
+During my work with the Beilstein database have I found several issues when it comes to using it to find shortest paths.
 First problem is that there are multiple instances of the same compound, each with a different Reaxys IDs. As seen in fig.\ref{fig::SameID} have I found four different IDs for the compound Dysidiolide. These were found when I tried to reproduce the different synthesis plans of Dysidiolide from \cite{SynthesisPlans} using the referenced articles where each synthesis plan origins. E. J. Corey's version of Dysidiolide have the ID 8171938, Boukouvalas have two different with ID 7601810 and 7910427 and Danishefsky have the ID 7910428. \\
 Since we have four different IDs for Dysidiolide we can't state a single goal compound to our program that would result in giving us these three synthesis plans. To handle this problem the program can take several goal compounds as an input, and by creating a dummy node $t$ are we able to give the illusion of a single target.
 
@@ -380,7 +440,7 @@ How the bond between two chemical elements are notated. Example: The bond to the
   \includegraphics[width=.8\linewidth]{Billeder/Dysidiolide-8171938-Close.png}
   \caption{}
 \end{subfigure}
-\caption{Different versions of Dysidiolide: ID 7601810 (a), ID 7910427(b), ID 7910428(c), ID 8171938(d)}
+\caption{Different versions of Dysidiolide: (a) ID 7601810 , (b) ID 7910427, (c) ID 7910428,  (d) ID 8171938}
 \label{fig::SameIDClose}
 \end{figure}
 
@@ -429,9 +489,9 @@ Fifth issue is reactions which have more than one product (fig. \ref{fig::Multip
 \label{fig::CopyReaction}
 \end{figure}
 
-\subsection{Results}
-\subsubsection{Pre-work}
-\subsubsection{Strychnine}
+\section{Results}
+\subsection{Pre-work}
+\subsection{Strychnine}
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -457,7 +517,7 @@ Plan & Reactions & Starting weight \\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Colchicine} 
+\subsection{Colchicine} 
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -471,7 +531,7 @@ Plan & Reactions & Starting weight \\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Dysidiolide}
+\subsection{Dysidiolide}
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -490,7 +550,7 @@ Plan & Reactions & Starting weight \\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Asteriscanolide}
+\subsection{Asteriscanolide}
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -502,7 +562,7 @@ Plan & Reactions & Starting weight \\ \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Lepadiformine}
+\subsection{Lepadiformine}
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -519,6 +579,8 @@ Plan & Reactions & Starting weight \\ \hline
 
 kkkk \cite{SynthesisPlans}\\
 
+\section{Further work}
+Expand from compounds - making all nodes with indegree 0 as starting compounds - expand from existing plans - generating new synthesis based on already known reactions.
 \section{Conclusion}
 
 \newpage
