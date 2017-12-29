@@ -98,19 +98,69 @@ Daniel Merkle
 
 \section{Acknowledgements}
 I would like to thank my supervisor, Daniel Merkle, for giving me the opportunity to work with this interesting subject, always guiding me when I was stuck, and asking questions to my code and thereby making it better and faster. I also want to thank Rojin Kianian for giving me answers to different questions regarding the algorithms and cost functions and for helping me produce my tests and results. Thanks to Peter F. Stadler and Guillermo Restrepo from the University of Leipzig for helping me with Reaxys. Thanks to Jacob Lykke Andersen for helping me with Python scripts to make use of my XML extracts.\\
-I would also like to thank Brian Alberg, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \#KNAWLEGE. For some of you - thank you for the daily trip to the canteen of SDU. It been a pleasure spending my years at the university with you.\\
+I would also like to thank Brian Alberg, Anders Busch, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann, Martin Pedersen and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \#KNAWLEGE. For some of you - thank you for the daily trip to the canteen of SDU. It been a pleasure spending my years at the university with you.\\
 And last but not least, I would like to thank my girlfriend, Louisa Høj, for being a huge support throughout the project, listening when I had the need to talk about problems and to always bring a smile to my face.
 
 \section{Introduction MANGLER}
 kkk \cite{Grzybowski}\\
 
-\subsection{Overview MANGLER}
-Hvad indeholder hver sektion??
+\section{Overview}
+This section briefly describes what each of the following sections contain, thus making it easier for the reader to find points of interest.
+\begin{itemize}
+\item
+Section \ref{sec::Preliminaries} contains definitions that is used in this thesis. What is a compound, a reaction, a synthesis plan and how is a hypergraph defined?
+\item
+Section \ref{sec::DesigningHyper} tells the reader about the design decisions that was made in the process of creating a hypergraph using the $C++$ programming language. 
+\item
+Section \ref{sec::K-Best} describes the principles behind Yen's algorithm and the conversion of the algorithm so that it may be used with hypergraphs. It also describes how the algorithm have been modified to handle larger instances of hypergraphs.
+\item
+Section \ref{sec::ShortestPath} describes the two different shortest path algorithms implemented: An algorithm using a dynamic approach using recursion\cite{Carsten} and a Dijkstra inspired approach called STB-Dijkstra\cite{Nielsen}. I furthermore contains the results of the testing made to ensure the correctness of the algorithms.
+\item
+Section \ref{sec::BeilsteinData} contains a description of the Beilstein database and how it is possible to extract data through the browser interface Reaxys. It also contains an evaluation of the data quality and suggests solutions to handle eventual problems with the data.
+\item
+Section \ref{sec::Results} shows the results of running the algorithms on Beilstein data and contains a discussion of the results and a description on how the data was produced.
+\item 
+Section \ref{sec::FutureWork} discusses possible alterations to the written algorithms to handle errors, and some ideas to interesting manipulation of the data from Beilstein.
+\end{itemize}
 
 \section{Preliminaries}
+\label{sec::Preliminaries}
 
-This section contains definitions that will be used throughout this paper. It is assumed that the reader have a basic understanding of graph theory. \\
+This section contains definitions that will be used throughout this paper. For the hypergraph specific part, it is assumed that the reader have a basic understanding of graph theory. 
 
+\subsection{Compounds}
+A compound is a chemical substance composed of atoms held together by chemical bonds.
+A compound can be converted to a different chemical composition by interaction with a second chemical compound via a chemical reaction. In this process, bonds between atoms are broken in both of the interacting compounds, and then bonds are reformed so that new associations are made between atoms. Schematically, this reaction could be described as AB + CD -> AD + CB, where A, B, C, and D are each unique atoms; and AB, AD, CD, and CB are each unique compounds.
+To express the composition of a compound, chemical formula is used. A chemical formula is a way of expressing information about the proportions of atoms that a particular chemical compound is made of, using the standard abbreviations for the chemical elements, and subscripts to indicate the number of atoms involved. An example of this could be water that consists of two hydrogen atoms and a single oxygen atom which is written as $H_2O$.
+
+
+\subsection{Reactions}
+A chemical reaction is a transformation from one set of compounds, denoted educts, to another set of compounds, denoted products. Reactions can have different properties such as relocating bonds and/or moving functional groups. Each reaction has their own yield and usually the more complex a reaction is, the lower the yield becomes. This is due to the fact that reactions often are balanced and nothing is removed. An example is the following reaction:
+\begin{equation}
+CH_4 + 2O_2 \rightarrow CO_2 + 2H_2O
+\end{equation}
+The yield of the reaction is dependent of what we would determine as the goal of the reaction. In the above example would it depend on if we want to create carbon dioxide or water. A reaction could of course have multiple yields stating how much the yield is for each of the products. Throughout this thesis there will be two different graphical versions of a reaction as show below.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/Reactions.png}
+\caption{\textbf{a)} Reaction when part of output files from program. Consisting of "R"+ID and the yield of the reaction. \textbf{b)} Reaction when drawn as minor example for thesis. Always have capital letters as identifiers.}
+\end{figure}
+\subsection{Synthesis Plans}
+A synthesis plan is a series of reactions that produces a target compound. The synthesis plans will usually have a reverse tree like structure where the root is the target compound and the leaves are starting compounds. All complete hypergraphs in this paper marks the target compound as red, and the starting compounds as green.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{TestGrafer/PaperTest.pdf}
+\caption{Example of a complete hypergraph}
+\label{fig::CompletegraphExample}
+\end{figure}
+When a synthesis plan is created the nodes are not colored. It is however easy to see that the compounds with in-degree = 0 is the starting compounds, and the only compound with out-degree = 0 is the target compounds.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/SynthplanExample.pdf}
+\caption{Example of a synthesis plan given the hypergraph in fig. \ref{fig::CompletegraphExample} }
+\end{figure}
+
+\subsection{Hypergraphs and Hyperpaths}
 \textbf{Hypergraphs}\\
 A directed hypergraph $h$ is a set $V$ of vertices and a set $E$ of hyperedges, where each hyperedge $e=(T(e),H(e))$ is an ordered pair of non-empty multi-sets of vertices. The set $T(e)$ is denoted as the tail of the hyperedge and $H(e)$ is the head. If $|H(e)|=1$ then the hyperedge is denoted as a B-hyperedge. If all edges in the hypergraph is B-hyperedges, then the graph is denoted a B-hypergraph. This paper will only consider hypergraphs that are B-hypergraphs. A hypergraph $H' = (V',E')$ is a subhypergraph of $H=(V,E)$ if $V' \subseteq V$ and $E'\subseteq E$.\cite{Fagerberg}
 
@@ -135,11 +185,12 @@ Every $v \in V_{\pi} \setminus \{s\}$ has at least one ingoing hyperarc in $E_{\
 \end{enumerate}
 
 \section{Designing a hypergraph in C++}
+\label{sec::DesigningHyper}
 A hypergraph consists of nodes and hyperedges. These where implemented as two structs that have their own seperate attributes.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{Billeder/Compound-ReactionNode.png}
-\caption{The structure of CompoundNodes and ReactionNodes}
+\caption{The structure of CompoundNodes (nodes) and ReactionNodes (hyperedges)}
 \end{figure}
 There are some non-trivial attributes in the CompoundNode struct.The difference between Molecular weight and the cost is that the cost is the accumulated weight of the given starting materials that is used to reach this compound, and the molecular weight is the actual weight the compound it self. This of course means that if a compound is a starting compound, then the cost and the molecular weight is the same.\\ The Max Yield Edge attribute is an identifier to the hyperedge that is used to reach this compound. The first time a compound is reached the attribute is changed to hold the ID of the reaction from where the algorithm came. If the compound is reached and the cost of the compound is changed, then the attribute would change, so that it always points to the edge used to calculate the current cost of the compound.\\
 Visited and Index are attributes used when the hypergraph is pruned (Section \ref{Pruning}) and to keep track of a CompoundNodes position in the priority queue used when running STB-Dijkstra (Section \ref{STB-Dijkstra}).\\
@@ -157,6 +208,7 @@ Notice that since we are working with pointers to, and not copies of, compoundNo
 \label{fig::ListLookupList}
 \end{figure}
 \section{Finding The K-Best Synthetic Plans}
+\label{sec::K-Best}
 This section describes how to find the K-Best paths of a hypergraph modifying an algorithm made by Jin Y. Yen. The section starts out by describing the work flow of the algorithm, and then proceeds to deal with the alterations that are needed to run the algorithm on a hypergraph.
 \subsection{Yen's Algorithm}
 Yen's algorithm is an algorithm that computes the K-shortest paths for a graph with non-negative edges. It was publish in 1971 and uses any shortest path algorithm to find the best path and then proceeds to find the $K-1$ deviation of the best path. \cite{Yen}
@@ -186,7 +238,7 @@ function Back-Branch(H,$\pi$)
 \caption{An example of branching for hypergraphs. $H$ is the original hypergraph. The vertices and hyperedges marked with blue are part of the best path. The rest of the figure illustrates the backwards branching. Each of the smaller figures shows a hypergraph $H^i$ and how it is created from $H$. Dotted hyperedges and red heyperedges are not part of the hypergraph, but have been deleted due to branching. Hyperedges in bold are fixed hyperedges. When hyperedges are fixed it leads to other hyperedges being deleted (dotted). The caption beneath each hypergraph represents the possible paths that are available in the given hypergraph.}
 \end{figure}
 However, this algorithm have a problem when working on a larger hypergraph. It demands that each time we make alterations on the hypergraph we have to make a copy, $H^i$, of the graph, $H$, with the exception of the hyperedges that is removed when fixing the back tree and removing $\pi.p(v_i)$.\\
-This could easily work for smaller graphs, but if we use this on the hypergraph that we generate from the beilstein database, we would have to copy a graph of multiple GigaBytes. \\
+This could easily work for smaller graphs, but if we use this on a hypergraph that would contain all of the data from beilstein, we would have to copy a graph of multiple GigaBytes. \\
 To handle this problem I came up with the idea of creating an overlay for the graph instead of copying it. The overlay would work as an transparent on top of the original graph, stating which edges still is accessible. This is done by creating a \textit{vector<bool>} which has a length of $R$, where $R$ is the number of reactions. Normally a reaction would contain at least 28 bytes of data:
 \begin{itemize}
 \item
@@ -286,13 +338,19 @@ F(p(u)) = \sum(W(Tail(p(u)) \cdot (1/yield_{p(u)})
 We are now able to distinguish between the paths found and extract the K-best plans. \cite{Carsten}
 
 \section{Shortest Path}
+\label{sec::ShortestPath}
 This section describes two different approaches to the shortest path problem in a hypergraph. A dynamic approach proposed by Carsten Grønbjerg Lützen and Daniel Fentz Johansen \cite{Carsten} and a Dijkstra inspired approach proposed by Lars Relund Nielsen, Kim Allan Andersen and Daniele Pretolani \cite{Nielsen}. 
 
-\subsection{Dynamic Approach MANGLER}
-kkk \cite{Carsten}\\
-kkkk \cite{Fagerberg}\\
+\subsection{Dynamic Approach}
+The dynamic approach to find shortest path in a hypergraph is an algorithm proposed by Carsten Grønbjerg Lützen and Daniel Fentz Johansen in their Master thesis \textit{A Computational and Mathematical Approach to Synthesis Planning}.\cite{Carsten}. It uses recursion to calculate the cost of compounds.
 
 \subsubsection{Approach}
+The dynamic approach starts at the target compound and moves away from it step by step in a recursive manner. Once it hits a starting compound it backtracks through the recursions, using the now gained cost to calculate the cost of those along its path. The approach can be defined as following:
+\begin{equation}
+Cost(V) = \displaystyle\min_{e\in productOfReaction} 1/yield_e \cdot \displaystyle\sum_{u\in Tail(e)} Cost(u)
+\end{equation}
+The cost of a node $V$ is the minimum over all the possible ways to synthesize it. The cost of a potential approach to synthesize node $V$ is the sum of cost of the educts involved times the retroyield of the reaction required for transforming the educts to the product V .\cite{Carsten}
+	
 \begin{lstlisting} [emph={if,for, endif, endfor, function, endfunction, do}, emphstyle = \bfseries,caption = Dynamic programming for finding the best path]
 function Min(V)
 	if(V) is starting material 
@@ -313,7 +371,12 @@ function Min(V)
 endfunction
 \end{lstlisting}
 
-$\mathcal{O}(V+E)$
+The worst hypergraph that we could run the algorithm on a hypergraph where each hyperedge $e=(|T| = 1, |H| = 1)$. When connected these would form a linked list which would lead to the running time of $\mathcal{O}(V+E)$. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/WorstCaseDynamic.png}
+\caption{Example of worstcase scenario of a hypergraph}
+\end{figure}
 
 
 \subsubsection{Problems}
@@ -394,6 +457,7 @@ The $(V+E)$ is however removed since the $E\ log_2 (V) + size(h)$ dominates. Thi
 \end{equation}
 The reason that the terms $V$ and $E$ does not change since in worst case are we not able to prune any of the hypergraph away using the dynamic approach.
 \subsection{Testing}
+\label{sec::testing}
 In the development phase of my implementation of the algorithms have I used some small instances of hypergraphs that would be easy to check if they were correct by running the algorithms by hand and check the results. The hypergraphs have previously been used in \cite{Carsten} (\ref{Appendix::ThesisGraph}) and \cite{Fagerberg} (\ref{Appendix::Paper Graph}). In this phase I also created small tests to check how the algorithms would handle cycles (\ref{Appendix::Cycle Graph}) and deadends (\ref{Appendix::DeadEnd Graph}).
 However, to be able to test my implementations on a larger automated scale, I had my colleague Rojin Kianian use the program SynthWorker to create some random generated hypergraph. SynthWorker is the product of Carsten Grønbjerg Lützens and Daniel Fentz Johansens master thesis \cite{Carsten}. It have been tested thoroughly and can therefore be used to test the correctness of my implementations.
 The smaller graphs, \ref{Appendix::Cycle Graph},\ref{Appendix::DeadEnd Graph}, \ref{Appendix::Paper Graph}, \ref{Appendix::ThesisGraph}, were all hardcoded in seperate testprograms, but when we started working with the automated test, we had to agree on a input format. We decided to go with a dot inspired format, which I already had used to visualize the hypergraphs and the output plans. The format contains of declarations and edges. It starts of by declaring all reactions and compounds. A compound is declared as following:
@@ -448,6 +512,7 @@ As the table above shows, there is errors in the fourth and fifth test. However 
 Why the STB-Dijkstra algorithm fails to find the three missing paths is a problem that have not been solved. It is suspected to have something to do with the priority queue implemented and the ordering of the nodes within. There are a lot of error prints from the decrease-key function, stating that the key given is not smaller than the one already existing. These errors have only been seen when running on the tests from Rojin, and I suspect that it is because there are many paths with the same cost, and that this leads to some problems in the if statements that checks whether a newly calculated cost is lower than the existing, thus leading to a potential false instead of true.
 
 \section{Beilstein Data}
+\label{sec::BeilsteinData}
 The Beilstein database is the largest database in the field of organic chemistry. Since 2009, the content has been maintained and distributed by Elsevier Information Systems in Frankfurt under the name "Reaxys".
 The content covers more than 200 years of chemistry and has been abstracted from several thousands of journal titles, books and patents. Today the data is drawn from selected journals (400 titles) and chemistry patents, and the extraction process for each reaction or substance data included needs to meet three conditions:
 \begin{enumerate}
@@ -459,8 +524,10 @@ It is supported by an experimental fact (property, preparation, reaction)
 It has a credible citation
 \end{enumerate}
 Journals covered include \textit{Advanced Synthesis and Catalysis, Angewandte Chemie, Journal of American Chemical Society, Journal of Organometallic Chemistry, Synlett} and \textit{Tetrahedron}. \cite{WikiReaxys}\cite{WikiBeilstein}
+\subsection{Data Access}
+As mentioned above the content of the database is maintained and distributed by Elsevier Information Systems under the name "Reaxys". Reaxys\footnote{https://new.reaxys.com/} is accessible through any browser and is easy to navigate. It is possible to find a compound or a reaction and locate all the documents in which they have been a part of. An example would be the compound Strychnidin-10-one which is referenced in 1442 documents. This is also possible the other way around. Through Reaxys is it possible to search for a specific paper using keywords, authors, publication year, Journal title, etc. Once the paper have been found it is possible to see reactions and compound that are connected to this particular article. All data connected to a article, reaction or compound can be exported and downloaded through the Reaxys interface in different formats. In this thesis I have used the XML format to extract data from the database. It is important to notice that to use Reaxys properly, a login is required. I have here used the "sign in by your institution" function, making it possible to use the WAYF (Danish Universities and Higher Education) as a login.
 \subsection{Data Assessment}
-During my work with the Beilstein database have I found several issues when it comes to using it to find shortest paths.
+During my work with the data from the Beilstein database have I found several issues when it comes to using it to find shortest paths.
 First problem is that there are multiple instances of the same compound, each with a different Reaxys IDs. As seen in fig.\ref{fig::SameID} have I found four different IDs for the compound Dysidiolide. These were found when I tried to reproduce the different synthesis plans of Dysidiolide from \cite{SynthesisPlans} using the referenced articles where each synthesis plan origins. E. J. Corey's version of Dysidiolide have the ID 8171938, Boukouvalas have two different with ID 7601810 and 7910427 and Danishefsky have the ID 7910428. \\
 Since we have four different IDs for Dysidiolide we can't state a single goal compound to our program that would result in giving us these three synthesis plans. To handle this problem the program can take several goal compounds as an input, and by creating a dummy node $t$ are we able to give the illusion of a single target.
 
@@ -564,6 +631,7 @@ Fifth issue is reactions which have more than one product (fig. \ref{fig::Multip
 \end{figure}
 
 \section{Results MANGLER}
+\label{sec::Results}
 \subsection{Pre-work}
 HOFFMAN - XML Files etc.
 \subsection{Strychnine}
@@ -652,11 +720,49 @@ Plan & Reactions & Starting weight \\ \hline
 \end{tabular}
 \end{table}
 
+\subsection{Discussion}
 kkkk \cite{SynthesisPlans}\\
 
-\section{Further work MANGLER}
-Expand from compounds - making all nodes with in-degree 0 as starting compounds - expand from existing plans - generating new synthesis based on already known reactions.
+\section{Future work}
+\label{sec::FutureWork}
+This section describes possible correction of errors that was discovered close to deadline or missing features of the program. It also contains ideas for further work on the data from Beilstein.
+\subsection{Expanding}
+The idea of expanding is to have either a compound or an existing synthesis plan and to expand on these. If we have a single target compound, it would be possible to expand step-wise from that compound. By doing this we are able to find all compounds from which it is possible to create the target by using only $B$ reactions. Once the expansion have been made the K-shortest algorithm could run using all compounds of the hypergraph that have a in-degree = 0 as staring compounds.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/TestOfExpansion1.png}
+\caption{\textbf{a)} The target compound. \textbf{b)} After a single expansion from target compound}
+\end{figure} 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/TestOfExpansion2.png}
+\caption{The hypergraph after a two expansions from target compound}
+\end{figure} 
+If we instead would have a existing synthesis plan, or perhaps a set of synthesis plans, from a published article. We could expand on each of the compounds in the plan. Even though we use already known reactions the reactions that are added might reveal connections that have not been used before to create that specific target compound. If we look at fig. \ref{fig::ExpansionOfPath} we can see that the expansion of the known synthesis plan have revealed a new path from compound 3 to the target compound 1 through the reactions G and F. It also reveals another way of creating compound 3 with the use of reaction H. If reaction H have a better yield than reaction C, it might result in a better plan. The author of the synthesis plan could simply have forgotten about reaction H or he did not know that a new reaction had been discovered, and therefore only thought that C was an option. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/ExpansionOfPath.png}
+\caption{\textbf{a)} A hypergraph made from an existing synthesis plan. \textbf{b)} A single step expansion of the given synthesis plan.}
+\label{fig::ExpansionOfPath}
+\end{figure}
+\subsection{Error handling}
+That the program throws a segmentation fault when the dynamic approach is used on a hypergraph with cycles, is of course not preferable. It should however use the visited attribute of the CompoundNodes for cycle detection. If an already visited node is visited again it should abort the algorithm, print an error messsage so that the user may know why the algorithm fails.
+The problem with STB-Dijkstra in test 4 \ref{sec::testing} should be investigate so that the problem can be fixed. As mentioned before it only seems to happen in the tests made by SynthWorker and in a hypergraph with many equally good paths, but should non the less be fixed.
+\subsection{Specific start weight}
+At the time of deadline, the results of the shortest path algorithms is the accumulated weight of the starting materials. This is a good way of determining if a path is better than another. It would however be a good thing to know how much of each of the individual staring materials should be used to create the target compound, for pratical purposes. To calculate the individual weight of the staring materials, we would need to implement a Depth-First-Search inspired algorithm that starts in the goal compound and traverses the synthesis plan towards the starting materials. For each reaction, $e$, it comes through on its path, the cost of $H(e)$ is divided with the retroyield ($1/yield_e$) and passed on to the nodes in $T(e)$ as the "inverted cost". When the algorithm hits a starting compound it divides the cost of the goal compound with the inverted cost of the staring material found by the DFS and multiplies it with the molecular weight of the starting compound.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/StartingMaterialCalculation.png}
+\end{figure}
+If we use the example above we can see that the result of the shortest path algorithms were 21,42857. By calculating the inverse cost from the target and down to the staring compounds 4, 5, 6, 7 leads to the following starting weights of the compounds:
+\begin{align}
+\{4,5\} &= (21,42857/7,4999) \cdot 2 \approx 5,71436\\
+\{6,7\} &= (21,42857/8,571428) \cdot 2 = 5
+\end{align}
+By dividing these results with the molecular weight of the compounds, we would get how many times of each starting compound we would need to create a single target compound.
 \section{Conclusion MANGLER}
+\label{sec::Conclusion}
 
 \newpage
 
@@ -716,9 +822,9 @@ Hypergraph to big to be on page. \href{RojinGrafer/test5.pdf}{Press here to see 
 \end{flushleft}
 \label{Appendix::Rojin5}
 
-\subsection{Rojin Test 6 MANGLER GRAF}
+\subsection{Rojin Test 6}
 \begin{flushleft}
-Hypergraph to big to be on page. \href{RojinGrafer/test5.pdf}{Press here to see pdf}.
+Hypergraph to big to be on page. \href{RojinGrafer/test6.pdf}{Press here to see pdf}.
 \end{flushleft}
 \label{Appendix::Rojin6}
 
