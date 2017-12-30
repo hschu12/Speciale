@@ -16,58 +16,6 @@
   {}
 \endgroup
 
-\entry{Grzybowski}{article}{}
-  \name{author}{8}{}{%
-    {{}%
-     {Szymkuc}{S.}%
-     {Sara}{S.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Gajewska}{G.}%
-     {Ewa~P.}{E.~P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Klucznik}{K.}%
-     {Tomasz}{T.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Molga}{M.}%
-     {Karol}{K.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Dittwald}{D.}%
-     {Piotr}{P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Startek}{S.}%
-     {Michal}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Bajczyk}{B.}%
-     {Michal}{M.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Grzybowski}{G.}%
-     {Bartosz~A.}{B.~A.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{SSGEPKT+1}
-  \strng{fullhash}{SSGEPKTMKDPSMBMGBA1}
-  \field{number}{55}
-  \field{pages}{5904\bibrangedash 5937}
-  \field{title}{Computer-Assisted Synthetic Planning: The End of the Beginning}
-  \field{journaltitle}{Angewandte Chemie International Edition}
-  \field{year}{2016}
-\endentry
-
 \entry{Fagerberg}{article}{}
   \name{author}{5}{}{%
     {{}%
@@ -103,23 +51,20 @@
   \field{year}{2017}
 \endentry
 
-\entry{Yen}{article}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Yen}{Y.}%
-     {Jin~Y.}{J.~Y.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{YJY1}
-  \strng{fullhash}{YJY1}
-  \field{number}{11}
-  \field{pages}{712\bibrangedash 716}
-  \field{title}{Finding the {K} Shortest Loopless Paths in a Network}
-  \field{volume}{17}
-  \field{journaltitle}{Management Science}
-  \field{month}{07}
-  \field{year}{1971}
+\entry{WikiReaxys}{misc}{}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Reaxys
+  \endverb
+  \field{month}{10}
+  \field{year}{2017}
+\endentry
+
+\entry{WikiBeilstein}{misc}{}
+  \verb{url}
+  \verb https://en.wikipedia.org/wiki/Beilstein_database
+  \endverb
+  \field{month}{10}
+  \field{year}{2017}
 \endentry
 
 \entry{Nielsen}{article}{}
@@ -147,6 +92,56 @@
   \field{year}{2002}
 \endentry
 
+\entry{Corey}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Corey}{C.}%
+     {Elias~James}{E.~J.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CEJ1}
+  \strng{fullhash}{CEJ1}
+  \field{number}{3902}
+  \field{pages}{178\bibrangedash 192}
+  \field{title}{Computer-Assisted Design of Complex Organic Syntheses}
+  \field{volume}{166}
+  \field{journaltitle}{Science}
+  \field{year}{1969}
+\endentry
+
+\entry{Hendrickson}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hendrickson}{H.}%
+     {Jambes~B}{J.~B.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HJB1}
+  \strng{fullhash}{HJB1}
+  \field{number}{16}
+  \field{pages}{5439\bibrangedash 5450}
+  \field{title}{Systematic synthesis design. 6. Yield analysis and convergency}
+  \field{volume}{99}
+  \field{journaltitle}{Journal of the American Chemical Society}
+  \field{year}{1977}
+\endentry
+
+\entry{Smith}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Smith}{S.}%
+     {Warren~D}{W.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{SWD1}
+  \strng{fullhash}{SWD1}
+  \field{title}{Computational complexity of synthetic chemistry -- Basic facts}
+  \field{year}{1998}
+\endentry
+
 \entry{Carsten}{thesis}{}
   \name{author}{2}{}{%
     {{}%
@@ -171,6 +166,25 @@
   \field{year}{2015}
 \endentry
 
+\entry{Yen}{article}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Yen}{Y.}%
+     {Jin~Y.}{J.~Y.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{YJY1}
+  \strng{fullhash}{YJY1}
+  \field{number}{11}
+  \field{pages}{712\bibrangedash 716}
+  \field{title}{Finding the {K} Shortest Loopless Paths in a Network}
+  \field{volume}{17}
+  \field{journaltitle}{Management Science}
+  \field{month}{07}
+  \field{year}{1971}
+\endentry
+
 \entry{VectorBool}{misc}{}
   \verb{url}
   \verb http://en.cppreference.com/w/cpp/container/vector_bool
@@ -184,22 +198,6 @@
   \verb https://en.wikipedia.org/wiki/Dijkstra's_algorithm
   \endverb
   \field{month}{12}
-  \field{year}{2017}
-\endentry
-
-\entry{WikiReaxys}{misc}{}
-  \verb{url}
-  \verb https://en.wikipedia.org/wiki/Reaxys
-  \endverb
-  \field{month}{10}
-  \field{year}{2017}
-\endentry
-
-\entry{WikiBeilstein}{misc}{}
-  \verb{url}
-  \verb https://en.wikipedia.org/wiki/Beilstein_database
-  \endverb
-  \field{month}{10}
   \field{year}{2017}
 \endentry
 

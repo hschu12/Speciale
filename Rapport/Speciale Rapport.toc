@@ -4,184 +4,186 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Acknowledgements}{3}{section.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Introduction MANGLER}{3}{section.2}
+\contentsline {section}{\numberline {2}Introduction}{3}{section.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Overview}{3}{section.3}
+\contentsline {section}{\numberline {3}Overview}{4}{section.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Preliminaries}{4}{section.4}
+\contentsline {section}{\numberline {4}Preliminaries}{5}{section.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Compounds}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.1}Compounds}{5}{subsection.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Reactions}{4}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.2}Reactions}{5}{subsection.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Synthesis Plans}{5}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.3}Synthesis Plans}{6}{subsection.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Hypergraphs and Hyperpaths}{7}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.4}Hypergraphs and Hyperpaths}{8}{subsection.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Designing a hypergraph in C++}{8}{section.5}
+\contentsline {section}{\numberline {5}Designing a hypergraph in C++}{9}{section.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Finding The K-Best Synthetic Plans}{10}{section.6}
+\contentsline {section}{\numberline {6}Finding The K-Best Synthetic Plans}{11}{section.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Yen's Algorithm}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.1}Yen's Algorithm}{11}{subsection.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2}Yen's Algorithm On Hypergraphs}{10}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.2}Yen's Algorithm On Hypergraphs}{11}{subsection.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3}Cost Function}{14}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Cost Function}{15}{subsection.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7}Shortest Path}{15}{section.7}
+\contentsline {section}{\numberline {7}Shortest Path}{16}{section.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.1}Dynamic Approach}{15}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.1}Dynamic Approach}{16}{subsection.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.1}Approach}{15}{subsubsection.7.1.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Approach}{16}{subsubsection.7.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.1.2}Problems}{16}{subsubsection.7.1.2}
+\contentsline {subsubsection}{\numberline {7.1.2}Problems}{17}{subsubsection.7.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.2}The STB-Dijkstra Algorithm}{17}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.2}The STB-Dijkstra Algorithm}{18}{subsection.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.1}Approach}{17}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.1}Approach}{18}{subsubsection.7.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {7.2.2}Optimizing For Large Hypergraphs}{18}{subsubsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.2}Optimizing For Large Hypergraphs}{19}{subsubsection.7.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {7.3}Testing}{19}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.3}Testing}{20}{subsection.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8}Beilstein Data}{21}{section.8}
+\contentsline {section}{\numberline {8}Beilstein Data}{22}{section.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.1}Data Access}{22}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.1}Data Access}{23}{subsection.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.2}Data Assessment}{22}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.2}Data Assessment}{23}{subsection.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9}Results MANGLER}{28}{section.9}
+\contentsline {section}{\numberline {9}Experiments and Results}{29}{section.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1}Pre-work}{28}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.1}Idea and data extraction}{29}{subsection.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.2}Strychnine}{29}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.2}Strychnine}{31}{subsection.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.3}Colchicine}{29}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.3}Colchicine}{38}{subsection.9.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.4}Dysidiolide}{29}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.4}Dysidiolide}{43}{subsection.9.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.5}Asteriscanolide}{30}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.5}Asteriscanolide}{43}{subsection.9.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.6}Lepadiformine}{30}{subsection.9.6}
+\contentsline {subsection}{\numberline {9.6}Lepadiformine}{43}{subsection.9.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.7}Discussion}{30}{subsection.9.7}
+\contentsline {subsection}{\numberline {9.7}General notes }{43}{subsection.9.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10}Future work}{30}{section.10}
+\contentsline {section}{\numberline {10}Future work}{44}{section.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.1}Expanding}{30}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.1}Expanding}{44}{subsection.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.2}Error handling}{32}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.2}Error handling}{46}{subsection.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.3}Specific start weight}{32}{subsection.10.3}
+\contentsline {subsection}{\numberline {10.3}Specific start weight}{46}{subsection.10.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11}Conclusion MANGLER}{33}{section.11}
+\contentsline {subsection}{\numberline {10.4}Pricing}{47}{subsection.10.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {11}Conclusion MANGLER}{47}{section.11}
 \defcounter {refsection}{0}\relax 
 \setcounter {tocdepth}{1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A}Test Graphs}{35}{appendix.A}
+\contentsline {section}{\numberline {A}Test Graphs}{49}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.1}Thesis Graph}{35}{subsection.A.1}
+\contentsline {subsection}{\numberline {A.1}Thesis Graph}{49}{subsection.A.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.2}Paper Graph}{35}{subsection.A.2}
+\contentsline {subsection}{\numberline {A.2}Paper Graph}{49}{subsection.A.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.3}Deadend Graph}{36}{subsection.A.3}
+\contentsline {subsection}{\numberline {A.3}Deadend Graph}{50}{subsection.A.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {A.4}Cycle Graph}{37}{subsection.A.4}
+\contentsline {subsection}{\numberline {A.4}Cycle Graph}{51}{subsection.A.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {B}Rojin Tests MANGLER}{38}{appendix.B}
+\contentsline {section}{\numberline {B}Rojin Tests MANGLER}{52}{appendix.B}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.1}Rojin Test 1}{38}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.1}Rojin Test 1}{52}{subsection.B.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.2}Rojin Test 2}{39}{subsection.B.2}
+\contentsline {subsection}{\numberline {B.2}Rojin Test 2}{53}{subsection.B.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.3}Rojin Test 3}{40}{subsection.B.3}
+\contentsline {subsection}{\numberline {B.3}Rojin Test 3}{54}{subsection.B.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.4}Rojin Test 4}{40}{subsection.B.4}
+\contentsline {subsection}{\numberline {B.4}Rojin Test 4}{54}{subsection.B.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.5}Rojin Test 5}{40}{subsection.B.5}
+\contentsline {subsection}{\numberline {B.5}Rojin Test 5}{54}{subsection.B.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.6}Rojin Test 6}{41}{subsection.B.6}
+\contentsline {subsection}{\numberline {B.6}Rojin Test 6}{55}{subsection.B.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {B.7}Rojin Test 7 MANGLER GRAF}{41}{subsection.B.7}
+\contentsline {subsection}{\numberline {B.7}Rojin Test 7 MANGLER GRAF}{55}{subsection.B.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {C}Synthesis Plans}{42}{appendix.C}
+\contentsline {section}{\numberline {C}Synthesis Plans}{56}{appendix.C}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.1}Strychnine plan 1}{42}{subsection.C.1}
+\contentsline {subsection}{\numberline {C.1}Strychnine plan 1}{56}{subsection.C.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.2}Strychnine plan 2}{43}{subsection.C.2}
+\contentsline {subsection}{\numberline {C.2}Strychnine plan 2}{57}{subsection.C.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.3}Strychnine plan 3}{44}{subsection.C.3}
+\contentsline {subsection}{\numberline {C.3}Strychnine plan 3}{58}{subsection.C.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.4}Strychnine plan 4}{45}{subsection.C.4}
+\contentsline {subsection}{\numberline {C.4}Strychnine plan 4}{59}{subsection.C.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.5}Strychnine plan 5}{46}{subsection.C.5}
+\contentsline {subsection}{\numberline {C.5}Strychnine plan 5}{60}{subsection.C.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.6}Strychnine plan 6}{47}{subsection.C.6}
+\contentsline {subsection}{\numberline {C.6}Strychnine plan 6}{61}{subsection.C.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.7}Strychnine plan 7}{48}{subsection.C.7}
+\contentsline {subsection}{\numberline {C.7}Strychnine plan 7}{62}{subsection.C.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.8}Strychnine plan 8}{49}{subsection.C.8}
+\contentsline {subsection}{\numberline {C.8}Strychnine plan 8}{63}{subsection.C.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.9}Strychnine plan 9}{50}{subsection.C.9}
+\contentsline {subsection}{\numberline {C.9}Strychnine plan 9}{64}{subsection.C.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.10}Strychnine plan 10}{51}{subsection.C.10}
+\contentsline {subsection}{\numberline {C.10}Strychnine plan 10}{65}{subsection.C.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.11}Strychnine plan 11}{52}{subsection.C.11}
+\contentsline {subsection}{\numberline {C.11}Strychnine plan 11}{66}{subsection.C.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.12}Strychnine plan 12}{53}{subsection.C.12}
+\contentsline {subsection}{\numberline {C.12}Strychnine plan 12}{67}{subsection.C.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.13}Strychnine plan 13}{54}{subsection.C.13}
+\contentsline {subsection}{\numberline {C.13}Strychnine plan 13}{68}{subsection.C.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.14}Strychnine plan 14}{55}{subsection.C.14}
+\contentsline {subsection}{\numberline {C.14}Strychnine plan 14}{69}{subsection.C.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.15}Strychnine plan 15}{56}{subsection.C.15}
+\contentsline {subsection}{\numberline {C.15}Strychnine plan 15}{70}{subsection.C.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.16}Strychnine plan 16}{57}{subsection.C.16}
+\contentsline {subsection}{\numberline {C.16}Strychnine plan 16}{71}{subsection.C.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.17}Colchicine plan 1}{58}{subsection.C.17}
+\contentsline {subsection}{\numberline {C.17}Colchicine plan 1}{72}{subsection.C.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.18}Colchicine plan 2}{59}{subsection.C.18}
+\contentsline {subsection}{\numberline {C.18}Colchicine plan 2}{73}{subsection.C.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.19}Colchicine plan 3}{60}{subsection.C.19}
+\contentsline {subsection}{\numberline {C.19}Colchicine plan 3}{74}{subsection.C.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.20}Colchicine plan 4}{61}{subsection.C.20}
+\contentsline {subsection}{\numberline {C.20}Colchicine plan 4}{75}{subsection.C.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.21}Colchicine plan 5}{62}{subsection.C.21}
+\contentsline {subsection}{\numberline {C.21}Colchicine plan 5}{76}{subsection.C.21}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.22}Dysidiolide plan 1}{63}{subsection.C.22}
+\contentsline {subsection}{\numberline {C.22}Dysidiolide plan 1}{77}{subsection.C.22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.23}Dysidiolide plan 2}{64}{subsection.C.23}
+\contentsline {subsection}{\numberline {C.23}Dysidiolide plan 2}{78}{subsection.C.23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.24}Dysidiolide plan 3}{66}{subsection.C.24}
+\contentsline {subsection}{\numberline {C.24}Dysidiolide plan 3}{80}{subsection.C.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.25}Dysidiolide plan 4}{67}{subsection.C.25}
+\contentsline {subsection}{\numberline {C.25}Dysidiolide plan 4}{81}{subsection.C.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.26}Dysidiolide plan 5}{69}{subsection.C.26}
+\contentsline {subsection}{\numberline {C.26}Dysidiolide plan 5}{83}{subsection.C.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.27}Dysidiolide plan 6}{70}{subsection.C.27}
+\contentsline {subsection}{\numberline {C.27}Dysidiolide plan 6}{84}{subsection.C.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.28}Dysidiolide plan 7}{71}{subsection.C.28}
+\contentsline {subsection}{\numberline {C.28}Dysidiolide plan 7}{85}{subsection.C.28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.29}Dysidiolide plan 8}{72}{subsection.C.29}
+\contentsline {subsection}{\numberline {C.29}Dysidiolide plan 8}{86}{subsection.C.29}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.30}Dysidiolide plan 9}{74}{subsection.C.30}
+\contentsline {subsection}{\numberline {C.30}Dysidiolide plan 9}{88}{subsection.C.30}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.31}Dysidiolide plan 10}{75}{subsection.C.31}
+\contentsline {subsection}{\numberline {C.31}Dysidiolide plan 10}{89}{subsection.C.31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.32}Asteriscanolide plan 1}{76}{subsection.C.32}
+\contentsline {subsection}{\numberline {C.32}Asteriscanolide plan 1}{90}{subsection.C.32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.33}Asteriscanolide plan 2}{76}{subsection.C.33}
+\contentsline {subsection}{\numberline {C.33}Asteriscanolide plan 2}{90}{subsection.C.33}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.34}Asteriscanolide plan 3}{77}{subsection.C.34}
+\contentsline {subsection}{\numberline {C.34}Asteriscanolide plan 3}{91}{subsection.C.34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.35}Lepadiformine plan 1}{78}{subsection.C.35}
+\contentsline {subsection}{\numberline {C.35}Lepadiformine plan 1}{92}{subsection.C.35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.36}Lepadiformine plan 2}{79}{subsection.C.36}
+\contentsline {subsection}{\numberline {C.36}Lepadiformine plan 2}{93}{subsection.C.36}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.37}Lepadiformine plan 3}{80}{subsection.C.37}
+\contentsline {subsection}{\numberline {C.37}Lepadiformine plan 3}{94}{subsection.C.37}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.38}Lepadiformine plan 4}{81}{subsection.C.38}
+\contentsline {subsection}{\numberline {C.38}Lepadiformine plan 4}{95}{subsection.C.38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.39}Lepadiformine plan 5}{81}{subsection.C.39}
+\contentsline {subsection}{\numberline {C.39}Lepadiformine plan 5}{95}{subsection.C.39}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {C.40}Lepadiformine plan 6}{82}{subsection.C.40}
+\contentsline {subsection}{\numberline {C.40}Lepadiformine plan 6}{96}{subsection.C.40}

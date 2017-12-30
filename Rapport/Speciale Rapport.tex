@@ -101,8 +101,17 @@ I would like to thank my supervisor, Daniel Merkle, for giving me the opportunit
 I would also like to thank Brian Alberg, Anders Busch, Peter Gottlieb, David Hammer, Vincent Henriksen, Jonas Malte Hinchely, Philip Moesmann, Martin Pedersen and Dan Sebastian Thrane for their unrelenting support in my endeavor of gaining \#KNAWLEGE. For some of you - thank you for the daily trip to the canteen of SDU. It been a pleasure spending my years at the university with you.\\
 And last but not least, I would like to thank my girlfriend, Louisa Høj, for being a huge support throughout the project, listening when I had the need to talk about problems and to always bring a smile to my face.
 
-\section{Introduction MANGLER}
-kkk \cite{Grzybowski}\\
+\section{Introduction}
+Chemical synthesis involves creating a target compound from smaller, often readily available building blocks. Approaching this computationally based on large databases of millions of compounds and millions of possible chemical reactions is only feasible based on recent technological developments and state-of-the-art algorithmic approaches. Informally, the problem is to get from some standard, easy accessible, of the shelf, cheap compounds to the goal compound. Seen from a graph theoretical point of view, the reactions and compounds span a hypergraph, and a synthesis plan (as recently shown in \cite{Fagerberg}) corresponds to a hyperpath in the hypergraph.
+
+Even for an experienced chemist it can be a challenge to infer the best way, or many good alternative ways, of synthesizing a compound, some of the synthesis plans require dozens of reaction steps. There exists databases, that support chemists to construct these synthesis plan. By far the biggest database (millions of compounds and millions of reactions and detailed information on reaction conditions and published literature for specific reactions) in organic chemistry is the so-called Beilstein/Reaxys database\cite{WikiReaxys}\cite{WikiBeilstein}.The database contains the individual compounds and reactions, however, it does not directly provide a way to find the optimal or near-optimal synthesis plans nor store optimal or near-optimal synthesis plans themselves.
+
+By modeling the compounds and reactions as a directed hypergraph of nodes (the compounds) and hyperedges (the chemical reactions) we are able to apply either optimization methods or graph algorithms to infer and enumerate synthesis plans of high quality. Most worth mentioning is an algorithm to infer the $K$ shortest hyperpaths in a hypergraph, as it was recently shown \cite{Nielsen} that hyperpaths in hypergraphs correspond to synthesis plans.
+
+But why do we want to find the $K$ best plans and not just the best plan? The reason for this is because by finding the $K$ best synthesis plans we present different options for the practitioners who can choose based on additional chemical knowledge and actual wet-lab feasibility. The best plan is worth nothing if it can't be done with the existing equipment or compounds.
+\subsubsection*{Previous Work}
+An early contribution towards an automated synthesis planning is retrosynthetic analysis. It was introduced by Elias James Corey in 1969 as part of a formalization of the rules of synthesis used in the development of the computer program LHASA (Logic and heuristics Applied to Synthetic Analysis)\cite{Corey}. Retrosynthetic analysis is a top-down approach to synthesis planning. It uses a heuristic formulated to mimic a chemist's decisions. The idea is: Start with the target chemical structure, split the molecule by removing a bond chosen by the heuristic. Then recursively continue on the newly created molecules until sufficiently simple or commercially available starting materials have been found. A major drawback of retrosynthesis is that it is a greedy approach. Since it always tries to make good choices during the top-down approach recursion, it leaves out synthesis plans with costly last steps but much better first steps. This means that the plans found are not necessarily optimal plans according to the quality measures for synthesis plans.\cite{Fagerberg}\\
+Other work that are close the work in this thesis is by Hendrickson \cite{Hendrickson} and by Smith\cite{Smith}. Both have a focus on graph based descriptions of synthesis plans. Hendrickson models synthesis plans as binary trees, and defines the quality of a plan to be based on convergency, which essentially is how balanced the tree is. His reasoning is that in a more balanced tree the staring materials would be part of fewer reactions, either directly or as part of larger molecules in later reactions. All reactions have, to some degree, loss, and the strategy is to reduce this loss. Smith models synthesis plans as hypergraphs, and defines the quality of a plan to be based on the actual loss incurred by each reaction. In both papers there is however only focus on finding a single best plan regarding to their quality measure.\cite{Fagerberg}
 
 \section{Overview}
 This section briefly describes what each of the following sections contain, thus making it easier for the reader to find points of interest.
@@ -114,7 +123,7 @@ Section \ref{sec::DesigningHyper} tells the reader about the design decisions th
 \item
 Section \ref{sec::K-Best} describes the principles behind Yen's algorithm and the conversion of the algorithm so that it may be used with hypergraphs. It also describes how the algorithm have been modified to handle larger instances of hypergraphs.
 \item
-Section \ref{sec::ShortestPath} describes the two different shortest path algorithms implemented: An algorithm using a dynamic approach using recursion\cite{Carsten} and a Dijkstra inspired approach called STB-Dijkstra\cite{Nielsen}. I furthermore contains the results of the testing made to ensure the correctness of the algorithms.
+Section \ref{sec::ShortestPath} describes the two different shortest path algorithms implemented: An algorithm using a dynamic approach using recursion\cite{Carsten} and a Dijkstra inspired approach called STB-Dijkstra\cite{Nielsen}. Furthermore it contains the results of the testing made to ensure the correctness of the algorithms.
 \item
 Section \ref{sec::BeilsteinData} contains a description of the Beilstein database and how it is possible to extract data through the browser interface Reaxys. It also contains an evaluation of the data quality and suggests solutions to handle eventual problems with the data.
 \item
@@ -527,6 +536,7 @@ Journals covered include \textit{Advanced Synthesis and Catalysis, Angewandte Ch
 \subsection{Data Access}
 As mentioned above the content of the database is maintained and distributed by Elsevier Information Systems under the name "Reaxys". Reaxys\footnote{https://new.reaxys.com/} is accessible through any browser and is easy to navigate. It is possible to find a compound or a reaction and locate all the documents in which they have been a part of. An example would be the compound Strychnidin-10-one which is referenced in 1442 documents. This is also possible the other way around. Through Reaxys is it possible to search for a specific paper using keywords, authors, publication year, Journal title, etc. Once the paper have been found it is possible to see reactions and compound that are connected to this particular article. All data connected to a article, reaction or compound can be exported and downloaded through the Reaxys interface in different formats. In this thesis I have used the XML format to extract data from the database. It is important to notice that to use Reaxys properly, a login is required. I have here used the "sign in by your institution" function, making it possible to use the WAYF (Danish Universities and Higher Education) as a login.
 \subsection{Data Assessment}
+\label{sec::Assesment}
 During my work with the data from the Beilstein database have I found several issues when it comes to using it to find shortest paths.
 First problem is that there are multiple instances of the same compound, each with a different Reaxys IDs. As seen in fig.\ref{fig::SameID} have I found four different IDs for the compound Dysidiolide. These were found when I tried to reproduce the different synthesis plans of Dysidiolide from \cite{SynthesisPlans} using the referenced articles where each synthesis plan origins. E. J. Corey's version of Dysidiolide have the ID 8171938, Boukouvalas have two different with ID 7601810 and 7910427 and Danishefsky have the ID 7910428. \\
 Since we have four different IDs for Dysidiolide we can't state a single goal compound to our program that would result in giving us these three synthesis plans. To handle this problem the program can take several goal compounds as an input, and by creating a dummy node $t$ are we able to give the illusion of a single target.
@@ -606,7 +616,7 @@ Third issue is that some reactions contains educts where a compound isn't linked
 \end{figure}
 
 Forth issue is multireactions. (fig \ref{fig::Multistep}) A mulitreaction is a reaction with its own ID, but it consists of an educt and a product were there are multiple reaction steps, $s$, between the two compounds. This means that instead of $s$ different reactions with their own ID and yield we get a single reaction without a yield. The yield for each reaction in the multistep reaction is often stored as a part of the reaction text, but not easy extractable. The multistep reaction should however only consist of individual reactions that already are in the database.\\
-The solution to this problem have been to not include all reactions labelled as "Multi-step reaction" to the extraction from the database. Since the steps should be saved as individual reactions this would not cause any harm to possibility of finding the exact same path, but only using all $s$ steps instead of one.
+The solution to this problem have been to not include all reactions labelled as "Multi-step reaction" when trimming the XML files from Reaxys. Since the steps should be saved as individual reactions this would not cause any harm to possibility of finding the exact same path, but only using all $s$ steps instead of one.
 
 \begin{figure}[H]
 \hspace{-1cm}
@@ -630,11 +640,106 @@ Fifth issue is reactions which have more than one product (fig. \ref{fig::Multip
 \label{fig::CopyReaction}
 \end{figure}
 
-\section{Results MANGLER}
+\section{Experiments and Results}
 \label{sec::Results}
-\subsection{Pre-work}
-HOFFMAN - XML Files etc.
+This section seeks to prove the usefulness of the K-best synthesis plan algorithm. This is done by using data from Beilstein based on already known synthesis plans in the pursuit of recreating these exact synthesis plans using the K-best synthesis plan algorithm.
+\subsection{Idea and data extraction}
+To prove that the k-best synthesis plan algorithm have a practical use in the real world, it should be able to create synthesis plans based on real data from the Beilstein database, and not just home made hypergraphs. There are however multiple problems with this:
+\begin{enumerate}
+\item
+How do we choose the target compound and staring materials
+\item
+How do we validate the output?
+\item
+Direct access to the Beilstein database in Leipzig is not allowed
+\end{enumerate}
+The answer to 1 and 2 are automatically combined. The first part of 1 "How do we choose the target compound?" could be  answered as trivially as: Any random compound in the world. This of course leads to the second part: How do we then choose were to start. If the target compound is random then there is no way to know where a non-naive starting point would be, without having the theoretical and practical knowledge of a chemist. With a non-naive starting point I mean a starting material that is not the target material it self or the tail of the reaction to which the target is the head. Suppose that we where able to choose a random target and even assign some starting materials that would lead to a set of synthesis plans, how would we then validate these plans?\\
+So instead of picking starting compounds and target compound in the dark, I chose to use already described synthesis plans as input when creating the hypergraphs. Hoffmann\cite{SynthesisPlans} have in his book "Elements of Synthesis Planning" described multiple synthesis plans of different compounds with correct citation to the articles in which they have origin. By using this book, I would be given the target compound and the corresponding starting materials. Furthermore I would have the already known synthesis plans to validate some if not all results of the K-best algorithm. The compounds that are described in the book is: Strychnine with 9 plans, Colchicine with 5 plans, Dysidiolide with 4 plans, Asteriscanolide with 4 plans and Lepadiformine 4 plans.\\
+
+As for the problem with no direct access to the Beilstein database is there a simple solution. As mentioned before the browser interface Reaxys allows the user to export and thereby extract data from the database in a limited sense. It will not allow a full download of all 48 million compounds and their corresponding reactions with a single click, but it will allow to download XML files containing the information of single compounds, reactions and most importantly articles. As mentioned in section \ref{sec::BeilsteinData} the XML file of an article holds the ID of all reactions and the ID of the compounds that are part of these reactions. This means that it is possible to search for each of the synthesis plans from Hoffmann, using the article as a reference, and thereby download articles information in the XML file. This XML file should then contain all the reactions and compounds that are needed to recreate this particular synthesis plan.\\
+The file contains a lot more information than needed to create a hypergraph so the file would have to be trimmed in order to be useful. The snippet below show one of the most important parts of the XML file.
+
+\begin{lstlisting}[numbers=none]
+<RX>
+	<RX.ID>406669</RX.ID>
+	<RX01>
+		<RX.RXRN>1209486</RX.RXRN>
+		<RX.RCT>glyoxylic acid ethyl ester</RX.RCT>
+	</RX01>
+	<RX01>
+		<RX.RXRN>296858</RX.RXRN>
+		<RX.RCT>2-[2-(3,4-dimethoxyphenyl)-1H-indol-3-yl]
+				-ethylamine</RX.RCT>	
+	</RX01>
+	<RX02>
+		<RX.PXRN>354389</RX.PXRN>
+		<RX.PRO>{2-[2-(3,4-dimethoxy-phenyl)-indol-3-yl]
+				-ethylimino}-acetic acid ethyl ester</RX.PRO>
+	</RX02>
+\end{lstlisting}
+This is one of the reactions that is part of a synthesis plan for strychnine. 
+\begin{itemize}
+\item
+<RX.ID> defines the reaction ID
+\item
+<RX01> defines the educt(s) of the reaction.
+\item
+<RX02> defines the product(s) of the reaction.
+\item
+<RX.RXRN> contains the ID of the compound in play.
+\end{itemize}
+So as the XML file states above, the reaction with ID: 406669 looks like this
+\begin{equation}
+296858 + 1209486 \rightarrow 354389
+\end{equation}
+Many of the reactions also contains the field <RX.MYD>. This is the yield of the reaction in percentage. Another important field is <RX.RTYP> that defines what type of reactions is it. Here we want to filter out all those saying "Multi-Reaction" since they cannot be used in the hypergraph construction. As mentioned in \ref{sec::BeilsteinData} this should however not interfere with the results since each reaction in a multi-step should also be saved as an individual reaction.\\
+
+Since it would not make much sense to find a synthesis plan in a hypergraph consisting of only that particular synthesis plan, I decided to extract the XML files of each of the articles connected to a particular target compound, and combining them all into a single hypergraph that should contain all the synthesis plans to that single target compound. 
 \subsection{Strychnine}
+There are in Hoffmann\cite{SynthesisPlans} nine different plans for the compound Stychnine. These synthesis plans have published in the following articles:
+\begin{itemize}
+\item
+R. B. Woodward, M. P. Cava, W. D. Ollis, A. Hunger, H. U. Daeniker, K. Schenker,
+Tetrahedron 1963, 19, 247-288.
+\item
+V. H. Rawal, S. Iwasa, J. Org. Chem. 1994, 59, 2685-2686.
+\item
+S. D. Knight, L. E. Overman, G. Pairaudeau, J. Am. Chem. Soc. 1993, 115,
+9293-9294.
+\item
+M. J. Eichberg, R. L. Dorta, K. Lamottke, K. P. C. Vollhardt, Org. Lett. 2000, 2,
+2479-2481.
+\item
+G. J. Bodwell, J. Li, Angew. Chem., Int. Ed. 2002, 41, 3261–3262. (Angew. Chem.
+2002, 114, 3395-3396).
+\item
+D. Solé, J. Bonjoch, S. Garcia-Rubio, E. Peidró, J. Bosch, Angew. Chem. Int. Ed.
+Engl. 1999, 38, 395-397. (Angew. Chem. 1999, 111, 408-410)
+\item
+M. Mori, M. Nakanishi, D. Kajishima, Y. Sato, J. Am. Chem. Soc. 2003, 125,
+9801-9807.
+\item
+Y. Kaburagi, H. Tokuyama, T. Fukuyama, J. Am. Chem. Soc. 2004, 126,
+10246-10247.
+\item
+T. Ohshima, Y. Xu, R. Takita, M. Shibasaki, Tetrahedron 2004, 60, 9569-9588.
+\end{itemize}
+The article by T. Ohshima, Y. Xu, R. Takita, M. Shibasaki was however not to be found through Reaxys. The extracted hypergraph consisted of 459 compounds and 296 reactions. Out of these 296 reaction, only 190 of them were remaining in the final hypergraph. This is because all non-educt or non-product reactions were removed.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.03, angle=90]{Synteseplaner/Strychnine/Output.pdf}
+\caption{Small version of the hypergraph. \href{Synteseplaner/Strychnine/Output.pdf}{Press here to see full pdf}}
+\end{figure} 
+As it can be seen the right part of the hypergraph consists of many non-linked single or small step reactions. It is assumed that the links between these reactions and between the rest of the hypergraph are missing because:
+\begin{itemize}
+\item
+The reaction that connected two parts were a multi step reaction, and there was no single step reaction described in the articles.
+\item
+The links were there but because they were not correctly saved in Beilstein they had become non-educt or non-product reactions, which have been delete.
+\item
+The articles do in fact describe the reaction, but it is only mentioned as a reference to another article. It is possible that reactions not properly described the article, but only referenced, may not be saved in the XML file.
+\end{itemize}
+Despite the lack of connectivity of the hypergraph, the K-best algorithm was still able to find 16 different synthesis plans. This is impressive taken into account that we only used 8 plans to create the hypergraph.
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -656,11 +761,73 @@ Plan & Reactions & Starting weight \\ \hline
 14 & \ref{Appendix::Strychnine14} & 21587,3 \\\hline
 15 & \ref{Appendix::Strychnine15} & 44400,5 \\\hline
 16 & \ref{Appendix::Strychnine16} & 277503 \\\hline
-
 \end{tabular}
+\caption{}
+\label{tab::StrychnineResults}
 \end{table}
+So what is going on? When looking at the plans that was found and match them with the synthesis plans of Hoffmann, it became clear that plan 1-13 all have their offset in the synthesis plan by K. P. C. Vollhardt (fig. \ref{fig::Vollhardt}). The first 5 plans all contain the same compounds, but are different in the reactions they use. This is quite interesting since this shows how large an impact the choice of reactions have in a synthesis plan. During those 5 plans the accumulated weight of the starting compounds have more than doubled.\\
+Plan 6-13 are almost the same story as 1-5. Each new plan switches a single reaction, and every second plan decides that it would be better to add the intermediate step of creating compound 8657520 instead of changing a reaction.
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Strychnine/Vollhardt.png}
+\caption{Strychnine synthesis by K. P. C. Vollhardt \cite{SynthesisPlans}}
+\label{fig::Vollhardt}
+\end{figure}
+What the first 13 plans of strychnine shows is that it is hard to match the plans with the synthesis plan from Hoffmann. The synthesis plan (fig. \ref{fig::Vollhardt}) pictured in Hoffman only matches on the lower part of the generated synthesis plans. Compound 8635587 is the last compound that can be matched with a compound in the synthesis plan in Hoffmann. The top of the graph only concerns the synthesis of compound 6798544 which is a part of a larger reaction in the synthesis plan by Vollhardt.\\
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Strychnine/Overman.png}
+\caption{Strychnine synthesis by L. E. Overman \cite{SynthesisPlans}}
+\label{fig::Overman}
+\end{figure}
 
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Strychnine/Fukuyama.png}
+\caption{Strychnine synthesis by T. Fukuyama \cite{SynthesisPlans}}
+\label{fig::Fukuyama}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Strychnine/Mori.png}
+\caption{Strychnine synthesis by M. Mori \cite{SynthesisPlans}}
+\label{fig::Mori}
+\end{figure}
+Plan 14 seems to be a merge of the synthesis plan from L. E. Overman (fig. \ref{fig::Overman}) and the plan of T.Fukuyama (fig. \ref{fig::Fukuyama}). The step between compound 8235349 and compound 899446 in Fukuyama expands to contain two more reactions that passes through compound 6616059 and compound 6638716, that both are part of Overmans synthesis plan. I suspect that since Overman published his synthesis plan in 1993 and Fukuyama published his in 2004, Fukuyama has used these reactions when creating his own synthesis plan.\\
+
+Plan 15 and 16 are both from the synthesis plan of Mori (fig. \ref{fig::Mori}). The only difference of these two plans is where they stop. This is due to the fact that the compound 97332 ((+)-isostrychnine) is the stage before compound 52979 ([3H]-Strychnine), but both have been given as goal compounds. This of course means that since 97332 is reached first, it becomes a better plan than 52979 which requires an extra reaction.\\
+
+When looking at the results in tab. \ref{tab::StrychnineResults} it might be weird that last 3 plans have such a high starting weight taking into consideration that they are from other plans than the 13 first and that both Mori and Fukuyama are newer publications. Would it not be assumed that they should be better then? The thing is they all have had a reaction which had no yield in the XML files are therefore have been assigned a yield automatically of 10 \%. This of course is not acceptable when trying to find the best paths available, but bare in mind that the goal of these experiments was not to find the best plans, but to find the plans and validate them with already known synthesis plans. If the data set had been fulfilling the scores would have been better - at least on plan 14 and 15. Plan 16 has a quite expensive last reaction from compound 97332 to 52979 with a yield of only 16 %.
 \subsection{Colchicine} 
+There are in Hoffmann\cite{SynthesisPlans} five different plans for the compound Colchicine. These synthesis plans have published in the following articles:
+\begin{itemize}
+\item
+J.Schreiber,W.Leimgruber,M.Pesaro,P.Schudel,A.Eschenmoser,Angew.Chem.
+1959, 71, 637-640.
+\item
+J. Schreiber, W. Leimgruber, M. Pesaro, P. Schudel, T. Threlfall, A. Eschenmoser,
+Helv. Chim. Acta 1961, 44, 540-597.
+\item
+R. B. Woodward, The Harvey Lecture Series 1963, 59, 31.
+\item
+D. A. Evans, S. P. Tanis, D. J. Hart, J. Am. Chem. Soc. 1981, 103, 5813-5821.
+\item
+T. Graening, W. Friedrichsen, J. Lex, H.-G. Schmalz, Angew. Chem., Int. Ed. 2002,
+41, 1524–1526. (Angew. Chem. 2002, 114, 1594-1597).
+\item
+T. Graening, V. Bette, J. Neudörfl, J. Lex, H. G. Schmalz, Org. Lett. 2005, 7,
+4317-4320.
+\item
+J. C. Lee, J. K. Cha, Tetrahedron 2000, 56, 10175-10184.
+\end{itemize}
+It was not possible to find three of the plans in Reaxys: R. B. Woodward, J. K. Cha and A. Eschenmoser. The extracted hypergraph contained 112 compounds and 64 Reactions. In the final generated hypergraph there are 66 reactions. This is due to fact that there have been some non-B-hyperedges that had to be split.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.1, angle=90]{Synteseplaner/Colchicine/Output.pdf}
+\caption{Small version of the hypergraph. \href{Synteseplaner/Colchicine/Output.pdf}{Press here to see full pdf}}
+\end{figure} 
+This hypergraph has a good connectivity and there are only few standalone reactions and the K-shortest algorithm is able to find five synthesis plans. The trivial plan of 5639498 going through R3161370 to become the target compound 2226531 have been disabled since it is uninteresting.
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -672,7 +839,35 @@ Plan & Reactions & Starting weight \\ \hline
 4 & \ref{Appendix::Colchicine4} & 119547 \\\hline
 5 & \ref{Appendix::Colchicine5} & 136227 \\\hline
 \end{tabular}
+\label{tab::ColchicineResults}
 \end{table}
+When looking at the results for Colchicine it is quite interesting that a hypergraph made from the content of two synthesis plan articles can create 5 very different paths when it comes to cost. Plan 1 and 3 originates from the synthesis plan by D. A. Evans (fig. \ref{fig::Evans}) and plan 2, 4 and 5 is part of the synthesis plan by H. G. Schmalz (fig. \ref{fig::Schmalz})\\
+
+Plan 1 and 3 are more or less the same. Both have the starting compounds from the original synthesis plan: compound 5545184 and compound 1877437. They do however not use as many steps as the synthesis plan by Evans (fig. \ref{fig::Evans}). The main difference between plan 1 and 3 is that plan 1 is able to cut three reactions in the step from 1895143 to 1894269, as shown in fig. \ref{fig::EvansCut}.\\
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{Billeder/EvansCut.png}
+\caption{}
+\label{fig::EvansCut}
+\end{figure}
+Not only is it three reactions less but it also manages to avoid a reaction with a yield of 10\% (auto assigned). These three reactions also gives an explanation of the massive growth in the results.\\
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Colchicine/Evans.png}
+\caption{Colchicine synthesis by D. A. Evans \cite{SynthesisPlans}}
+\label{fig::Evans}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Colchicine/Schmalz.png}
+\caption{Colchicine synthesis by H. G. Schmalz  \cite{SynthesisPlans}}
+\label{fig::Schmalz}
+\end{figure}
+
+When it comes to plan 2, 4 and 5 it is harder to get a match on the synthesis plan by Schmalz (fig. \ref{fig::Schmalz}). Plan 2 matches on the compound 10123458 which is its starting compound, but in the original synthesis plan is close to the end. The following reactions and compounds does not match perfect with does depicted in Hoffman but the goal is a variant of Colchicine. Plan 4 and 5 both match on the compound 9961407 which is the second last compound in the original synthesis plan. Again it does not find perfect matches to the depictions of Hoffman, but also finds a way to Colchicine. The reason for the high results of 4 and 5 is because both plans have two reactions that have a yield of 10\% (auto assigned).\\
+If the reactions in 3, 4 and 5 all had their yields from correct data, then they scores would have been much closer to each other, and not with the growth of approximately 7920 \%. 
 
 \subsection{Dysidiolide}
 \begin{table}[H]
@@ -720,7 +915,11 @@ Plan & Reactions & Starting weight \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{Discussion}
+
+\subsection{General notes }
+all linear 
+Expansion as described in section \ref{sec::FutureWork}
+
 kkkk \cite{SynthesisPlans}\\
 
 \section{Future work}
@@ -731,7 +930,7 @@ The idea of expanding is to have either a compound or an existing synthesis plan
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{Billeder/TestOfExpansion1.png}
-\caption{\textbf{a)} The target compound. \textbf{b)} After a single expansion from target compound}
+\caption{\textbf{a)} The target compound. \\ \textbf{b)} After a single expansion from target compound}
 \end{figure} 
 
 \begin{figure}[H]
@@ -747,7 +946,7 @@ If we instead would have a existing synthesis plan, or perhaps a set of synthesi
 \label{fig::ExpansionOfPath}
 \end{figure}
 \subsection{Error handling}
-That the program throws a segmentation fault when the dynamic approach is used on a hypergraph with cycles, is of course not preferable. It should however use the visited attribute of the CompoundNodes for cycle detection. If an already visited node is visited again it should abort the algorithm, print an error messsage so that the user may know why the algorithm fails.
+That the program throws a segmentation fault when the dynamic approach is used on a hypergraph with cycles, is of course not preferable. It should however use the visited attribute of the CompoundNodes for cycle detection. If an already visited node is visited again it should abort the algorithm, print an error messsage so that the user may know why the algorithm fails.\\
 The problem with STB-Dijkstra in test 4 \ref{sec::testing} should be investigate so that the problem can be fixed. As mentioned before it only seems to happen in the tests made by SynthWorker and in a hypergraph with many equally good paths, but should non the less be fixed.
 \subsection{Specific start weight}
 At the time of deadline, the results of the shortest path algorithms is the accumulated weight of the starting materials. This is a good way of determining if a path is better than another. It would however be a good thing to know how much of each of the individual staring materials should be used to create the target compound, for pratical purposes. To calculate the individual weight of the staring materials, we would need to implement a Depth-First-Search inspired algorithm that starts in the goal compound and traverses the synthesis plan towards the starting materials. For each reaction, $e$, it comes through on its path, the cost of $H(e)$ is divided with the retroyield ($1/yield_e$) and passed on to the nodes in $T(e)$ as the "inverted cost". When the algorithm hits a starting compound it divides the cost of the goal compound with the inverted cost of the staring material found by the DFS and multiplies it with the molecular weight of the starting compound.
@@ -761,9 +960,11 @@ If we use the example above we can see that the result of the shortest path algo
 \{6,7\} &= (21,42857/8,571428) \cdot 2 = 5
 \end{align}
 By dividing these results with the molecular weight of the compounds, we would get how many times of each starting compound we would need to create a single target compound.
+\subsection{Pricing}
+There is also the possibility of adding new attributes to the structure. It would be possible to find all those compounds which can be bought on the open market, and add a price to each of the compounds. The reactions would then need to have a price in the form of lab costs, so that when a reaction is made, it takes into consideration that there is a potential cost to equipment and/or personnel.\\
+Each compound that have a market price would become a starting material, since it would be possible just to buy the compound instead of making it. The shortest path algorithm would now find the $K$ shortest synthesis plans that not only gives the highest yield, but also takes into consideration if it would be cheaper to use a longer synthesis plan, with more reactions, to make the same amount of the target compound. An example of this would be that the work cost in Germany is much higher than in China. This means that it could be profitable for the chinese to buy cheaper compounds and make the more expensive compounds themselves, whereas the german scientists would find it more profitable to start at more complex compound, since it would be more profitable to buy the compound instead of making it themselves from scratch.
 \section{Conclusion MANGLER}
 \label{sec::Conclusion}
-
 \newpage
 
 \printbibliography[type=book, title={Books}]
