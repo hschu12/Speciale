@@ -798,7 +798,7 @@ Plan 14 seems to be a merge of the synthesis plan from L. E. Overman (fig. \ref{
 
 Plan 15 and 16 are both from the synthesis plan of Mori (fig. \ref{fig::Mori}). The only difference of these two plans is where they stop. This is due to the fact that the compound 97332 ((+)-isostrychnine) is the stage before compound 52979 ([3H]-Strychnine), but both have been given as goal compounds. This of course means that since 97332 is reached first, it becomes a better plan than 52979 which requires an extra reaction.\\
 
-When looking at the results in tab. \ref{tab::StrychnineResults} it might be weird that last 3 plans have such a high starting weight taking into consideration that they are from other plans than the 13 first and that both Mori and Fukuyama are newer publications. Would it not be assumed that they should be better then? The thing is they all have had a reaction which had no yield in the XML files are therefore have been assigned a yield automatically of 10 \%. This of course is not acceptable when trying to find the best paths available, but bare in mind that the goal of these experiments was not to find the best plans, but to find the plans and validate them with already known synthesis plans. If the data set had been fulfilling the scores would have been better - at least on plan 14 and 15. Plan 16 has a quite expensive last reaction from compound 97332 to 52979 with a yield of only 16 %.
+When looking at the results in tab. \ref{tab::StrychnineResults} it might be weird that last 3 plans have such a high starting weight taking into consideration that they are from other plans than the 13 first and that both Mori and Fukuyama are newer publications. Would it not be assumed that they should be better then? The thing is they all have had a reaction which had no yield in the XML files are therefore have been assigned a yield automatically of 10 \%. This of course is not acceptable when trying to find the best paths available, but bare in mind that the goal of these experiments was not to find the best plans, but to find the plans and validate them with already known synthesis plans. If the data set had been fulfilling the scores would have been better - at least on plan 14 and 15. Plan 16 has a quite expensive last reaction from compound 97332 to 52979 with a yield of only 16\%.
 \subsection{Colchicine} 
 There are in Hoffmann\cite{SynthesisPlans} five different plans for the compound Colchicine. These synthesis plans have published in the following articles:
 \begin{itemize}
@@ -839,6 +839,7 @@ Plan & Reactions & Starting weight \\ \hline
 4 & \ref{Appendix::Colchicine4} & 119547 \\\hline
 5 & \ref{Appendix::Colchicine5} & 136227 \\\hline
 \end{tabular}
+\caption{}
 \label{tab::ColchicineResults}
 \end{table}
 When looking at the results for Colchicine it is quite interesting that a hypergraph made from the content of two synthesis plan articles can create 5 very different paths when it comes to cost. Plan 1 and 3 originates from the synthesis plan by D. A. Evans (fig. \ref{fig::Evans}) and plan 2, 4 and 5 is part of the synthesis plan by H. G. Schmalz (fig. \ref{fig::Schmalz})\\
@@ -870,6 +871,30 @@ When it comes to plan 2, 4 and 5 it is harder to get a match on the synthesis pl
 If the reactions in 3, 4 and 5 all had their yields from correct data, then they scores would have been much closer to each other, and not with the growth of approximately 7920 \%. 
 
 \subsection{Dysidiolide}
+There are in Hoffmann\cite{SynthesisPlans} four different plans for the compound Dysidiolide. These synthesis plans have been published in the following articles:
+\begin{itemize}
+\item
+E. J. Corey, B. E. Roberts, J. Am. Chem. Soc. 1997, 119, 12425-12431.
+\item
+J. Boukouvalas, Y. X. Cheng, J. Robichaud, J. Org. Chem. 1998, 63, 228-229.
+\item
+S. R. Magnuson, L. Sepp-Lorenzino, N. Rosen, S. J. Danishefsky, J. Am. Chem.
+Soc. 1998, 120, 1615-1616.
+\item
+D. Demeke, C. J. Forsyth, Org. Lett. 2000, 2, 3177-3179.
+\item
+R. Paczkowski, C. Maichle-Mössmer, M. E. Maier, Org. Lett. 2000, 2, 3967-3969.
+\end{itemize}
+The reason that there is five articles to four synthesis plans is because Forsyth and Maier is a combined synthesis plan. This time it was possible to retrieve all articles from Reaxys. The extracted hypergraph contained 119 compounds and 65 reactions. In the final generated graph there is 70 reactions. Once again this is because of the need to split the non-B-hyperedges.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.18]{Synteseplaner/Dysidiolide/Output.pdf}
+\caption{Small version of the hypergraph. \href{Synteseplaner/Dysidiolide/Output.pdf}{Press here to see full pdf}}
+\end{figure}
+
+The created hypergraph have a high connectivity with close to none standalone reactions. The K-shortest algorithm was able to find 10 different synthesis plans.
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -886,9 +911,67 @@ Plan & Reactions & Starting weight \\ \hline
 9 & \ref{Appendix::Dysidiolide9} & 23259 \\\hline
 10 & \ref{Appendix::Dysidiolide10} & 27928,3 \\\hline
 \end{tabular}
+\caption{}
+\label{tab::DysidiolideResults}
 \end{table}
 
+Plan 1-6 is generated from the compounds found in the synthesis plan from Danishefsky (fig. \ref{fig::Danishefsky}). Plan 1 and 2 goes all the way to the starting material (compound 5330688) depicted in Hoffmann, and are identical with the only exception of the second to last reaction that is changed from a 56\% reaction to a 45\% reaction. Plan 3-6 is the same plans as 1 and 2, except they go further away in the reactions including reactions and compounds that is not shown in Hoffman. The differences between these plans is the second to last reaction, and that there is a possibility to skip two reactions between compound 1738097 and compound 1815228 by using reaction R5142034.\\
+
+Plan 7 and 9 are both from Coreys synthesis plan (fig. \ref{fig::Corey}. The matching with the plan in Hoffmann ends at compound 8166687 that is to found almost at the top of the plan. The difference between the plans is that it is possible to skip two reactions at the end of the synthesis plan. Reaction R8540393 was original a non-B-hyperedge that both lead to compound 8168305 and the compound 8168306, but have been split, so by using the new reaction R10207847 that leads to  compound 8168306 we can skip the steps that it takes for compound 8168305 to become compound 8168306.\\
+
+Both plan 8 and 10 are from Forsyth and Maiers synthesis plan (fig. \ref{fig::Forsyth}). It have been possible to match the plans until compound 8633878, which resides in the middle of the synthesis plans found. The last two steps of the synthesis plan is identical to the plans from Danishefsky. Just as with Danishefsky the second to last reaction can be changed, and this is what leads to the two different plans.\\
+
+There is a small jump in cost between plan 6 and plan 7. One reason for this could be that the first reaction of plan 7 and 9 is R5075479 which has an auto assigned yield of 10\%. What goes for plan 8 and 10, is it assumed that the length of the plan alone is responsible for the cost of the plan.\\ 
+One might ask: Where is the plan generated by the article of J. Boukouvalas? The starting compound 3543574 is 
+found at the top of a small sub-hypergraph that is cut off from the rest of the hypergraph, which leads me to think that there have been a possible multi-step reaction linking it together with the rest of the hypergraph. But since there is no link there is no path from $s$ to $t$ and therefore no synthesis plan.
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Dysidiolide/Danishefsky.png}
+\caption{Dysidiolide synthesis by S. J. Danishefsky \cite{SynthesisPlans}}
+\label{fig::Danishefsky}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Dysidiolide/Corey.png}
+\caption{Dysidiolide synthesis by E. J. Corey  \cite{SynthesisPlans}}
+\label{fig::Corey}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Dysidiolide/Forsyth.png}
+\caption{Dysidiolide synthesis by Forsyth and Maier \cite{SynthesisPlans}}
+\label{fig::Forsyth}
+\end{figure}
+
 \subsection{Asteriscanolide}
+There are in Hoffmann\cite{SynthesisPlans} four different plans for the compound Asteriscanolide. These synthesis plans have been published in the following articles:
+\begin{itemize}
+\item
+M. E. Krafft, Y. Y. Cheung, C. A. Juliano-Capucao, Synthesis 2000, 1020-1026.
+\item
+M. E. Krafft, Y. Y. Cheung, K. A. Abboud, J. Org. Chem. 2001, 66, 7443-7448.
+\item
+L.A.Paquette, J. Tae, M. P. Arrington, A. H. Sadoun, J. Am. Chem. Soc. 2000,122,
+2742-2748.
+\item
+P. A. Wender, N. C. Ihle, C. R .D. Correia, J. Am. Chem. Soc. 1988, 110,5904-5906.
+\item
+J. Limanto, M. L. Snapper, J. Am. Chem. Soc. 2000, 122, 8071-8072.
+\end{itemize}
+The two first articles describe the same synthesis plan. The XML file for L. A. Paquette's article did not contain the final goal compound Asteriscanolide as one of its listed compounds. The articles reactions and compounds were however still added to the creation of the hypergraph.
+The extracted hypergraph contained 104 compounds and 49 reactions. In the final generated graph there is 50 reactions. Again, this is because of the need to split the non-B-hyperedges.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.17, angle=90]{Synteseplaner/Asteriscanolide/Output.pdf}
+\caption{Small version of the hypergraph. \href{Synteseplaner/Asteriscanolide/Output.pdf}{Press here to see full pdf}}
+\label{fig::AsteriscanolideGraph}
+\end{figure}
+
+Considering that this graph (fig. \ref{fig::AsteriscanolideGraph}) was created using only four different articles, it is quite spares. There is only two sub-hypergraphs, that have a potential path length longer than four reactions, and only one of these contains a target compound. The K-shortest algorithm was able to find 3 different synthesis plans. 
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -898,9 +981,66 @@ Plan & Reactions & Starting weight \\ \hline
 2 & \ref{Appendix::Asteriscanolide2} & 5175,63 \\\hline
 3 & \ref{Appendix::Asteriscanolide3} & 13549,2 \\\hline
 \end{tabular}
+\caption{}
 \end{table}
+Plan 1 is a part of the synthesis plan from Wender (fig. \ref{fig::Wender}). The found plan matches step by step the last three reactions of the original plan, and stops at compound 6198015.\\
+Plan 2 is the last part of the synthesis plan from Snapper (fig. \ref{fig::Snapper}). Once again it matches step by step the reactions of the original plan. This time it reaches four reactions backwards until it stops at compound 10443050.\\
+Plan 3 is the longest of the synthesis plans found, and matches that of Krafft (fig. \ref{fig::Krafft}). Some of the steps in the found plan are intermediate steps when looking at the description in Hoffmann. The plan found could be matched until compound 8546300.\\
+
+As expected there were no plan for the article by L. A. Paquette, since the goal compound was not included in the XML file. The increase in scores on plan 2 and 3 is because the first reaction of each plan uses an auto assigned yield of 10\%. \\
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Asteriscanolide/Wender.png}
+\caption{Asteriscanolide synthesis by P. A. Wender \cite{SynthesisPlans}}
+\label{fig::Wender}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Asteriscanolide/Snapper.png}
+\caption{Asteriscanolide synthesis by M. L. Snapper  \cite{SynthesisPlans}}
+\label{fig::Snapper}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Asteriscanolide/Krafft.png}
+\caption{Asteriscanolide synthesis by M. E. Krafft \cite{SynthesisPlans}}
+\label{fig::Krafft}
+\end{figure}
 
 \subsection{Lepadiformine}
+There are in Hoffmann\cite{SynthesisPlans} four different plans for the compound Lepadiformine. These synthesis plans have been published in the following articles:
+\begin{itemize}
+\item
+T. J. Greshock, R. L. Funk, Org. Lett. 2001, 3, 3511-3514.
+\item
+P. Sun, C. Sun, S. M. Weinreb, J. Org. Chem. 2002, 67, 4337-4345.
+\item
+S. M. Weinreb, Acc. Chem. Res. 2003, 36, 59–65.
+\item
+H. Abe, S. Aoyagi, C. Kibayashi, Angew. Chem., Int. Ed. 2002, 41, 3017-3020.
+(Angew. Chem. 2002, 114, 3143-3146).
+\item
+C. Kibayashi, S. Aoyagi, H. Abe, Bull. Chem. Soc. Jpn. 2003, 76, 2059-2074.
+\item
+H. Abe, S. Aoyagi, C. Kibayashi, J. Am. Chem. Soc. 2005, 127, 1473-1480.
+\item
+Proposal by the R. W. Hoffmann Group, 2001.
+\end{itemize}
+The three articles by Kibayashi all describe the same synthesis plan. The synthesis plan that comes from "Proposal by the R. W. Hoffmann Group" was not to be found on Reaxys, since there was no precise keywords or documents to search for.
+The extracted hypergraph contained 94 compounds and 56 reactions. In the final generated graph there is 60 reactions due to non-B-hyperedges conflict resolving. 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.17, angle=90]{Synteseplaner/Lepadiformine/Output.pdf}
+\caption{Small version of the hypergraph. \href{Synteseplaner/Lepadiformine/Output.pdf}{Press here to see full pdf}}
+\label{fig::LepadiformineGraph}
+\end{figure}
+
+The created hypergraph (fig. \ref{fig::LepadiformineGraph}) has the highest connectivity among all the experiments. However, since both goal compounds are found in the right sub-hypergraph there would be not much variation of the found synthesis plans. The K-shortest algorithm was able to find 6 different synthesis plans. 
+
 \begin{table}[H]
 \centering
 \begin{tabular}{|r|r|r|}
@@ -913,14 +1053,44 @@ Plan & Reactions & Starting weight \\ \hline
 5 & \ref{Appendix::Lepadiformine5} & 7629,88 \\\hline
 6 & \ref{Appendix::Lepadiformine6} & 8116,89 \\\hline
 \end{tabular}
+\caption{}
 \end{table}
 
+Plan 1 is surprisingly not the shortest of the found synthesis plans. The origin of the plan is the synthesis plan from Funk (fig. \ref{fig::Funk}). We are able to follow the synthesis plan two reactions backwards until we hit the compound 8949596. 
 
-\subsection{General notes }
-all linear 
-Expansion as described in section \ref{sec::FutureWork}
+Plan 2 and 3 are the longest of the found synthesis plans. They come from the synthesis plan by Kibayashi (fig. \ref{fig::Kibayashi}). Even though the synthesis plan found contains more reactions than the one depicted in Hoffmann, it is the same. The starting compound 9367668 is the second compound of the synthesis plan shown in Hoffmann. The two plans differ in the last reaction. Plan 2 uses a reaction with a yield of 100\% and plan 3 uses a reaction with a yield of 94\%.
 
-kkkk \cite{SynthesisPlans}\\
+Plan 4, 5 and 6 are parts of the synthesis plan by Weinreb (fig. \ref{fig::Weinreb}). There is close to no match between the compounds shown in Hoffmann, but it is known that the synthesis plans found origins from Weinreb because the reactions are in the XML files. The furthest back the plans can be shown to fit is compound 9223049, which is the second to last compound in the synthesis plan shown in Hoffmann. This compound is part of plan 5 and 6.\\
+
+The rise in cost between 3 and 4 is once again due to an auto assign of yield. Plan 4, 5 and 6, all start with a reaction with a yield of 10\%.
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Lepadiformine/Funk.png}
+\caption{Lepadiformine synthesis by R. L. Funk \cite{SynthesisPlans}}
+\label{fig::Funk}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Lepadiformine/Kibayashi.png}
+\caption{Lepadiformine synthesis by C. Kibayashi  \cite{SynthesisPlans}}
+\label{fig::Kibayashi}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, angle=90]{Synteseplaner/Lepadiformine/Weinreb.png}
+\caption{Lepadiformine synthesis by S. M. Weinreb \cite{SynthesisPlans}}
+\label{fig::Weinreb}
+\end{figure}
+
+
+\subsection{General notes}
+As the reader might have noticed, all the found synthesis plans are close to being completely linear. This is because the hypergraphs that the algorithms have work with were based on already known synthesis plans. This made the hypergraphs goal oriented. As described in the following section, Future work, it would be interesting to be able to expand on already known hypergraphs. This would broaden the search space and probably show synthesis plans with a larger breath, looking more like a balanced tree instead of a linked list.
+
+\subsection{Summary}
+By using the already known synthesis plans of specific compounds it have been possible to generate hypergraphs on which the K-best algorithm could work. The results have been overall satisfying. It was possible to distinguish exactly from which known synthesis plans the newly found ones originated, even if there never was a perfect match. 
 
 \section{Future work}
 \label{sec::FutureWork}
