@@ -88,8 +88,16 @@ Daniel Merkle
 
 \vfill
 \section*{Abstract}
+This thesis describes how to find the K-best synthesis plans in a hypergraph. The hypergraph consists of nodes(compounds) and hyperedges (reactions). Given a set of starting compounds and a goal compound it is possible to enumerate the $K$-best synthesis plans using a modified Yen's algorithm and a shortest path algorithm. This thesis investigates the use of two different approaches: 
+\begin{itemize}
+\item
+A dynamic approach \cite{Carsten}, that expands from the target compound and works towards the staring compounds. Does not work on cyclic hypergraphs. Finds K-best plans in $\mathcal{O}(K \cdot |V| \cdot (|V|+|E|))$.
+\item
+A Dijkstra inspired approach called STB-Dijkstra \cite{Nielsen}. Works on cyclic hypergraphs and findes K-best plans in $\mathcal{O}(K \cdot |V| \cdot (|E|\ log_2 (|V|) + size(h)))$.\\
+\end{itemize}
+By using real data from the largest organic chemistry database, the Beilstein database, this thesis seeks to reproduce already known and documented synthesis plans to prove the practical use of the K-best algorithm. Multiple plans are found and matched with the original documented synthesis plans described in R. W. Hoffmanns book "Elements of Synthesis Planning". \\
 
-\section*{Resumé}
+\textbf{Keywords:} Synthesis Planning; Hypergraph; K-Shortest; Algorithm; Beilstein; Reaxys; Strychnine; Colchicine; Dysidiolide; Lepadiformine
 \newpage
 
 \tableofcontents
@@ -207,7 +215,7 @@ The two vectors, Product of Reaction and Educt of Reaction, are lists containing
 
 The ReactionNode also contains some non-trivial attributes. The Used Edge Counter is used by the STB-Dijkstra algorithm (Section \ref{STB-Dijkstra}) to make sure that all educts to a reaction have had their min cost evaluated before the reaction can be used. The Original ID attribute is used when we need to change a hyperedge into a B-Hyperedge. If there is more than one product of a reaction we need to split the reaction into multiple new reactions, so that the hyperedge becomes legal. It is for result purpose needed to have a pointer to the original ID of the reaction.\\
 
-The hypergraph is designed to consist of four dynamic lists, vectors, to facilitate quick lookup time and fast attribute reseting. The two vectors compoundList and reactionList are list of size $V$ and $E$ respectively, containing pointers to the compounds and reactions of the given hypergraph. These two vectors are used to reset the attributes of the compounds and reactions after each iteration of the algorithms. The compoundLookupList and reactionLookupList vectors are used to have have a constant lookup time at the cost of space. Both are vectors of pointers to compounds and reactions, just as compoundList and reactionList, but are of size $N$ and $M$ instead, where $N$ is the highest compoundID and $M$ is the highest reactionID. This means that if a reaction with ID 235406 is added to the hypergraph, a pointer to the reaction is pushed to to the back of reactionList and added to reactionLookupList[235406]. This makes it possible to edit a single compound or reaction in $\mathcal{O}(1)$ time, using the lookupLists, and to edit all compounds or reactions in $\mathcal{O}(V)$ and $\mathcal{O}(E)$ respectively.\\
+The hypergraph is designed to consist of four dynamic lists, vectors, to facilitate quick lookup time and fast attribute reseting. The two vectors compoundList and reactionList are list of size $V$ and $E$ respectively, containing pointers to the compounds and reactions of the given hypergraph. These two vectors are used to reset the attributes of the compounds and reactions after each iteration of the algorithms. The compoundLookupList and reactionLookupList vectors are used to have have a constant lookup time at the cost of space. Both are vectors of pointers to compounds and reactions, just as compoundList and reactionList, but are of size $N$ and $M$ instead, where $N$ is the highest compoundID and $M$ is the highest reactionID. This means that if a reaction with ID 235406 is added to the hypergraph, a pointer to the reaction is pushed to to the back of reactionList and added to reactionLookupList[235406]. This makes it possible to edit a single compound or reaction in $\mathcal{O}(1)$ time, using the lookupLists, and to edit all compounds or reactions in $\mathcal{O}(|V|)$ and $\mathcal{O}(|E|)$ respectively.\\
 If the structure was only used on homemade hypegraphs where we would label the compounds from $0,1, ... N$ and the reactions $0,1,...,M$, we would only need the two lookupLists, since we would have two vectors of size $V=N$ and $E=M$ and still have the constant lookup time. However, when working on real data we could have a hypergraph with the reactionIDs 6, 12820 and 50003829 as the only reactionsNodes in the hypergraph. This would result in a vector of size 50003829 but we only have three entries in the vector. So when we need to reset the attributes in the use of the shortest path algorithms we would have to run through the whole vector. This is where the two second lists are useful. Even though we have a reactionLookupList of size 50003829 the reactionList in this hypergraph would only be of size 3.
 Notice that since we are working with pointers to, and not copies of, compoundNodes or reactionsNodes there is no problem in only changing the attributes by accessing it through one of the lists. 
 \begin{figure}[H]
@@ -380,7 +388,7 @@ function Min(V)
 endfunction
 \end{lstlisting}
 
-The worst hypergraph that we could run the algorithm on a hypergraph where each hyperedge $e=(|T| = 1, |H| = 1)$. When connected these would form a linked list which would lead to the running time of $\mathcal{O}(V+E)$. 
+The worst hypergraph that we could run the algorithm on a hypergraph where each hyperedge $e=(|T| = 1, |H| = 1)$. When connected these would form a linked list which would lead to the running time of $\mathcal{O}(|V|+|E|)$. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{Billeder/WorstCaseDynamic.png}
@@ -422,7 +430,7 @@ function SBT-Dijkstra
 	endwhile
 endfunction
 \end{lstlisting}
-When node $u$ is removed from the candidate set $Q$ (the priority queue), $W(u)$ is the minimum weight of all hyperpath from $s$ to $u$. The condition in line 7 ensures that each hyperedge $e_j$ is processed only once after the minimum cost for its tail nodes have been determined. The implementation of the priority queue, $Q$, dictates the running time of the algorithm. I have followed Nielsen et. al. example and chosen a heap structure. Since I have decided to implement the simple binary heap the running time of the algorithm becomes: $\mathcal{O}(E\ log_2(V) + size(h))$. The size of the hypergraph, $h$, is the sum of the cardinalities of its hyperedges:
+When node $u$ is removed from the candidate set $Q$ (the priority queue), $W(u)$ is the minimum weight of all hyperpath from $s$ to $u$. The condition in line 7 ensures that each hyperedge $e_j$ is processed only once after the minimum cost for its tail nodes have been determined. The implementation of the priority queue, $Q$, dictates the running time of the algorithm. I have followed Nielsen et. al. example and chosen a heap structure. Since I have decided to implement the simple binary heap the running time of the algorithm becomes: $\mathcal{O}(|E|\ log_2(|V|) + size(h))$. The size of the hypergraph, $h$, is the sum of the cardinalities of its hyperedges:
 
 \begin{equation}
 size(h) = \displaystyle\sum_{e\in E} |e|.
@@ -456,13 +464,13 @@ function reduceGraph(graphOverlay, v, s)
 	endif
 	return graphOverlay;
 \end{lstlisting}
-Since the running time for the dynamic approach was $\mathcal{O}(V+E)$, the combined running time becomes: 
+Since the running time for the dynamic approach was $\mathcal{O}(|V|+|E|)$, the combined running time becomes: 
 \begin{equation}
-\mathcal{O}((V+E)+(E\ log_2 (V) + size(h)))
+\mathcal{O}((|V|+|E|)+(|E|\ log_2 (|V|) + size(h)))
 \end{equation}
 The $(V+E)$ is however removed since the $E\ log_2 (V) + size(h)$ dominates. This results in a running time of:
 \begin{equation}
-\mathcal{O}(E\ log_2 (V) + size(h))
+\mathcal{O}(|E|\ log_2 (|V|) + size(h))
 \end{equation}
 The reason that the terms $V$ and $E$ does not change since in worst case are we not able to prune any of the hypergraph away using the dynamic approach.
 \subsection{Testing}
@@ -1089,8 +1097,8 @@ The rise in cost between 3 and 4 is once again due to an auto assign of yield. P
 \subsection{General notes}
 As the reader might have noticed, all the found synthesis plans are close to being completely linear. This is because the hypergraphs that the algorithms have work with were based on already known synthesis plans. This made the hypergraphs goal oriented. As described in the following section, Future work, it would be interesting to be able to expand on already known hypergraphs. This would broaden the search space and probably show synthesis plans with a larger breath, looking more like a balanced tree instead of a linked list.
 
-\subsection{Summary}
-By using the already known synthesis plans of specific compounds it have been possible to generate hypergraphs on which the K-best algorithm could work. The results have been overall satisfying. It was possible to distinguish exactly from which known synthesis plans the newly found ones originated, even if there never was a perfect match. 
+\subsection{Evaluation of results}
+By using the already known synthesis plans of specific compounds it have been possible to generate hypergraphs on which the K-best algorithm could run. The results have been overall satisfying. It was possible to distinguish exactly from which known synthesis plans the newly found ones originated, even if there never was a perfect match. 
 
 \section{Future work}
 \label{sec::FutureWork}
@@ -1133,8 +1141,15 @@ By dividing these results with the molecular weight of the compounds, we would g
 \subsection{Pricing}
 There is also the possibility of adding new attributes to the structure. It would be possible to find all those compounds which can be bought on the open market, and add a price to each of the compounds. The reactions would then need to have a price in the form of lab costs, so that when a reaction is made, it takes into consideration that there is a potential cost to equipment and/or personnel.\\
 Each compound that have a market price would become a starting material, since it would be possible just to buy the compound instead of making it. The shortest path algorithm would now find the $K$ shortest synthesis plans that not only gives the highest yield, but also takes into consideration if it would be cheaper to use a longer synthesis plan, with more reactions, to make the same amount of the target compound. An example of this would be that the work cost in Germany is much higher than in China. This means that it could be profitable for the chinese to buy cheaper compounds and make the more expensive compounds themselves, whereas the german scientists would find it more profitable to start at more complex compound, since it would be more profitable to buy the compound instead of making it themselves from scratch.
-\section{Conclusion MANGLER}
+\section{Conclusion}
 \label{sec::Conclusion}
+By using a hypergraph consisting of chemical compounds and chemical reaction we have shown that it is possible to enumerate the $K$-best synthesis plans given a set of goal compounds and a set of starting materials. To enumerate the $K$-best plans a modification of Yen's algorithm is used alongside a shortest path algorithm. The use of an overlay to remove the costly function of copying the whole hypergraph when changes are made, have been proposed in this thesis.\\ 
+If the hypergraph is acyclic it is possible to list the $K$-best plans in $\mathcal{O}(K \cdot |V| \cdot (|V|+|E|))$ using a dynamic approach\cite{Carsten} and the appropriate cost function.\\
+Should the hypergraph be cyclic, there is the possibility of using the STB-Dijkstra\cite{Nielsen} algorithm instead. The algorithm is able to enumerate the $K$-best plans in 
+$\mathcal{O}(K \cdot |V| \cdot (|E|\ log_2 (|V)| + size(h)))$. In the attempt of decreasing the run time of STB-Dijkstra it have been shown that by using the dynamic approach to mark all reactions it traverses, it is possible to prune the hypergraph and thereby reducing the search space of the STB-Dijkstra.\\
+To show the practical use of the $K$-best algorithm, experiments were made to try to recreate already known synthesis plans. The idea was to take the compounds and reactions of already known and documented synthesis plans from the Beilstein database in Leipzig and see if the K-best algorithm could reproduce them. The synthesis plans chosen came from the book "Elements of Synthesis Planning" by R. W. Hoffmann. In this book the synthesis plans were depicted and had references to the articles from which they originated. The compounds were: Strychnine, Colchicine, Dysidiolide, Asteriscanolide and Lepadiformine. The results were very satisfying since almost all synthesis plans were reproduced. That some of the synthesis plans were not found is most likely due to imperfect data. Some of the hypergraphs generated were sparse and had multiple unlinked sub-hypergraphs, making it hard to find the full length of the synthesis plans.\\
+It would be interesting to be able to expand on the synthesis plan already known or from a given target compound. This could lead to new unseen synthesis plans that might be better (or worse) than those already known. This would however need an direct access to the Beilstein database. It would also be interesting to use prices of compounds and actual work cost as another minimizing objective instead of weight and yield.
+
 \newpage
 
 \printbibliography[type=book, title={Books}]
@@ -1166,7 +1181,7 @@ Each compound that have a market price would become a starting material, since i
 \includegraphics[scale=0.4]{TestGrafer/CycleTest.pdf}
 \label{Appendix::Cycle Graph}
 
-\section{Rojin Tests MANGLER}
+\section{Rojin Tests}
 \subsection{Rojin Test 1}
 \centering
 \includegraphics[scale=0.4]{RojinGrafer/Test1.pdf}
@@ -1199,9 +1214,9 @@ Hypergraph to big to be on page. \href{RojinGrafer/test6.pdf}{Press here to see 
 \end{flushleft}
 \label{Appendix::Rojin6}
 
-\subsection{Rojin Test 7 MANGLER GRAF}
+\subsection{Rojin Test 7 }
 \begin{flushleft}
-Hypergraph to big to be on page. \href{RojinGrafer/test5.pdf}{Press here to see pdf}.
+Hypergraph to big to be converted from dot to pdf. Hypergraph omited.
 \end{flushleft}
 \label{Appendix::Rojin7}
 
