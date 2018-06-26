@@ -12,3 +12,7 @@ addons:
       - cmake
 
 script: make
+
+notifications:
+  email:
+    - schulz@imada.sdu.dk
