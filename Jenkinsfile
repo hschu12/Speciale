@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'ls /usr/bin'
+        sh '''
+
+apt-get make
+ls /usr/bin'''
       }
     }
   }
