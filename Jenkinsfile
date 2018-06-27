@@ -3,10 +3,23 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''echo Hello World
-ls
-make
+        sh '''make
 '''
+      }
+    }
+    stage('Run Tests') {
+      steps {
+        sh '''./CycleTest
+./DeadEndTest
+./PaperTest
+./ThesisTest
+./ThesisTestWithCycles
+'''
+      }
+    }
+    stage('') {
+      steps {
+        echo 'All done'
       }
     }
   }
