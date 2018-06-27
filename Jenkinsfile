@@ -3,14 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''#!/bin/sh
-
-
-
-
-
-set -e
-make -f makefile:'''
+        sh '''
+echo Hello World'''
       }
     }
   }
