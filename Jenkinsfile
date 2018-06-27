@@ -1,7 +1,7 @@
 pipeline { 
   agent { docker 'gcc:latest' } 
   stages { 
-    stage('build') { 
+    stage('Build') { 
       steps { 
         sh 'make --version' } 
     } 
