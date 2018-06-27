@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'make'
+        sh '''#!/bin/sh
+
+
+
+
+
+set -e
+make -f makefile:'''
       }
     }
   }
