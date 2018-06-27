@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''ls
-make'''
+        sh '/usr/local/bin/make'
       }
     }
   }
