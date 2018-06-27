@@ -3,10 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''
-
-apt-get make
-ls /usr/bin'''
+        sh '''cd src
+g++ -std=c++14 -O3 src/PaperTest.cpp -o PaperTest'''
       }
     }
   }
