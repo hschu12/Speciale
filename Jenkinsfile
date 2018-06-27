@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh '''cd src
-ls
+        sh '''ls
 make'''
       }
     }
